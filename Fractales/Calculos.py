@@ -1,51 +1,33 @@
-import scipy.io
 import numpy as np
 from scipy.optimize import curve_fit
 from matplotlib import pyplot as plt
+from Datos_practica import *
 
-papel_suave_2 = np.array([[1,14.6],
-                        [2, 22.2],
-                        [4, 35.8],
-                        [8, 38.5],
-                        [16, 54.8],
-                        [32, 78.2],
-                        [64, 119]])
+masa_relativa = np.transpose(papel_suave[0])[0]
+log_masa_relativa = np.log(masa_relativa)
 
-print(papel_suave_2)
+diametros = np.transpose(np.transpose(papel_suave)[1])
+log_diametros = np.log(diametros)
 
-t_medido = np.transpose(papel_suave_2)[0]
-y_medido = np.transpose(papel_suave_2)[1]
-
-print(t_medido, y_medido)
-
-log_t = np.copy(t_medido)
-log_y = np.copy(y_medido)
 
 for i in range(7):
-    log_t[i] = np.log(t_medido[i])
-    log_y[i] = np.log(y_medido[i])
 
-print(log_t, log_y)
+	def test_function(x,a,b):
+		return a*x+b
 
-def test_function(x,a,b):
-    return a*x+b
+	param, param_cov = curve_fit(test_function, log_masa_relativa, log_diametros[i])
 
-param, param_cov = curve_fit(test_function, log_t, log_y)
+	fit_f = param[0]* log_masa_relativa +param[1]
 
-fit_f = param[0]* t_medido +param[1]
+	print(param[0])
 
-# Graficar la señal original y la reconstruida
-plt.subplot(2, 1, 1)
-plt.plot(t_medido, y_medido)
-plt.title('Señal original en el dominio del tiempo')
-plt.xlabel('Tiempo [s]')
-plt.ylabel('Amplitud')
+	# Graficar la señal original y la reconstruida
 
-plt.subplot(2, 1, 2)
-plt.plot(log_t, fit_f)
-plt.title('Señal original en el dominio del tiempo')
-plt.xlabel('Tiempo [s]')
-plt.ylabel('Amplitud')
+	plt.subplot(1, 1, 1)
+	plt.scatter(log_masa_relativa, log_diametros[i])
+	plt.plot(log_masa_relativa, fit_f)
+	plt.xlabel("log(masa relativa)")
+	plt.ylabel("log(diametros)")
+	plt.title("Scatter Plot m=")
 
-plt.tight_layout()
-plt.show()
+	plt.show()
