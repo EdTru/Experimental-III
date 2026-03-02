@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
 
-img1 = cv2.imread("shapes.png")
+img1 = cv2.imread("P5.jpeg")
 img = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
-ret,thresh = cv2.threshold(img,10,255,0)
-contours,hierarchy = cv2.findContours(thresh, 1, 2)
+ret,thresh = cv2.threshold(img,80,400,0)
+contours,hierarchy = cv2.findContours(thresh, 2, 2)
 print("Number of contours in image:",len(contours))
 
 for i, cnt in enumerate(contours):
