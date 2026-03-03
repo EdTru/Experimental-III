@@ -6,7 +6,7 @@ from Datos_practica import *
 masa_relativa = np.transpose(papel_suave[0])[0]
 log_masa_relativa = np.log(masa_relativa)
 
-diametros = np.transpose(np.transpose(papel_suave)[1])
+diametros = np.transpose(np.transpose(papel_comprimido)[1])
 log_diametros = np.log(diametros)
 
 
