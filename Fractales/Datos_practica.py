@@ -1,5 +1,14 @@
 import numpy as np
+
 #en mm, error = 0,02mm
+m_error = np.array([[0,0.2],
+                    [0,0.2],
+                    [0,0.2],
+                    [0,0.2],
+                    [0,0.2],
+                    [0,0.2],
+                    [0, 0.2]])
+
 papel_suave_1 = np.array([[1,14.7],
                         [2, 17.9],
                         [4, 23.2],
@@ -177,3 +186,7 @@ papel_comprimido_7 = np.array([[1, 12.4],
                         [16, 38.4],
                         [32, 44.5],
                         [64, 57.5]])
+
+papel_suave = [papel_suave_1, papel_suave_2, papel_suave_3, papel_suave_4, papel_suave_5, papel_suave_6, papel_suave_7]
+papel_aluminio = [papel_aluminio_1, papel_aluminio_2, papel_aluminio_3, papel_aluminio_4, papel_aluminio_5, papel_aluminio_6,papel_aluminio_7]
+papel_comprimido = [papel_comprimido_1, papel_comprimido_2, papel_comprimido_3, papel_comprimido_4, papel_comprimido_5, papel_comprimido_6,papel_comprimido_7]
