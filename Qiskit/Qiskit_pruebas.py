@@ -1,21 +1,20 @@
 from qiskit import QuantumCircuit
+from qiskit._accelerate import results
 from qiskit_aer import AerSimulator
-from qiskit import transpile
-import matplotlib.pyplot as plt
-qc = QuantumCircuit(2)
-qc.h(0)
-qc.cx(0, 1)
-qc.measure_all()
-# Inicializar el simulador
-simulator = AerSimulator()
-# Transpilar el circuito
-transpiled_qc = transpile(qc, simulator)
-# Ejecutar el circuito
-result = simulator.run(transpiled_qc, shots=1024).result()
-# Obtener los resultados
-counts = result.get_counts()
-print(counts)
-# Dibujar el circuito
-qc.draw(output='mpl')
-# Mostrar la gráfica del circuito
-plt.show()
+import numpy as np
+import matplotlib
+
+pi = np.pi
+
+theta = [0, pi/3, pi/2, pi]
+shots = 100
+
+sim = AerSimulator()
+qc = QuantumCircuit(1, 1)
+qc.ry(theta[2], 0)
+qc.measure(0, 0)
+job = sim.run(qc, shots=shots)
+result = job.result()
+counts = result.get_counts(qc)
+
+
