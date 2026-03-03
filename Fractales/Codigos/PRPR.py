@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 AREA_BASE = 54*38 #mm²
 
-img = cv2.imread('PapelAluminio.jpeg')
+img = cv2.imread('Imagenes/PapelAluminio.jpeg')
 #cv2.imshow('Original', img)
 
 #ret,thresh1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
