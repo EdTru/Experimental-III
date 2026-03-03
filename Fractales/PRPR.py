@@ -19,17 +19,17 @@ print("Number of Contours = " ,len(contours))
 #cv2.imshow('Canny Edges', canny)
 
 for i, cnt in enumerate(contours):
-   M = cv2.moments(cnt)
-   if M['m00'] != 0.0:
-      x1 = int(M['m10']/M['m00'])
-      y1 = int(M['m01']/M['m00'])
-   area = cv2.contourArea(cnt)
-   perimeter = cv2.arcLength(cnt, True)
-   perimeter = round(perimeter, 4)
-   print(f'Area of contour :', area)
-   #print(f'Perimeter of contour {i+1}:', perimeter)
-   img = cv2.drawContours(img, [cnt], -1, (0,255,255), 3)
-   cv2.putText(img, f'Area :{area}', (x1, y1), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+	M = cv2.moments(cnt)
+	if M['m00'] != 0.0:
+		x1 = int(M['m10']/M['m00'])
+		y1 = int(M['m01']/M['m00'])
+	area = cv2.contourArea(cnt)
+	perimeter = cv2.arcLength(cnt, True)
+	perimeter = round(perimeter, 4)
+	print(f'Area of contour :', area)
+	#print(f'Perimeter of contour {i+1}:', perimeter)
+	img = cv2.drawContours(img, [cnt], -1, (0,255,255), 3)
+	cv2.putText(img, f'Area :{area}', (x1, y1), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
 
 
 
