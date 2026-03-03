@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1772575057.22194 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/fractales.tex" "fractales.pdf" "fractales" 1772575058.87219 0
+["pdflatex"] 1772577090.28747 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/fractales.tex" "fractales.pdf" "fractales" 1772577092.1389 0
   "/etc/texmf/web2c/texmf.cnf" 1772558401.88063 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/fractales.tex" 1772575056.87154 3255 b9e4357632813d9ca757c1595f22dbb0 ""
+  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/fractales.tex" 1772577088.14171 3288 9ecd3d6655054eeda9573f8aba954e39 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -126,9 +126,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772558436.28143 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772558537 8213750 c6ebc134b42159850a4c1734aebddba1 ""
-  "fractales.aux" 1772575058.72657 1095 aaf4c9f469947796ebc2054b68150a60 "pdflatex"
-  "fractales.out" 1772575058.72957 472 6b9a60abd0a69f72a4c5d54914af4dc2 "pdflatex"
-  "fractales.tex" 1772575056.87154 3255 b9e4357632813d9ca757c1595f22dbb0 ""
+  "fractales.aux" 1772577091.98758 847 670988546e253a4bf61b2fc601f1b32f "pdflatex"
+  "fractales.out" 1772577091.99058 371 2e91bf13f5c43df3ff1adf5b74e8db80 "pdflatex"
+  "fractales.tex" 1772577088.14171 3288 9ecd3d6655054eeda9573f8aba954e39 ""
   "logoFCTo.png" 1772574445.58576 24951 42ed5d86fd536d29b7eb5bb73e116d7c ""
   (generated)
   "fractales.aux"
