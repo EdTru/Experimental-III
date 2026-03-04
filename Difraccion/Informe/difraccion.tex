@@ -1,0 +1,88 @@
+\documentclass[11pt, a4paper, twocolumn]{article}
+
+% --- Paquetes de Idioma y Codificación ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-nodecimaldot]{babel} % Configurado para español
+\usepackage[T1]{fontenc}
+
+% --- Tipografía y Estética ---
+\usepackage{mathpazo} % Fuente Palatino, elegante y legible
+\usepackage{microtype} % Mejora el espaciado entre letras y palabras
+
+% --- Geometría de Página ---
+\usepackage[margin=2.5cm]{geometry}
+\columnsep 0.6cm % Espacio entre columnas
+
+% --- Matemáticas Avanzadas ---
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{mathtools}
+
+% --- Gráficos y Tablas ---
+\usepackage{graphicx}
+\usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
+\usepackage{caption}
+\captionsetup{labelfont=bf, font=small} % Captions en negrita y pequeñas
+
+% --- Hipervínculos y Referencias ---
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
+
+% --- Título y Autores ---
+\title{\textbf{\Large Difracción}}
+\author{
+    \textbf{Sanz Rubio, Juan}; \textbf{Truchado Iniesta, Eduardo} \\
+    \small Grado de Física, UCLM. \texttt{autor1@email.com} \\
+    \small Grado de Física, UCLM. \texttt{autor2@email.com}
+}
+\date{\small 2 Marzo 2026}
+
+
+\usepackage{fancyhdr}
+%\usepackage{graphicx}
+
+% --- Configuración del Encabezado ---
+\pagestyle{fancy}
+\fancyhf{} % Limpia encabezado y pie de página
+\renewcommand{\headrulewidth}{0.4pt} % Línea horizontal bajo el encabezado
+
+% Imagen a la IZQUIERDA
+\fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}}
+
+
+% Espaciado para que el texto no choque con las imágenes
+\setlength{\headheight}{60.98553pt}
+% --- Inicio del Documento ---
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+%Resumen
+\begin{abstract}
+HAy que meter pajas sssssss
+\end{abstract}
+
+\section{Introducción}
+No todos los objetos geométricos tienen dimensiones enteras como clásicamente se ha considerado. Algunos con geometrías complejas se describen matemáticamenete como onbjetos con dimensiones fraccionadas,
+conocidos como fractales. En este trabajo se estudian las propiedades de objetos de formas cercanas a la esférica asumiendo una relación de masas y dimensiones relacionadas mediante la siguiente fórmula: 
+\begin{equation}
+    D = K M ^{\frac{1}{d}}
+\end{equation}
+
+Donde d es la dimensión fractal, M es la masa del objeto, K es una constante de proporcionalidad y D el diámetro de la esfera considerada.
+
+\section{Objetivos}
+
+\section{Metodología}
+
+\section{Tratamiento de datos}
+
+\section{Análisis de resultados}
+% --- Bibliografía ---
+\begin{thebibliography}{99}
+\bibitem{autor2024} 
+Apellido, Nombre (2024). \textit{Título del Libro o Artículo}. Editorial o Revista.
+\end{thebibliography}
+
+\end{document}  

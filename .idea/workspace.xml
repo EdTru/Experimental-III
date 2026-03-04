@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Informe Qiskit">
-      <change afterPath="$PROJECT_DIR$/Difraccion/Practica/Datos_cafe_Benito.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Difraccion/Practica/Datos_red_difraccion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Difraccion/Practica/Datos_rendija_simple.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Difraccion/Practica/arcoiris.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.log" beforeDir="false" afterPath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.log" afterDir="false" />
+    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Practica difracción">
+      <change afterPath="$PROJECT_DIR$/Difraccion/Informe/difraccion.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Difraccion/Informe/logoFCTo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "LaTeX.Fractales.executor": "Run",
+    "LaTeX.difraccion.executor": "Run",
     "LaTeX.fractales.executor": "Run",
     "LaTeX.main (1).executor": "Run",
     "LaTeX.main.executor": "Run",
@@ -75,7 +73,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/eduardo/PycharmProjects/Experimental-III/Qiskit/Informe",
+    "last_opened_file_path": "/home/eduardo/PycharmProjects/Experimental-III/Difraccion/Informe",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
@@ -83,16 +81,42 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Difraccion/Informe" />
       <recent name="$PROJECT_DIR$/Qiskit/Informe" />
       <recent name="$PROJECT_DIR$/Fractales" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Difraccion/Informe" />
       <recent name="$PROJECT_DIR$/Qiskit/Practica" />
       <recent name="$PROJECT_DIR$/Fractales/Informe" />
       <recent name="$PROJECT_DIR$/Fractales" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="LaTeX.difraccion">
+    <configuration name="difraccion" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/Difraccion/Informe/difraccion.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <working-directory>{mainFileParent}</working-directory>
+        <compile-twice>true</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>MODULE_SDK</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
     <configuration name="qiskit" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -117,8 +141,13 @@
       </texify>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="LaTeX.difraccion" />
+      <item itemvalue="LaTeX.qiskit" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.difraccion" />
         <item itemvalue="LaTeX.qiskit" />
       </list>
     </recent_temporary>
@@ -229,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772619880784</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Practica difracción">
+      <option name="closed" value="true" />
+      <created>1772644115377</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1772644115377</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +287,8 @@
     <MESSAGE value="aa" />
     <MESSAGE value="Organizacion" />
     <MESSAGE value="Informe Qiskit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Informe Qiskit" />
+    <MESSAGE value="Practica difracción" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practica difracción" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Experimental_III$Prueba2.coverage" NAME="Prueba2 Coverage Results" MODIFIED="1772471029426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
