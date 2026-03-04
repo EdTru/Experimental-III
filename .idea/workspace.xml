@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Informe Qiskit">
-      <change beforePath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.log" beforeDir="false" afterPath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Qiskit/Informe/qiskit.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Qiskit/Informe/qiskit.tex" afterDir="false" />
-    </list>
+    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Informe Qiskit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,34 +45,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "LaTeX.Fractales.executor": "Run",
-    "LaTeX.fractales.executor": "Run",
-    "LaTeX.main (1).executor": "Run",
-    "LaTeX.main.executor": "Run",
-    "LaTeX.prueba.executor": "Run",
-    "LaTeX.qiskit.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Calculos.executor": "Run",
-    "Python.Medida de area por imagen.executor": "Run",
-    "Python.PRPR.executor": "Run",
-    "Python.Parte1.executor": "Run",
-    "Python.ParteEstadistica.executor": "Run",
-    "Python.Prueba2.executor": "Run",
-    "Python.Qiskit_pruebas.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "Qiskit",
-    "last_opened_file_path": "/home/eduardo/PycharmProjects/Experimental-III/Qiskit/Informe",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;LaTeX.Fractales.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.fractales.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.prueba.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.qiskit.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Calculos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Medida de area por imagen.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PRPR.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Parte1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ParteEstadistica.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Prueba2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Qiskit_pruebas.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Qiskit&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/eduardo/PycharmProjects/Experimental-III/Qiskit/Informe&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Qiskit/Informe" />
@@ -144,7 +139,7 @@
       <workItem from="1772612540280" duration="659000" />
       <workItem from="1772616460682" duration="785000" />
       <workItem from="1772617389026" duration="944000" />
-      <workItem from="1772619247931" duration="626000" />
+      <workItem from="1772619247931" duration="653000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <option name="closed" value="true" />
@@ -218,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772619497413</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Informe Qiskit">
+      <option name="closed" value="true" />
+      <created>1772619880784</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1772619880784</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
