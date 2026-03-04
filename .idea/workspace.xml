@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="aa" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EdTru&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/EdTru/Experimental-III.git&quot;,
+    &quot;accountId&quot;: &quot;19246dc9-1e32-4e7f-9e74-13e18f3de786&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3AO8DSbBSOzWqAUk8olOZCcrmy0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;LaTeX.fractales.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Calculos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Medida de area por imagen.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PRPR.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Parte1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ParteEstadistica.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Prueba2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Qiskit_pruebas.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/eduardo/PycharmProjects/Experimental-III/Fractales&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Fractales" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Fractales" />
+    </key>
+  </component>
+  <component name="RunManager" selected="LaTeX.fractales">
+    <configuration name="fractales" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>evince</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file>$PROJECT_DIR$/Fractales/fractales.tex</main-file>
+        <output-path>$PROJECT_DIR$/Fractales/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <working-directory>{mainFileParent}</working-directory>
+        <compile-twice>true</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>$PROJECT_DIR$/Fractales/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <working-directory>{mainFileParent}</working-directory>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <pdf-viewer>evince</pdf-viewer>
+        <require-focus>true</require-focus>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
+        <before-run-command />
+        <main-file />
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <working-directory>{mainFileParent}</working-directory>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="LaTeX.fractales" />
+      <item itemvalue="LaTeX.main" />
+      <item itemvalue="LaTeX.main (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="LaTeX.fractales" />
+        <item itemvalue="LaTeX.main (1)" />
+        <item itemvalue="LaTeX.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="" />
+      <created>1772452137462</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1772452137462</updated>
+      <workItem from="1772452138548" duration="619000" />
+      <workItem from="1772461926737" duration="10416000" />
+      <workItem from="1772476462343" duration="1007000" />
+      <workItem from="1772525058386" duration="10836000" />
+      <workItem from="1772557285550" duration="2601000" />
+      <workItem from="1772612257884" duration="257000" />
+      <workItem from="1772612540280" duration="659000" />
+    </task>
+    <task id="LOCAL-00001" summary="aa">
+      <option name="closed" value="true" />
+      <created>1772465278317</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1772465278317</updated>
+    </task>
+    <task id="LOCAL-00002" summary="aa">
+      <option name="closed" value="true" />
+      <created>1772476491370</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772476491370</updated>
+    </task>
+    <task id="LOCAL-00003" summary="aa">
+      <option name="closed" value="true" />
+      <created>1772525161101</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772525161101</updated>
+    </task>
+    <task id="LOCAL-00004" summary="aa">
+      <option name="closed" value="true" />
+      <created>1772548191209</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772548191209</updated>
+    </task>
+    <task id="LOCAL-00005" summary="aa">
+      <option name="closed" value="true" />
+      <created>1772556720711</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772556720711</updated>
+    </task>
+    <task id="LOCAL-00006" summary="aa">
+      <option name="closed" value="true" />
+      <created>1772612690009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772612690009</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="aa" />
+    <option name="LAST_COMMIT_MESSAGE" value="aa" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Experimental_III$Prueba2.coverage" NAME="Prueba2 Coverage Results" MODIFIED="1772471029426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
+    <SUITE FILE_PATH="coverage/Experimental_III$ParteEstadistica.coverage" NAME="ParteEstadistica Coverage Results" MODIFIED="1772556783146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qiskit" />
+    <SUITE FILE_PATH="coverage/Experimental_III$Medida_de_area_por_imagen.coverage" NAME="Medida de area por imagen Coverage Results" MODIFIED="1772469265169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
+    <SUITE FILE_PATH="coverage/Experimental_III$PRPR.coverage" NAME="PRPR Coverage Results" MODIFIED="1772470752415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
+    <SUITE FILE_PATH="coverage/Experimental_III$Qiskit_pruebas.coverage" NAME="Qiskit_pruebas Coverage Results" MODIFIED="1772549038988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qiskit" />
+    <SUITE FILE_PATH="coverage/Experimental_III$Calculos.coverage" NAME="Calculos Coverage Results" MODIFIED="1772558430529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
+    <SUITE FILE_PATH="coverage/Experimental_III$Parte1.coverage" NAME="Parte1 Coverage Results" MODIFIED="1772556301575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qiskit" />
+  </component>
+</project>
