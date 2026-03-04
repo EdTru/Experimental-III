@@ -1,52 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="intotnto de hacer las cosas bien">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Calculos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Calculos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Datos_practica.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Datos_practica.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Imagenes/PapelAluminio.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Imagenes/PapelAluminio.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Imagenes/PapelComprimido.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Imagenes/PapelComprimido.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Imagenes/PapelSuave.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Imagenes/PapelSuave.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Imagenes/shapes.png" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Imagenes/shapes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Medida de area por imagen.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Medida de area por imagen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/PRPR.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/PRPR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Codigos/Prueba2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Practica/Prueba2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Informe/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Informe/fractales.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Informe/out/main.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Informe/out/main.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Informe/out/main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/Informe/out/main.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.fdb_latexmk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.fls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/fractales.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/logoFCTo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Fractales/Informe/logoFCTo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/fractales.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/fractales.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/fractales.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/fractales.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/fractales.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/main.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/main.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/main.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fractales/out/texput.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/fractales.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/fractales.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/fractales.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/fractales.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/fractales.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/main.synctex.gz" beforeDir="false" />
-    </list>
+    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Organizacion" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,6 +77,7 @@
       <recent name="$PROJECT_DIR$/Fractales" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Qiskit/Practica" />
       <recent name="$PROJECT_DIR$/Fractales/Informe" />
       <recent name="$PROJECT_DIR$/Fractales" />
     </key>
@@ -162,7 +118,7 @@
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/prueba.tex</main-file>
+        <main-file />
         <output-path>$PROJECT_DIR$/out</output-path>
         <auxil-path>{projectDir}/auxil</auxil-path>
         <working-directory>{mainFileParent}</working-directory>
@@ -181,6 +137,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="LaTeX.prueba" />
+        <item itemvalue="LaTeX.fractales" />
+        <item itemvalue="LaTeX.fractales" />
         <item itemvalue="LaTeX.prueba" />
         <item itemvalue="LaTeX.fractales" />
       </list>
@@ -257,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772612690009</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Organizacion">
+      <option name="closed" value="true" />
+      <created>1772615317738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772615317738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +243,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="aa" />
-    <option name="LAST_COMMIT_MESSAGE" value="aa" />
+    <MESSAGE value="Organizacion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organizacion" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Experimental_III$Prueba2.coverage" NAME="Prueba2 Coverage Results" MODIFIED="1772471029426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
