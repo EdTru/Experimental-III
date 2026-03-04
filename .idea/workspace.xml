@@ -105,12 +105,12 @@
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
         <main-file>$PROJECT_DIR$/Difraccion/Informe/difraccion.tex</main-file>
-        <output-path>$PROJECT_DIR$/out</output-path>
+        <output-path>$PROJECT_DIR$/Difraccion/Informe/out</output-path>
         <auxil-path>{projectDir}/auxil</auxil-path>
         <working-directory>{mainFileParent}</working-directory>
         <compile-twice>true</compile-twice>
         <output-format>PDF</output-format>
-        <latex-distribution>MODULE_SDK</latex-distribution>
+        <latex-distribution>TEXLIVE</latex-distribution>
         <has-been-run>true</has-been-run>
         <bib-run-config>[]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
