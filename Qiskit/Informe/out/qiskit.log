@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.3)  4 MAR 2026 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.3)  4 MAR 2026 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -719,7 +719,7 @@ usr/local/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/loc
 al/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texl
 ive/2026/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 Output written on /home/eduardo/PycharmProjects/Experimental-III/Qiskit/Informe
-/out/qiskit.pdf (1 page, 105608 bytes).
+/out/qiskit.pdf (1 page, 105581 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
