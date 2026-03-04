@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Organizacion" />
+    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Organizacion">
+      <change beforePath="$PROJECT_DIR$/.idea/Experimental-III.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Experimental-III.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,33 +49,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "LaTeX.Fractales.executor": "Run",
-    "LaTeX.fractales.executor": "Run",
-    "LaTeX.main (1).executor": "Run",
-    "LaTeX.main.executor": "Run",
-    "LaTeX.prueba.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Calculos.executor": "Run",
-    "Python.Medida de area por imagen.executor": "Run",
-    "Python.PRPR.executor": "Run",
-    "Python.Parte1.executor": "Run",
-    "Python.ParteEstadistica.executor": "Run",
-    "Python.Prueba2.executor": "Run",
-    "Python.Qiskit_pruebas.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/eduardo/PycharmProjects/Experimental-III/Fractales",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;LaTeX.Fractales.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.fractales.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.prueba.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.qiskit.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Calculos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Medida de area por imagen.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PRPR.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Parte1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ParteEstadistica.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Prueba2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Qiskit_pruebas.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Qiskit&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/eduardo/PycharmProjects/Experimental-III/Fractales&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Fractales" />
@@ -82,8 +87,8 @@
       <recent name="$PROJECT_DIR$/Fractales" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.prueba">
-    <configuration name="fractales" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
+  <component name="RunManager">
+    <configuration name="qiskit" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
@@ -94,32 +99,8 @@
         <envs />
         <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
         <before-run-command />
-        <main-file>$PROJECT_DIR$/Fractales/Informe/fractales.tex</main-file>
-        <output-path>$PROJECT_DIR$/Fractales/Informe/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
-        <working-directory>{mainFileParent}</working-directory>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>TEXLIVE</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
-      <method v="2" />
-    </configuration>
-    <configuration name="prueba" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path>/usr/local/texlive/2026/bin/x86_64-linux/pdflatex</compiler-path>
-        <pdf-viewer>evince</pdf-viewer>
-        <require-focus>true</require-focus>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <expand-macros-in-environment-variables>false</expand-macros-in-environment-variables>
-        <before-run-command />
-        <main-file />
-        <output-path>$PROJECT_DIR$/out</output-path>
+        <main-file>$PROJECT_DIR$/Qiskit/Informe/qiskit.tex</main-file>
+        <output-path>$PROJECT_DIR$/Qiskit/Informe/out</output-path>
         <auxil-path>{projectDir}/auxil</auxil-path>
         <working-directory>{mainFileParent}</working-directory>
         <compile-twice>true</compile-twice>
@@ -131,17 +112,9 @@
       </texify>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="LaTeX.fractales" />
-      <item itemvalue="LaTeX.prueba" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="LaTeX.prueba" />
-        <item itemvalue="LaTeX.fractales" />
-        <item itemvalue="LaTeX.fractales" />
-        <item itemvalue="LaTeX.prueba" />
-        <item itemvalue="LaTeX.fractales" />
+        <item itemvalue="LaTeX.qiskit" />
       </list>
     </recent_temporary>
   </component>
@@ -167,6 +140,8 @@
       <workItem from="1772557285550" duration="2601000" />
       <workItem from="1772612257884" duration="257000" />
       <workItem from="1772612540280" duration="659000" />
+      <workItem from="1772616460682" duration="785000" />
+      <workItem from="1772617389026" duration="944000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <option name="closed" value="true" />
@@ -224,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772615317738</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Organizacion">
+      <option name="closed" value="true" />
+      <created>1772616021375</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772616021375</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
