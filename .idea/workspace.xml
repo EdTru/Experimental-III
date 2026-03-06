@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Practica difracción">
-      <change afterPath="$PROJECT_DIR$/Difraccion/Informe/difraccion.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Difraccion/Informe/logoFCTo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Qiskit/Informe/out/qiskit.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Efecto Hall/Practica/datos_P1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Efecto Hall/Practica/datos_P2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Polarizacion/Practica/datos_P1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Polarizacion/Practica/datos_P2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Polarizacion/Practica/datos_P3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.log" beforeDir="false" afterPath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,36 +54,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "LaTeX.Fractales.executor": "Run",
-    "LaTeX.difraccion.executor": "Run",
-    "LaTeX.fractales.executor": "Run",
-    "LaTeX.main (1).executor": "Run",
-    "LaTeX.main.executor": "Run",
-    "LaTeX.prueba.executor": "Run",
-    "LaTeX.qiskit.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Calculos.executor": "Run",
-    "Python.Datos_red_difraccion.executor": "Run",
-    "Python.Medida de area por imagen.executor": "Run",
-    "Python.PRPR.executor": "Run",
-    "Python.Parte1.executor": "Run",
-    "Python.ParteEstadistica.executor": "Run",
-    "Python.Prueba2.executor": "Run",
-    "Python.Qiskit_pruebas.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "ai.playground.ignore.import.keys.banner.in.settings": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/eduardo/PycharmProjects/Experimental-III/Difraccion/Informe",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;LaTeX.Fractales.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.difraccion.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.fractales.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.main.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.prueba.executor&quot;: &quot;Run&quot;,
+    &quot;LaTeX.qiskit.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Calculos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Datos_red_difraccion.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Medida de area por imagen.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PRPR.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Parte1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ParteEstadistica.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Prueba2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Qiskit_pruebas.executor&quot;: &quot;Run&quot;,
+    &quot;Python.datos_P1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.datos_P2.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;ai.playground.ignore.import.keys.banner.in.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/eduardo/PycharmProjects/Experimental-III/Difraccion/Informe&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Difraccion/Informe" />
@@ -92,7 +99,7 @@
       <recent name="$PROJECT_DIR$/Fractales" />
     </key>
   </component>
-  <component name="RunManager" selected="LaTeX.difraccion">
+  <component name="RunManager">
     <configuration name="difraccion" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -177,6 +184,8 @@
       <workItem from="1772616460682" duration="785000" />
       <workItem from="1772617389026" duration="944000" />
       <workItem from="1772619247931" duration="653000" />
+      <workItem from="1772721972085" duration="9368000" />
+      <workItem from="1772785119091" duration="9130000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <option name="closed" value="true" />
@@ -266,7 +275,31 @@
       <option name="project" value="LOCAL" />
       <updated>1772644115377</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Practica difracción">
+      <option name="closed" value="true" />
+      <created>1772651518195</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1772651518195</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Practica difracción">
+      <option name="closed" value="true" />
+      <created>1772651567764</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1772651567764</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Practica difracción">
+      <option name="closed" value="true" />
+      <created>1772651729513</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1772651729513</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +328,8 @@
     <SUITE FILE_PATH="coverage/Experimental_III$ParteEstadistica.coverage" NAME="ParteEstadistica Coverage Results" MODIFIED="1772556783146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qiskit" />
     <SUITE FILE_PATH="coverage/Experimental_III$Medida_de_area_por_imagen.coverage" NAME="Medida de area por imagen Coverage Results" MODIFIED="1772469265169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
     <SUITE FILE_PATH="coverage/Experimental_III$PRPR.coverage" NAME="PRPR Coverage Results" MODIFIED="1772470752415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
+    <SUITE FILE_PATH="coverage/Experimental_III$datos_P1.coverage" NAME="datos_P1 Coverage Results" MODIFIED="1772787396547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Efecto Hall/Practica" />
+    <SUITE FILE_PATH="coverage/Experimental_III$datos_P2.coverage" NAME="datos_P2 Coverage Results" MODIFIED="1772793568404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Efecto Hall/Practica" />
     <SUITE FILE_PATH="coverage/Experimental_III$Datos_red_difraccion.coverage" NAME="Datos_red_difraccion Coverage Results" MODIFIED="1772640185505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Difraccion/Practica" />
     <SUITE FILE_PATH="coverage/Experimental_III$Calculos.coverage" NAME="Calculos Coverage Results" MODIFIED="1772558430529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
     <SUITE FILE_PATH="coverage/Experimental_III$Qiskit_pruebas.coverage" NAME="Qiskit_pruebas Coverage Results" MODIFIED="1772613295980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qiskit" />
