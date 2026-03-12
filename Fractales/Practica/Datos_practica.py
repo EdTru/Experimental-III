@@ -1,4 +1,5 @@
 import numpy as np
+from tabulate import tabulate
 
 #en mm, error = 0,02mm
 m_error = np.array([[0,0.2],
@@ -190,3 +191,35 @@ papel_comprimido_7 = np.array([[1, 12.4],
 papel_suave = [papel_suave_1, papel_suave_2, papel_suave_3, papel_suave_4, papel_suave_5, papel_suave_6, papel_suave_7]
 papel_aluminio = [papel_aluminio_1, papel_aluminio_2, papel_aluminio_3, papel_aluminio_4, papel_aluminio_5, papel_aluminio_6,papel_aluminio_7]
 papel_comprimido = [papel_comprimido_1, papel_comprimido_2, papel_comprimido_3, papel_comprimido_4, papel_comprimido_5, papel_comprimido_6,papel_comprimido_7]
+
+
+
+
+def generar_tabla(papel, lista_papel):
+
+    diametros = np.array([i[:,1] for i in lista_papel])
+
+    media_diametros = np.mean(diametros, axis=0)
+    masas = np.array([i[0] for i in lista_papel[0]])
+
+    fila = []
+
+    for i in range(len(masas)):
+        fila.append([
+            int(masas[i]),
+            media_diametros[i].round(2), 
+            r"$\pm$ " + str(m_error[0][1])
+        ])
+
+    
+    headers = [r"Masa (g)", r"$\langle$ D $\rangle$ (mm)", r"$\bigtriangleup$ D (mm)"]
+    print(f"Tabla de datos para {papel}:\n")
+    print(tabulate(fila, headers=headers, tablefmt="latex_raw"))
+    print("\n")
+    print(r"\vspace{0.5cm}")
+    print("\n")
+
+generar_tabla("papel suave", papel_suave)
+
+generar_tabla("papel aluminio", papel_aluminio)
+generar_tabla("papel comprimido", papel_comprimido)

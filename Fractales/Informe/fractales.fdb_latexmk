@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1772615925.25559 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1772615926.84434 0
+["pdflatex"] 1773271993.35642 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1773271994.02312 0
   "/etc/texmf/web2c/texmf.cnf" 1772558401.88063 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" 1772615923.20919 2844 a589f89dedf96efd3cd37560d4c6aeea ""
+  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" 1773271993.16259 7719 8d7fd4b07aa91c87c91931e0b63a09b5 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -17,6 +17,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1136768653 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm" 1136768653 1032 7fa31d93ecd4cbdfac02c7a1ebc6facc ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm" 1136768653 1148 56b0fdf7ca3f800294e968f64cfdcb87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7m.tfm" 1136768653 2080 40a71f65088bdd047622ce295520749e ""
@@ -24,6 +25,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7v.tfm" 1136768653 1012 955c4ca523d7827d33db91a33412b048 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/zplmr7y.tfm" 1136768653 1316 b4037e9c09961a72f8476628774e1ec1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb" 1136849748 52406 dad2f72863a03727d5f536c64a69c452 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb" 1136849748 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb" 1136849748 50022 90249cba7e3e4e9845f80328d6f9bd13 ""
@@ -33,6 +35,7 @@
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf" 1136768653 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf" 1136768653 1812 de7624743c8bafe2ce204bec2f72ce7e ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf" 1136768653 1532 73e2c76c81e4f977ab65540630baf4f0 ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf" 1136768653 1372 31129ac1f6b6f62aaec24c8fed41b02b ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf" 1622145181 26965 3b6d1655ad716f98e788b1fb9f2e87b8 ""
@@ -121,9 +124,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772558436.28143 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772558537 8213750 c6ebc134b42159850a4c1734aebddba1 ""
-  "fractales.aux" 1772615926.71324 909 860ee81d0b6fce6a6a3fbc0e3545e75a "pdflatex"
-  "fractales.out" 1772615926.71624 606 febb8b2bf7b2cb2c69ff980955d6c994 "pdflatex"
-  "fractales.tex" 1772615923.20919 2844 a589f89dedf96efd3cd37560d4c6aeea ""
+  "fractales.aux" 1773271993.95663 1229 ad859b6e1eaea8635ddfa03af57f1c53 "pdflatex"
+  "fractales.out" 1773271993.95779 880 cc14cf7fc3509423cc5ef984b55ca487 "pdflatex"
+  "fractales.tex" 1773271993.16259 7719 8d7fd4b07aa91c87c91931e0b63a09b5 ""
   "logoFCTo.png" 1772615879.30213 24951 42ed5d86fd536d29b7eb5bb73e116d7c ""
   (generated)
   "fractales.aux"
