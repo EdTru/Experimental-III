@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Practica difracción">
-      <change afterPath="$PROJECT_DIR$/Efecto Hall/Practica/datos_P1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Efecto Hall/Practica/datos_P2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Polarizacion/Practica/datos_P1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Polarizacion/Practica/datos_P2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Polarizacion/Practica/datos_P3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/datos_P1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_05_[Changes]/PapelAluminio.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_05_[Changes]/PapelComprimido.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_05_[Changes]/PapelSuave.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_05_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_24_[Changes]/PapelAluminio.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_24_[Changes]/PapelComprimido.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_24_[Changes]/PapelSuave.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26,_18_24_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26__18_05__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_3_26__18_24__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.log" beforeDir="false" afterPath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Polarizacion/Practica/datos_P1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Polarizacion/Practica/datos_P1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +104,7 @@
       <recent name="$PROJECT_DIR$/Fractales" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="LaTeX.difraccion">
     <configuration name="difraccion" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory" temporary="true">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -162,7 +167,6 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.31033.139" />
         <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
       </set>
     </attachedChunks>
@@ -186,6 +190,8 @@
       <workItem from="1772619247931" duration="653000" />
       <workItem from="1772721972085" duration="9368000" />
       <workItem from="1772785119091" duration="9130000" />
+      <workItem from="1773159004217" duration="647000" />
+      <workItem from="1773914866739" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="aa">
       <option name="closed" value="true" />
@@ -328,7 +334,7 @@
     <SUITE FILE_PATH="coverage/Experimental_III$ParteEstadistica.coverage" NAME="ParteEstadistica Coverage Results" MODIFIED="1772556783146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Qiskit" />
     <SUITE FILE_PATH="coverage/Experimental_III$Medida_de_area_por_imagen.coverage" NAME="Medida de area por imagen Coverage Results" MODIFIED="1772469265169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
     <SUITE FILE_PATH="coverage/Experimental_III$PRPR.coverage" NAME="PRPR Coverage Results" MODIFIED="1772470752415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
-    <SUITE FILE_PATH="coverage/Experimental_III$datos_P1.coverage" NAME="datos_P1 Coverage Results" MODIFIED="1772787396547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Efecto Hall/Practica" />
+    <SUITE FILE_PATH="coverage/Experimental_III$datos_P1.coverage" NAME="datos_P1 Coverage Results" MODIFIED="1773159047291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Polarizacion/Practica" />
     <SUITE FILE_PATH="coverage/Experimental_III$datos_P2.coverage" NAME="datos_P2 Coverage Results" MODIFIED="1772793568404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Efecto Hall/Practica" />
     <SUITE FILE_PATH="coverage/Experimental_III$Datos_red_difraccion.coverage" NAME="Datos_red_difraccion Coverage Results" MODIFIED="1772640185505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Difraccion/Practica" />
     <SUITE FILE_PATH="coverage/Experimental_III$Calculos.coverage" NAME="Calculos Coverage Results" MODIFIED="1772558430529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />

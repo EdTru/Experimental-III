@@ -45,7 +45,7 @@ pol_per = np.array([
 	[85, 9.62]
 ])
 
-"""
+
 grados = []
 
 intensidad1 = []
@@ -73,4 +73,3 @@ plt.show()
 
 
 plt.show()
-"""
