@@ -131,7 +131,7 @@ peso de valor 1 y aumentando este hasta llegar a 64.
 \section{Tratamiento de datos}
 
 A continuación mostraremos las tablas de datos obtenidos. Para cada tipo de papel se han realizado 7 medidas para cada masa de cada pelota
-y realizado el promedio de estas medidas para cada masa. El error asociado es el error del calibre utilizado para la propia medida, en este caso 0.02mm.
+y realizado el promedio de estas medidas para cada una. El error asociado es el error del calibre utilizado para la propia medida, en este caso 0.02mm.
 
 \vspace{0.5cm}
 
@@ -141,13 +141,13 @@ Tabla de datos para papel suave:
 \hline
    Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
 \hline
-          1 &                        16.14 & $\pm$ 0.2                 \\
-          2 &                        23.96 & $\pm$ 0.2                 \\
-          4 &                        31.66 & $\pm$ 0.2                 \\
-          8 &                        41.5  & $\pm$ 0.2                 \\
-         16 &                        48.87 & $\pm$ 0.2                 \\
-         32 &                        74.19 & $\pm$ 0.2                 \\
-         64 &                       108.4  & $\pm$ 0.2                 \\
+          1 &                        16.14 & $\pm$ 0.02                 \\
+          2 &                        23.96 & $\pm$ 0.02                 \\
+          4 &                        31.66 & $\pm$ 0.02                 \\
+          8 &                        41.5  & $\pm$ 0.02                 \\
+         16 &                        48.87 & $\pm$ 0.02                 \\
+         32 &                        74.19 & $\pm$ 0.02                 \\
+         64 &                       108.4  & $\pm$ 0.02                 \\
 \hline
 \end{tabular}
 
@@ -161,13 +161,13 @@ Tabla de datos para papel aluminio:
 \hline
    Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
 \hline
-          1 &                        10.06 & $\pm$ 0.2                 \\
-          2 &                        11.91 & $\pm$ 0.2                 \\
-          4 &                        17    & $\pm$ 0.2                 \\
-          8 &                        20.7  & $\pm$ 0.2                 \\
-         16 &                        27.06 & $\pm$ 0.2                 \\
-         32 &                        35.87 & $\pm$ 0.2                 \\
-         64 &                        53.54 & $\pm$ 0.2                 \\
+          1 &                        10.06 & $\pm$ 0.02                 \\
+          2 &                        11.91 & $\pm$ 0.02                 \\
+          4 &                        17    & $\pm$ 0.02                 \\
+          8 &                        20.7  & $\pm$ 0.02                 \\
+         16 &                        27.06 & $\pm$ 0.02                 \\
+         32 &                        35.87 & $\pm$ 0.02                 \\
+         64 &                        53.54 & $\pm$ 0.02                 \\
 \hline
 \end{tabular}
 
@@ -181,16 +181,42 @@ Tabla de datos para papel comprimido:
 \hline
    Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
 \hline
-          1 &                        10.79 & $\pm$ 0.2                 \\
-          2 &                        15.29 & $\pm$ 0.2                 \\
-          4 &                        23.69 & $\pm$ 0.2                 \\
-          8 &                        27.53 & $\pm$ 0.2                 \\
-         16 &                        35.67 & $\pm$ 0.2                 \\
-         32 &                        49.17 & $\pm$ 0.2                 \\
-         64 &                        62.14 & $\pm$ 0.2                 \\
+          1 &                        10.79 & $\pm$ 0.02                 \\
+          2 &                        15.29 & $\pm$ 0.02                 \\
+          4 &                        23.69 & $\pm$ 0.02                 \\
+          8 &                        27.53 & $\pm$ 0.02                 \\
+         16 &                        35.67 & $\pm$ 0.02                 \\
+         32 &                        49.17 & $\pm$ 0.02                 \\
+         64 &                        62.14 & $\pm$ 0.02                 \\
 \hline
 \end{tabular}
 
+\vspace{0.5 cm}
+
+Con estos datos, se realiza una represión lineal para cada tipo de papel así pudiendo analizar la dimensión fractal obtenida. En estas aparece ya calculado el
+error asociado a la dimensión fractal, que se ha obtenido a partir de la siguiente fórmula: 
+\begin{equation}
+    \triangle d = \left | \frac{\partial d}{\partial m} \right | \triangle m = \frac{1}{m^{2}} \triangle m
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Papel_aluminio_lineal.png}
+    \caption{Regresión lineal para papel aluminio.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Papel_comprimido_lineal.png}
+    \caption{Regresión lineal para papel comprimido.}
+
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Papel_suave_lineal.png}
+    \caption{Regresión lineal para papel suave.}   
+\end{figure}
 
 \vspace{0.5cm}
 \section{Análisis de resultados}
