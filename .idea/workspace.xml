@@ -2,70 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Practica Frank-Hertz">
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_01.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_02.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_03.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_04.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_05.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_07.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_08.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_09.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_10.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_11.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_12.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_13.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_14.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_15.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_16.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_17.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_18.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_19.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_20.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_21.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_22.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_23.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_24.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_25.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_26.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_27.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_28.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_29.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_30.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_31.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_32.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_33.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_34.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_35.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_36.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_37.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_38.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_39.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_40.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_41.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_42.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_43.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_44.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_45.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_46.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_47.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_48.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_49.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_50.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_51.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_52.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_53.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_54.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_55.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_56.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_57.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_58.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_59.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_60.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_61.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_62.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Franck Hertz/T180/T180_63.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_01.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_02.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_03.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_04.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_07.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_08.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_09.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_50.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_51.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_52.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_53.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_54.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_55.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_56.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_57.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_58.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_59.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_60.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_61.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_62.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T170/T170_63.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_01.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_02.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_03.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_04.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_07.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_08.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_09.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_10.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_11.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_12.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_13.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_14.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_15.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_16.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_17.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_19.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_20.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_21.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_22.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_23.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_24.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_26.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_27.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_28.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_29.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_32.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_33.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_34.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_35.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_36.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_37.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_38.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_39.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_40.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_41.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_42.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_43.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_44.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_46.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_47.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_48.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_49.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_50.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_51.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_52.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_53.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_54.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_55.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_56.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_57.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_58.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_59.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_60.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_61.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_62.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Franck Hertz/T175/T175_63.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,7 +430,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774277407387</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Practica Frank-Hertz">
+      <option name="closed" value="true" />
+      <created>1774280167411</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1774280167412</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
