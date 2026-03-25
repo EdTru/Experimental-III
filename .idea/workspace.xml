@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Practica Frank-Hertz">
-      <change afterPath="$PROJECT_DIR$/SerieBalmer/Practica/Intensidadfrenteangulo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SerieBalmer/Practica/datos_He.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SerieBalmer/Practica/datos_Hg.py" afterDir="false" />
+    <list default="true" id="79da8e3c-7b86-43b4-b73c-627fa1778968" name="Changes" comment="Practica Serie Balmer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.log" beforeDir="false" afterPath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Difraccion/Informe/out/difraccion.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Franck Hertz/datos_P1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Franck Hertz/T170.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SerieBalmer/Practica/Intensidadfrenteangulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/SerieBalmer/Practica/Intensidadfrenteangulo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +60,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.Calculos.executor": "Run",
     "Python.Datos_red_difraccion.executor": "Run",
+    "Python.Intensidadfrenteangulo.executor": "Run",
     "Python.Medida de area por imagen.executor": "Run",
     "Python.PRPR.executor": "Run",
     "Python.Parte1.executor": "Run",
@@ -329,7 +325,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774281297208</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Practica Serie Balmer">
+      <option name="closed" value="true" />
+      <created>1774384685183</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1774384685184</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +356,8 @@
     <MESSAGE value="Informe Qiskit" />
     <MESSAGE value="Practica difracción" />
     <MESSAGE value="Practica Frank-Hertz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Practica Frank-Hertz" />
+    <MESSAGE value="Practica Serie Balmer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Practica Serie Balmer" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Experimental_III$Prueba2.coverage" NAME="Prueba2 Coverage Results" MODIFIED="1772471029426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Fractales" />
