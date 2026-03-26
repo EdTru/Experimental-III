@@ -220,7 +220,34 @@ error asociado a la dimensión fractal, que se ha obtenido a partir de la siguie
 
 \vspace{0.5cm}
 \section{Análisis de resultados}
+Además de los valores dados de dimensión fractal, se ha realizado el cálculo de residuos para cada toma
+y así poder analizar la calidad del ajuste ralizado. Para este cálculo se ha realizado una regresión lineal 
+en python con la función \texttt{scipy.stats.linregress} y a partir de esta se han obtenido los valores de 
+pendiente e intercepción para cada tipo de papel y restado al valor real obtenido.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Residuos_Papel_Suave.png}
+    \caption{Residuos para papel suave.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Residuos_Papel_Aluminio.png}
+    \caption{Residuos para papel aluminio.}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Residuos_Papel_Comprimido.png}
+    \caption{Residuos para papel comprimido.}
+\end{figure}
+
+
+\vspace{0.5cm}
+
+Vemos pues que las medidas difieren considerablemente en función del papel, y la toma dada respecto a los datos
+teóricos y entre sí. Tomando esto en cuenta, hemos comparado los resultados obtenidos con el estudio \ref{}
 \section{Conclusiones}
 
 \section{Referencias}
