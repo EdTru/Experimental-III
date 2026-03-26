@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1774285513.94669 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1774285514.82603 0
+["pdflatex"] 1774527217.02321 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1774527218.21343 0
   "/etc/texmf/web2c/texmf.cnf" 1772558401.88063 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" 1774285513.74595 9574 dd79eaca59d9dca2f3daef8a9f5e8388 ""
+  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" 1774527216.79162 9792 e894aba74dbc1c15b7e5d3a0132f3d56 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -136,9 +136,9 @@
   "Residuos_Papel_Aluminio.png" 1774284737.38692 23125 b9c7350ed03d8b1db6e8e6410ee83992 ""
   "Residuos_Papel_Comprimido.png" 1774284794.83714 20888 917adaff43841d5ef55ae981c4236992 ""
   "Residuos_Papel_Suave.png" 1774284777.64007 26124 a22af69cd31d965502ab61f816213377 ""
-  "fractales.aux" 1774285514.73795 2142 a7c8dc520a3fe619a17ce9168979a058 "pdflatex"
-  "fractales.out" 1774285514.73895 880 cc14cf7fc3509423cc5ef984b55ca487 "pdflatex"
-  "fractales.tex" 1774285513.74595 9574 dd79eaca59d9dca2f3daef8a9f5e8388 ""
+  "fractales.aux" 1774527218.11765 2142 a7c8dc520a3fe619a17ce9168979a058 "pdflatex"
+  "fractales.out" 1774527218.11865 880 cc14cf7fc3509423cc5ef984b55ca487 "pdflatex"
+  "fractales.tex" 1774527216.79162 9792 e894aba74dbc1c15b7e5d3a0132f3d56 ""
   "logoFCTo.png" 1772615879.30213 24951 42ed5d86fd536d29b7eb5bb73e116d7c ""
   (generated)
   "fractales.aux"
