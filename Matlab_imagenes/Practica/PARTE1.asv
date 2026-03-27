@@ -1,0 +1,83 @@
+% =========================
+% SCRIPT DE PRUEBA : Control basico de la camara
+% ==============================
+
+clear ; close all; clc;
+
+% 1. INICIALIZACION
+% Usa 'winvideo ' y el ID del dispositivo (1 suele ser laintegrada , 2 la USB )
+disp (' Conectando ␣con␣la␣ camara ... ') ;
+cam = videoinput('winvideo', 1);
+
+% Forzar que MATLAB devuelva la matriz en formato RGB estandar
+cam.ReturnedColorSpace = 'rgb';
+
+% 2. ENCUADRE ( Opcional )
+% Abre una ventana de video en vivo para poder apuntar lacamara
+preview(cam);
+disp (' Encuadra ␣tu␣ objetivo .␣ Capturando ␣en␣3␣ segundos ... ') ;
+%pause (3) ;
+
+% 3. CAPTURA
+% Toma una unica fotografia (un frame matricial )
+img = getsnapshot ( cam ) ;
+
+
+
+% 4. VISUALIZACION
+% Cerramos la vista previa y mostramos la foto estatica capturada
+closepreview(cam);
+%figure ('Name', 'Prueba␣de␣Captura') ;
+%imshow ( img ) ;
+%title ('Imagen␣Capturada␣Exitosamente') ;
+
+% 5. LIMPIEZA Y LIBERACION DE HARDWARE ( CRITICO )
+% Si no haces esto , tendras que reiniciar MATLAB para volver ausar la camara
+delete(cam) ; % Borra el objeto del hardware
+clear cam ; % Borra la variable del Workspace
+disp('Camara ␣ desconectada ␣y␣ liberada ␣ correctamente .') ;
+
+
+% PASAMOS A GRISES
+img_gray = double(rgb2gray(img)) / 255; 
+
+N = 512;
+Objt1 = imresize(img_gray,[N,N]);
+
+Objt2 = zeros(N,N);
+Objt2 = insertText(Objt2,[N/2,N/2],"FISICA",'FontSize', 60, 'BoxOpacity', 0, 'TextColor', 'white');
+Objt2 = double(rgb2gray(Objt2));
+
+lambda = 633e-9;
+deltax = 5e-6;
+
+deltaf = 1/(N*deltax);
+[u,v] = meshgrid(-N/2 : N/2-1,-N/2 : N/2-1);
+
+U = u.*deltaf;
+V = v.*deltaf;
+
+z1 = 0.05;
+z2 = 0.15;
+
+H_objt1 = exp(-1j * pi * lambda * z1 * (U.^2 + V.^2));
+H_objt2 = exp(-1j * pi * lambda * z2 * (U.^2 + V.^2));
+
+Campobt1 = ifft2(ifftshift( fftshift(fft2(Objt1)).* H_objt1 ));
+Campobt2 = ifft2(ifftshift( fftshift(fft2(Objt2)).* H_objt2 ));
+
+U_holo = Campobt1+Campobt2;
+imshow(U_holo)
+
+U_bucle = 0;
+for z  = 0:0.001:0.2
+    H_mov = exp(-1j * pi * lambda * z * (U.^2 + V.^2));
+
+    Campo_mov = ifft2(ifftshift( fftshift(fft2(U_holo)).* H_mov ));
+    U_bucle = Campo_mov;
+    amp = abs(Campo_mov).^2;
+    %subplot(2,1,1); 
+    imshow(amp);
+    pause(1)
+end
+

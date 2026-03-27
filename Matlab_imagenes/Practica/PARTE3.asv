@@ -1,0 +1,35 @@
+clear; clc;
+
+M_RGB2XYZ= [0.4124, 0.3576, 0.1805;
+            0.2126, 0.7152, 0.0722;
+            0.0193, 0.1192, 0.9505];
+
+i1 = imread('3000k.png');
+pix = impixel(i1, 30:39, 30:39);
+
+pix_norm= transpose(pix/255);
+
+pix_lin = pix_norm .^2;
+
+
+for i = 1:10
+    R= M_RGB2XYZ * pix_lin(i);
+    X = R(1,:);
+    Y = R(2,:);
+    Z = R(3,:);
+    
+    N= X+Y+Z;
+
+    x = X/N;
+    y = Y/N;
+    z = Z/N;
+end
+
+%load 3500k.png;
+%load 4000k.png;
+%load 4500k.png;
+%load 5000k.png;
+%load 5500k.png;
+%load 6000k.png;
+
+
