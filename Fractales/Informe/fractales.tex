@@ -27,6 +27,8 @@
 % --- Hipervínculos y Referencias ---
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
+\usepackage{biblatex}
+\addbibresource{referencias.bib}
 
 % --- Título y Autores ---
 \title{\textbf{\Large Fractales: Dimensiones enteras y fraccionarias}}
@@ -100,7 +102,8 @@ Para realizar esto, se ha utilizado la siguiente relación:
 \end{equation}
 
 Donde d es la dimensión fractal, M es la masa del objeto, K es una constante de proporcionalidad y D el diámetro de la esfera considerada. Para
-analizar la ecuación se realizara una regresión lineal aplicando logaritmo a ambos lados: 
+analizar la ecuación de forma lineal pasaremos la ecuación con relaciones en base a elyes de potencias a una lineal usado las propiedades de los
+logaritmos. Con esto conseguiremos que la pendiente sea la relacion entre la dimension fractal y la masa. 
 
 \begin{equation}
     \log(D) = \log(K) + \frac{1}{d} \log(M)
@@ -221,7 +224,7 @@ error asociado a la dimensión fractal, que se ha obtenido a partir de la siguie
 \vspace{0.5cm}
 \section{Análisis de resultados}
 Además de los valores dados de dimensión fractal, se ha realizado el cálculo de residuos para cada toma
-y así poder analizar la calidad del ajuste ralizado. Para este cálculo se ha realizado una regresión lineal 
+y así poder analizar la calidad del ajuste lineal realizado. Para este cálculo se ha realizado una regresión lineal 
 en python con la función \texttt{scipy.stats.linregress} y a partir de esta se han obtenido los valores de 
 pendiente e intercepción para cada tipo de papel y restado al valor real obtenido.
 
@@ -246,17 +249,54 @@ pendiente e intercepción para cada tipo de papel y restado al valor real obteni
 
 \vspace{0.5cm}
 
-Vemos pues que las medidas difieren considerablemente en función del papel, y la toma dada respecto a los datos
-teóricos y entre sí. Tomando esto en cuenta, hemos comparado los resultados obtenidos con el estudio. 
+Al analizar los residuos, vemos que el modelo es adecuado, si bien no representa una homostacidad perfecta ya que ciertos valores 
+como el valor quinto de el papel suave tienen saltos significativos respecto a los demás.Tomando esto en cuenta, hemos comparado los resultados obtenidos con los estudios:
+
+\vspace{0.5cm}
+
+\cite{gomes1987fractal}, \cite{balankin2010fractal}, \cite{cambou2011three}, \cite{garcia2012bolas}.
+
+\vspace{0.5cm}
+
+Donde en ellos se obtiene una media de dimensión fractal de entre 2.3 a 2.5.
+\vspace{0.5cm}
+
+Vemos pues que aún a pesar de los resultados obtenidos en el cálculo de los residuos asociados a las tomas, los resultados
+ experimentales son consistentes con estudios realizados previamente.  
 \section{Conclusiones}
+
+Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
+se encurntra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
+ocupa todo el espacio teniendo zonas con aire lo que hace variar su volumen general. 
+
+
+En el caso de que hubieramos obtenido un valor experimental de $d = 3$, eso implicaría que la bola que hemos creado sería perfectamente esférica, 
+lo que implicaría que estaríamos hablando de un objeto en 3D. 
+
+\vspace{0.5cm}
+Podemos sacar otras relaciones en base a la masa y el volumen como la densidad. Como $\rho = \frac{M}{V}$ y $V \propto R^d$, 
+podemos decir que $\rho \propto D^{d-3}$. Y como $d < 3$, las bolas más grandes, con mayor masa serán menos densas que las más 
+pequeñas y compactas. 
+
+\vspace{0.5cm}
+
+Otra relación interesante es la dependendia de $d$ con el tipo de material utilizado para formar las esferas y con el método (si han sido comprimidas o no). 
+En nuestro caso podemos apreciar que el pael de aluminio es el que más se acerca a tener una dimensión igual a 3, mientras que el papel no comprimido se aleja más
+si bien el comprimido tiene una dimensión mayor. Es decir cuanto más maleable o más se trabaje para asimilar a una esfera, mayor será la dimensión fractal obetnida.
+
+\textbf{AQUÍ HABRÍA QUE COMPARAR EL ERROR OBTENIDO PARA m EXPERIMENTALMENTE CON EL OBTENIDO EN LA APLICACIÓN}
+
+\vspace{1cm}
+Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de práctias: 
+\cite{experimental32026}
 
 \section{Referencias}
 
-\begin{thebibliography}{99}
-\bibitem{autor2024}
-Apellido, Nombre (2024). \textit{Título del Libro o Artículo}. Editorial o Revista.
-\end{thebibliography}
+\nocite{gomes1987fractal}
+\nocite{balankin2010fractal}
+\nocite{cambou2011three}
+\nocite{garcia2012bolas}
 
-\section{Anexos}
+\printbibliography
 
 \end{document}
