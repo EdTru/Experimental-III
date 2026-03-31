@@ -113,13 +113,20 @@ El objetivo principal de esta práctica es el estudio de la difracción para dif
  
 Para el estudio aquí presentado se han realizado mediciones del patrón de difracción tras colocar el láser con $\lambda = 630-650 nm$ frente a la red de
 difraccición. Esta a su vez se ha colocado a una distancia variable de entre 0.3 a 1 metro de respecto a la pantalla donde se han tomado las medidas, en este caso una caja de cartón.
-Estas medidas se han tomado con un calibre milimetrado. 
+Estas medidas se han tomado con un calibre milimetrado. Con estos datos usaremos la relación de intensidad mostrada antes para llegar a la relación: 
 
-\vspace{0.2cm}
+\begin{equation}
+    2 a sin(\theta) = m \lambda
+\end{equation}
 
-Este mismo procedimiento se ha realizado tanto para la rendija simple como para la red de difracción. 
+Donde si aproximamos $sin(\theta) \approx \theta = \frac{D}{L}$:
 
-\newpage
+\begin{equation}
+    X_{min} = \frac{\lambda D}{2 a}
+\end{equation}
+
+Y donde $2a$ es la anchura de la rendija, $D$ es la distancia entre los mínimos y $L$ es la distancia entre la rendija y la pantalla. Para una red de difracción es casi igual cambiando la distancia 
+$2a$ por el parámetro de red $\frac{1}{2d}$ (en líneas/mm).
 
 \begin{figure}[h]
     \centering
@@ -128,7 +135,11 @@ Este mismo procedimiento se ha realizado tanto para la rendija simple como para 
 \end{figure}
 
 Posterioremnte para el estudio espectroscópico se ha colocado la red en un goniómetro apuntando en la dirección de la emisión de luz de la lámpara del helio. Con el goniómetro se han calculado 
-los ángulos respecto a un ángulo incial de referencia y con estos datos se han realizado los cálculos.
+los ángulos respecto a un ángulo incial de referencia y con estos datos se han realizado los cálculos usando la siguiente relación: 
+
+\begin{equation}
+    \theta_{i} = arcsin\left(\frac{\lambda_{i}}{2d}\right) \approx \frac{\lambda_{i}}{2d}
+\end{equation}
 
 
 \begin{figure}[h]
@@ -139,52 +150,8 @@ los ángulos respecto a un ángulo incial de referencia y con estos datos se han
 
 \section{Tratamiento de datos}
 
-A continuación mostraremos las tablas de datos obtenidos. Para cada tipo de papel se han realizado 7 medidas para cada masa de cada pelota
-y realizado el promedio de estas medidas para cada una. El error asociado es el error del calibre utilizado para la propia medida, en este caso 0.02mm.
-
-\vspace{0.5cm}
-
-Tabla de datos para papel suave:
-
-\begin{tabular}{ccc}
-\hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
-\hline
-          1 &                        16.14 & $\pm$ 0.02                 \\
-          2 &                        23.96 & $\pm$ 0.02                 \\
-          4 &                        31.66 & $\pm$ 0.02                 \\
-          8 &                        41.5  & $\pm$ 0.02                 \\
-         16 &                        48.87 & $\pm$ 0.02                 \\
-         32 &                        74.19 & $\pm$ 0.02                 \\
-         64 &                       108.4  & $\pm$ 0.02                 \\
-\hline
-\end{tabular}
-
-
-\vspace{0.5cm}
-
-
-Tabla de datos para papel aluminio:
-
-\begin{tabular}{ccc}
-\hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
-\hline
-          1 &                        10.06 & $\pm$ 0.02                 \\
-          2 &                        11.91 & $\pm$ 0.02                 \\
-          4 &                        17    & $\pm$ 0.02                 \\
-          8 &                        20.7  & $\pm$ 0.02                 \\
-         16 &                        27.06 & $\pm$ 0.02                 \\
-         32 &                        35.87 & $\pm$ 0.02                 \\
-         64 &                        53.54 & $\pm$ 0.02                 \\
-\hline
-\end{tabular}
-
-
-\vspace{0.5cm}
-
-
-Tabla de datos para papel comprimido:
+\subsection{Rendija simple}
+Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada caso. La distancia mostrada es la medida entre los dos primeros mínimos, $m = -1$ y $m=1$.
 
 \begin{tabular}{ccc}
 \hline
