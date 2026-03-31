@@ -1,13 +1,14 @@
 # Fdb version 4
-["biber difraccion"] 1774954483.56657 "difraccion.bcf" "difraccion.bbl" "difraccion" 1774956933.59984 0
-  "difraccion.bcf" 1774956933.51379 107351 4fe8951dc95e2140f6188ab8ec0feb40 "pdflatex"
+["biber difraccion"] 0 "difraccion.bcf" "difraccion.bbl" "difraccion" 1774973058.88774 -1
+  "difraccion.bcf" 1774973058.77105 107351 4fe8951dc95e2140f6188ab8ec0feb40 "pdflatex"
+  "difraccion.bib" 1774971524.47908 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "difraccion.bbl"
   "difraccion.blg"
   (rewritten before read)
-["pdflatex"] 1774956932.60441 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Difraccion/Informe/difraccion.tex" "difraccion.pdf" "difraccion" 1774956933.6002 0
+["pdflatex"] 1774973057.57817 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Difraccion/Informe/difraccion.tex" "difraccion.pdf" "difraccion" 1774973058.88809 0
   "/etc/texmf/web2c/texmf.cnf" 1772558401.88063 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Difraccion/Informe/difraccion.tex" 1774956931.50578 9189 74301fc0899f1fb90e8fd33e67801cdb ""
+  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Difraccion/Informe/difraccion.tex" 1774973057.295 10400 b8812d232bc0ba39c4ec37be19242fc9 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -154,11 +155,13 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772558436.28143 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772558537 8213750 c6ebc134b42159850a4c1734aebddba1 ""
-  "difraccion.aux" 1774956933.51079 1212 ca59eed5c98b5075332acf3dbf2b850d "pdflatex"
-  "difraccion.bbl" 1774954484.19405 466 ee04f40f768daeed26442158e95aba61 "biber difraccion"
-  "difraccion.out" 1774956933.51279 807 5676db89b5e4d038b1f886e88451c096 "pdflatex"
-  "difraccion.run.xml" 1774956933.51534 2347 24fac60f60c7e8d3f68a58bc626f35bd "pdflatex"
-  "difraccion.tex" 1774956931.50578 9189 74301fc0899f1fb90e8fd33e67801cdb ""
+  "difraccion.aux" 1774973058.76805 1531 3bbf531b4cbda88525fb8423e4a89347 "pdflatex"
+  "difraccion.bbl" 1774971524.47725 466 ee04f40f768daeed26442158e95aba61 "biber difraccion"
+  "difraccion.out" 1774973058.77005 807 5676db89b5e4d038b1f886e88451c096 "pdflatex"
+  "difraccion.run.xml" 1774973058.7736 2347 24fac60f60c7e8d3f68a58bc626f35bd "pdflatex"
+  "difraccion.tex" 1774973057.295 10400 b8812d232bc0ba39c4ec37be19242fc9 ""
+  "fotos práctica/montaje_espectroscopio.jpg" 1774971524.54323 2657376 17afdee71d68dd41a0f7603e676291d0 ""
+  "fotos práctica/montaje_rendija.jpg" 1774971524.57755 2935299 ff50fc8ad443a105574766cc33c1b904 ""
   "logoFCTo.png" 1774953598.75434 24951 42ed5d86fd536d29b7eb5bb73e116d7c ""
   (generated)
   "difraccion.aux"
