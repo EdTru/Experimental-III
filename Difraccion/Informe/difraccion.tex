@@ -1,5 +1,6 @@
 \documentclass[11pt, a4paper, twocolumn]{article}
 
+
 % --- Paquetes de Idioma y Codificación ---
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, es-nodecimaldot]{babel} % Configurado para español
@@ -10,7 +11,7 @@
 \usepackage{microtype} % Mejora el espaciado entre letras y palabras
 
 % --- Geometría de Página ---
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=2.5cm, top=3.8cm, headheight=65pt, headsep=0.8cm]{geometry}
 \columnsep 0.6cm % Espacio entre columnas
 
 % --- Matemáticas Avanzadas ---
@@ -26,13 +27,16 @@
 % --- Hipervínculos y Referencias ---
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
+\usepackage{csquotes} % Soluciona el warning de babel/polyglossia
+\usepackage{biblatex}
+\addbibresource{difraccion.bib}
 
 % --- Título y Autores ---
-\title{\textbf{\Large Difracción}}
+\title{\textbf{\Large Fractales: Dimensiones enteras y fraccionarias}}
 \author{
-    \textbf{Sanz Rubio, Juan}; \textbf{Truchado Iniesta, Eduardo} \\
-    \small Grado de Física, UCLM. \texttt{autor1@email.com} \\
-    \small Grado de Física, UCLM. \texttt{autor2@email.com}
+    \textbf{Truchado Iniesta, Eduardo}, \textbf{Sanz Rubio, Juan} \\
+    \small Grado de Física, UCLM. \texttt{juan.sanz1@alu.uclm.es} \\
+    \small Grado de Física, UCLM. \texttt{eduardo.truchado@alu.uclm.es}
 }
 \date{\small 2 Marzo 2026}
 
@@ -48,9 +52,16 @@
 % Imagen a la IZQUIERDA
 \fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}}
 
+\fancyfoot[C]{\thepage}
 
-% Espaciado para que el texto no choque con las imágenes
-\setlength{\headheight}{60.98553pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{} % Limpia el estilo plain por defecto
+    \fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}} % Mantiene tu logo
+    \fancyfoot[C]{\thepage} % Fuerza el número de página
+    \renewcommand{\headrulewidth}{0.4pt} % Mantiene la línea
+}
+
 % --- Inicio del Documento ---
 
 \begin{document}
@@ -59,9 +70,19 @@
 \thispagestyle{fancy}
 
 %Resumen
+
 \begin{abstract}
-HAy que meter pajas sssssss
+En esta práctica, se realizan 3 partes. La primera de ellas se trata de usando la medición de los máximos y mínimos del patrón 
+de difracción generado, se mida la anchura de una rendija que genera el patrón, en este primer caso se utiliza una rendija simple. 
+Después en la segunda parte se realiza el mismo cálculo pero para una red de difracción así pudiendo obtener su parámetro de red. 
+
+\vspace{0.2cm}
+
+A parte se ha realizado una parte opcional donde se consigue un patrón de difracción circular a través de un filtro con aberturas circulares. Y por último se analizan las 
+longitudes de onda espectroscópicas del helio a través de la red de difracción analizada previamente. 
 \end{abstract}
+
+
 
 \section{Introducción}
 La difracción es un efecto físico propio de las ondas que ocurre cuando estas chocan contra un obstáculo cuya anchura
@@ -83,18 +104,130 @@ Donde $\beta = k a sin(\theta)$.
 Por otro lado en este estudio también se realizará un tratamiento espectroscópico a un elemento químico. Cada uno de estos 
 emite un espectro de longitudes de onda característico que nos permite identificarlo bajo una emisión de luz y usando una red 
 de difracción como filtro.
-
 \section{Objetivos}
 
 \section{Metodología}
 
+Para realizar esta práctica se han utilizado 3 tipos de papel: 
+\begin{itemize}
+    \item Papel de cocina
+    \item Papel aluminio
+    \item Papel tipo folio
+\end{itemize}
+
+Cada uno de estos ha sido tratado de diferente forma. En el caso del papel de cocina, ha sido compactado suavemente con las manos, 
+el papel de aluminio ha sido compactado con las manos también pero de forma más intensa, y el papel de tipo folio ha sido comprimido 
+con una bandeja con pesos de entorno a 1 kilo por encima. 
+
+\vspace{0.2cm}
+
+Cabe destacar el tamaño utilizado ya que este se ha vasado en un tamaño original consistente en un aproximado 1/8 de un papel de cocina completo. Así siendo este el 
+peso de valor 1 y aumentando este hasta llegar a 64.  
 \section{Tratamiento de datos}
 
-\section{Análisis de resultados}
-% --- Bibliografía ---
-\begin{thebibliography}{99}
-\bibitem{autor2024} 
-Apellido, Nombre (2024). \textit{Título del Libro o Artículo}. Editorial o Revista.
-\end{thebibliography}
+A continuación mostraremos las tablas de datos obtenidos. Para cada tipo de papel se han realizado 7 medidas para cada masa de cada pelota
+y realizado el promedio de estas medidas para cada una. El error asociado es el error del calibre utilizado para la propia medida, en este caso 0.02mm.
 
-\end{document}  
+\vspace{0.5cm}
+
+Tabla de datos para papel suave:
+
+\begin{tabular}{ccc}
+\hline
+   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
+\hline
+          1 &                        16.14 & $\pm$ 0.02                 \\
+          2 &                        23.96 & $\pm$ 0.02                 \\
+          4 &                        31.66 & $\pm$ 0.02                 \\
+          8 &                        41.5  & $\pm$ 0.02                 \\
+         16 &                        48.87 & $\pm$ 0.02                 \\
+         32 &                        74.19 & $\pm$ 0.02                 \\
+         64 &                       108.4  & $\pm$ 0.02                 \\
+\hline
+\end{tabular}
+
+
+\vspace{0.5cm}
+
+
+Tabla de datos para papel aluminio:
+
+\begin{tabular}{ccc}
+\hline
+   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
+\hline
+          1 &                        10.06 & $\pm$ 0.02                 \\
+          2 &                        11.91 & $\pm$ 0.02                 \\
+          4 &                        17    & $\pm$ 0.02                 \\
+          8 &                        20.7  & $\pm$ 0.02                 \\
+         16 &                        27.06 & $\pm$ 0.02                 \\
+         32 &                        35.87 & $\pm$ 0.02                 \\
+         64 &                        53.54 & $\pm$ 0.02                 \\
+\hline
+\end{tabular}
+
+
+\vspace{0.5cm}
+
+
+Tabla de datos para papel comprimido:
+
+\begin{tabular}{ccc}
+\hline
+   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
+\hline
+          1 &                        10.79 & $\pm$ 0.02                 \\
+          2 &                        15.29 & $\pm$ 0.02                 \\
+          4 &                        23.69 & $\pm$ 0.02                 \\
+          8 &                        27.53 & $\pm$ 0.02                 \\
+         16 &                        35.67 & $\pm$ 0.02                 \\
+         32 &                        49.17 & $\pm$ 0.02                 \\
+         64 &                        62.14 & $\pm$ 0.02                 \\
+\hline
+\end{tabular}
+
+\vspace{0.5 cm}
+
+Con estos datos, se realiza una represión lineal para cada tipo de papel así pudiendo analizar la dimensión fractal obtenida. En estas aparece ya calculado el
+error asociado a la dimensión fractal, que se ha obtenido a partir de la siguiente fórmula: 
+\begin{equation}
+    \triangle d = \left | \frac{\partial d}{\partial m} \right | \triangle m = \frac{1}{m^{2}} \triangle m
+\end{equation}
+
+
+\section{Análisis de resultados}
+
+
+Vemos pues que aún a pesar de los resultados obtenidos en el cálculo de los residuos asociados a las tomas, los resultados
+ experimentales son consistentes con estudios realizados previamente.  
+\section{Conclusiones}
+
+Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
+se encurntra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
+ocupa todo el espacio teniendo zonas con aire lo que hace variar su volumen general. 
+
+
+En el caso de que hubieramos obtenido un valor experimental de $d = 3$, eso implicaría que la bola que hemos creado sería perfectamente esférica, 
+lo que implicaría que estaríamos hablando de un objeto en 3D. 
+
+\vspace{0.5cm}
+Podemos sacar otras relaciones en base a la masa y el volumen como la densidad. Como $\rho = \frac{M}{V}$ y $V \propto R^d$, 
+podemos decir que $\rho \propto D^{d-3}$. Y como $d < 3$, las bolas más grandes, con mayor masa serán menos densas que las más 
+pequeñas y compactas. 
+
+\vspace{0.5cm}
+
+Otra relación interesante es la dependendia de $d$ con el tipo de material utilizado para formar las esferas y con el método (si han sido comprimidas o no). 
+En nuestro caso podemos apreciar que el pael de aluminio es el que más se acerca a tener una dimensión igual a 3, mientras que el papel no comprimido se aleja más
+si bien el comprimido tiene una dimensión mayor. Es decir cuanto más maleable o más se trabaje para asimilar a una esfera, mayor será la dimensión fractal obetnida.
+
+\textbf{AQUÍ HABRÍA QUE COMPARAR EL ERROR OBTENIDO PARA m EXPERIMENTALMENTE CON EL OBTENIDO EN LA APLICACIÓN}
+
+\vspace{1cm}
+Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de práctias: 
+
+
+\section{Referencias}
+
+
+\end{document}

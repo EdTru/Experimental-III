@@ -7,6 +7,7 @@ datos_manual = np.array([
 ])
 
 
+
 binario_1 = []
 voltaje_1 = []
 
