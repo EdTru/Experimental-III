@@ -355,6 +355,7 @@ INPUT ./fotos práctica/montaje_espectroscopio.jpg
 INPUT ./fotos práctica/montaje_espectroscopio.jpg
 INPUT ./fotos práctica/montaje_espectroscopio.jpg
 INPUT ./fotos práctica/montaje_espectroscopio.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
@@ -366,7 +367,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
@@ -374,8 +376,6 @@ INPUT ./logoFCTo.png
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT difraccion.aux
 INPUT ./difraccion.out
 INPUT ./difraccion.out

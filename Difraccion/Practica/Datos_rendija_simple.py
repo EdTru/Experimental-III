@@ -55,16 +55,14 @@ r6 = np.transpose(rendija_1_6)[1]
 
 indices_tabla = ["D (cm)", "Xmin (mm)", r"$\Delta D$ (mm)"]
 
-tabla_r1 = tb.tabulate(rendija_1_1, headers=indices_tabla, tablefmt="latex")
-tabla_r2 = tb.tabulate(rendija_1_2, headers=indices_tabla, tablefmt="latex")
-tabla_r3 = tb.tabulate(rendija_1_3, headers=indices_tabla, tablefmt="latex")
-tabla_r4 = tb.tabulate(rendija_1_4, headers=indices_tabla, tablefmt="latex")
-tabla_r5 = tb.tabulate(rendija_1_5, headers=indices_tabla, tablefmt="latex")
-tabla_r6 = tb.tabulate(rendija_1_6, headers=indices_tabla, tablefmt="latex")
+tabla_r1 = tb.tabulate(rendija_1_1, headers=indices_tabla, tablefmt="latex_raw")
+tabla_r2 = tb.tabulate(rendija_1_2, headers=indices_tabla, tablefmt="latex_raw")
+tabla_r3 = tb.tabulate(rendija_1_3, headers=indices_tabla, tablefmt="latex_raw")
+tabla_r4 = tb.tabulate(rendija_1_4, headers=indices_tabla, tablefmt="latex_raw")
+tabla_r5 = tb.tabulate(rendija_1_5, headers=indices_tabla, tablefmt="latex_raw")
+tabla_r6 = tb.tabulate(rendija_1_6, headers=indices_tabla, tablefmt="latex_raw")
 
-print(tabla_r1)
-print(tabla_r2)
-print(tabla_r3)
-print(tabla_r4)
-print(tabla_r5)
-print(tabla_r6)
+tablas = [tabla_r1, tabla_r2, tabla_r3, tabla_r4, tabla_r5, tabla_r6]
+
+for i,j  in enumerate(tablas):
+	print(j)
