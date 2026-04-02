@@ -44,7 +44,6 @@ rendija_1_6 = np.array([[100,62.60, r"$\pm 0.02$"],
 
 distancias = np.transpose(rendija_1_1)[0]
 
-errores = np.array([r"$\pm 0.02$", r"$\pm 0.02$", r"$\pm 0.02$", r"$\pm 0.02$", r"$\pm 0.02$"])
 r1 = np.transpose(rendija_1_1)[1]
 r2 = np.transpose(rendija_1_2)[1]
 r3 = np.transpose(rendija_1_3)[1]

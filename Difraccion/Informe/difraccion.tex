@@ -22,6 +22,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
 \usepackage{caption}
+\usepackage{float} % Permite el uso del modificador [H] para fijar la posición de las tablas
 \captionsetup{labelfont=bf, font=small} % Captions en negrita y pequeñas
 
 % --- Hipervínculos y Referencias ---
@@ -150,125 +151,194 @@ los ángulos respecto a un ángulo incial de referencia y con estos datos se han
 
 \section{Tratamiento de datos}
 \subsection{Rendija simple}
-Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada caso. La distancia mostrada es la medida entre los dos primeros mínimos, $m = -1$ y $m=1$.
+Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada caso. La distancia mostrada es la medida entre los dos primeros mínimos, $m = -1$ y $m=1$ dividida entre 2 para reducir errores.
 
-\centering{\textbf{Tabla para la toma 1 }}
+\begin{table}[H]
+    \caption{Tabla para la toma 1 }
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        \hline
+            1000 &        9    & $\pm 0.5$        & $\pm 0.02$ \\        \
+            900 &        8.12 & $\pm 0.5$        & $\pm 0.02$ \\
+            800 &        6.86 & $\pm 0.5$        & $\pm 0.02$ \\
+            700 &        6.35 & $\pm 0.5$        & $\pm 0.02$ \\
+            600 &        5.05 & $\pm 0.5$        & $\pm 0.02$ \\
+        \hline
 
-\vspace{0.3cm}
-
-\begin{tabular}{ccc}
-\hline
-   D (cm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   \\
-\hline
-      100 &        9    & $\pm 0.02$        \\
-       90 &        8.12 & $\pm 0.02$        \\
-       80 &        6.86 & $\pm 0.02$        \\
-       70 &        6.35 & $\pm 0.02$        \\
-       60 &        5.05 & $\pm 0.02$        \\
-\hline
-
-\end{tabular}
-
-\vspace{0.5cm}
-
-\centering{\textbf{Tabla para la toma 2 }}
-
-\vspace{0.3cm}
-
-\begin{tabular}{ccc}
-\hline
-   D (cm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   \\
-\hline
-      100 &       10.66 & $\pm 0.02$        \\
-       90 &        9.57 & $\pm 0.02$        \\
-       80 &        8.12 & $\pm 0.02$        \\
-       70 &        7.78 & $\pm 0.02$        \\
-       60 &        5.87 & $\pm 0.02$        \\
-\hline
-\end{tabular}
+    \end{tabular}
+\end{table}
 
 \vspace{0.5cm}
 
-\centering{\textbf{Tabla para la toma 3 }}
+\begin{table}[H]
+    \caption{Tabla para la toma 2 }
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        \hline
+            1000 &       10.66 & $\pm 0.5$        & $\pm 0.02$ \\
+            900 &        9.57 & $\pm 0.5$        & $\pm 0.02$ \\
+            800 &        8.12 & $\pm 0.5$        & $\pm 0.02$ \\
+            700 &        7.78 & $\pm 0.5$        & $\pm 0.02$ \\
+            600 &        5.87 & $\pm 0.5$        & $\pm 0.02$ \\
+        \hline
+    \end{tabular}
+\end{table}
 
-\vspace{0.3cm}
-
-\begin{tabular}{ccc}
-\hline
-   D (cm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   \\
-\hline
-      100 &       13.48 & $\pm 0.02$        \\
-       90 &       12.21 & $\pm 0.02$        \\
-       80 &       10.83 & $\pm 0.02$        \\
-       70 &        9.63 & $\pm 0.02$        \\
-       60 &        7.89 & $\pm 0.02$        \\
-\hline
-\end{tabular}
-
-\vspace{0.5cm}
-
-\centering{\textbf{Tabla para la toma 4 }}
-
-\vspace{0.3cm}
-
-\begin{tabular}{ccc}
-\hline
-   D (cm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   \\
-\hline
-      100 &       17.8  & $\pm 0.02$        \\
-       90 &       15.36 & $\pm 0.02$        \\
-       80 &       14.28 & $\pm 0.02$        \\
-       70 &       12.12 & $\pm 0.02$        \\
-       60 &       10.93 & $\pm 0.02$        \\
-\hline
-\end{tabular}
 
 \vspace{0.5cm}
 
-\newpage
+\begin{table}[H]
+    \caption{Tabla para la toma 3 }
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        \hline
+            1000 &       13.48 & $\pm 0.5$        & $\pm 0.02$ \\
+            900 &       12.21 & $\pm 0.5$        & $\pm 0.02$ \\
+            800 &       10.83 & $\pm 0.5$        & $\pm 0.02$ \\
+            700 &        9.63 & $\pm 0.5$        & $\pm 0.02$ \\
+            600 &        7.89 & $\pm 0.5$        & $\pm 0.02$ \\
+        \hline
+    \end{tabular}
 
-\centering{\textbf{Tabla para la toma 5 }}
-
-\vspace{0.3cm}
-
-\begin{tabular}{ccc}
-\hline
-   D (cm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   \\
-\hline
-      100 &       24.29 & $\pm 0.02$        \\
-       90 &       21.32 & $\pm 0.02$        \\
-       80 &       19.82 & $\pm 0.02$        \\
-       70 &       17.78 & $\pm 0.02$        \\
-       60 &       13.83 & $\pm 0.02$        \\
-\hline
-\end{tabular}
+\end{table}
 
 \vspace{0.5cm}
 
-\centering{\textbf{Tabla para la toma 6 }}
+\begin{table}[H]
+    \caption{Tabla para la toma 4 }
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        \hline
+            1000 &       17.8  & $\pm 0.5$        & $\pm 0.02$ \\
+            900 &       15.36 & $\pm 0.5$        & $\pm 0.02$ \\
+            800 &       14.28 & $\pm 0.5$        & $\pm 0.02$ \\
+            700 &       12.12 & $\pm 0.5$        & $\pm 0.02$ \\
+            600 &       10.93 & $\pm 0.5$        & $\pm 0.02$ \\
+        \hline
+    \end{tabular}
+\end{table}
 
-\vspace{0.3cm}
+\vspace{0.5cm}
 
-\begin{tabular}{ccc}
-\hline
-   D (cm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   \\
-\hline
-      100 &       62.6  & $\pm 0.02$        \\
-       90 &       56.25 & $\pm 0.02$        \\
-       80 &       50.34 & $\pm 0.02$        \\
-       70 &       44.17 & $\pm 0.02$        \\
-       60 &       37.59 & $\pm 0.02$        \\
-\hline
-\end{tabular}
+\begin{table}[H]
+    \caption{Tabla para la toma 5 }
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        \hline
+            1000 &       24.29 & $\pm 0.5$        & $\pm 0.02$ \\
+            900 &       21.32 & $\pm 0.5$        & $\pm 0.02$ \\
+            800 &       19.82 & $\pm 0.5$        & $\pm 0.02$ \\
+            700 &       17.78 & $\pm 0.5$        & $\pm 0.02$ \\
+            600 &       13.83 & $\pm 0.5$        & $\pm 0.02$ \\
+        \hline
+    \end{tabular}
 
-\vspace{0.5 cm}
+\end{table}
 
-Con estos datos, se realiza una represión lineal para cada tipo de papel así pudiendo analizar la dimensión fractal obtenida. En estas aparece ya calculado el
-error asociado a la dimensión fractal, que se ha obtenido a partir de la siguiente fórmula: 
-\begin{equation}
-    \triangle d = \left | \frac{\partial d}{\partial m} \right | \triangle m = \frac{1}{m^{2}} \triangle m
-\end{equation}
+\vspace{0.5cm}
 
+\begin{table}[H]
+    \caption{Tabla para la toma 6 }
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) & $X_{min}$ (mm) & $\Delta X_{min}$ (mm) & $\Delta D$ (mm)  \\
+        \hline
+        1000 & 62.6  & $\pm 0.5$  & $\pm 0.02$  \\
+        900  & 56.25 & $\pm 0.5$  & $\pm 0.02$  \\
+        800  & 50.34 & $\pm 0.5$  & $\pm 0.02$  \\
+        700  & 44.17 & $\pm 0.5$  & $\pm 0.02$  \\
+        600  & 37.59 & $\pm 0.5$  & $\pm 0.02$  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Red de difracción}
+Para el caso de una red de difracción, se han examinado 3 redes distintas para buscar sus parámetros de red y obtener el número de líneas por milímetro:
+
+\begin{table}[H]
+    \caption{Tabla para la red de 600 líneas/mm }
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (mm)   \\
+        \hline
+            350 &           28   & $\pm 0.5$         & $\pm 0.02$              \\
+            300 &           25.2 & $\pm 0.5$         & $\pm 0.02$              \\
+            250 &           19.6 & $\pm 0.5$         & $\pm 0.02$              \\
+            200 &           15.9 & $\pm 0.5$         & $\pm 0.02$              \\
+            150 &           12   & $\pm 0.5$         & $\pm 0.02$              \\
+        \hline
+    \end{tabular}    
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+    \caption{Tabla para la red de 300 líneas/mm}
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (cm)   \\
+        \hline
+            700 &           28.4 & $\pm 0.5$         & $\pm 0.02$              \\
+            600 &           23.8 & $\pm 0.5$         & $\pm 0.02$              \\
+            500 &           20.2 & $\pm 0.5$         & $\pm 0.02$              \\
+            400 &           15   & $\pm 0.5$         & $\pm 0.02$              \\
+            300 &           11.9 & $\pm 0.5$         & $\pm 0.02$              \\
+        \hline
+    \end{tabular}
+
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+    \caption{Tabla para la red de 100 líneas/mm}
+    \centering
+    \small
+    \setlength{\tabcolsep}{4pt}
+
+    \begin{tabular}{cccc}
+        \hline
+        D (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (mm)   \\
+        \hline
+            700 &            9.1 & $\pm 0.5$         & $\pm 0.02$              \\
+            600 &            8.4 & $\pm 0.5$         & $\pm 0.02$              \\
+            500 &            6.1 & $\pm 0.5$         & $\pm 0.02$              \\
+            400 &            5   & $\pm 0.5$         & $\pm 0.02$              \\
+            300 &            3.9 & $\pm 0.5$         & $\pm 0.02$              \\
+        \hline
+    \end{tabular}
+
+\end{table}
 
 \section{Análisis de resultados}
 
