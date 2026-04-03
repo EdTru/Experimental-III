@@ -141,6 +141,18 @@ Estas dos últimas las calcularemos utilizando:
 	z = \frac{|f-p|}{\sigma}
 \end{equation}
 
+La probabilidad teórica la calcularemos sabiendo que la puerta $R_y{\theta}$ nos
+crea el estado:
+
+\begin{equation}
+	R_y(\theta)|0\rangle = \cos(\frac{\theta}{2})|0\rangle + \sen(\frac{\theta}{2})|1\rangle
+\end{equation}
+
+Y cómo la probabilidad es proporcional al cuadrado de cada componente, conoceremos
+el valor teórico de la probabilidad.
+
+\vspace{0.2cm}
+
 Además de esta tabla, como parte extra realizaremos un programa que 
 ejecute el código, con un número de $shots$ dado, varias veces. De esta
 manera podemos como se distribuye la desviación típica.
@@ -166,7 +178,7 @@ Para ello, nuestro circuito será:
 
 Como en el apartado anterior, ejecutaremos el circuito con un cierto número 
 de $shots$ y calculamos la frecuencia relativa, la probabilidad teórica, 
-la desviación típica y la incertidumbre $z$. 
+la desviación típica y la incertidumbre $z$. Ahora
 
 \vspace{0.2cm}
 
@@ -257,8 +269,7 @@ con éxito.
 
 \section{Tratamiento de datos}
 
-A continuación mostraremos las tablas de datos obtenidos. Para cada tipo de papel se han realizado 7 medidas para cada masa de cada pelota
-y realizado el promedio de estas medidas para cada una. El error asociado es el error del calibre utilizado para la propia medida, en este caso 0.02mm.
+A continuación mostraremos los resultados obtenidos al ejecutar cada código
 
 \vspace{0.5cm}
 

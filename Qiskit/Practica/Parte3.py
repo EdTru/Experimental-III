@@ -17,7 +17,6 @@ qc = QuantumCircuit(qb0,qb1,qb2, cr)
 qc.x(qb0)
 
 
-# Inserting a barrier changes nothing about the logic. It just allows us to force gates to be positioned in "layers".
 qc.barrier()
 qc.h(qb1)
 qc.cx(qb1, qb2)
