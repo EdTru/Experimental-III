@@ -7,6 +7,7 @@ from tabulate import tabulate
 pi = np.pi
 
 theta = [0, pi/3, pi/2, pi]
+
 shots = [50, 100, 1000, 5000]
 p_teo_0 = [1, 0.75,0.5,0]
 p_teo_1 = [0, 0.25,0.5,1]
@@ -67,36 +68,6 @@ for theta_i in range(len(theta)):
 		elif theta[theta_i] == 2:
 			dispersion_pi2.append(np.abs(counts["0"] / shots[shot_i] - p_teo_0[theta_i]) / np.sqrt((p_teo_0[theta_i] * (1 - p_teo_0[theta_i])) / shots[shot_i]))
 
-theta_i = 3
-
-"""
-# Crear histograma \theta = 0
-plt.subplot(2,2,1)
-plt.bar(resultados_abs[theta_i][0].keys(), resultados_abs[theta_i][0].values())
-plt.xlabel("Estado")
-plt.ylabel("n resultado")
-plt.title("Shots= 50")
-
-plt.subplot(2,2,2)
-plt.bar(resultados_abs[theta_i][1].keys(), resultados_abs[theta_i][1].values())
-plt.xlabel("Estado")
-plt.ylabel("n resultado")
-plt.title("Shots= 100")
-
-plt.subplot(2,2,3)
-plt.bar(resultados_abs[theta_i][2].keys(), resultados_abs[theta_i][2].values())
-plt.xlabel("Estado")
-plt.ylabel("n resultado")
-plt.title("Shots= 1000")
-
-plt.subplot(2,2,4)
-plt.bar(resultados_abs[theta_i][3].keys(), resultados_abs[theta_i][3].values())
-plt.xlabel("Estado")
-plt.ylabel("n resultado")
-plt.title("Shots= 5000")
-
-plt.show()
-"""
 #Analisis estadistico
 
 heads = ["theta", "shots", "f_exp 0", "f_exp 1", "p_teo 0", "p_teo 1", "sigma_teo_0","sigma_teo_1","dif teo-exp 0","dif teo-exp 1"]
@@ -104,5 +75,3 @@ heads = ["theta", "shots", "f_exp 0", "f_exp 1", "p_teo 0", "p_teo 1", "sigma_te
 tabla_latex = tabulate(datos,heads,tablefmt="latex")
 
 print(tabla_latex)
-
-

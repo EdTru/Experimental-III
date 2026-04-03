@@ -33,7 +33,7 @@ def tirar():
 
 	return dispersion_pi3, dispersion_pi2
 
-N_exp = 500
+N_exp = 300
 
 dispersion_pi3, dispersion_pi2 = [], []
 
@@ -46,9 +46,9 @@ for i in range(N_exp):
 
 print(dispersion_pi2)
 
-datos = dispersion_pi2
+datos = dispersion_pi3
 plt.hist(datos, bins=20)  # Divide los datos en 5 intervalos
-plt.xlabel('Valores')
-plt.ylabel('Frecuencia')
-plt.title('Histograma por intervalos')
+plt.xlabel("Dispersión")
+plt.ylabel("Frecuencia")
+plt.title("Histograma por intervalos")
 plt.show()

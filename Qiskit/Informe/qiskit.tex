@@ -1,6 +1,5 @@
 \documentclass[11pt, a4paper, twocolumn]{article}
 
-
 % --- Paquetes de Idioma y Codificación ---
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, es-nodecimaldot]{babel} % Configurado para español
@@ -17,25 +16,28 @@
 % --- Matemáticas Avanzadas ---
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{mathtools}
+\usepackage{mathtools}
 
 % --- Gráficos y Tablas ---
 \usepackage{graphicx}
 \usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
 \usepackage{caption}
+\usepackage{svg}
 \captionsetup{labelfont=bf, font=small} % Captions en negrita y pequeñas
 
 % --- Hipervínculos y Referencias ---
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
 \usepackage{biblatex}
+\usepackage{csquotes}
 \addbibresource{referencias.bib}
 
 % --- Título y Autores ---
-\title{\textbf{\Large Fractales: Dimensiones enteras y fraccionarias}}
+\title{\textbf{\Large Simulacion de circuitos cuánticos con Qiskit}}
 \author{
-    \textbf{Truchado Iniesta, Eduardo}, \textbf{Sanz Rubio, Juan} \\
-    \small Grado de Física, UCLM. \texttt{juan.sanz1@alu.uclm.es} \\
-    \small Grado de Física, UCLM. \texttt{eduardo.truchado@alu.uclm.es}
+	\textbf{Truchado Iniesta, Eduardo}, \textbf{Sanz Rubio, Juan} \\
+	\small Grado de Física, UCLM. \texttt{juan.sanz1@alu.uclm.es} \\
+	\small Grado de Física, UCLM. \texttt{eduardo.truchado@alu.uclm.es}
 }
 \date{\small 2 Marzo 2026}
 
@@ -55,10 +57,10 @@
 
 
 \fancypagestyle{plain}{
-    \fancyhf{} % Limpia el estilo plain por defecto
-    \fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}} % Mantiene tu logo
-    \fancyfoot[C]{\thepage} % Fuerza el número de página
-    \renewcommand{\headrulewidth}{0.4pt} % Mantiene la línea
+	\fancyhf{} % Limpia el estilo plain por defecto
+	\fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}} % Mantiene tu logo
+	\fancyfoot[C]{\thepage} % Fuerza el número de página
+	\renewcommand{\headrulewidth}{0.4pt} % Mantiene la línea
 }
 
 % --- Inicio del Documento ---
@@ -71,66 +73,103 @@
 %Resumen
 
 \begin{abstract}
-En esta práctica se realizaron medidas de diámetro para diferentes esferoides de masas relativas definidas a partir de 1/8 de dimensión 
-de una hoja de papel de cocina completa. Con estas dimensiones se obtuvieron de los siguientes tipos de papel; papel de cocina, 
-papel aluminio y papel tipo folio, comprimido ligeramente para alcanzar una forma más esferoidal, masa de masa relativa 1,2,4,8,16,32 y 64. 
+En esta práctica realizaremos una aproximación a la librería de python Qiskit,
+un paquete especializado para la simulación de circuitos cuánticos. Construiremos
+circuitos cuánticos de hasta tres qubits y en ellos veremos cómo aplicar las 
+diferentes puertas lógicas y cómo procesar e interpretar los resultados de estos
+circuitos.
 
-\vspace{0.2cm}
-
-A partir de la medida de los diámetros, reañizamos una regresión logarítmica para hallar la pendiente y con ello obtener el valor de la dimensión
-fractal que se busca. El resultado obtenido fue un valor promedio cercano a $d\approx 2.5$ variando ligeramente para los esferoides más compactados y menos.
 \end{abstract}
 
 
-
 \section{Introducción}
-No todos los objetos geométricos tienen dimensiones enteras (euclidianas) como clásicamente se ha considerado. Algunos con geometrías complejas se describen matemáticamenete 
-como objetos con dimensiones fraccionadas, conocidos como fractales. 
+
+En esta practica vamos a simular distintos circuitos cuánticos en el 
+lenguaje de programación Python utilizando la librería $Qiskit$, simularemos
+circuitos con un número diferente de qubits en cada caso y aplicando en cada ocasión
+puertas lógicas cuánticas distintas.
 
 \vspace{0.2cm}
 
-El propósito de este estudio es determinar las propiedades dimensionales de objetas
-geométricamente complejos, que en este caso serán esferoides, para determinar como
-algunos objetos se pueden describir matemáticamente con dimensiones fraccionarias.
+Al iniciar cada parte, comenzaremos inicializando un circuito cuántico
+con un cierto número de qubits y todos ellos en el estado $|0\rangle$.
+Después de ello, aplicaremos las operaciones pertinentes en cada situación
+y para visualizar el circuito haremos uso del método $draw()$. Una vez
+el circuito esté finalizado, haremos uso de la libreria $Qiskit\_aer$ para
+realizar la simulación del circuito. Esta simulación la ejecutaremos un
+número de veces o $shots$ para obtener un espacio muestral suficiente con
+el que obtendremos las probabilidades con las cuales nuestro circuito colapsa
+a cada estado posible.
 
-\vspace{0.2cm}
-
-Para realizar esto, se ha utilizado la siguiente relación:
-
-\begin{equation}
-    D = K M ^{\frac{1}{d}}
-\end{equation}
-
-Donde d es la dimensión fractal, M es la masa del objeto, K es una constante de proporcionalidad y D el diámetro de la esfera considerada. Para
-analizar la ecuación de forma lineal pasaremos la ecuación con relaciones en base a elyes de potencias a una lineal usado las propiedades de los
-logaritmos. Con esto conseguiremos que la pendiente sea la relacion entre la dimension fractal y la masa. 
-
-\begin{equation}
-    \log(D) = \log(K) + \frac{1}{d} \log(M)
-\end{equation}
-
-Donde la pendiente es igual a $m = \frac{1}{d}$, por lo que a partir de la regresión 
-se puede obtener el valor de la dimensión fractal d.
 \section{Objetivos}
-Los objetivos propuestos son analizar la influencia del tipo de material y de la forma en la que es compactado en un esferoide para poder 
-determinar como afecta a su dimensión fractal. 
+Los objetivos principales de la práctica son: familiarizarnos con la librería $Qiskit$,
+aprender a construir circuitos y estados cuánticos y analizar estadísticamente 
+los resultados que obtenemos en función de las veces que lo ejecutamos.
+
+
 \section{Metodología}
 
-Para realizar esta práctica se han utilizado 3 tipos de papel: 
-\begin{itemize}
-    \item Papel de cocina
-    \item Papel aluminio
-    \item Papel tipo folio
-\end{itemize}
+\subsection{Circuito de 1 qubit}
 
-Cada uno de estos ha sido tratado de diferente forma. En el caso del papel de cocina, ha sido compactado suavemente con las manos, 
-el papel de aluminio ha sido compactado con las manos también pero de forma más intensa, y el papel de tipo folio ha sido comprimido 
-con una bandeja con pesos de entorno a 1 kilo por encima. 
+En esta primera parte realizaremos un código que a un qubit $|0\rangle $ le 
+aplique la puerta lógica $R_y({\theta})$. Con ello conseguiremos estados cuánticos
+que pueden colapsar a diferentes valores lógicos de $0$ o $1$, cada uno con 
+una probabilidad dependiente de $\theta$. En nuestro caso, tomaremos cuatro
+valores distintos: 
+
+\begin{equation}
+	\theta = 0,\frac{\pi}{3},\frac{\pi}{2},\pi
+\end{equation}
+
+El circuito será: 
+
+\begin{figure}[h]
+	\centering
+	\includesvg{imagenes/circ1qb.svg}
+	\caption{Circuito de 1 qubit con $R_y(\pi)$}
+	\label{circ1qb}
+\end{figure}
+
+Ejecutaremos este circuito con 50, 100, 1000 y 5000 $shots$ para cada valor
+de $\theta$ y calcularemos: la frecuencia relativa experimental, la 
+probabilidad teórica, su desviación típica $\sigma$ y el factor  de incertidumbre estadística $z$. 
+Estas dos últimas las calcularemos utilizando:
+
+\begin{equation}
+	\sigma= \sqrt{\frac{p_{teo}(1-p_{teo})}{N}}\:\:\:\:\:\:\:\:
+	z = \frac{|f-p|}{\sigma}
+\end{equation}
+
+Además de esta tabla, como parte extra realizaremos un programa que 
+ejecute el código, con un número de $shots$ dado, varias veces. De esta
+manera podemos como se distribuye la desviación típica.
+
+\subsection{Circuito de 2 qubits}
+
+Ahora iniciaremos un circuito con 2 qubits que se encontrarán en el estado
+$|00\rangle$ y construiremos el estado de Bell $|\Phi^+\rangle$:
+
+\begin{equation}
+	|\Phi^+\rangle = \frac{1}{\sqrt{2}}\left( |00\rangle + |11\rangle\right)
+\end{equation}
+
+Para ello, nuestro circuito será:
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.5]{imagenes/circ2qb.svg}
+	\caption{Circuito de 2 qubits para obtener $|\Phi^+\rangle$}
+	\label{circ2qb}
+\end{figure}
+
+Como en el apartado anterior, ejecutaremos el circuito con un cierto número 
+de $shots$ y calculamos la frecuencia relativa, la probabilidad teórica, 
+la desviación típica y la incertidumbre $z$. 
 
 \vspace{0.2cm}
 
-Cabe destacar el tamaño utilizado ya que este se ha vasado en un tamaño original consistente en un aproximado 1/8 de un papel de cocina completo. Así siendo este el 
-peso de valor 1 y aumentando este hasta llegar a 64.  
+
+
 \section{Tratamiento de datos}
 
 A continuación mostraremos las tablas de datos obtenidos. Para cada tipo de papel se han realizado 7 medidas para cada masa de cada pelota
@@ -144,13 +183,13 @@ Tabla de datos para papel suave:
 \hline
    Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
 \hline
-          1 &                        16.14 & $\pm$ 0.02                 \\
-          2 &                        23.96 & $\pm$ 0.02                 \\
-          4 &                        31.66 & $\pm$ 0.02                 \\
-          8 &                        41.5  & $\pm$ 0.02                 \\
-         16 &                        48.87 & $\pm$ 0.02                 \\
-         32 &                        74.19 & $\pm$ 0.02                 \\
-         64 &                       108.4  & $\pm$ 0.02                 \\
+		  1 &                        16.14 & $\pm$ 0.02                 \\
+		  2 &                        23.96 & $\pm$ 0.02                 \\
+		  4 &                        31.66 & $\pm$ 0.02                 \\
+		  8 &                        41.5  & $\pm$ 0.02                 \\
+		 16 &                        48.87 & $\pm$ 0.02                 \\
+		 32 &                        74.19 & $\pm$ 0.02                 \\
+		 64 &                       108.4  & $\pm$ 0.02                 \\
 \hline
 \end{tabular}
 
@@ -164,13 +203,13 @@ Tabla de datos para papel aluminio:
 \hline
    Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
 \hline
-          1 &                        10.06 & $\pm$ 0.02                 \\
-          2 &                        11.91 & $\pm$ 0.02                 \\
-          4 &                        17    & $\pm$ 0.02                 \\
-          8 &                        20.7  & $\pm$ 0.02                 \\
-         16 &                        27.06 & $\pm$ 0.02                 \\
-         32 &                        35.87 & $\pm$ 0.02                 \\
-         64 &                        53.54 & $\pm$ 0.02                 \\
+		  1 &                        10.06 & $\pm$ 0.02                 \\
+		  2 &                        11.91 & $\pm$ 0.02                 \\
+		  4 &                        17    & $\pm$ 0.02                 \\
+		  8 &                        20.7  & $\pm$ 0.02                 \\
+		 16 &                        27.06 & $\pm$ 0.02                 \\
+		 32 &                        35.87 & $\pm$ 0.02                 \\
+		 64 &                        53.54 & $\pm$ 0.02                 \\
 \hline
 \end{tabular}
 
@@ -184,13 +223,13 @@ Tabla de datos para papel comprimido:
 \hline
    Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
 \hline
-          1 &                        10.79 & $\pm$ 0.02                 \\
-          2 &                        15.29 & $\pm$ 0.02                 \\
-          4 &                        23.69 & $\pm$ 0.02                 \\
-          8 &                        27.53 & $\pm$ 0.02                 \\
-         16 &                        35.67 & $\pm$ 0.02                 \\
-         32 &                        49.17 & $\pm$ 0.02                 \\
-         64 &                        62.14 & $\pm$ 0.02                 \\
+		  1 &                        10.79 & $\pm$ 0.02                 \\
+		  2 &                        15.29 & $\pm$ 0.02                 \\
+		  4 &                        23.69 & $\pm$ 0.02                 \\
+		  8 &                        27.53 & $\pm$ 0.02                 \\
+		 16 &                        35.67 & $\pm$ 0.02                 \\
+		 32 &                        49.17 & $\pm$ 0.02                 \\
+		 64 &                        62.14 & $\pm$ 0.02                 \\
 \hline
 \end{tabular}
 
@@ -199,26 +238,26 @@ Tabla de datos para papel comprimido:
 Con estos datos, se realiza una represión lineal para cada tipo de papel así pudiendo analizar la dimensión fractal obtenida. En estas aparece ya calculado el
 error asociado a la dimensión fractal, que se ha obtenido a partir de la siguiente fórmula: 
 \begin{equation}
-    \triangle d = \left | \frac{\partial d}{\partial m} \right | \triangle m = \frac{1}{m^{2}} \triangle m
+	\triangle d = \left | \frac{\partial d}{\partial m} \right | \triangle m = \frac{1}{m^{2}} \triangle m
 \end{equation}
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Papel_aluminio_lineal.png}
-    \caption{Regresión lineal para papel aluminio.}
+	\centering
+	%\includegraphics[width=0.4\textwidth]{Papel_aluminio_lineal.png}
+	\caption{Regresión lineal para papel aluminio.}
 \end{figure}
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Papel_comprimido_lineal.png}
-    \caption{Regresión lineal para papel comprimido.}
+	\centering
+	%\includegraphics[width=0.4\textwidth]{Papel_comprimido_lineal.png}
+	\caption{Regresión lineal para papel comprimido.}
 
 \end{figure}
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Papel_suave_lineal.png}
-    \caption{Regresión lineal para papel suave.}   
+	\centering
+	%\includegraphics[width=0.4\textwidth]{Papel_suave_lineal.png}
+	\caption{Regresión lineal para papel suave.}   
 \end{figure}
 
 \vspace{0.5cm}
@@ -229,21 +268,21 @@ en python con la función \texttt{scipy.stats.linregress} y a partir de esta se 
 pendiente e intercepción para cada tipo de papel y restado al valor real obtenido.
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Residuos_Papel_Suave.png}
-    \caption{Residuos para papel suave.}
+	\centering
+	%\includegraphics[width=0.4\textwidth]{Residuos_Papel_Suave.png}
+	\caption{Residuos para papel suave.}
 \end{figure}
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Residuos_Papel_Aluminio.png}
-    \caption{Residuos para papel aluminio.}
+	\centering
+	%\includegraphics[width=0.4\textwidth]{Residuos_Papel_Aluminio.png}
+	\caption{Residuos para papel aluminio.}
 \end{figure}
 
 \begin{figure}[h]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Residuos_Papel_Comprimido.png}
-    \caption{Residuos para papel comprimido.}
+	\centering
+	%\includegraphics[width=0.4\textwidth]{Residuos_Papel_Comprimido.png}
+	\caption{Residuos para papel comprimido.}
 \end{figure}
 
 
@@ -254,7 +293,7 @@ como el valor quinto de el papel suave tienen saltos significativos respecto a l
 
 \vspace{0.5cm}
 
-\cite{gomes1987fractal}, \cite{balankin2010fractal}, \cite{cambou2011three}, \cite{garcia2012bolas}.
+%\cite{gomes1987fractal}, \cite{balankin2010fractal}, \cite{cambou2011three}, \cite{garcia2012bolas}.
 
 \vspace{0.5cm}
 
@@ -288,15 +327,15 @@ si bien el comprimido tiene una dimensión mayor. Es decir cuanto más maleable 
 
 \vspace{1cm}
 Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de práctias: 
-\cite{experimental32026}
+%\cite{experimental32026}
 
 \section{Referencias}
 
-\nocite{gomes1987fractal}
-\nocite{balankin2010fractal}
-\nocite{cambou2011three}
-\nocite{garcia2012bolas}
+%\nocite{gomes1987fractal}
+%\nocite{balankin2010fractal}
+%\nocite{cambou2011three}
+%\nocite{garcia2012bolas}
 
-\printbibliography
+%\printbibliography
 
 \end{document}
