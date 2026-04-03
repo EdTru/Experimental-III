@@ -19,3 +19,11 @@ red_radio = np.array([[90, 40.32],
 						[80, 34.92],
 						[75, 31.92],
 						[70, 30.91]])
+
+distancias = np.transpose(red_distanciaG)[0]
+
+d_g = np.transpose(red_distanciaG)[1]
+d_p = np.transpose(red_distanciaP)[1]
+d_r = np.transpose(red_radio)[1]
+
+indices_tabla = ["D (cm)", r"$\Delta D$ (cm)"]
