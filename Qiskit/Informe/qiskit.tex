@@ -15,6 +15,7 @@
 
 % --- Matemáticas Avanzadas ---
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{mathtools}
 
@@ -147,7 +148,8 @@ manera podemos como se distribuye la desviación típica.
 \subsection{Circuito de 2 qubits}
 
 Ahora iniciaremos un circuito con 2 qubits que se encontrarán en el estado
-$|00\rangle$ y construiremos el estado de Bell $|\Phi^+\rangle$:
+$|00\rangle$ y nuestro objetivo será 
+construir el estado de Bell $|\Phi^+\rangle$:
 
 \begin{equation}
 	|\Phi^+\rangle = \frac{1}{\sqrt{2}}\left( |00\rangle + |11\rangle\right)
@@ -168,7 +170,90 @@ la desviación típica y la incertidumbre $z$.
 
 \vspace{0.2cm}
 
+Debido a la particularidad del estado de Bell $|\Phi^+\rangle$ aunque nos
+piden realizar medidas en la base $ZZ$ y $XX$ el resultado será el mismo.
+Para demostrarlo, lo analizaremos analíticamente, sabiendo que los vectores
+de la base $ZZ$:
 
+\begin{equation}
+	|0\rangle \:\: |1\rangle
+\end{equation}
+
+Y los de la base $XX$:
+
+\begin{equation}
+	|+\rangle = \frac{1}{\sqrt{2}}(|0\rangle+|1\rangle) \:\:\:
+	|-\rangle = \frac{1}{\sqrt{2}}(|0\rangle-|1\rangle)  
+\end{equation}
+
+Escribimos la base $ZZ$ en funcion de los vectores de la base $XX$:
+
+\begin{equation}
+	|0\rangle = \frac{1}{\sqrt{2}}(|+\rangle+|-\rangle) \:\:\:
+	|1\rangle = \frac{1}{\sqrt{2}}(|+\rangle-|-\rangle) 
+\end{equation}
+
+Ahora, sabemos que el estado de Bell en la base $ZZ$ es: 
+
+\begin{equation}
+	|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|0\rangle \otimes |0\rangle + |1\rangle \otimes |1\rangle)
+\end{equation}
+
+Ahora reescribimos los vectores de la base $ZZ$ en función de los vectores
+de la base $XX$:
+
+\begin{multline}
+	|\Phi^+\rangle = \frac{1}{2\sqrt{2}}((|+\rangle+|-\rangle) \otimes (|+\rangle+|-\rangle) + \\
+	(|+\rangle-|-\rangle) \otimes (|+\rangle-|-\rangle)
+\end{multline}
+
+Operamo los productos tensoriales:
+
+\begin{multline}
+	|\Phi^+\rangle = \frac{1}{2\sqrt{2}}((|++\rangle + |-+\rangle + |+-\rangle + |--\rangle)+\\
+	(|++\rangle - |-+\rangle - |+-\rangle + |--\rangle))
+\end{multline}
+
+Y obtenemos:
+
+\begin{equation}
+	|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|++\rangle + |--\rangle)
+\end{equation}
+
+Y como vemos, el estado de Bell tiene la misma forma en la base $ZZ$ que en la base $XX$.
+Por lo tanto solo realizaremos las medidas en la base $ZZ$.
+
+\vspace{0.2cm}
+
+Por último, realizaremos un programa que ejecute, para un número de $shots$ dado,
+varias veces la simulación para ver cómo se distribuye la desviación típica. 
+
+\newpage
+
+\subsection{Circuito de 3 qubits}
+En esta práctica nos solicitan construir un circuito que teleporte la información
+de un qubit a otro. El circuito que nos proponen es:
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.3]{imagenes/circ3qb.svg}
+	\caption{Circuito de teleportación cuántica}
+	\label{circ3qb}
+\end{figure}
+
+El circuito consta de cuatro fases. En la primera fase, iniciamos el circuito 
+con $qb0$ en el estado que queramos (en nuestro caso iniciamos con $qb0 = |1\rangle$).
+La segunda parte consta de construir un estado de Bell entre los qubits $qb1$ y $qb2$.
+En la tercera parte, construimos un estado entrelazado entre el $qb0$ y $qb1$. Y 
+por último, en la última parte medimos todos los qubits y aplicamos las puertas $X$ y 
+$Z$ condicionadas al resultado de la medida del qubit $qb0$ y $qb1$.
+
+\vspace{0.2cm}
+
+Con este circuito, el estado en el que iniciemos el $qb0$ será el que tome al final 
+el qubit $qb2$. Para comprobarlo, ejecutaremos el código varias veces iniciando
+cada vez el $qb0$ en diferentes estados para ver si la teleportación ocurre 
+con éxito.
 
 \section{Tratamiento de datos}
 
