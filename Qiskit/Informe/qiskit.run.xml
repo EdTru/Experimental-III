@@ -41,13 +41,13 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>fractales.bcf</file>
+      <file>qiskit.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>fractales.bbl</file>
+      <file>qiskit.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -60,23 +60,23 @@
       <file>spanish.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>fractales</infile>
+      <infile>qiskit</infile>
     </cmdline>
     <input>
-      <file>fractales.bcf</file>
+      <file>qiskit.bcf</file>
     </input>
     <output>
-      <file>fractales.bbl</file>
+      <file>qiskit.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>fractales.bbl</file>
+      <file>qiskit.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>fractales.bcf</file>
+      <file>qiskit.bcf</file>
     </requires>
     <requires type="editable">
       <file>referencias.bib</file>
