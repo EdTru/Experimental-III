@@ -48,7 +48,8 @@ print(dispersion_pi2)
 
 datos = dispersion_pi3
 plt.hist(datos, bins=20)  # Divide los datos en 5 intervalos
-plt.xlabel("Dispersión")
+plt.xlabel("Desviación típica")
 plt.ylabel("Frecuencia")
-plt.title("Histograma por intervalos")
+plt.title("Histograma por intervalos de la desviación típica del estado |1>")
+plt.savefig("HistogramaCirc1qb.svg")
 plt.show()

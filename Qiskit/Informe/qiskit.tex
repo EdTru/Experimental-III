@@ -24,6 +24,8 @@
 \usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
 \usepackage{caption}
 \usepackage{svg}
+\usepackage{dblfloatfix}
+
 \captionsetup{labelfont=bf, font=small} % Captions en negrita y pequeñas
 
 % --- Hipervínculos y Referencias ---
@@ -76,9 +78,11 @@
 \begin{abstract}
 En esta práctica realizaremos una aproximación a la librería de python Qiskit,
 un paquete especializado para la simulación de circuitos cuánticos. Construiremos
-circuitos cuánticos de hasta tres qubits y en ellos veremos cómo aplicar las 
-diferentes puertas lógicas y cómo procesar e interpretar los resultados de estos
-circuitos.
+diferentes circuitos cuánticos: para visualizar la distribución estadística de 
+un estado $R_y(\theta)|0\rangle$ según el ángulo. Construiremos un estado de Bell
+$|\Phi^+\rangle$, lo mediremos en diferentes bases y calcularemos el valor de 
+$\langle Z \otimes Z \rangle$ y por último realizaremos un circuito de teleportación 
+cuántica.
 
 \end{abstract}
 
@@ -126,7 +130,7 @@ El circuito será:
 
 \begin{figure}[h]
 	\centering
-	\includesvg{imagenes/circ1qb.svg}
+	\includesvg[scale=0.5]{imagenes/circ1qb.svg}
 	\caption{Circuito de 1 qubit con $R_y(\pi)$}
 	\label{circ1qb}
 \end{figure}
@@ -167,18 +171,91 @@ construir el estado de Bell $|\Phi^+\rangle$:
 	|\Phi^+\rangle = \frac{1}{\sqrt{2}}\left( |00\rangle + |11\rangle\right)
 \end{equation}
 
-Para ello, nuestro circuito será:
+Y medirlo en la base $ZZ$ y $XX$ para ello, nuestros circuitos serán:
 
 \begin{figure}[h]
 	\centering
-	\includesvg[scale=0.5]{imagenes/circ2qb.svg}
-	\caption{Circuito de 2 qubits para obtener $|\Phi^+\rangle$}
+	\includesvg[scale=0.4]{imagenes/circ2qb.svg}
+	\caption{Circuito de 2 qubits para obtener $|\Phi^+\rangle$ en la base $ZZ$}
 	\label{circ2qb}
 \end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/circ2qbXX.svg}
+	\caption{Circuito de 2 qubits para obtener $|\Phi^+\rangle$ en la base $XX$}
+	\label{circ2qbXX}
+\end{figure}
+\newpage
+
+Dónde el aplicar las dos puerta $H$ hace que cambiemos de la base $ZZ$ a la base
+$XX$.
+
+\vspace{0.2cm}
 Como en el apartado anterior, ejecutaremos el circuito con un cierto número 
 de $shots$ y calculamos la frecuencia relativa, la probabilidad teórica, 
-la desviación típica y la incertidumbre $z$. Ahora
+la desviación típica y la incertidumbre $z$. Para calcular la probabilidad 
+teórica evaluaremos $\langle Z \otimes Z \rangle$:
+
+\begin{equation}
+	\langle Z \otimes Z \rangle = \langle \Phi^+| Z \otimes Z |\Phi^+ \rangle 
+\end{equation}
+
+Donde $Z$ es la matriz de Pauli:
+
+\begin{equation}
+	Z = 
+	\begin{pmatrix}
+		1 & 0\\ 0 & -1
+	\end{pmatrix}
+\end{equation}
+
+El producto $Z \otimes Z$ será:
+
+\begin{equation}
+	Z \otimes Z = 
+	\begin{pmatrix}
+		1 & 0\\ 0 & -1
+	\end{pmatrix} \otimes
+	\begin{pmatrix}
+		1 & 0\\ 0 & -1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1 & 0 & 0 & 0 \\
+		0 &-1 & 0 & 0 \\
+		0 & 0 &-1 & 0 \\
+		0 & 0 & 0 & 1
+
+	\end{pmatrix}	
+\end{equation}
+
+Entonces tenemos:
+
+\begin{equation}
+	\langle \Phi^+| Z \otimes Z |\Phi^+ \rangle = 
+	\frac{1}{2}(\langle 00 | + \langle 11|) Z \otimes Z (|00\rangle + |11\rangle)
+\end{equation}
+
+Cómo hemos visto, el producto $Z \otimes Z$ actua como la identidad para los 
+vectores $|00\rangle$ y $|11\rangle$ y por lo tanto:
+
+\begin{equation}
+	\langle Z \otimes Z \rangle = \frac{1}{2}(\langle 00 | 00 \rangle - 
+	\langle 00 | 11 \rangle - \langle 11 | 00 \rangle + \langle 11 | 11 \rangle)
+\end{equation}
+
+\begin{equation}
+	\langle Z \otimes Z \rangle = \frac{1}{2}(1 - 0 -0 +1) = 1
+\end{equation}
+
+Para calcular el valor esperado de forma experimental lo que haremos será medir
+las probabilidades de los cuatro estados $P(00)$, $P(01)$, $P(10)$ y $P(11)$. Y 
+operarlas según hemos calculado:
+
+\begin{equation}
+	\langle Z \otimes z \rangle = P(00) - P(01) - P(10) + P(11)
+\end{equation}
 
 \vspace{0.2cm}
 
@@ -211,19 +288,19 @@ Ahora, sabemos que el estado de Bell en la base $ZZ$ es:
 	|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|0\rangle \otimes |0\rangle + |1\rangle \otimes |1\rangle)
 \end{equation}
 
-Ahora reescribimos los vectores de la base $ZZ$ en función de los vectores
+Reescribimos los vectores de la base $ZZ$ en función de los vectores
 de la base $XX$:
 
 \begin{multline}
-	|\Phi^+\rangle = \frac{1}{2\sqrt{2}}((|+\rangle+|-\rangle) \otimes (|+\rangle+|-\rangle) + \\
+	|\Phi^+\rangle = \frac{\sqrt{2}}{4}((|+\rangle+|-\rangle) \otimes (|+\rangle+|-\rangle) + \\
 	(|+\rangle-|-\rangle) \otimes (|+\rangle-|-\rangle)
 \end{multline}
 
 Operamo los productos tensoriales:
 
 \begin{multline}
-	|\Phi^+\rangle = \frac{1}{2\sqrt{2}}((|++\rangle + |-+\rangle + |+-\rangle + |--\rangle)+\\
-	(|++\rangle - |-+\rangle - |+-\rangle + |--\rangle))
+	|\Phi^+\rangle = \frac{\sqrt{2}}{4}((|++\rangle + |-+\rangle + |+-\rangle + |--\rangle)\\
+	+ (|++\rangle - |-+\rangle - |+-\rangle + |--\rangle))
 \end{multline}
 
 Y obtenemos:
@@ -240,8 +317,6 @@ Por lo tanto solo realizaremos las medidas en la base $ZZ$.
 Por último, realizaremos un programa que ejecute, para un número de $shots$ dado,
 varias veces la simulación para ver cómo se distribuye la desviación típica. 
 
-\newpage
-
 \subsection{Circuito de 3 qubits}
 En esta práctica nos solicitan construir un circuito que teleporte la información
 de un qubit a otro. El circuito que nos proponen es:
@@ -254,7 +329,7 @@ de un qubit a otro. El circuito que nos proponen es:
 \end{figure}
 
 El circuito consta de cuatro fases. En la primera fase, iniciamos el circuito 
-con $qb0$ en el estado que queramos (en nuestro caso iniciamos con $qb0 = |1\rangle$).
+con $qb0$ en el estado que queramos (en nuestro caso iniciamos con una puerta lógica $U$ para poder iniciar en el estado que deseemos).
 La segunda parte consta de construir un estado de Bell entre los qubits $qb1$ y $qb2$.
 En la tercera parte, construimos un estado entrelazado entre el $qb0$ y $qb1$. Y 
 por último, en la última parte medimos todos los qubits y aplicamos las puertas $X$ y 
@@ -269,169 +344,222 @@ con éxito.
 
 \section{Tratamiento de datos}
 
-A continuación mostraremos los resultados obtenidos al ejecutar cada código
+A continuación mostraremos los resultados obtenidos al ejecutar cada código, todos
+los códigos esán disponibles al final del informe:
 
-\vspace{0.5cm}
+\subsection{Circuito de 1 qubit}
 
-Tabla de datos para papel suave:
+En este primer código, $Circ1qb.py$ al ejecutarlo obtenemos la siguiente tabla de datos:
 
-\begin{tabular}{ccc}
+\begin{table*}
+	
+
+\begin{tabular}{cccccccccc}
 \hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
+   $\theta$ &   $shots$ &   $f_{exp}(0)$ &   $f_{exp}(1)$ &   $p_{teo}(0)$ &   $p_{teo}(1)$ &   $\sigma_{teo}(0)$ &   $\sigma_{teo}(1)$ &   $z(0)$ &   $z(1)$ \\
 \hline
-		  1 &                        16.14 & $\pm$ 0.02                 \\
-		  2 &                        23.96 & $\pm$ 0.02                 \\
-		  4 &                        31.66 & $\pm$ 0.02                 \\
-		  8 &                        41.5  & $\pm$ 0.02                 \\
-		 16 &                        48.87 & $\pm$ 0.02                 \\
-		 32 &                        74.19 & $\pm$ 0.02                 \\
-		 64 &                       108.4  & $\pm$ 0.02                 \\
+ 0       &      50 &          50 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
+ 0       &     100 &       100 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
+ 0       &    1000 &      1000 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
+ 0       &    5000 &      5000 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
+ $\pi/3$  &      50 &    0.66   &    0.34   &      0.75 &      0.25 &    0.0612372  &    0.0612372  &       1.46969   &       1.46969   \\
+  $\pi/3$   &     100 &    0.75   &    0.25   &      0.75 &      0.25 &    0.0433013  &    0.0433013  &       0         &       0         \\
+ $\pi/3$   &    1000 &    0.751  &    0.249  &      0.75 &      0.25 &    0.0136931  &    0.0136931  &       0.0730297 &       0.0730297 \\
+  $\pi/3$  &    5000 &    0.7534 &    0.2466 &      0.75 &      0.25 &    0.00612372 &    0.00612372 &       0.555218  &       0.555218  \\
+  $\pi/2$  &      50 &    0.52   &    0.48   &      0.5  &      0.5  &    0.0707107  &    0.0707107  &       0.282843  &       0.282843  \\
+ $\pi/2$  &     100 &    0.51   &    0.49   &      0.5  &      0.5  &    0.05       &    0.05       &       0.2       &       0.2       \\
+ $\pi/2$  &    1000 &    0.525  &    0.475  &      0.5  &      0.5  &    0.0158114  &    0.0158114  &       1.58114   &       1.58114   \\
+ $\pi/2$  &    5000 &    0.4912 &    0.5088 &      0.5  &      0.5  &    0.00707107 &    0.00707107 &       1.24451   &       1.24451   \\
+ $\pi$ &      50 &         0 &        50 &      0    &      1    &    0          &    0          &     0         &     0         \\
+ $\pi$ &     100 &         0 &       100 &      0    &      1    &    0          &    0          &     0         &     0         \\
+ $\pi$ &    1000 &         0 &      1000 &      0    &      1    &    0          &    0          &     0         &     0         \\
+ $\pi$&    5000 &         0 &      5000 &      0    &      1    &    0          &    0          &     0         &     0         \\
+\hline
+
+\end{tabular}
+\caption{Resultado código $Circ1qb.py$ }
+
+\label{tab: TablaCirc1qb}
+\end{table*}
+
+\newpage
+
+Al ejecutar el programa $Circ1qb\_estadistica.py$, que ejecuta este circuito cuántico con $5000$ $shots$ 
+$500$ veces, obtenemos un histograma con el valor que obtenemos de la desviación
+típica de cada ejecución:
+
+
+\begin{figure}[h!]
+	\centering
+	\includesvg[scale=0.54]{imagenes/HistogramaCirc1qb.svg}
+	\caption{Histograma de desviaciones típicas para el circuito \ref{circ1qb}}
+	\label{HistogramaCirc1qb}
+\end{figure}
+
+\newpage
+
+Además, el código también nos devuelve los valores de la dispersión del estado $|0\rangle$
+pero como son equivalentes, solo dibujamos el histograma de uno de ellos.
+
+\subsection{Circuito de 2 qubits}
+
+Al ejecutar el código $Circ2qb.py$ y obtendremos tres tablas distintas, la primera
+es el resultado de las medidas en la base $ZZ$, la segunda en la base $XX$ y 
+la tercera es la desviación típica de cada medida realizada en la base $ZZ$.
+Las tres tablas son:
+
+
+\begin{table*}
+	
+	\begin{tabular}{ccccccccc}
+\hline
+ Base   &   $Shots$ &   $f_{exp}(00)$ &   $f_{exp}(01)$ &   $f_{exp}(10)$ &   $f_{exp}(11)$ &   $\langle Z \otimes Z \rangle_{teo}$ &   $\langle Z \otimes Z \rangle_{exp}$ &   z \\
+\hline
+ ZZ     &     100 &        0.51   &             0 &             0 &        0.49   &               1 &               1 &   0 \\
+ ZZ     &    1000 &        0.484  &             0 &             0 &        0.516  &               1 &               1 &   0 \\
+ ZZ     &    2000 &        0.503  &             0 &             0 &        0.497  &               1 &               1 &   0 \\
+ ZZ     &    5000 &        0.5012 &             0 &             0 &        0.4988 &               1 &               1 &   0 \\
+\hline
+\end{tabular}
+	
+\begin{tabular}{ccccccccc}
+\hline
+ Base   &   $Shots$ &   $f_{exp}(++)$ &   $f_{exp}(-+)$ &   $f_{exp}(+-)$ &   $f_{exp}(--)$ &   $\langle Z \otimes Z \rangle_{teo}$ &   $\langle Z \otimes Z \rangle_{exp}$ &   z \\
+\hline
+ XX     &     100 &        0.38   &             0 &             0 &        0.62   &               1 &               1 &   0 \\
+ XX     &    1000 &        0.489  &             0 &             0 &        0.511  &               1 &               1 &   0 \\
+ XX     &    2000 &        0.483  &             0 &             0 &        0.517  &               1 &               1 &   0 \\
+ XX     &    5000 &        0.4786 &             0 &             0 &        0.5214 &               1 &               1 &   0 \\
 \hline
 \end{tabular}
 
-
-\vspace{0.5cm}
-
-
-Tabla de datos para papel aluminio:
-
-\begin{tabular}{ccc}
+\begin{tabular}{cccccccccc}
 \hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
+ Base   &   $Shots$ &   $\sigma_{teo}(00)$ &   $\sigma_{teo}(01)$ &   $\sigma_{teo}(10)$ &   $\sigma_{teo}(11)$ &     $z(00)$ &   $z(01)$ &   $z(10)$ &     $z(11)$ \\
 \hline
-		  1 &                        10.06 & $\pm$ 0.02                 \\
-		  2 &                        11.91 & $\pm$ 0.02                 \\
-		  4 &                        17    & $\pm$ 0.02                 \\
-		  8 &                        20.7  & $\pm$ 0.02                 \\
-		 16 &                        27.06 & $\pm$ 0.02                 \\
-		 32 &                        35.87 & $\pm$ 0.02                 \\
-		 64 &                        53.54 & $\pm$ 0.02                 \\
+ ZZ     &     100 &        0.05       &                 0 &                 0 &        0.05       & 0.2       &       0 &       0 & 0.2       \\
+ ZZ     &    1000 &        0.0158114  &                 0 &                 0 &        0.0158114  & 0.822192  &       0 &       0 & 0.822192  \\
+ ZZ     &    2000 &        0.0111803  &                 0 &                 0 &        0.0111803  & 1.43108   &       0 &       0 & 1.43108   \\
+ ZZ     &    5000 &        0.00707107 &                 0 &                 0 &        0.00707107 & 0.0565685 &       0 &       0 & 0.0565685 \\
 \hline
 \end{tabular}
+\caption{Resultado circuito $circ2qb.py$ }
+
+\label{tab: TablaCirc2qb}
+\end{table*}
 
 
-\vspace{0.5cm}
+\newpage
 
+Luego, como en el apartado anterior, realizamos otro programa ($Circ2qb\_estadistica.py$)
+con el que observaremos como se distribuyen las desviaciones típicas al ejecutar
+$300$ veces el circuito con $5000$ $shots$. El histograma que nos devuelve es:
 
-Tabla de datos para papel comprimido:
-
-\begin{tabular}{ccc}
-\hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
-\hline
-		  1 &                        10.79 & $\pm$ 0.02                 \\
-		  2 &                        15.29 & $\pm$ 0.02                 \\
-		  4 &                        23.69 & $\pm$ 0.02                 \\
-		  8 &                        27.53 & $\pm$ 0.02                 \\
-		 16 &                        35.67 & $\pm$ 0.02                 \\
-		 32 &                        49.17 & $\pm$ 0.02                 \\
-		 64 &                        62.14 & $\pm$ 0.02                 \\
-\hline
-\end{tabular}
-
-\vspace{0.5 cm}
-
-Con estos datos, se realiza una represión lineal para cada tipo de papel así pudiendo analizar la dimensión fractal obtenida. En estas aparece ya calculado el
-error asociado a la dimensión fractal, que se ha obtenido a partir de la siguiente fórmula: 
-\begin{equation}
-	\triangle d = \left | \frac{\partial d}{\partial m} \right | \triangle m = \frac{1}{m^{2}} \triangle m
-\end{equation}
-
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	%\includegraphics[width=0.4\textwidth]{Papel_aluminio_lineal.png}
-	\caption{Regresión lineal para papel aluminio.}
+	\includesvg[scale=0.54]{imagenes/HistogramaCirc2qb.svg}
+	\caption{Histograma de desviaciones típicas para el circuito \ref{circ2qb}}
+	\label{HistogramaCirc2qb}
 \end{figure}
 
-\begin{figure}[h]
-	\centering
-	%\includegraphics[width=0.4\textwidth]{Papel_comprimido_lineal.png}
-	\caption{Regresión lineal para papel comprimido.}
+\subsection{Circuito de 3 qubits}
 
-\end{figure}
+El código $Cir3qb.py$, en el construimos el circuito de teleportación cuántica 
+\ref{circ3qb}, no nos devuelve ninuna tabla, tan solo nos devuelve el valor del 
+qubit inicial y resultado de medir los qubits. Ejecutamos el programa con diferentes
+configuraciones iniciales:
 
-\begin{figure}[h]
-	\centering
-	%\includegraphics[width=0.4\textwidth]{Papel_suave_lineal.png}
-	\caption{Regresión lineal para papel suave.}   
-\end{figure}
+\begin{quote}
+	$\theta = \pi$ $\phi=0$ $\lambda =  0$ \newline
+	$qb0 = (0,1)$\newline
+ ${'100': 246, '111': 246, '101': 258, '110': 250}$
+\end{quote}
 
-\vspace{0.5cm}
+\begin{quote}
+	$\theta = 0$ $\phi=\pi$ $\lambda =  0$ \newline
+	$qb0 = (1,0)$\newline
+ ${'001': 247, '011': 260, '000': 249, '010': 244}$
+\end{quote}
+
+\begin{quote}
+	$\theta = \frac{\pi}{2}$ $\phi=0$ $\lambda =  0$ \newline
+	$qb0 = (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$\newline
+ ${'110': 144, '001': 122, '111': 105, '011': 128,}$ \newline${ '000': 141, '010': 125, '100': 110, '101': 125}$
+\end{quote}
+
 \section{Análisis de resultados}
-Además de los valores dados de dimensión fractal, se ha realizado el cálculo de residuos para cada toma
-y así poder analizar la calidad del ajuste lineal realizado. Para este cálculo se ha realizado una regresión lineal 
-en python con la función \texttt{scipy.stats.linregress} y a partir de esta se han obtenido los valores de 
-pendiente e intercepción para cada tipo de papel y restado al valor real obtenido.
 
-\begin{figure}[h]
-	\centering
-	%\includegraphics[width=0.4\textwidth]{Residuos_Papel_Suave.png}
-	\caption{Residuos para papel suave.}
-\end{figure}
+En el primer circuito, los resultados de \ref{tab: TablaCirc1qb} nos muestran 
+como el resultado del circuito parece mas fiable según mayor sea el número
+de $shots$. Aunque al tratar con variables aleatorias, podemos tener casos, 
+como algunos que vemos en la tabla, que se alejan bastante del valor esperado.
 
-\begin{figure}[h]
-	\centering
-	%\includegraphics[width=0.4\textwidth]{Residuos_Papel_Aluminio.png}
-	\caption{Residuos para papel aluminio.}
-\end{figure}
+\vspace{0.2cm}
 
-\begin{figure}[h]
-	\centering
-	%\includegraphics[width=0.4\textwidth]{Residuos_Papel_Comprimido.png}
-	\caption{Residuos para papel comprimido.}
-\end{figure}
+Esto podría llevarnos a pensar que puede no existir la correlación que estamos 
+buscando, pero con la parte del hisograma \ref{HistogramaCirc1qb} vemos que si el
+número de ejecuciones ($5000 $ $shots$ y 300 ejecuciones) es suficientemente grande
+la desviación típica  de cada ejecución tiende a ser una distribución normal centrada en
+el 0.
 
+\vspace{0.4cm}
 
-\vspace{0.5cm}
+En el segundo circuito, aunque también hemos observado la estadística, nos hemos preocupado
+mas por construir el llamado estado de Bell $|\Phi^+\rangle$ y lo que hemos comprobado con él
+es que, a parte de tener las mismas coordenadas en la base de medida $ZZ$ y $XX$,
+consigue que el producto $\langle Z \otimes Z \rangle$ sea siempre el esperado, ya que
+como podemos comprobar en la tabla \ref{tab: TablaCirc2qb} siempre obtenemos el mismo
+valor para el teórico que para el experimental. Esto se debe a que el estado 
+de Bell nos crea siempre los dos mismos estados y la probabilidad de tener uno 
+o el otro es siempre $1$.
 
-Al analizar los residuos, vemos que el modelo es adecuado, si bien no representa una homostacidad perfecta ya que ciertos valores 
-como el valor quinto de el papel suave tienen saltos significativos respecto a los demás.Tomando esto en cuenta, hemos comparado los resultados obtenidos con los estudios:
+\vspace{0.2cm}
 
-\vspace{0.5cm}
+Además, en esta parte también analizamos la dispersión de un estado (concretamente
+el $|0\rangle$) y con los mimos parámetros de ejecuciones y $shots$ obtenemos 
+algo muy similar, un histograma que se acerca a una distribución normal centrada
+en el $0$.
 
-%\cite{gomes1987fractal}, \cite{balankin2010fractal}, \cite{cambou2011three}, \cite{garcia2012bolas}.
+\vspace{0.4cm}
 
-\vspace{0.5cm}
+En la última parte en el circuito de teleportación comprobamos como el estado que
+iniciamos el $qb0$ es el que aparece luego en el $qb2$. En el primer caso iniciamos
+en $|1\rangle$ y en los cuatro estados que nos devuelve el sistema en todos el $qb2$
+(el que primero aparece en los estados posibles) siempre está en $1$. 
 
-Donde en ellos se obtiene una media de dimensión fractal de entre 2.3 a 2.5.
-\vspace{0.5cm}
+\vspace{0.2cm}
 
-Vemos pues que aún a pesar de los resultados obtenidos en el cálculo de los residuos asociados a las tomas, los resultados
- experimentales son consistentes con estudios realizados previamente.  
+En el segundo caso iniciamos $qb0$ en $|0\rangle$ y obtenemos que $qb2$ siempre
+se encuentra en $0$. Por último, iniciamos $qb0$ en $\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ y 
+comprobamos que el $qb2$ se encuentra en el estado $0$ y $1$ con la misma probabilidad.
+
 \section{Conclusiones}
 
-Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
-se encurntra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
-ocupa todo el espacio teniendo zonas con aire lo que hace variar su volumen general. 
+Tras el estudio podemos sacar conclusiones como que el simulador $AerSimulator$ 
+utilizado en la práctica sigue el comportamiento de una distribución aleatoria ya
+que hemos visto que para un número suficientemente alto de simulaciones 
+la respuesta aleatoria converge a una normal centrada den $0$, cosa que no ocurriria
+si la distribución pseudoaleatoria no fuese muy lograda y ello provocaría errores
+al ejecutar los circuitos.
 
+\vspace{0.2cm}
 
-En el caso de que hubieramos obtenido un valor experimental de $d = 3$, eso implicaría que la bola que hemos creado sería perfectamente esférica, 
-lo que implicaría que estaríamos hablando de un objeto en 3D. 
-
-\vspace{0.5cm}
-Podemos sacar otras relaciones en base a la masa y el volumen como la densidad. Como $\rho = \frac{M}{V}$ y $V \propto R^d$, 
-podemos decir que $\rho \propto D^{d-3}$. Y como $d < 3$, las bolas más grandes, con mayor masa serán menos densas que las más 
-pequeñas y compactas. 
-
-\vspace{0.5cm}
-
-Otra relación interesante es la dependendia de $d$ con el tipo de material utilizado para formar las esferas y con el método (si han sido comprimidas o no). 
-En nuestro caso podemos apreciar que el pael de aluminio es el que más se acerca a tener una dimensión igual a 3, mientras que el papel no comprimido se aleja más
-si bien el comprimido tiene una dimensión mayor. Es decir cuanto más maleable o más se trabaje para asimilar a una esfera, mayor será la dimensión fractal obetnida.
-
-\textbf{AQUÍ HABRÍA QUE COMPARAR EL ERROR OBTENIDO PARA m EXPERIMENTALMENTE CON EL OBTENIDO EN LA APLICACIÓN}
+Por lo demás, lo que nos ha aportado esta práctica son las herramientas necesarias
+para poder simular circuitos cuanticos utilizando los algoritmos que deseemos.
 
 \vspace{1cm}
-Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de práctias: 
-%\cite{experimental32026}
+Para ver todo el análisis de datos realizado por los alumnos, se habilita este 
+enlace al repositorio de 
+github donde están todos los archivos de prácticas: 
+\cite{experimental32026}
 
 \section{Referencias}
 
-%\nocite{gomes1987fractal}
-%\nocite{balankin2010fractal}
+\nocite{experimental32026}
+\nocite{teleportation}
 %\nocite{cambou2011three}
 %\nocite{garcia2012bolas}
 
-%\printbibliography
+\printbibliography
 
 \end{document}

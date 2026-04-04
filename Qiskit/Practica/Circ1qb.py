@@ -53,8 +53,8 @@ for theta_i in range(len(theta)):
 
 		datos.append([theta[theta_i],
 					  shots[shot_i],
-					  counts["0"],
-					  counts["1"],
+					  counts["0"]/shots[shot_i],
+					  counts["1"]/shots[shot_i],
 					  p_teo_0[theta_i],
 					  p_teo_1[theta_i],
 					  np.sqrt((p_teo_0[theta_i]*(1-p_teo_0[theta_i]))/shots[shot_i]),
