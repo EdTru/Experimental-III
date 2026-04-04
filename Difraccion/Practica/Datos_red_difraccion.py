@@ -21,13 +21,19 @@ red100 = np.array([[70, 9.1, r"$\pm 0.5$", r"$\pm 0.01$"],
 					[40, 5, r"$\pm 0.5$", r"$\pm 0.01$"],
 					[30, 3.9, r"$\pm 0.5$", r"$\pm 0.01$"]])
 
-distancias_600 = np.transpose(red600)[0]
-distancias_300 = np.transpose(red300)[0]
-distancias_100 = np.transpose(red100)[0]
+distancias_600 = np.transpose(red600)[0] 
+distancias_300 = np.transpose(red300)[0] 
+distancias_100 = np.transpose(red100)[0] 
 
 r_600 = np.transpose(red600)[1]
-r_300 = np.transpose(red300)[1]
-r_100 = np.transpose(red100)[1]
+r_300 = np.transpose(red300)[1] 
+r_100 = np.transpose(red100)[1] 
+
+distancias_arcoiris_600 = [round(float(i), 2) * 10**(-2) for i in distancias_600] #Convertimos a metros para los calculos posteriores
+xmax_600 = [round(float(i), 2) * 10**(-2) for i in r_600] #Convertimos a metros para los calculos posteriores
+
+print(distancias_arcoiris_600)
+print(xmax_600)
 
 """
 
@@ -44,7 +50,7 @@ for i,j  in enumerate(tablas):
 	print(j)
 	print("\n")
 """
-
+""""
 resultados_600 = []
 resultados_300 = []
 resultados_100 = []
@@ -74,3 +80,6 @@ print("Media 600:", round(sum(resultados_600)/len(resultados_600), 2))
 print("Media_errores_100:", round(sum(errores_100)/len(errores_100), 2))
 print("Media_errores_300:", round(sum(errores_300)/len(errores_300), 2))
 print("Media_errores_600:", round(sum(errores_600)/len(errores_600), 1))
+
+
+"""
