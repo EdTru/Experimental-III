@@ -19,7 +19,7 @@
 \usepackage{mathtools}
 
 % --- Gráficos y Tablas ---
-\usepackage{graphicx}
+\usepackage{graphicx}% Para incluir imágenes
 \usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
 \usepackage{caption}
 \usepackage{float} % Permite el uso del modificador [H] para fijar la posición de las tablas
@@ -30,7 +30,7 @@
 \usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
 \usepackage{csquotes} % Soluciona el warning de babel/polyglossia
 \usepackage{biblatex}
-\addbibresource{difraccion.bib}
+%\addbibresource{difraccion.bib}
 
 % --- Título y Autores ---
 \title{\textbf{\Large Difracción: Estudio Experimental y Espectroscópico}}
@@ -131,7 +131,7 @@ $2a$ por el parámetro de red $\frac{1}{2d}$ (en líneas/mm).
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.4\textwidth]{fotos práctica/montaje_rendija.jpg}
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_rendija.jpg}
     \caption{Montaje para el estudio de la difracción}
 \end{figure}
 
@@ -145,7 +145,7 @@ los ángulos respecto a un ángulo incial de referencia y con estos datos se han
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.4\textwidth]{fotos práctica/montaje_espectroscopio.jpg}
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_espectroscopio.jpg}
     \caption{Montaje para el estudio espectroscópico}
 \end{figure}
 
@@ -160,15 +160,14 @@ Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada c
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        $D$ (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
         \hline
-            1000 &        9    & $\pm 0.5$        & $\pm 0.01$ \\        \
-            900 &        8.12 & $\pm 0.5$        & $\pm 0.01$ \\
-            800 &        6.86 & $\pm 0.5$        & $\pm 0.01$ \\
-            700 &        6.35 & $\pm 0.5$        & $\pm 0.01$ \\
-            600 &        5.05 & $\pm 0.5$        & $\pm 0.01$ \\
+            1000 &       4.5   & $\pm 0.02$   & $\pm 0.01$    \\
+            900 &       4.06  & $\pm 0.02$    & $\pm 0.01$    \\
+            800 &       3.43  & $\pm 0.02$    & $\pm 0.01$   \\
+            700 &       3.18 & $\pm 0.02$    & $\pm 0.01$   \\
+            600 &       2.53 & $\pm 0.02$    & $\pm 0.01$   \\
         \hline
-
     \end{tabular}
 \end{table}
 
@@ -181,13 +180,13 @@ Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada c
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        $D$ (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm)  & $\Delta X_{min}$ (mm)  \\
         \hline
-            1000 &       10.66 & $\pm 0.5$        & $\pm 0.01$ \\
-            900 &        9.57 & $\pm 0.5$        & $\pm 0.01$ \\
-            800 &        8.12 & $\pm 0.5$        & $\pm 0.01$ \\
-            700 &        7.78 & $\pm 0.5$        & $\pm 0.01$ \\
-            600 &        5.87 & $\pm 0.5$        & $\pm 0.01$ \\
+            1000 &       5.33  & $\pm 0.02$    & $\pm 0.01$    \\
+            900 &       4.79 & $\pm 0.02$    & $\pm 0.01$    \\
+            800 &       4.06  & $\pm 0.02$    & $\pm 0.01$   \\
+            700 &       3.89  & $\pm 0.02$    & $\pm 0.01$   \\
+            600 &       2.94 & $\pm 0.02$    & $\pm 0.01$   \\
         \hline
     \end{tabular}
 \end{table}
@@ -201,14 +200,14 @@ Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada c
     \small
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
+        \hline        
+        $D$ (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{min}$ (mm)  \\
         \hline
-        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
-        \hline
-            1000 &       13.48 & $\pm 0.5$        & $\pm 0.01$ \\
-            900 &       12.21 & $\pm 0.5$        & $\pm 0.01$ \\
-            800 &       10.83 & $\pm 0.5$        & $\pm 0.01$ \\
-            700 &        9.63 & $\pm 0.5$        & $\pm 0.01$ \\
-            600 &        7.89 & $\pm 0.5$        & $\pm 0.01$ \\
+            1000 &       6.74  & $\pm 0.02$        & $\pm 0.01$\\
+            900 &       6.11 & $\pm 0.02$        & $\pm 0.01$\\
+            800 &       5.42 & $\pm 0.02$        & $\pm 0.01$\\
+            700 &       4.82 & $\pm 0.02$        & $\pm 0.01$\\
+            600 &       3.95 & $\pm 0.02$        & $\pm 0.01$\\
         \hline
     \end{tabular}
 
@@ -223,13 +222,13 @@ Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada c
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        $D$ (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{min}$ (mm)  \\
         \hline
-            1000 &       17.8  & $\pm 0.5$        & $\pm 0.01$ \\
-            900 &       15.36 & $\pm 0.5$        & $\pm 0.01$ \\
-            800 &       14.28 & $\pm 0.5$        & $\pm 0.01$ \\
-            700 &       12.12 & $\pm 0.5$        & $\pm 0.01$ \\
-            600 &       10.93 & $\pm 0.5$        & $\pm 0.01$ \\
+            1000 &       8.9   & $\pm 0.02$   & $\pm 0.01$ \\
+            900 &       7.68  & $\pm 0.02$    & $\pm 0.01$ \\
+            800 &       7.14  & $\pm 0.02$    & $\pm 0.01$ \\
+            700 &       6.06  & $\pm 0.02$    & $\pm 0.01$ \\
+            600 &       5.47 & $\pm 0.02$    & $\pm 0.01$ \\
         \hline
     \end{tabular}
 \end{table}
@@ -243,13 +242,13 @@ Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada c
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        D (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm) & $\Delta X_{min}$ (mm)  \\
+        $D$ (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm)  & $\Delta X_{min}$ (mm) \\
         \hline
-            1000 &       24.29 & $\pm 0.5$        & $\pm 0.01$ \\
-            900 &       21.32 & $\pm 0.5$        & $\pm 0.01$ \\
-            800 &       19.82 & $\pm 0.5$        & $\pm 0.01$ \\
-            700 &       17.78 & $\pm 0.5$        & $\pm 0.01$ \\
-            600 &       13.83 & $\pm 0.5$        & $\pm 0.01$ \\
+            1000 &      12.15 & $\pm 0.02$   & $\pm 0.01$    \\
+            900 &      10.66  & $\pm 0.02$    & $\pm 0.01$   \\
+            800 &       9.91  & $\pm 0.02$    & $\pm 0.01$   \\
+            700 &       8.89  & $\pm 0.02$    & $\pm 0.01$   \\
+            600 &       6.92 & $\pm 0.02$    & $\pm 0.01$   \\
         \hline
     \end{tabular}
 
@@ -264,13 +263,13 @@ Tomamos las medidas de la anchura del patrón de difracción 5 veces para cada c
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        D (mm) & $X_{min}$ (mm) & $\Delta X_{min}$ (mm) & $\Delta D$ (mm)  \\
+        $D$ (mm) &   $X_{min}$ (mm) & $\Delta D$ (mm)  & $\Delta X_{min}$ (mm)\\
         \hline
-        1000 & 62.6  & $\pm 0.5$  & $\pm 0.01$  \\
-        900  & 56.25 & $\pm 0.5$  & $\pm 0.01$  \\
-        800  & 50.34 & $\pm 0.5$  & $\pm 0.01$  \\
-        700  & 44.17 & $\pm 0.5$  & $\pm 0.01$  \\
-        600  & 37.59 & $\pm 0.5$  & $\pm 0.01$  \\
+            1000 &      31.3   & $\pm 0.02$   & $\pm 0.01$    \\
+            900 &      28.13 & $\pm 0.02$   & $\pm 0.01$    \\
+            800 &      25.17  & $\pm 0.02$   & $\pm 0.01$    \\
+            700 &      22.09 & $\pm 0.02$   & $\pm 0.01$    \\
+            600 &      18.79 & $\pm 0.02$   & $\pm 0.01$    \\
         \hline
     \end{tabular}
 \end{table}
@@ -285,15 +284,17 @@ Para el caso de una red de difracción, se han examinado 3 redes distintas para 
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        D (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (mm)   \\
+        $D$ (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (mm)   \\
         \hline
-            350 &           28   & $\pm 0.5$         & $\pm 0.01$              \\
-            300 &           25.2 & $\pm 0.5$         & $\pm 0.01$              \\
-            250 &           19.6 & $\pm 0.5$         & $\pm 0.01$              \\
-            200 &           15.9 & $\pm 0.5$         & $\pm 0.01$              \\
-            150 &           12   & $\pm 0.5$         & $\pm 0.01$              \\
+            350 &            140   & $\pm 0.5$         & $\pm 0.5$               \\
+            300 &            126   & $\pm 0.5$         & $\pm 0.5$               \\
+            250 &             98   & $\pm 0.5$         & $\pm 0.5$               \\
+            200 &             79.5 & $\pm 0.5$         & $\pm 0.5$               \\
+            150 &             60   & $\pm 0.5$         & $\pm 0.5$               \\
         \hline
-    \end{tabular}    
+    \end{tabular}
+
+       
 \end{table}
 
 \vspace{0.5cm}
@@ -303,19 +304,17 @@ Para el caso de una red de difracción, se han examinado 3 redes distintas para 
     \centering
     \small
     \setlength{\tabcolsep}{4pt}
-
     \begin{tabular}{cccc}
         \hline
-        D (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (cm)   \\
+        $D$ (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (mm)   \\
         \hline
-            700 &           28.4 & $\pm 0.5$         & $\pm 0.01$              \\
-            600 &           23.8 & $\pm 0.5$         & $\pm 0.01$              \\
-            500 &           20.2 & $\pm 0.5$         & $\pm 0.01$              \\
-            400 &           15   & $\pm 0.5$         & $\pm 0.01$              \\
-            300 &           11.9 & $\pm 0.5$         & $\pm 0.01$              \\
+            700 &            142   & $\pm 0.5$         & $\pm 0.5$               \\
+            600 &            119   & $\pm 0.5$         & $\pm 0.5$               \\
+            500 &            101   & $\pm 0.5$         & $\pm 0.5$               \\
+            400 &             75   & $\pm 0.5$         & $\pm 0.5$               \\
+            300 &             59.5 & $\pm 0.5$         & $\pm 0.5$               \\
         \hline
     \end{tabular}
-
 \end{table}
 
 \vspace{0.5cm}
@@ -328,13 +327,13 @@ Para el caso de una red de difracción, se han examinado 3 redes distintas para 
 
     \begin{tabular}{cccc}
         \hline
-        D (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (mm)   \\
+        $D$ (mm) &   $X_{max}$ (mm) & $\Delta D$ (mm)   & $\Delta X_{max}$ (mm)   \\
         \hline
-            700 &            9.1 & $\pm 0.5$         & $\pm 0.01$              \\
-            600 &            8.4 & $\pm 0.5$         & $\pm 0.01$              \\
-            500 &            6.1 & $\pm 0.5$         & $\pm 0.01$              \\
-            400 &            5   & $\pm 0.5$         & $\pm 0.01$              \\
-            300 &            3.9 & $\pm 0.5$         & $\pm 0.01$              \\
+            700 &             45.5 & $\pm 0.5$         & $\pm 0.5$               \\
+            600 &             42   & $\pm 0.5$         & $\pm 0.5$               \\
+            500 &             30.5 & $\pm 0.5$         & $\pm 0.5$               \\
+            400 &             25   & $\pm 0.5$         & $\pm 0.5$               \\
+            300 &             19.5 & $\pm 0.5$         & $\pm 0.5$               \\
         \hline
     \end{tabular}
 
@@ -349,7 +348,7 @@ más adelante en el estudio espectroscópico ya que uilizaremos los valores medi
 \end{align}
 
 \subsection{Parte opcional: Patrón de difracción circular}
-En esta parte
+En esta parte se ha realizado un estudio del patrón de difracción circular.
 
 \subsection{Espectroscopía de un gas}
 
@@ -371,7 +370,7 @@ Y los resultados obtenidos para cada red serán los siguientes:
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        $\theta_{i}$ (grados) &   $\lambda_{i}$ (nm) &   $\Delta$ $\theta_{i}$ (grados) & $\Delta$ $\lambda_{i}$ (nm)   \\
+        $\theta_{i}$ (grados) &   $\lambda_{i}$ (nm) &   $\Delta \theta_{i}$ (grados) & $\Delta \lambda_{i}$ (nm)   \\
         \hline
                     0   &          0     &                     $\pm 0.01$ & $ \pm 0.0001$            \\
                     2.5 &        431.491 &                     $\pm 0.01$ & $ \pm 0.0001$            \\
@@ -391,7 +390,7 @@ Y los resultados obtenidos para cada red serán los siguientes:
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        $\theta$ (grados) &   $\lambda$ (nm) & $\Delta$ $\theta$ (grados)   & $\Delta$ $\lambda$ (nm)   \\
+        $\theta$ (grados) &   $\lambda$ (nm) & $\Delta \theta$ (grados)   & $\Delta \lambda$ (nm)   \\
         \hline
                         0   &            0     & $\pm$ 0.01                     & $\pm$ 3e-05                 \\
                         7.5 &          422.319 & $\pm$ 0.01                     & $\pm$ 3e-05                 \\
@@ -413,7 +412,7 @@ Y los resultados obtenidos para cada red serán los siguientes:
     \setlength{\tabcolsep}{4pt}
     \begin{tabular}{cccc}
         \hline
-        $\theta$ (grados) &   $\lambda$ (nm) & $\Delta$ $\theta$ (grados)   & $\Delta$ $\lambda$ (nm)   \\
+        $\theta$ (grados) &   $\lambda$ (nm) & $\Delta \theta$ (grados)   & $\Delta \lambda$ (nm)   \\
         \hline
                         0   &            0     & $\pm$ 0.01                     & $\pm$ 2e-05                 \\
                         16   &          438.934 & $\pm$ 0.01                     & $\pm$ 2e-05                 \\
@@ -427,37 +426,163 @@ Y los resultados obtenidos para cada red serán los siguientes:
 
 \section{Análisis de resultados}
 
+Ahora procederemos a representar gráficamente los resultados ohbtenidos para en cada caso, obtener lo que se nos pide.
 
-Vemos pues que aún a pesar de los resultados obtenidos en el cálculo de los residuos asociados a las tomas, los resultados
- experimentales son consistentes con estudios realizados previamente.  
+\subsection{Rendija simple}
+En esta parte representaremos gráficamente la relación entre $X_{min}$ y $D$ para cada una de las 6 tomas realizadas. Además, se realizará un ajuste lineal a cada una de las gráficas para obtener el valor de $m$ 
+y así poder obtener el valor de la anchura de la rendija. Para el cálculo, supondremos que el laser tiene una $\lambda = $
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/toma_1_rendija_simple.png}
+    \caption{Gráfica de $X_{min}$ vs $D$ para la toma 1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/toma_2_rendija_simple.png}
+    \caption{Gráfica de $X_{min}$ vs $D$ para la toma 2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/toma_3_rendija_simple.png}
+    \caption{Gráfica de $X_{min}$ vs $D$ para la toma 3}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/toma_4_rendija_simple.png}
+    \caption{Gráfica de $X_{min}$ vs $D$ para la toma 4}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/toma_5_rendija_simple.png}
+    \caption{Gráfica de $X_{min}$ vs $D$ para la toma 5}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/toma_6_rendija_simple.png}
+    \caption{Gráfica de $X_{min}$ vs $D$ para la toma 6}
+\end{figure}
+
+\vspace{0.5cm}
+
+Al hacer la media de los valores obtenidos para $m$, obtenemos que:
+\begin{equation}
+    \bar{m} = 0.012
+\end{equation}
+
+\vspace{0.5cm}
+
+
+Y por tanto usando la relación $a = \frac{\lambda}{2 \bar{m}}$ obtenemos que la anchura de la rendija es de:
+\begin{equation}
+    a = 26.25 \, \mu\text{m}
+\end{equation}
+
+Podemos comparar este resultado obtenido con datos de las rendijas con rendijas similares en venta, en nuestro caso comparamos con la página \cite{ventus_rendijas} donde las rendijas tienen una anchura de 
+$0.025 mm$, por tanto nuestro resultado se acerca mucho al real.
+\subsection{Red de difracción}
+
+En este caso se ha representado gráficamente la relación entre $X_{max}$ y $D$ para cada una de las 3 redes de difracción. Además, se ha realizado un ajuste lineal a cada una de las gráficas para obtener el valor de $p$ y así poder obtener el número de líneas por milímetro de cada red.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/red_600.png}
+    \caption{Gráfica de $X_{max}$ vs $D$ para la red de 600 líneas/mm}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/red_300.png}
+    \caption{Gráfica de $X_{max}$ vs $D$ para la red de 300 líneas/mm}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/red_100.png}
+    \caption{Gráfica de $X_{max}$ vs $D$ para la red de 100 líneas/mm}
+\end{figure}
+
+Con el análisis realizado, obtenemos que $p= \frac{m}{\lambda}$, con $\lambda = 650$ nm, primero antes de obtener los resultados debemos hacer el cálculo del error asociado:
+\begin{equation}
+    \Delta p = \left|\frac{\partial p}{\partial m}\right|\Delta m = \left|\frac{1}{\lambda}\right| \Delta m
+\end{equation}
+\begin{align}
+    p_{600} = 635 \pm 32 \\
+    p_{300} = 321 \pm 12 \\
+    p_{100} = 106 \pm 9
+\end{align}
+
+Vemos pues que nuestros resultados, divergen ligeramente respecto al resultado teórico, pero al encontrarse en el mismo orden de magnitud, los errores pueden deberse a errores de 
+calibración en la medida. 
+
+\subsection{Espectroscopía de un gas}
+
+Para este apartado utilizaremos el código programado para el apartado 6. Con ello, obtendremos las longitudes de onda representadas. Pasaremos en cada caso los datos a metros ya que es 
+la unidad en la que esta basada el código. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/espectro600.png}
+    \caption{Espectograma para los datos obtenidos para la red de 600 líneas/mm}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/espectro_300.png}
+    \caption{Espectograma para los datos obtenidos para la red de 300 líneas/mm}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/espectro_100.png}
+    \caption{Espectograma para los datos obtenidos para la red de 100 líneas/mm}
+\end{figure}
+ 
+Para comparar con el Helio, utilizaremos la de 300 líneas/mm ya que es la que nos da mejores valores cercanos a los teóricos. Buscando encontramos el siguiente espectrograma, con los datos de $\lambda$
+\cite{espectro_helio}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+        \hline
+        $\lambda_{teo}$ & $\lambda_{exp}$  & $\lambda_{tablas}$ & $\Delta \lambda_{tablas}$ \\
+        \hline
+
+        438             &    434           & 422.319            & 3e-05 \\
+        443             &    460           & 450.296            & 3e-05 \\
+        471             &    473           & 456            & 3e-05\\
+        492             &    486           & 506.146            & 3e-05\\
+        587             &    563           & 561.841            & 3e-05\\
+        667             &    640           & 645.058            & 3e-05\\
+        \hline          
+    \end{tabular}
+    
+\end{table}
+
+En esta tabla podemos ver que nuestros resultados a través del código y el cálculo de tablas se acercan bastante al resultado deseado. Si bien, faltan 2 espectros
+si mencionados en la página citada.
+
 \section{Conclusiones}
 
-Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
-se encurntra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
-ocupa todo el espacio teniendo zonas con aire lo que hace variar su volumen general. 
-
-
-En el caso de que hubieramos obtenido un valor experimental de $d = 3$, eso implicaría que la bola que hemos creado sería perfectamente esférica, 
-lo que implicaría que estaríamos hablando de un objeto en 3D. 
+Tras el estudio de la difracción y la espectroscopía del Helio, se ha podido validar el modelo de Fraunhofer para la determinación de parámetros físicos. La anchura de la rendija calculada ($26.25 \mu m$) concuerda con las especificaciones técnicas habituales, y los parámetros de red obtenidos han permitido identificar las líneas principales del espectro del Helio con un error mínimo.
 
 \vspace{0.5cm}
-Podemos sacar otras relaciones en base a la masa y el volumen como la densidad. Como $\rho = \frac{M}{V}$ y $V \propto R^d$, 
-podemos decir que $\rho \propto D^{d-3}$. Y como $d < 3$, las bolas más grandes, con mayor masa serán menos densas que las más 
-pequeñas y compactas. 
-
-\vspace{0.5cm}
-
-Otra relación interesante es la dependendia de $d$ con el tipo de material utilizado para formar las esferas y con el método (si han sido comprimidas o no). 
-En nuestro caso podemos apreciar que el pael de aluminio es el que más se acerca a tener una dimensión igual a 3, mientras que el papel no comprimido se aleja más
-si bien el comprimido tiene una dimensión mayor. Es decir cuanto más maleable o más se trabaje para asimilar a una esfera, mayor será la dimensión fractal obetnida.
+Las discrepancias observadas en las redes de mayor densidad de líneas sugieren que la aproximación de ángulos pequeños pierde validez, requiriendo el uso de la relación trigonométrica completa para mejorar la precisión en futuros estudios.
 
 \textbf{AQUÍ HABRÍA QUE COMPARAR EL ERROR OBTENIDO PARA m EXPERIMENTALMENTE CON EL OBTENIDO EN LA APLICACIÓN}
 
 \vspace{1cm}
 Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de práctias: 
 
+\subsection{Referencias}
 
-\section{Referencias}
-
+%\printbibliography
 
 \end{document}

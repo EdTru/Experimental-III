@@ -289,9 +289,12 @@ def calcular_espectro():
         return
 
     theta = np.array([float(x) for x in entry_theta.get().split(",")])
+
+    theta_rad = np.deg2rad(theta)
+
     d = 1/(2*N_global)
 
-    lambdas = 2*d*np.abs(np.sin(theta))
+    lambdas = 2*d*np.abs(np.sin(theta_rad))
 
     texto = "\n".join([f"{l:.2e} m" for l in lambdas])
     label_spec.configure(text=texto)
