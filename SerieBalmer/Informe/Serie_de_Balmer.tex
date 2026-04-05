@@ -18,7 +18,7 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{mathtools}
-
+\usepackage{appendix}
 % --- Gráficos y Tablas ---
 \usepackage{graphicx}
 \usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
@@ -36,7 +36,7 @@
 \addbibresource{referencias.bib}
 
 % --- Título y Autores ---
-\title{\textbf{\Large Serie de Balmer}}
+\title{\textbf{\Large Series de emisión del helio}}
 \author{
 	\textbf{Truchado Iniesta, Eduardo}, \textbf{Sanz Rubio, Juan} \\
 	\small Grado de Física, UCLM. \texttt{juan.sanz1@alu.uclm.es} \\
@@ -76,476 +76,472 @@
 %Resumen
 
 \begin{abstract}
-En esta práctica realizaremos una aproximación a la librería de python Qiskit,
-un paquete especializado para la simulación de circuitos cuánticos. Construiremos
-diferentes circuitos cuánticos: para visualizar la distribución estadística de 
-un estado $R_y(\theta)|0\rangle$ según el ángulo. Construiremos un estado de Bell
-$|\Phi^+\rangle$, lo mediremos en diferentes bases y calcularemos el valor de 
-$\langle Z \otimes Z \rangle$ y por último realizaremos un circuito de teleportación 
-cuántica.
+
+En esta práctica nuestro objetivo será estudiar la estructura atómica
+mediante la espectroscopía de emisión. Para ello, primero utilizaremos las 
+lineas espectrales de emisión del mercurio para calcular la constante 
+de red de la red de difracción que utilizaremos a lo largo de la práctica.
+
+\vspace{0.1cm}
+
+A continuación, utilizaremos una lampara de helio y utilizando la misma 
+red de difracción y un goniómetro mediremos a los ángulos para los cuales
+obtenemos las lineas de emisión. Luego calcularemos las longitudes de 
+onda resultantes y las comparemos con la teoría para ver que transiciones 
+electrónicas estamos viendo. 
+
+\vspace{0.1cm}
+
+Por último, realizaremos un script de Python que simule estas transiciones 
+electrónicas.
 
 \end{abstract}
 
 
 \section{Introducción}
+Cuando excitamos eléctricamente un material aplicando un campo eléctrico 
+suficientemente potente, los electrones de los átomos del material 
+saltan a niveles energéticos superiores y al regresar a su nivel original 
+liberan energía en forma de fotones. Como esos saltos de energía solo pueden 
+tomar ciertos valores, al tomar el espectro de emisión vemos solo algunos colores 
+que representan estas transiciones. Pero para poder ver los diferentes colores 
+sin que se aglutinen en luz blanca debemos utilizar una red de difracción, que 
+separará las longitudes de onda siguiendo la ecuación:
 
-En esta practica vamos a simular distintos circuitos cuánticos en el 
-lenguaje de programación Python utilizando la librería $Qiskit$, simularemos
-circuitos con un número diferente de qubits en cada caso y aplicando en cada ocasión
-puertas lógicas cuánticas distintas.
+\begin{equation}
+	k \cdot \lambda = g \sin{(\alpha)} \:\: k=0,1,2,\cdots
+\end{equation}
 
-\vspace{0.2cm}
+Donde $g$ es el parámetro de red y la relación trigonométrica $sin(\alpha)$ podemos 
+obtenerla mediante:
 
-Al iniciar cada parte, comenzaremos inicializando un circuito cuántico
-con un cierto número de qubits y todos ellos en el estado $|0\rangle$.
-Después de ello, aplicaremos las operaciones pertinentes en cada situación
-y para visualizar el circuito haremos uso del método $draw()$. Una vez
-el circuito esté finalizado, haremos uso de la libreria $Qiskit\_aer$ para
-realizar la simulación del circuito. Esta simulación la ejecutaremos un
-número de veces o $shots$ para obtener un espacio muestral suficiente con
-el que obtendremos las probabilidades con las cuales nuestro circuito colapsa
-a cada estado posible.
+\begin{equation}
+	\sin(\alpha) = \frac{l}{\sqrt{l^2+d^2}}
+\end{equation}
+
+Puesto que en la primera parte no medimos el ángulo, si no que mediremos la 
+distancia entre las lineas espectrales $2l$ y la distancia dentre el banco 
+óptico y la fuente $d$.
+
+
+\begin{equation}
+	g = \frac{\sqrt{d^2 + l^2}}{l}\lambda
+\end{equation}
+
+Con el parámetro de red calculamos, procederemos a calcular la longitud de 
+onda de las lineas de emisión del helio.
+
+\begin{equation}
+	\lambda = g \sin{\alpha}
+   \label{lambdaEQ}
+\end{equation}
+
+Y como la energía de los fotones viene dada por:
+
+\begin{equation}
+	\Delta E = h f = \frac{h c}{\lambda}
+   \label{EEQ}
+\end{equation}
+
+Podremos calcular los saltos entre niveles de energía.
 
 \section{Objetivos}
-Los objetivos principales de la práctica son: familiarizarnos con la librería $Qiskit$,
-aprender a construir circuitos y estados cuánticos y analizar estadísticamente 
-los resultados que obtenemos en función de las veces que lo ejecutamos.
+Los objetivos principales de la práctica son: calibrar una red de difracción 
+para comprobar cuál es su parámetro de red, estudiar las lineas espectrales 
+del mercurio y del helio y demostrar que transiciones electrónicas dan lugar 
+a esas lineas espectrales.
 
 
 \section{Metodología}
 
-\subsection{Circuito de 1 qubit}
+\subsection{Calibración del parámetro de red}
 
-En esta primera parte realizaremos un código que a un qubit $|0\rangle $ le 
-aplique la puerta lógica $R_y({\theta})$. Con ello conseguiremos estados cuánticos
-que pueden colapsar a diferentes valores lógicos de $0$ o $1$, cada uno con 
-una probabilidad dependiente de $\theta$. En nuestro caso, tomaremos cuatro
-valores distintos: 
-
-\begin{equation}
-	\theta = 0,\frac{\pi}{3},\frac{\pi}{2},\pi
-\end{equation}
-
-El circuito será: 
+Para esta parte el montaje será:
 
 \begin{figure}[h]
 	\centering
-	\includesvg[scale=0.5]{imagenes/circ1qb.svg}
-	\caption{Circuito de 1 qubit con $R_y(\pi)$}
-	\label{circ1qb}
+	\includegraphics[scale=0.2]{imagenes/Montaje_SerieBalmer.png}
+	\caption{Montaje experimental para la determinación de la constante de red}
+	\label{Montaje1}
 \end{figure}
 
-Ejecutaremos este circuito con 50, 100, 1000 y 5000 $shots$ para cada valor
-de $\theta$ y calcularemos: la frecuencia relativa experimental, la 
-probabilidad teórica, su desviación típica $\sigma$ y el factor  de incertidumbre estadística $z$. 
-Estas dos últimas las calcularemos utilizando:
+Montamos el banco óptico a una distancia $d$ que variaremos y colocaremos una 
+regla milimetrada detrás del tubo espectral, para evitar el error de paralaje. 
+Además, nos cercioraremos de que todo esté a la misma altura e intentaremos 
+tener la zona de trabajo lo menos iluminada posible.
 
-\begin{equation}
-	\sigma= \sqrt{\frac{p_{teo}(1-p_{teo})}{N}}\:\:\:\:\:\:\:\:
-	z = \frac{|f-p|}{\sigma}
-\end{equation}
+\vspace{0.1cm}
 
-La probabilidad teórica la calcularemos sabiendo que la puerta $R_y{\theta}$ nos
-crea el estado:
+Una vez el montaje esté correcto, conectaremos la fuente de alto voltaje 
+con el tubo espectral de mercurio y colocando el ojo en una posición fija 
+respecto a la red de difracción y anotaremos los puntos en los que las lineas 
+de emisión coinciden con la regla milimetrada. De esta forma, podremos saber 
+la longitud entre cada linea de emisión.
 
-\begin{equation}
-	R_y(\theta)|0\rangle = \cos(\frac{\theta}{2})|0\rangle + \sen(\frac{\theta}{2})|1\rangle
-\end{equation}
+\vspace{0.1cm}
 
-Y cómo la probabilidad es proporcional al cuadrado de cada componente, conoceremos
-el valor teórico de la probabilidad.
+Midiendo estas lineas de emisión y comparandolas con las de la 
+literatura, obtendremos la constante de red que utilizaremos en los 
+siguientes apartados.
 
-\vspace{0.2cm}
+\subsection{Lineas de emisión del helio}
 
-Además de esta tabla, como parte extra realizaremos un programa que 
-ejecute el código, con un número de $shots$ dado, varias veces. De esta
-manera podemos como se distribuye la desviación típica.
-
-\subsection{Circuito de 2 qubits}
-
-Ahora iniciaremos un circuito con 2 qubits que se encontrarán en el estado
-$|00\rangle$ y nuestro objetivo será 
-construir el estado de Bell $|\Phi^+\rangle$:
-
-\begin{equation}
-	|\Phi^+\rangle = \frac{1}{\sqrt{2}}\left( |00\rangle + |11\rangle\right)
-\end{equation}
-
-Y medirlo en la base $ZZ$ y $XX$ para ello, nuestros circuitos serán:
+Una vez tengamos la constante de red de nuestra red de difracción, 
+cambiamos el tubo espectral del mercurio por uno de helio y mediremos 
+el ángulo para el cual se forman las lineas espectrales con el uso de un 
+goniómetro:
 
 \begin{figure}[h]
 	\centering
-	\includesvg[scale=0.4]{imagenes/circ2qb.svg}
-	\caption{Circuito de 2 qubits para obtener $|\Phi^+\rangle$ en la base $ZZ$}
-	\label{circ2qb}
+	\includegraphics[scale=0.15]{imagenes/Montaje_Goniometro.png}
+	\caption{Montaje experimental para la medición de las lineas espectrales del helio}
+	\label{Montaje2}
 \end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includesvg[scale=0.4]{imagenes/circ2qbXX.svg}
-	\caption{Circuito de 2 qubits para obtener $|\Phi^+\rangle$ en la base $XX$}
-	\label{circ2qbXX}
-\end{figure}
-\newpage
+De esta manera podremos medir el ángulo para el cual se forman las lineas 
+espectrales de emisión. Con este ángulo podremos calcular la longitud de 
+onda de los fotones emitidos y con ello, su energía. Con la energía de 
+los fotones podremos determinar que salto entre niveles energéticos estamos 
+determinando.
 
-Dónde el aplicar las dos puerta $H$ hace que cambiemos de la base $ZZ$ a la base
-$XX$.
+\vspace{0.1cm}
 
-\vspace{0.2cm}
-Como en el apartado anterior, ejecutaremos el circuito con un cierto número 
-de $shots$ y calculamos la frecuencia relativa, la probabilidad teórica, 
-la desviación típica y la incertidumbre $z$. Para calcular la probabilidad 
-teórica evaluaremos $\langle Z \otimes Z \rangle$:
+Además, para intentar caracterizar mejor el espectro de emisión del helio 
+trataremos de colocar un fotodiodo en la lente del goniómetro para medir 
+ángulo a ángulo la intensidad recibida.
 
-\begin{equation}
-	\langle Z \otimes Z \rangle = \langle \Phi^+| Z \otimes Z |\Phi^+ \rangle 
-\end{equation}
+\subsection{GUI de transiciones atómicas}
 
-Donde $Z$ es la matriz de Pauli:
-
-\begin{equation}
-	Z = 
-	\begin{pmatrix}
-		1 & 0\\ 0 & -1
-	\end{pmatrix}
-\end{equation}
-
-El producto $Z \otimes Z$ será:
-
-\begin{equation}
-	Z \otimes Z = 
-	\begin{pmatrix}
-		1 & 0\\ 0 & -1
-	\end{pmatrix} \otimes
-	\begin{pmatrix}
-		1 & 0\\ 0 & -1
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		1 & 0 & 0 & 0 \\
-		0 &-1 & 0 & 0 \\
-		0 & 0 &-1 & 0 \\
-		0 & 0 & 0 & 1
-
-	\end{pmatrix}	
-\end{equation}
-
-Entonces tenemos:
-
-\begin{equation}
-	\langle \Phi^+| Z \otimes Z |\Phi^+ \rangle = 
-	\frac{1}{2}(\langle 00 | + \langle 11|) Z \otimes Z (|00\rangle + |11\rangle)
-\end{equation}
-
-Cómo hemos visto, el producto $Z \otimes Z$ actua como la identidad para los 
-vectores $|00\rangle$ y $|11\rangle$ y por lo tanto:
-
-\begin{equation}
-	\langle Z \otimes Z \rangle = \frac{1}{2}(\langle 00 | 00 \rangle - 
-	\langle 00 | 11 \rangle - \langle 11 | 00 \rangle + \langle 11 | 11 \rangle)
-\end{equation}
-
-\begin{equation}
-	\langle Z \otimes Z \rangle = \frac{1}{2}(1 - 0 -0 +1) = 1
-\end{equation}
-
-Para calcular el valor esperado de forma experimental lo que haremos será medir
-las probabilidades de los cuatro estados $P(00)$, $P(01)$, $P(10)$ y $P(11)$. Y 
-operarlas según hemos calculado:
-
-\begin{equation}
-	\langle Z \otimes z \rangle = P(00) - P(01) - P(10) + P(11)
-\end{equation}
-
-\vspace{0.2cm}
-
-Debido a la particularidad del estado de Bell $|\Phi^+\rangle$ aunque nos
-piden realizar medidas en la base $ZZ$ y $XX$ el resultado será el mismo.
-Para demostrarlo, lo analizaremos analíticamente, sabiendo que los vectores
-de la base $ZZ$:
-
-\begin{equation}
-	|0\rangle \:\: |1\rangle
-\end{equation}
-
-Y los de la base $XX$:
-
-\begin{equation}
-	|+\rangle = \frac{1}{\sqrt{2}}(|0\rangle+|1\rangle) \:\:\:
-	|-\rangle = \frac{1}{\sqrt{2}}(|0\rangle-|1\rangle)  
-\end{equation}
-
-Escribimos la base $ZZ$ en funcion de los vectores de la base $XX$:
-
-\begin{equation}
-	|0\rangle = \frac{1}{\sqrt{2}}(|+\rangle+|-\rangle) \:\:\:
-	|1\rangle = \frac{1}{\sqrt{2}}(|+\rangle-|-\rangle) 
-\end{equation}
-
-Ahora, sabemos que el estado de Bell en la base $ZZ$ es: 
-
-\begin{equation}
-	|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|0\rangle \otimes |0\rangle + |1\rangle \otimes |1\rangle)
-\end{equation}
-
-Reescribimos los vectores de la base $ZZ$ en función de los vectores
-de la base $XX$:
-
-\begin{multline}
-	|\Phi^+\rangle = \frac{\sqrt{2}}{4}((|+\rangle+|-\rangle) \otimes (|+\rangle+|-\rangle) + \\
-	(|+\rangle-|-\rangle) \otimes (|+\rangle-|-\rangle)
-\end{multline}
-
-Operamo los productos tensoriales:
-
-\begin{multline}
-	|\Phi^+\rangle = \frac{\sqrt{2}}{4}((|++\rangle + |-+\rangle + |+-\rangle + |--\rangle)\\
-	+ (|++\rangle - |-+\rangle - |+-\rangle + |--\rangle))
-\end{multline}
-
-Y obtenemos:
-
-\begin{equation}
-	|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|++\rangle + |--\rangle)
-\end{equation}
-
-Y como vemos, el estado de Bell tiene la misma forma en la base $ZZ$ que en la base $XX$.
-Por lo tanto solo realizaremos las medidas en la base $ZZ$.
-
-\vspace{0.2cm}
-
-Por último, realizaremos un programa que ejecute, para un número de $shots$ dado,
-varias veces la simulación para ver cómo se distribuye la desviación típica. 
-
-\subsection{Circuito de 3 qubits}
-En esta práctica nos solicitan construir un circuito que teleporte la información
-de un qubit a otro. El circuito que nos proponen es:
-
-\begin{figure}[h]
-	\centering
-	\includesvg[scale=0.3]{imagenes/circ3qb.svg}
-	\caption{Circuito de teleportación cuántica}
-	\label{circ3qb}
-\end{figure}
-
-El circuito consta de cuatro fases. En la primera fase, iniciamos el circuito 
-con $qb0$ en el estado que queramos (en nuestro caso iniciamos con una puerta lógica $U$ para poder iniciar en el estado que deseemos).
-La segunda parte consta de construir un estado de Bell entre los qubits $qb1$ y $qb2$.
-En la tercera parte, construimos un estado entrelazado entre el $qb0$ y $qb1$. Y 
-por último, en la última parte medimos todos los qubits y aplicamos las puertas $X$ y 
-$Z$ condicionadas al resultado de la medida del qubit $qb0$ y $qb1$.
-
-\vspace{0.2cm}
-
-Con este circuito, el estado en el que iniciemos el $qb0$ será el que tome al final 
-el qubit $qb2$. Para comprobarlo, ejecutaremos el código varias veces iniciando
-cada vez el $qb0$ en diferentes estados para ver si la teleportación ocurre 
-con éxito.
+Por último, realizaremos un script en Python que tenga una interfaz de 
+usuario gráfica que nos permita simular las energías de los fotones emitidos 
+en diferentes transiciones atómicas.
 
 \section{Tratamiento de datos}
 
-A continuación mostraremos los resultados obtenidos al ejecutar cada código, todos
-los códigos esán disponibles al final del informe:
+A continuación mostraremos los datos obtenidos al realizar cada apartado.
 
-\subsection{Circuito de 1 qubit}
+\subsection{Calibración del parámetro de red}
 
-En este primer código, $Circ1qb.py$ al ejecutarlo obtenemos la siguiente tabla de datos:
+El error que tendremos al calcular el parámetro de red $g$ será:
+
+\begin{equation}
+   \Delta g = \left|  \frac{\partial g}{\partial l}\right| \Delta l + \left|  \frac{\partial g}{\partial d}\right| \Delta d
+\end{equation}
+
+Ya que tomamos que la longitud de onda de la teoría no tiene error. 
+Dentro del código $datos\_Hg.py$ se encuentran los datos obtenidos y al ejecutarlo 
+obtenemos:
 
 \begin{table*}
-	
-
-\begin{tabular}{cccccccccc}
+	\begin{tabular}{cccccccccc}
 \hline
-   $\theta$ &   $shots$ &   $f_{exp}(0)$ &   $f_{exp}(1)$ &   $p_{teo}(0)$ &   $p_{teo}(1)$ &   $\sigma_{teo}(0)$ &   $\sigma_{teo}(1)$ &   $z(0)$ &   $z(1)$ \\
+   d (m) & Color    &   $\lambda_{ref}$ (nm) &   2l (m) &   l (m) &       g (m) &   $\Delta d$ &   $\Delta 2l$ &   $\Delta l$ & $\Delta g$\\
 \hline
- 0       &      50 &          50 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
- 0       &     100 &       100 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
- 0       &    1000 &      1000 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
- 0       &    5000 &      5000 &         0 &      1    &      0    &    0          &    0          &     0         &     0         \\
- $\pi/3$  &      50 &    0.66   &    0.34   &      0.75 &      0.25 &    0.0612372  &    0.0612372  &       1.46969   &       1.46969   \\
-  $\pi/3$   &     100 &    0.75   &    0.25   &      0.75 &      0.25 &    0.0433013  &    0.0433013  &       0         &       0         \\
- $\pi/3$   &    1000 &    0.751  &    0.249  &      0.75 &      0.25 &    0.0136931  &    0.0136931  &       0.0730297 &       0.0730297 \\
-  $\pi/3$  &    5000 &    0.7534 &    0.2466 &      0.75 &      0.25 &    0.00612372 &    0.00612372 &       0.555218  &       0.555218  \\
-  $\pi/2$  &      50 &    0.52   &    0.48   &      0.5  &      0.5  &    0.0707107  &    0.0707107  &       0.282843  &       0.282843  \\
- $\pi/2$  &     100 &    0.51   &    0.49   &      0.5  &      0.5  &    0.05       &    0.05       &       0.2       &       0.2       \\
- $\pi/2$  &    1000 &    0.525  &    0.475  &      0.5  &      0.5  &    0.0158114  &    0.0158114  &       1.58114   &       1.58114   \\
- $\pi/2$  &    5000 &    0.4912 &    0.5088 &      0.5  &      0.5  &    0.00707107 &    0.00707107 &       1.24451   &       1.24451   \\
- $\pi$ &      50 &         0 &        50 &      0    &      1    &    0          &    0          &     0         &     0         \\
- $\pi$ &     100 &         0 &       100 &      0    &      1    &    0          &    0          &     0         &     0         \\
- $\pi$ &    1000 &         0 &      1000 &      0    &      1    &    0          &    0          &     0         &     0         \\
- $\pi$&    5000 &         0 &      5000 &      0    &      1    &    0          &    0          &     0         &     0         \\
+    0.5  & Amarillo &             578   &    0.382 &  0.191  & 1.620e-06 &    0.0005 &      0.001 &    0.0005 & 0.005e-06 \\
+    0.45 & Amarillo &             578   &    0.336 &  0.168  & 1.653e-06 &    0.0005 &      0.001 &    0.0005 & 0.006e-06 \\
+    0.5  & Verde    &             546.1 &    0.358 &  0.179  & 1.620e-06 &    0.0005 &      0.001 &    0.0005 & 0.005e-06 \\
+    0.45 & Verde    &             546.1 &    0.316 &  0.158  & 1.648e-06 &    0.0005 &      0.001 &    0.0005 & 0.006e-06 \\
+    0.5  & Azul     &             434.8 &    0.279 &  0.1395 & 1.618e-06 &    0.0005 &      0.001 &    0.0005 & 0.007e-06 \\
+    0.45 & Azul     &             434.8 &    0.247 &  0.1235 & 1.643e-06 &    0.0005 &      0.001 &    0.0005 & 0.008e-06 \\
 \hline
-
 \end{tabular}
-\caption{Resultado código $Circ1qb.py$ }
+\caption{Resultados de la calibración de la constante de red $g$}
 
-\label{tab: TablaCirc1qb}
+\label{tab: TablagHg}
 \end{table*}
 
 \newpage
 
-Al ejecutar el programa $Circ1qb\_estadistica.py$, que ejecuta este circuito cuántico con $5000$ $shots$ 
-$500$ veces, obtenemos un histograma con el valor que obtenemos de la desviación
-típica de cada ejecución:
+Tomando la media nos da un valor de $g$ de:
+\begin{equation}
+	g = 1.634\cdot 10^{-06} m \pm  0.006\cdot 10^{-06} m
+\end{equation}
+
+\subsection{Lineas de emisión del helio}
+
+Dentro del código $datos\_He.py$ tenemos los datos:
+
+\begin{table}[h]
+   \centering
+   \resizebox{1\textwidth}{!}{
+\begin{tabular}{cccccccccc}
+\hline
+   nº muestra & Color       &   $\alpha_{deg}$ (º) &   $\alpha_{rad}$ (r) &   $\lambda$ ($m$) &    $E$ ($eV$) &   $\Delta \alpha_{deg}$ &   $\Delta \alpha_{rad}$  &   $\Delta \lambda$ &     $\Delta E$ \\
+\hline
+           1 & azul oscuro &         15.1 &       0.2635 &  426e-09 &   2.91 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           2 & azul oscuro &         16   &       0.2792 &  450e-09  &   2.75 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           3 & azul oscuro &         16.8 &       0.2932 &  472e-09 &   2.63 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           4 & azul oscuro &         14.6 &       0.2548 &  412e-09 &   3.01 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           1 & azul claro  &         15.9 &       0.2775 &  448e-09 &   2.77  &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           2 & azul claro  &         17   &       0.2967 &  478e-09 &   2.60 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           3 & azul claro  &         17.6 &       0.3072 &  494e-09 &   2.51    &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           4 & azul claro  &         15.7 &       0.2740 &  442e-09 &   2.80 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           1 & cyan        &         16.9 &       0.2949 &  475e-09   &   2.61 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           2 & cyan        &         17.5 &       0.3054 &  491e-09 &   2.52 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           3 & cyan        &         18.5 &       0.3228 &  518e-09 &   2.39 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           4 & cyan        &         16.4 &       0.2862 &  461e-09 &   2.69 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           1 & verde       &         17.3 &       0.3019 &  486e-09 &   2.55 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           2 & verde       &         18   &       0.3141 &  505e-09  &   2.46 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           3 & verde       &         18.7 &       0.3263 &  524e-09 &   2.37 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           4 & verde       &         16.6 &       0.2897 &  467e-09  &   2.66 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
+           1 & amarillo    &         20.5 &       0.3578 &  572e-09  &   2.17 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
+           2 & amarillo    &         21   &       0.3665 &  585e-09 &   2.12 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
+           3 & amarillo    &         21.2 &       0.3700 &  591e-09 &   2.10 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
+           4 & amarillo    &         19.9 &       0.3473 &  556e-09 &   2.23 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
+           1 & rojo        &         23.5 &       0.4102 &  651e-09 &   1.90 &               0.05 &               0.0009 &    4e-09 &   0.01  \\
+           2 & rojo        &         24   &       0.4189 &  664e-09 &   1.87 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
+           3 & rojo        &         24.3 &       0.4241 &  672e-09 &   1.84 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
+           4 & rojo        &         22.8 &       0.3979 &  633e-09 &   1.96  &               0.05 &               0.0009 &    4e-09 &   0.01 \\
+\hline
 
 
-\begin{figure}[h!]
-	\centering
-	\includesvg[scale=0.54]{imagenes/HistogramaCirc1qb.svg}
-	\caption{Histograma de desviaciones típicas para el circuito \ref{circ1qb}}
-	\label{HistogramaCirc1qb}
-\end{figure}
+\end{tabular}
+   }
+\caption{Lineas de emisión del helio}
+\label{tab: TablaHe}
+
+\end{table}
 
 \newpage
+\quad
+\newpage
 
-Además, el código también nos devuelve los valores de la dispersión del estado $|0\rangle$
-pero como son equivalentes, solo dibujamos el histograma de uno de ellos.
-
-\subsection{Circuito de 2 qubits}
-
-Al ejecutar el código $Circ2qb.py$ y obtendremos tres tablas distintas, la primera
-es el resultado de las medidas en la base $ZZ$, la segunda en la base $XX$ y 
-la tercera es la desviación típica de cada medida realizada en la base $ZZ$.
-Las tres tablas son:
+Como hemos hecho cuatro tandas de medición tenemos cuatro valores para cada 
+línea de emisión, pero conviene tener la media de todas así que tomamos:
 
 
-\begin{table*}
-	
-	\begin{tabular}{ccccccccc}
-\hline
- Base   &   $Shots$ &   $f_{exp}(00)$ &   $f_{exp}(01)$ &   $f_{exp}(10)$ &   $f_{exp}(11)$ &   $\langle Z \otimes Z \rangle_{teo}$ &   $\langle Z \otimes Z \rangle_{exp}$ &   z \\
-\hline
- ZZ     &     100 &        0.51   &             0 &             0 &        0.49   &               1 &               1 &   0 \\
- ZZ     &    1000 &        0.484  &             0 &             0 &        0.516  &               1 &               1 &   0 \\
- ZZ     &    2000 &        0.503  &             0 &             0 &        0.497  &               1 &               1 &   0 \\
- ZZ     &    5000 &        0.5012 &             0 &             0 &        0.4988 &               1 &               1 &   0 \\
-\hline
-\end{tabular}
-	
+\begin{table}[h]
+   \centering
+
 \begin{tabular}{ccccccccc}
 \hline
- Base   &   $Shots$ &   $f_{exp}(++)$ &   $f_{exp}(-+)$ &   $f_{exp}(+-)$ &   $f_{exp}(--)$ &   $\langle Z \otimes Z \rangle_{teo}$ &   $\langle Z \otimes Z \rangle_{exp}$ &   z \\
+   Color       &  $\lambda$ ($m$) &    $E$ ($eV$) &  $\Delta \lambda$ &     $\Delta E$ \\
 \hline
- XX     &     100 &        0.38   &             0 &             0 &        0.62   &               1 &               1 &   0 \\
- XX     &    1000 &        0.489  &             0 &             0 &        0.511  &               1 &               1 &   0 \\
- XX     &    2000 &        0.483  &             0 &             0 &        0.517  &               1 &               1 &   0 \\
- XX     &    5000 &        0.4786 &             0 &             0 &        0.5214 &               1 &               1 &   0 \\
+           azul oscuro & 440e-09 &   2.82 &3e-09 &   0.02 \\
+           azul claro  & 465e-09 &   2.67 &3e-09 &   0.02 \\
+           cyan        & 486e-09 &   2.55 &3e-09 &   0.02 \\
+           verde       & 495e-09 &   2.51 &3e-09 &   0.02 \\
+           amarillo    & 576e-09 &   2.16 &4e-09 &   0.01 \\
+           rojo        & 655e-09 &   1.89 &4e-09 &   0.01 \\
+\hline
+
+
+\end{tabular}
+\caption{Valor medio de las lineas de emisión del helio}
+\label{tab: TablaHeM}
+
+\end{table}
+
+Dónde los errores de $\lambda$ y $E$ se han calculado por propagación de 
+errores de \ref{lambdaEQ} y \ref{EEQ}:
+
+\begin{equation}
+   \Delta \lambda = \left| \sin(\theta)\right| \Delta g + |g\cos(\theta)|\Delta \theta
+\end{equation}
+
+\begin{equation}
+   \Delta E = \frac{hc}{e} \frac{\Delta \lambda}{\lambda^2}
+\end{equation}
+
+La medición con el fotodiodo se encuentra en $datos\_He\_continuo.py$ y de ella obtenemos:
+
+\begin{table}[h]
+   \centering
+   \resizebox{0.5\textwidth}{!}{
+\begin{tabular}{cccccccc}
+\hline
+   $\alpha_{deg}$ (º) &   $\alpha_{rad}$ (rad) &   $\lambda$ ($m$)&   $I$ ($mW/cm^2$) &   $\Delta \alpha_{deg}$ &   $\Delta \alpha_{rad}$ &   $\Delta \lambda$ &   $\Delta I$ \\
+\hline
+            2 &         0.0349 & 57e-09  &                  0.006 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+            3 &         0.0524 & 85e-09  &                  0.004 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+            4 &         0.0698 & 114e-09 &                  0.009 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+            5 &         0.0873 & 142e-09 &                  0.008 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+            6 &         0.1047 & 171e-09 &                  0.002 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+            7 &         0.1222 & 199e-09 &                  0.008 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+            8 &         0.1396 & 227e-09 &                  0.013 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+            9 &         0.1571 & 256e-09 &                  0.006 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
+           10 &         0.1745 & 284e-09 &                  0.003 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           11 &         0.192  & 312e-09 &                  0.001 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           12 &         0.2094 & 340e-09  &                  0.004 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           13 &         0.2269 & 367e-09 &                  0.006 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           14 &         0.2443 & 395e-09 &                  0.005 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           15 &         0.2618 & 423e-09 &                  0.004 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           16 &         0.2793 & 450e-09  &                  0.005 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           17 &         0.2967 & 478e-09 &                  0.001 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           18 &         0.3142 & 505e-09 &                  0.013 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           19 &         0.3316 & 532e-09 &                  0.013 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
+           20 &         0.3491 & 559e-09 &                  0.018 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           21 &         0.3665 & 585e-09 &                  0.013 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           22 &         0.384  & 612e-09 &                  0.025 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           23 &         0.4014 & 638e-09 &                  0.006 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           24 &         0.4189 & 664e-09 &                  0.016 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           25 &         0.4363 & 690e-09  &                  0.009 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           26 &         0.4538 & 716e-09 &                  0.004 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           27 &         0.4712 & 742e-09 &                  0.002 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           28 &         0.4887 & 767e-09 &                  0.002 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           29 &         0.5061 & 792e-09 &                  0.003 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
+           30 &         0.5236 & 817e-09 &                  0.002 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
 \hline
 \end{tabular}
+   }
+\caption{Valores del espectro de emisión visible del helio}
+\label{tab: TablaHedio}
 
-\begin{tabular}{cccccccccc}
-\hline
- Base   &   $Shots$ &   $\sigma_{teo}(00)$ &   $\sigma_{teo}(01)$ &   $\sigma_{teo}(10)$ &   $\sigma_{teo}(11)$ &     $z(00)$ &   $z(01)$ &   $z(10)$ &     $z(11)$ \\
-\hline
- ZZ     &     100 &        0.05       &                 0 &                 0 &        0.05       & 0.2       &       0 &       0 & 0.2       \\
- ZZ     &    1000 &        0.0158114  &                 0 &                 0 &        0.0158114  & 0.822192  &       0 &       0 & 0.822192  \\
- ZZ     &    2000 &        0.0111803  &                 0 &                 0 &        0.0111803  & 1.43108   &       0 &       0 & 1.43108   \\
- ZZ     &    5000 &        0.00707107 &                 0 &                 0 &        0.00707107 & 0.0565685 &       0 &       0 & 0.0565685 \\
-\hline
-\end{tabular}
-\caption{Resultado circuito $circ2qb.py$ }
+\end{table}
 
-\label{tab: TablaCirc2qb}
-\end{table*}
+Y representando las intensidades frente a las longitudes de onda obtenemos 
+el espectro de emisión:
 
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.5]{imagenes/Espectrohelio.svg}
+	\caption{Espectro de emisión visible del helio}
+	\label{espectroHe}
+\end{figure}
 
 \newpage
 
-Luego, como en el apartado anterior, realizamos otro programa ($Circ2qb\_estadistica.py$)
-con el que observaremos como se distribuyen las desviaciones típicas al ejecutar
-$300$ veces el circuito con $5000$ $shots$. El histograma que nos devuelve es:
+\section{Análisis de resultados}
+\subsection{Calibración del parámetro de red}
 
-\begin{figure}[h!]
+La red de difracción que estábamos utilizando tenía, según las especificaciones,
+$600$ líneas por milímetro. Lo que corresponde a un parámetro de red de 
+$g=1.667\cdot10^{-6} m$. Este valor, aunque falla por un $3\%$ aproximadamente 
+del nuestro, no se encuentra en el rango de error que dimos. Por lo que debemos 
+tener otra fuente de error, que muy probablemente será o el error de paralaje 
+al medir o que la medida fuese incorrecta al tomar la linea espectral desde un 
+punto equivocado.
+
+\vspace{0.2cm}
+
+Esto podríamos haberlo resuelto si hubiesemos repetido las muestras tomando cada 
+vez una distancia al objeto $d$ mayor. Aunque en ese caso la iluminación hubiera empezado 
+a afectar nuestras medidas.
+
+\subsection{Lineas de emisión del Helio}
+
+Para comprobar si los resultados son adecuados, buscamos en la literatura 
+cual es es espectro de emisión del Helio y encontramos que en \cite{espectro_helioHYP}
+, en  \cite{espectro_helioNASA} y en \cite{espectro_Richard} obtienen entre 8 y 9 líneas de emision, mientras 
+que nosotros tan solo encontramos 6. 
+
+\newpage
+
+\begin{figure}[h]
 	\centering
-	\includesvg[scale=0.54]{imagenes/HistogramaCirc2qb.svg}
-	\caption{Histograma de desviaciones típicas para el circuito \ref{circ2qb}}
-	\label{HistogramaCirc2qb}
+	\includegraphics[scale=0.30]{imagenes/ImagenRichar.png}
+	\caption{Espectro del helio según \cite{espectro_Richard}}
+	\label{espectroRichar}
 \end{figure}
 
-\subsection{Circuito de 3 qubits}
-
-El código $Cir3qb.py$, en el construimos el circuito de teleportación cuántica 
-\ref{circ3qb}, no nos devuelve ninuna tabla, tan solo nos devuelve el valor del 
-qubit inicial y resultado de medir los qubits. Ejecutamos el programa con diferentes
-configuraciones iniciales:
-
-\begin{quote}
-	$\theta = \pi$ $\phi=0$ $\lambda =  0$ \newline
-	$qb0 = (0,1)$\newline
- ${'100': 246, '111': 246, '101': 258, '110': 250}$
-\end{quote}
-
-\begin{quote}
-	$\theta = 0$ $\phi=\pi$ $\lambda =  0$ \newline
-	$qb0 = (1,0)$\newline
- ${'001': 247, '011': 260, '000': 249, '010': 244}$
-\end{quote}
-
-\begin{quote}
-	$\theta = \frac{\pi}{2}$ $\phi=0$ $\lambda =  0$ \newline
-	$qb0 = (\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}})$\newline
- ${'110': 144, '001': 122, '111': 105, '011': 128,}$ \newline${ '000': 141, '010': 125, '100': 110, '101': 125}$
-\end{quote}
-
-\section{Análisis de resultados}
-
-En el primer circuito, los resultados de \ref{tab: TablaCirc1qb} nos muestran 
-como el resultado del circuito parece mas fiable según mayor sea el número
-de $shots$. Aunque al tratar con variables aleatorias, podemos tener casos, 
-como algunos que vemos en la tabla, que se alejan bastante del valor esperado.
+En estas tres referencias, y especialmente en la imagen, observamos que nuestros 
+datos \ref{tab: TablaHeM} \ref{tab: TablaHedio} corresponden con lo que observamos 
+en la literatura, pero solo el rojo y el verde se encuentran dentro del rango de error.
+En las demás medidas tenemos un factor de desplazamieento de hasta $10nm$ en el caso del 
+rojo.
 
 \vspace{0.2cm}
 
-Esto podría llevarnos a pensar que puede no existir la correlación que estamos 
-buscando, pero con la parte del hisograma \ref{HistogramaCirc1qb} vemos que si el
-número de ejecuciones ($5000 $ $shots$ y 300 ejecuciones) es suficientemente grande
-la desviación típica  de cada ejecución tiende a ser una distribución normal centrada en
-el 0.
-
-\vspace{0.4cm}
-
-En el segundo circuito, aunque también hemos observado la estadística, nos hemos preocupado
-mas por construir el llamado estado de Bell $|\Phi^+\rangle$ y lo que hemos comprobado con él
-es que, a parte de tener las mismas coordenadas en la base de medida $ZZ$ y $XX$,
-consigue que el producto $\langle Z \otimes Z \rangle$ sea siempre el esperado, ya que
-como podemos comprobar en la tabla \ref{tab: TablaCirc2qb} siempre obtenemos el mismo
-valor para el teórico que para el experimental. Esto se debe a que el estado 
-de Bell nos crea siempre los dos mismos estados y la probabilidad de tener uno 
-o el otro es siempre $1$.
+Ahora, para encontrar los niveles de energía que corresponden a cada linea de emisión
+buscamos en la literatura y encontramos \cite{NIST_ASD}.
 
 \vspace{0.2cm}
 
-Además, en esta parte también analizamos la dispersión de un estado (concretamente
-el $|0\rangle$) y con los mimos parámetros de ejecuciones y $shots$ obtenemos 
-algo muy similar, un histograma que se acerca a una distribución normal centrada
-en el $0$.
+Descargamos los datos del NIST \cite{NIST_ASD} en formato $csv$ y realizamos un 
+código de python que lea el archivo para así encontrar los niveles de energía. Por 
+comodidad trabajaremos solo hasta $n=5$. Con estos datos hacemos un esquema 
+de los niveles de energía:
 
-\vspace{0.4cm}
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.5]{imagenes/EspectroHelioTeo.svg}
+	\caption{Esquema de los niveles de energía del helio}
+	\label{nivelHe}
+\end{figure}
 
-En la última parte en el circuito de teleportación comprobamos como el estado que
-iniciamos el $qb0$ es el que aparece luego en el $qb2$. En el primer caso iniciamos
-en $|1\rangle$ y en los cuatro estados que nos devuelve el sistema en todos el $qb2$
-(el que primero aparece en los estados posibles) siempre está en $1$. 
+Como se puede observar en el esquema, hasta con una representación logarítmica 
+en el eje $y$ los niveles de energía para $n=5$ se aglutinan bastante. 
 
 \vspace{0.2cm}
 
-En el segundo caso iniciamos $qb0$ en $|0\rangle$ y obtenemos que $qb2$ siempre
-se encuentra en $0$. Por último, iniciamos $qb0$ en $\frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ y 
-comprobamos que el $qb2$ se encuentra en el estado $0$ y $1$ con la misma probabilidad.
+Ahora crearemos un programa con una interfaz gráfica que calcule que transiciones 
+energéticas generan cada longitud de onda . 
+Y no todas las transiciones están permitidas, ya que deben de seguir las reglas:
+
+\begin{enumerate}
+   \centering
+   \item $\Delta L = \pm 1 $
+   \item $\Delta S = 0$
+\end{enumerate}
+
+El programa tiene por nombre $Aplicacion\_niveles\_energia\_He.py$ y con él, podemos 
+ir probando diferentes configuraciones para ver que emisión resulta de cada una de 
+ellas:
+
+\vspace{0.2cm}
+
+Las imágenes del uso del programa se encuentran en un apéndice al final del documento. Y 
+en ellas podemos ver algunas transiciones como la  $1s3d 1D\rightarrow 1s2p 1P$  \ref{EGUI1} 
+que da lugar a una emisión de color amarillo. O la transición $1s3d 1D \rightarrow 1s2p 1P$  \ref{EGUI2}
+ que da lugar a una emisión roja. Los otros dos ejemplos son de cómo si se cumple alguna 
+ de las reglas que mencionamos antes el programa no ejecuta \ref{EGUI3} \ref{EGUI4}.
+
+Con la ayuda del programa y de la literatura, podemos ampliar la tabla \ref{tab: TablaHeM} 
+con los saltos electrónicos correspondientes:
+
+\begin{table}[h]
+   \centering
+
+\begin{tabular}{cccccc}
+\hline
+   Color       &  $\lambda$ ($m$) &    $E$ ($eV$) &  Transición&$\Delta \lambda$ &     $\Delta E$ \\
+\hline
+           azul oscuro & 440e-09 &   2.82 & $6d\rightarrow2p$&3e-09 &   0.02 \\
+           azul claro  & 465e-09 &   2.67 & $5d\rightarrow2p$&3e-09 &   0.02 \\
+           cyan        & 486e-09 &   2.55 & $4d\rightarrow2p$&3e-09 &   0.02 \\
+           verde       & 495e-09 &   2.51 & $4d\rightarrow2p$&3e-09 &   0.02 \\
+           amarillo    & 576e-09 &   2.16 & $3d\rightarrow2p$&4e-09 &   0.01 \\
+           rojo        & 655e-09 &   1.89 & $3d\rightarrow2p$&4e-09 &   0.01 \\
+\hline
+
+
+\end{tabular}
+\caption{Valor medio de las lineas de emisión del helio}
+\label{tab: TablaHeM}
+
+\end{table}
+
 
 \section{Conclusiones}
 
-Tras el estudio podemos sacar conclusiones como que el simulador $AerSimulator$ 
-utilizado en la práctica sigue el comportamiento de una distribución aleatoria ya
-que hemos visto que para un número suficientemente alto de simulaciones 
-la respuesta aleatoria converge a una normal centrada den $0$, cosa que no ocurriria
-si la distribución pseudoaleatoria no fuese muy lograda y ello provocaría errores
-al ejecutar los circuitos.
+Tras el estudio podemos concluir que la medición de las lineas espectrales 
+del mercurio para calibrar la constante de red, pese a no estar dentro de los 
+límites de error. Dió un resultado aceptable.
 
 \vspace{0.2cm}
 
-Por lo demás, lo que nos ha aportado esta práctica son las herramientas necesarias
-para poder simular circuitos cuanticos utilizando los algoritmos que deseemos.
+En cuanto a la parte del cálculo de las lineas espectrales, pese a que hemos intentado 
+varios métodos como la medida directa y el uso de un fotodiodo, ambas tienen 
+mucho error y no se acercan todo lo que deberían al valor esperado. Probablemente 
+la fuente de error sea que la medida directa no haya sido todo lo precisa posible 
+especialmente a la hora de mantener perpendiculares la muestra y la red de difracción, 
+y que en la medida con el fotodiodo este tomaba un ancho de luz demasiado grande 
+y cuando enfocabamos a un solo ángulo este tomaba la intensidad de un rango de unos $10º$ 
+que supone un tercio de todo el barrido. Esta última parte intentamos compensarla 
+añadiendo un tubo mas largo al óptico del goniómetro o tapando con cinta la mayor 
+parte del telescopio, pero no resultó en nada.
+
+\vspace{0.2cm}
+
+La mejor manera de resolverlo habría sido, conseguir un tubo mas delgado y que 
+filtrase mejor la luz haciendola mas directa y utilizar una red de difracción 
+que hubiese dispersado mas las lineas espectrales.
+
+\vspace{0.2cm}
+
+Por otro lado, el uso de la GUI desarrollada y de la literatura nos han hecho 
+ver que pese a los errores en el procedimiento no estamos tan alejados de los 
+autenticos resultados.
 
 \vspace{1cm}
 Para ver todo el análisis de datos realizado por los alumnos, se habilita este 
@@ -553,13 +549,48 @@ enlace al repositorio de
 github donde están todos los archivos de prácticas: 
 \cite{experimental32026}
 
+
 \section{Referencias}
 
 \nocite{experimental32026}
-\nocite{teleportation}
+
 %\nocite{cambou2011three}
 %\nocite{garcia2012bolas}
 
 \printbibliography
+
+\appendix
+\onecolumn
+
+\section{Imagenes de la GUI}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{imagenes/EjemploGUI1.png}
+	\caption{Ejemplo 1}
+	\label{EGUI1}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{imagenes/EjemploGUI2.png}
+	\caption{Ejemplo 2}
+	\label{EGUI2}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{imagenes/EjemploGUI3.png}
+	\caption{Ejemplo 3}
+	\label{EGUI3}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.35]{imagenes/EjemploGUI4.png}
+	\caption{Ejemplo 4}
+	\label{EGUI4}
+\end{figure}
+
 
 \end{document}

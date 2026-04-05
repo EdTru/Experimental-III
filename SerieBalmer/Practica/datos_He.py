@@ -3,14 +3,18 @@ import tabulate
 import scipy.constants as cons
 
 h = cons.h
-print(h)
 c = cons.c
 e = cons.eV
+g = np.float64(1.6336317230290944e-06) #Constante red apartado anterior
+
+error_angulo = 0.05
+error_angulo_rad = 0.0009
+error_g = np.float64(6.254791388988623e-09) #Error medio apartado anterior
+
 
 #ángulos en grados, el 0 es 325º, error = 0.1
 
-i = 323.5
-g = np.float64(1.6197290939428308e-06)
+i = 323.5 #Cero
 red_600_1 = np.array([[0, "blanco"],
 					[338.6-i, "azul oscuro"],
 					[339.4-i, "azul claro"],
@@ -27,7 +31,8 @@ red_600_2 = np.array([[0, "blanco"],#324
 					[18, "verde"],#342
 					[21, "amarillo"], #345
 					[24, "rojo"]]) #348
-i = 323
+
+i = 323 #Cero
 red_600_3 = np.array([[0, "blanco"],
 					[339.8-i, "azul oscuro"],#338.4 339.8
 					[340.6-i, "azul claro"],
@@ -36,9 +41,7 @@ red_600_3 = np.array([[0, "blanco"],
 					[344.2-i, "amarillo"],
 					[347.3-i, "rojo"]])
 
-#usamos otra red de difracción de 600 / mm
-
-i = 323.9
+i = 323.9 #Cero
 red_600_4 = np.array([[0, "blanco"],
 					[338.5-i, "azul oscuro"],#338.4 339.8
 					[339.6-i, "azul claro"],
@@ -49,15 +52,58 @@ red_600_4 = np.array([[0, "blanco"],
 
 
 
-tabla_lambas = []
-for ang,color in zip(np.transpose(red_600_4)[0], np.transpose(red_600_4)[1]):
-	ang= np.float64(ang)*2*np.pi/360
-	lambd = g*np.sin(np.float64(ang))
+pies = []
+
+
+for i in range(0,7):
+	#TOMA 1
+	angulo = red_600_1[i][0]
+	angulo_rad = np.float64(angulo)*2*np.pi/360
+	lambd = g*np.sin(np.float64(angulo_rad))
 	E_h = h*c/e * 1/lambd
-	tabla_lambas.append([color,ang,lambd,E_h])
 
-print(tabulate.tabulate(tabla_lambas))
+	error_lambd = error_g*np.abs(np.sin(angulo_rad))+np.abs(g*np.cos(angulo_rad))*error_angulo_rad
+	error_E = h*c/e * error_lambd/(lambd**2)
 
+	pies.append([1, red_600_1[i][1], angulo, angulo_rad, lambd, E_h, error_angulo, error_angulo_rad, error_lambd, error_E])
+	#Toma 2
+	angulo = red_600_2[i][0]
+	angulo_rad = np.float64(angulo)*2*np.pi/360
+	lambd = g*np.sin(np.float64(angulo_rad))
+	E_h = h*c/e * 1/lambd
+
+	error_lambd = error_g*np.abs(np.sin(angulo_rad))+np.abs(g*np.cos(angulo_rad))*error_angulo_rad
+	error_E = h*c/e * error_lambd/(lambd**2)
+
+	pies.append([2, red_600_2[i][1], angulo, angulo_rad, lambd, E_h, error_angulo, error_angulo_rad, error_lambd, error_E])
+
+	#TOMA 3
+	angulo = red_600_3[i][0]
+	angulo_rad = np.float64(angulo)*2*np.pi/360
+	lambd = g*np.sin(np.float64(angulo_rad))
+	E_h = h*c/e * 1/lambd
+
+	error_lambd = error_g*np.abs(np.sin(angulo_rad))+np.abs(g*np.cos(angulo_rad))*error_angulo_rad
+	error_E = h*c/e * error_lambd/(lambd**2)
+
+	pies.append([3, red_600_1[i][1], angulo, angulo_rad, lambd, E_h, error_angulo, error_angulo_rad, error_lambd, error_E])
+
+	#Toma 4
+	angulo = red_600_4[i][0]
+	angulo_rad = np.float64(angulo)*2*np.pi/360
+	lambd = g*np.sin(np.float64(angulo_rad))
+	E_h = h*c/e * 1/lambd
+
+	error_lambd = error_g*np.abs(np.sin(angulo_rad))+np.abs(g*np.cos(angulo_rad))*error_angulo_rad
+	error_E = h*c/e * error_lambd/(lambd**2)
+
+	pies.append([4, red_600_1[i][1], angulo, angulo_rad, lambd, E_h, error_angulo, error_angulo_rad, error_lambd, error_E])
+
+cabezas = ["nº medida","Color", "angulo (º)","angulo (rad)","lambda (m)","E (ev)","error angulo (º)", "error angulo (rad)", "error lambda","error E"]
+
+print(tabulate.tabulate(pies, cabezas, tablefmt="latex"))
+
+"""
 tabla_niveles=[]
 for n in range(1,8):
 	for m in range(1,n):
@@ -65,3 +111,4 @@ for n in range(1,8):
 		tabla_niveles.append([(m,n),E_at])
 
 print(tabulate.tabulate(tabla_niveles))
+"""
