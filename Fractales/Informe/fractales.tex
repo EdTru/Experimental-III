@@ -13,7 +13,7 @@
 % --- Geometría de Página ---
 \usepackage[margin=2.5cm, top=3.8cm, headheight=65pt, headsep=0.8cm]{geometry}
 \columnsep 0.6cm % Espacio entre columnas
-
+\usepackage{float}
 % --- Matemáticas Avanzadas ---
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
 \usepackage{mathtools}
@@ -262,8 +262,63 @@ Donde en ellos se obtiene una media de dimensión fractal de entre 2.3 a 2.5.
 \vspace{0.5cm}
 
 Vemos pues que aún a pesar de los resultados obtenidos en el cálculo de los residuos asociados a las tomas, los resultados
- experimentales son consistentes con estudios realizados previamente.  
+ experimentales son consistentes con estudios realizados previamente.
+
+\vspace{0.5cm}
+
+textbf{Crítica Experimental: Comparación de métodos de medida (Calibre vs. Análisis de imagen)}
+
+Por último haremos un estudio gráfico usando el programa imageJ para medir las áreas a través de fotos y usando la relación $D_{eq} = 2\sqrt{\frac{A_{eq}}{\pi}}$ obtener los diámetros 
+para el área dada por el programa. El objetivo pues de esta sección es realizar un estudio de la precisión del diámetro tomado de forma experimental.
+ Para ello usaremos las siguientes fotos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{fotos_informe/papel_comprimido_real.jpg}
+    \caption{Fotos del papel comprimido}
+ \end{figure}
+\newpage
+
+ \begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{fotos_informe/papel_de_aluminio_real.jpg}
+    \caption{Fotos del papel aluminio}
+ \end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{fotos_informe/papel_suave_real.jpg}
+    \caption{Fotos del papel suave}
+ \end{figure}
+
+ \vspace{0.5cm}
+\newpage
+
+Estas serán procesadas en imageJ en forma de 8bit y saturando las diferentes zonas, conseguiremos una imagen que el programa puede medir en $mm^{2}$. Con ello obtenemos los siguientes
+resultados: 
+
+
+\begin{table}[h]
+    \centering
+    \small
+    \begin{tabular}{ccccc}
+        \toprule
+        Papel   &   $m_{exp}$ &   $m_{img}$ &   $\Delta m_{exp}$ &   $\Delta m_{img}$ \\
+        \midrule
+        Suave      &     0.43 &     0.43 &            $\pm$ 0.02 &            $\pm$ 0.03 \\
+        Aluminio   &     0.39 &     0.44 &            $\pm$ 0.01 &            $\pm$ 0.02   \\
+        Comprimido &     0.41 &     0.39 &            $\pm$ 0.02 &            $\pm$ 0.02 \\
+        \bottomrule
+        \end{tabular}
+        \caption{Comparativa de la pendiente $m$ y su error estándar $\Delta m$ obtenidos experimentalmente frente al análisis de imagen.}
+        \label{tab:comparativa_errores}
+\end{table}
+
+Vemos pues que nuestros valores están considerablemente correlacionados con los obtenidos a través del análsis de imagen.
 \section{Conclusiones}
+
+
 
 Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
 se encurntra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
@@ -283,8 +338,6 @@ pequeñas y compactas.
 Otra relación interesante es la dependendia de $d$ con el tipo de material utilizado para formar las esferas y con el método (si han sido comprimidas o no). 
 En nuestro caso podemos apreciar que el pael de aluminio es el que más se acerca a tener una dimensión igual a 3, mientras que el papel no comprimido se aleja más
 si bien el comprimido tiene una dimensión mayor. Es decir cuanto más maleable o más se trabaje para asimilar a una esfera, mayor será la dimensión fractal obetnida.
-
-\textbf{AQUÍ HABRÍA QUE COMPARAR EL ERROR OBTENIDO PARA m EXPERIMENTALMENTE CON EL OBTENIDO EN LA APLICACIÓN}
 
 \vspace{1cm}
 Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de práctias: 
