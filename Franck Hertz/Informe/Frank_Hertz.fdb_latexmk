@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber Frank_Hertz"] 1775559097.55403 "Frank_Hertz.bcf" "Frank_Hertz.bbl" "Frank_Hertz" 1775559116.05581 0
-  "Frank_Hertz.bcf" 1775559115.7749 109180 f7523a655b6028d804d204484f4b5aaa "pdflatex"
+["biber Frank_Hertz"] 1775559097.55403 "Frank_Hertz.bcf" "Frank_Hertz.bbl" "Frank_Hertz" 1775585351.61819 0
+  "Frank_Hertz.bcf" 1775585351.35501 109180 f7523a655b6028d804d204484f4b5aaa "pdflatex"
   "referencias.bib" 1775557224.4915 1607 9ad85e8756f8e23110df8e5956990086 ""
   (generated)
   "Frank_Hertz.bbl"
   "Frank_Hertz.blg"
   (rewritten before read)
-["pdflatex"] 1775559110.69352 "/home/eduardo/Documentos/Python/Experimental III/Experimental-III/Franck Hertz/Informe/Frank_Hertz.tex" "Frank_Hertz.pdf" "Frank_Hertz" 1775559116.05725 0
-  "/home/eduardo/Documentos/Python/Experimental III/Experimental-III/Franck Hertz/Informe/Frank_Hertz.tex" 1775559085.36767 24470 c5aaf32662ac7e3def613938dca8ac8f ""
+["pdflatex"] 1775585345.69331 "/home/eduardo/Documentos/Python/Experimental III/Experimental-III/Franck Hertz/Informe/Frank_Hertz.tex" "Frank_Hertz.pdf" "Frank_Hertz" 1775585351.61917 0
+  "/home/eduardo/Documentos/Python/Experimental III/Experimental-III/Franck Hertz/Informe/Frank_Hertz.tex" 1775585345.14267 24672 5e9bbf542e23dae9702b024ee4c1b55a ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -187,11 +187,11 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1772574664 5571915 c7549c520e326cef0faccb09c1e29464 ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1772574922 3636717 0c0ec52c20abbb6703fc8f4a42b9bad6 ""
   "/usr/local/texlive/2026/texmf.cnf" 1772574650.98262 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "Frank_Hertz.aux" 1775559115.7649 7874 1817065c19eb805a573305a542707e86 "pdflatex"
+  "Frank_Hertz.aux" 1775585351.34501 7874 1817065c19eb805a573305a542707e86 "pdflatex"
   "Frank_Hertz.bbl" 1775559100.46779 7648 ddd5369ca931e0adf31dfe925d5c64fd "biber Frank_Hertz"
-  "Frank_Hertz.out" 1775559115.7719 2495 1e03dfb1ff99a8c3d90b5d41ec28c26e "pdflatex"
-  "Frank_Hertz.run.xml" 1775559115.77924 2355 c6704069767de4a5fcce6059628936f6 "pdflatex"
-  "Frank_Hertz.tex" 1775559085.36767 24470 c5aaf32662ac7e3def613938dca8ac8f ""
+  "Frank_Hertz.out" 1775585351.35101 2495 1e03dfb1ff99a8c3d90b5d41ec28c26e "pdflatex"
+  "Frank_Hertz.run.xml" 1775585351.35768 2355 c6704069767de4a5fcce6059628936f6 "pdflatex"
+  "Frank_Hertz.tex" 1775585345.14267 24672 5e9bbf542e23dae9702b024ee4c1b55a ""
   "imagenes/EjemploGUI1.png" 1775557224.4765 160925 4e5095998d7bddcfdfaeda64aeaa0827 ""
   "imagenes/EjemploGUI2.png" 1775557224.4785 160366 496b373fdcd8b93ac40bd9f5b35b802b ""
   "imagenes/EjemploGUI3.png" 1775557224.4815 161578 2cd89fea6d5dde3b257365975cca6177 ""

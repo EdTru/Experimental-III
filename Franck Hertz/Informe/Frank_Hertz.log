@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.3)  7 APR 2026 12:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.3)  7 APR 2026 20:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -996,83 +996,74 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 <imagenes/Montaje_SerieBalmer.png, id=67, 665.48625pt x 756.8275pt>
 File: imagenes/Montaje_SerieBalmer.png Graphic file (type png)
 <use imagenes/Montaje_SerieBalmer.png>
-Package pdftex.def Info: imagenes/Montaje_SerieBalmer.png  used on input line 119.
+Package pdftex.def Info: imagenes/Montaje_SerieBalmer.png  used on input line 123.
 (pdftex.def)             Requested size: 133.09488pt x 151.36281pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 <logoFCTo.png, id=69, 121.8954pt x 36.3759pt>
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 149.
+Package pdftex.def Info: logoFCTo.png  used on input line 146.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
- [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+[1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 
 
  <./logoFCTo.png> <./imagenes/Montaje_SerieBalmer.png>]
 <imagenes/Montaje_Goniometro.png, id=87, 1034.86626pt x 782.925pt>
 File: imagenes/Montaje_Goniometro.png Graphic file (type png)
 <use imagenes/Montaje_Goniometro.png>
-Package pdftex.def Info: imagenes/Montaje_Goniometro.png  used on input line 152.
+Package pdftex.def Info: imagenes/Montaje_Goniometro.png  used on input line 156.
 (pdftex.def)             Requested size: 155.22324pt x 117.43369pt.
 
-Underfull \hbox (badness 3049) in paragraph at lines 171--174
+Underfull \hbox (badness 3049) in paragraph at lines 175--178
 []\T1/ppl/m/n/10.95 (+20) Por úl-ti-mo, rea-li-za-re-mos un script en
  []
 
 
-Underfull \vbox (badness 1394) has occurred while \output is active []
-
-
-Overfull \hbox (11.45735pt too wide) in paragraph at lines 192--204
+Overfull \hbox (11.45735pt too wide) in paragraph at lines 196--208
 [][] 
  []
 
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 204.
+(Font)              scaled to size 10.42007pt on input line 208.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 204.
+(Font)              scaled to size 7.91925pt on input line 208.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 204.
+(Font)              scaled to size 10.42007pt on input line 208.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 204.
+(Font)              scaled to size 7.91925pt on input line 208.
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 209.
+Package pdftex.def Info: logoFCTo.png  used on input line 213.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
 [2 <./imagenes/Montaje_Goniometro.png>]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 255.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 259.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-Overfull \hbox (236.1637pt too wide) in paragraph at lines 222--256
+Overfull \hbox (236.1637pt too wide) in paragraph at lines 226--260
  [][] 
  []
 
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 263.
+Package pdftex.def Info: logoFCTo.png  used on input line 267.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
 [3]
-Overfull \hbox (7.54979pt too wide) in paragraph at lines 272--286
+Overfull \hbox (7.54979pt too wide) in paragraph at lines 276--290
  [][] 
  []
 
 
-LaTeX Warning: Reference `lambdaEQ' on page 4 undefined on input line 292.
+LaTeX Warning: Reference `lambdaEQ' on page 4 undefined on input line 296.
 
 
-LaTeX Warning: Reference `EEQ' on page 4 undefined on input line 292.
+LaTeX Warning: Reference `EEQ' on page 4 undefined on input line 296.
 
 
-Overfull \hbox (8.53677pt too wide) in paragraph at lines 306--343
+Overfull \hbox (8.53677pt too wide) in paragraph at lines 310--347
  [][] 
  []
 
-Package svg Info: Last page of `./svg-inkscape/Espectrohelio_svg-tex.pdf' is 1 on input line 353.
+Package svg Info: Last page of `./svg-inkscape/Espectrohelio_svg-tex.pdf' is 1 on input line 357.
 (./svg-inkscape/Espectrohelio_svg-tex.pdf_tex
 <./svg-inkscape/Espectrohelio_svg-tex.pdf, id=104, page=1, 462.52798pt x 346.89601pt>
 File: ./svg-inkscape/Espectrohelio_svg-tex.pdf Graphic file (type pdf)
@@ -1080,7 +1071,7 @@ File: ./svg-inkscape/Espectrohelio_svg-tex.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./svg-inkscape/Espectrohelio_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 231.26399pt x 173.44757pt.
 )
-Overfull \hbox (12.17786pt too wide) in paragraph at lines 353--354
+Overfull \hbox (12.17786pt too wide) in paragraph at lines 357--358
  [][] 
  []
 
@@ -1089,15 +1080,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 384.
+Package pdftex.def Info: logoFCTo.png  used on input line 388.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
 [4 <./svg-inkscape/Espectrohelio_svg-tex.pdf>]
 <imagenes/ImagenRichar.png, id=303, 708.6475pt x 448.67625pt>
 File: imagenes/ImagenRichar.png Graphic file (type png)
 <use imagenes/ImagenRichar.png>
-Package pdftex.def Info: imagenes/ImagenRichar.png  used on input line 388.
+Package pdftex.def Info: imagenes/ImagenRichar.png  used on input line 392.
 (pdftex.def)             Requested size: 212.59589pt x 134.60391pt.
-Package svg Info: Last page of `./svg-inkscape/EspectroHelioTeo_svg-tex.pdf' is 1 on input line 413.
+Package svg Info: Last page of `./svg-inkscape/EspectroHelioTeo_svg-tex.pdf' is 1 on input line 417.
  (./svg-inkscape/EspectroHelioTeo_svg-tex.pdf_tex
 <./svg-inkscape/EspectroHelioTeo_svg-tex.pdf, id=311, page=1, 462.52798pt x 346.89601pt>
 File: ./svg-inkscape/EspectroHelioTeo_svg-tex.pdf Graphic file (type pdf)
@@ -1105,78 +1096,78 @@ File: ./svg-inkscape/EspectroHelioTeo_svg-tex.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./svg-inkscape/EspectroHelioTeo_svg-tex.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 231.26399pt x 173.44757pt.
 )
-Overfull \hbox (12.17786pt too wide) in paragraph at lines 413--414
+Overfull \hbox (12.17786pt too wide) in paragraph at lines 417--418
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--436
+Underfull \hbox (badness 10000) in paragraph at lines 437--440
 []\T1/ppl/m/n/10.95 (+20) El pro-gra-ma tie-ne por nom-bre
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--436
+Underfull \hbox (badness 10000) in paragraph at lines 437--440
 \OML/zplm/m/it/10.95 Aplicacion[]niveles[]energia[]He\OT1/ppl/m/n/10.95 (+20) .\OML/zplm/m/it/10.95 py$ \T1/ppl/m/n/10.95 (+20) y con
  []
 
 
-Overfull \hbox (69.67828pt too wide) in paragraph at lines 451--465
+Overfull \hbox (69.67828pt too wide) in paragraph at lines 455--469
  [][] 
  []
 
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 485.
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 489.
 
 
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 485.
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 489.
 
 Missing character: There is no º in font pplr7t!
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 489.
+Package pdftex.def Info: logoFCTo.png  used on input line 493.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
 [5 <./imagenes/ImagenRichar.png> <./svg-inkscape/EspectroHelioTeo_svg-tex.pdf>]
-Underfull \hbox (badness 6825) in paragraph at lines 517--517
+Underfull \hbox (badness 6825) in paragraph at lines 521--521
 \T1/cmtt/m/n/10.95 https://physics.nist.gov/asd \T1/ppl/m/n/10.95 (+20) [2026,
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 517--517
+Underfull \hbox (badness 1019) in paragraph at lines 521--521
 \T1/ppl/m/it/10.95 (+20) gra-ma del he-lio\T1/ppl/m/n/10.95 (+20) . 2025. \T1/ppl/m/sc/10.95 (+20) url\T1/ppl/m/n/10.95 (+20) : [][]$\T1/cmtt/m/n/10.95 http : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 []\T1/ppl/m/n/10.95 (+20) imagine.gsfc.nasa.gov. \T1/ppl/m/it/10.95 (+20) So-lu-tion for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--517
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 \T1/ppl/m/it/10.95 (+20) Graphing Spec-tra Stu-dent Worksheet,
  []
 
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 519.
+Package pdftex.def Info: logoFCTo.png  used on input line 523.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
 [6]
 <imagenes/EjemploGUI1.png, id=358, 1499.6025pt x 1037.8775pt>
 File: imagenes/EjemploGUI1.png Graphic file (type png)
 <use imagenes/EjemploGUI1.png>
-Package pdftex.def Info: imagenes/EjemploGUI1.png  used on input line 525.
+Package pdftex.def Info: imagenes/EjemploGUI1.png  used on input line 529.
 (pdftex.def)             Requested size: 524.86874pt x 363.26257pt.
 
-Overfull \hbox (69.62463pt too wide) in paragraph at lines 525--526
+Overfull \hbox (69.62463pt too wide) in paragraph at lines 529--530
  [][] 
  []
 
 <imagenes/EjemploGUI2.png, id=359, 1499.6025pt x 1037.8775pt>
 File: imagenes/EjemploGUI2.png Graphic file (type png)
 <use imagenes/EjemploGUI2.png>
-Package pdftex.def Info: imagenes/EjemploGUI2.png  used on input line 532.
+Package pdftex.def Info: imagenes/EjemploGUI2.png  used on input line 536.
 (pdftex.def)             Requested size: 524.86874pt x 363.26257pt.
 
-Overfull \hbox (69.62463pt too wide) in paragraph at lines 532--533
+Overfull \hbox (69.62463pt too wide) in paragraph at lines 536--537
  [][] 
  []
 
@@ -1186,10 +1177,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <imagenes/EjemploGUI3.png, id=360, 1499.6025pt x 1037.8775pt>
 File: imagenes/EjemploGUI3.png Graphic file (type png)
 <use imagenes/EjemploGUI3.png>
-Package pdftex.def Info: imagenes/EjemploGUI3.png  used on input line 539.
+Package pdftex.def Info: imagenes/EjemploGUI3.png  used on input line 543.
 (pdftex.def)             Requested size: 524.86874pt x 363.26257pt.
 
-Overfull \hbox (69.62463pt too wide) in paragraph at lines 539--540
+Overfull \hbox (69.62463pt too wide) in paragraph at lines 543--544
  [][] 
  []
 
@@ -1199,10 +1190,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <imagenes/EjemploGUI4.png, id=361, 1499.6025pt x 1037.8775pt>
 File: imagenes/EjemploGUI4.png Graphic file (type png)
 <use imagenes/EjemploGUI4.png>
-Package pdftex.def Info: imagenes/EjemploGUI4.png  used on input line 546.
+Package pdftex.def Info: imagenes/EjemploGUI4.png  used on input line 550.
 (pdftex.def)             Requested size: 524.86874pt x 363.26257pt.
 
-Overfull \hbox (69.62463pt too wide) in paragraph at lines 546--547
+Overfull \hbox (69.62463pt too wide) in paragraph at lines 550--551
  [][] 
  []
 
@@ -1211,24 +1202,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 552.
+Package pdftex.def Info: logoFCTo.png  used on input line 556.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
 [7
 
  <./imagenes/EjemploGUI1.png>]
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 552.
+Package pdftex.def Info: logoFCTo.png  used on input line 556.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
  [8 <./imagenes/EjemploGUI2.png>]
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 552.
+Package pdftex.def Info: logoFCTo.png  used on input line 556.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
  [9 <./imagenes/EjemploGUI3.png>]
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 552.
+Package pdftex.def Info: logoFCTo.png  used on input line 556.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
  [10 <./imagenes/EjemploGUI4.png>] (./Frank_Hertz.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -1261,7 +1252,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  94i,15n,93p,1097b,1836s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Frank_Hertz.pdf (10 pages, 2556078 bytes).
+Output written on Frank_Hertz.pdf (10 pages, 2556244 bytes).
 PDF statistics:
  443 PDF objects out of 1000 (max. 8388607)
  327 compressed objects within 4 object streams
