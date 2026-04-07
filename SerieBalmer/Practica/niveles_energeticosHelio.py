@@ -4,6 +4,8 @@ from tabulate import tabulate
 import scipy.constants as const
 import numpy as np
 import matplotlib.pyplot as plt
+from adjustText import adjust_text   # pip install adjustText
+
 
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
@@ -34,6 +36,8 @@ with open("niveles_energia.csv", "r", newline='', encoding='utf-8') as csvfile:
 		S = int((int(nivel_Esp[0])-1)/2)
 
 		E_ev = np.float64(row[4][2:-1])
+		if int(e2[0])>4:
+			continue
 
 		datos_niveles.append([e1,e2,nivel_Esp,J,L,S,E_ev])
 
@@ -47,19 +51,47 @@ S = datos_inv[5]
 
 En = np.float64(datos_inv[6])
 
-x = [1]*len(En)
-for i in range(len(En)):
-	x[i] = int(J[i])+1
+x = [int(j) + 1 for j in J]
 
-plt.scatter(x,En, s=900, marker="_", linewidth=2, zorder=3)
-plt.yscale("log",base=2)
+fig, ax = plt.subplots(figsize=(10, 7))
 
-for xi, Eni, nom_orbital, H, mom_ang in zip(x,En,orb, nivel_Esp, J):
-	nombre = str(nom_orbital)+"|"+str(H)+"|J="+str(mom_ang)
-	plt.annotate(nombre, xy=(xi,Eni))
+ax.scatter(x, En, s=2000, marker="_", linewidth=2, zorder=3)
+ax.set_yscale("log", base=2)
 
-plt.xlabel("Momento angular J")
-plt.ylabel("Energía ->>")
-plt.title("Niveles de energía del Helio hasta n=5")
+# 1. Guardar todos los textos en una lista para adjust_text
+texts = []
+for xi, Eni, nom_orbital, H, mom_ang in zip(x, En, orb, nivel_Esp, J):
+	nombre = f"{nom_orbital}|{H}|J={mom_ang}"
+	t = ax.text(
+		xi, Eni, nombre,
+		fontsize=7.5,
+		va='bottom',
+		bbox=dict(           # 2. Fondo blanco para que no se "pisen"
+			boxstyle='round,pad=0.15',
+			fc='white',
+			ec='none',
+			alpha=0.75
+		)
+	)
+	texts.append(t)
 
+# 3. Recolocar automáticamente para evitar solapamientos
+adjust_text(
+	texts,
+	ax=ax,
+	expand_text=(1.1, 1.4),      # expansión horizontal / vertical
+	arrowprops=dict(             # línea guía si el texto se mueve mucho
+		arrowstyle='-',
+		color='gray',
+		lw=0.5
+	)
+)
+
+ax.set_xlabel("Momento angular J")
+ax.set_ylabel("Energía ->>")
+ax.set_title("Niveles de energía del Helio hasta n=5")
+ax.grid(True, axis='y', alpha=0.2)
+
+plt.tight_layout()
+plt.savefig("EspectroHelioTeo.svg")
 plt.show()
