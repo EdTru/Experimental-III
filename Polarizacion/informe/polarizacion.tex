@@ -13,6 +13,7 @@
 % --- Geometría de Página ---
 \usepackage[margin=2.5cm, top=3.8cm, headheight=65pt, headsep=0.8cm]{geometry}
 \columnsep 0.6cm % Espacio entre columnas
+\usepackage{float}
 
 % --- Matemáticas Avanzadas ---
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
@@ -28,10 +29,10 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
 \usepackage{biblatex}
-\addbibresource{referencias.bib}
+\addbibresource{polarizacion.bib}
 
 % --- Título y Autores ---
-\title{\textbf{\Large Fractales: Dimensiones enteras y fraccionarias}}
+\title{\textbf{\Large Polarización}}
 \author{
     \textbf{Truchado Iniesta, Eduardo}, \textbf{Sanz Rubio, Juan} \\
     \small Grado de Física, UCLM. \texttt{juan.sanz1@alu.uclm.es} \\
@@ -71,155 +72,240 @@
 %Resumen
 
 \begin{abstract}
-En esta práctica se realizaron medidas de diámetro para diferentes esferoides de masas relativas definidas a partir de 1/8 de dimensión 
-de una hoja de papel de cocina completa. Con estas dimensiones se obtuvieron de los siguientes tipos de papel; papel de cocina, 
-papel aluminio y papel tipo folio, comprimido ligeramente para alcanzar una forma más esferoidal, masa de masa relativa 1,2,4,8,16,32 y 64. 
+En esta práctica se han realizado diferentes montajes relacionados con la polarización para analizar diferentes fenómenos: 
 
-\vspace{0.2cm}
+\begin{enumerate}
+    \item \textbf{Ecuaciones de Fresnel y ángulo de Brewster:} Mediante el estudio de la reflexión de un láser a través de un
+    prisma, obtendremos el ángulo de Brewster y el índice de refracción del prisma.
+    \item \textbf{Ley de Malus:} Mediante un analizador de intensidad y un polarizador que nos permite variar el ángulo, buscamos
+    mostrar la ley de intensidades de Malus.
+    \item \textbf{Cálculo del vector de Stokes:} Montaremos diferentes sistemas con polarizadores y láminas para ver como varían los vectores de Stokes.
+    \item \textbf{Birrefringencia:} Vemos cualitativamente como afectan los materiales birrefringentes a un sistema lumínico de un láser.
+\end{enumerate}
 
-A partir de la medida de los diámetros, reañizamos una regresión logarítmica para hallar la pendiente y con ello obtener el valor de la dimensión
-fractal que se busca. El resultado obtenido fue un valor promedio cercano a $d\approx 2.5$ variando ligeramente para los esferoides más compactados y menos.
 \end{abstract}
 
-
-
 \section{Introducción}
-No todos los objetos geométricos tienen dimensiones enteras (euclidianas) como clásicamente se ha considerado. Algunos con geometrías complejas se describen matemáticamenete 
-como objetos con dimensiones fraccionadas, conocidos como fractales. 
 
-\vspace{0.2cm}
+La polarización es una propiedad intrínseca de las ondas electromagnéticas, esta puede estudiarse mediante diferentes métodos. En nuestro utilizaremos diferentes medios ópticos para
+estudiar el comportamiento de la luz, en este caso un láser con $\lambda = 635 nm$, al pasar por ellos.
 
-El propósito de este estudio es determinar las propiedades dimensionales de objetas
-geométricamente complejos, que en este caso serán esferoides, para determinar como
-algunos objetos se pueden describir matemáticamente con dimensiones fraccionarias.
-
-\vspace{0.2cm}
-
-Para realizar esto, se ha utilizado la siguiente relación:
-
-\begin{equation}
-    D = K M ^{\frac{1}{d}}
-\end{equation}
-
-Donde d es la dimensión fractal, M es la masa del objeto, K es una constante de proporcionalidad y D el diámetro de la esfera considerada. Para
-analizar la ecuación de forma lineal pasaremos la ecuación con relaciones en base a elyes de potencias a una lineal usado las propiedades de los
-logaritmos. Con esto conseguiremos que la pendiente sea la relacion entre la dimension fractal y la masa. 
-
-\begin{equation}
-    \log(D) = \log(K) + \frac{1}{d} \log(M)
-\end{equation}
-
-Donde la pendiente es igual a $m = \frac{1}{d}$, por lo que a partir de la regresión 
-se puede obtener el valor de la dimensión fractal d.
-\section{Objetivos}
-Los objetivos propuestos son analizar la influencia del tipo de material y de la forma en la que es compactado en un esferoide para poder 
-determinar como afecta a su dimensión fractal. 
-\section{Metodología}
-
-Para realizar esta práctica se han utilizado 3 tipos de papel: 
 \begin{itemize}
-    \item Papel de cocina
-    \item Papel aluminio
-    \item Papel tipo folio
+    \item La luz refracta con un cierto ángulo cuando sufre un cambio de medios con diferente índice de refracción. Un caso interesante es aquel donde se cumple la relación de Brewster $tan(\theta_{B}) = \frac{n'}{n}$ donde $\theta_{B}$ es el ángulo de Brewster que es aquel donde no hay reflexión.
+    \item Por otro lado la intensidad de la luz también varía al cambiar su ángulo de polarización, esta variabilidad sigue una ley conocida como ley de Malus, $I(\theta) = I_{0}cos^2(\theta)$.
+    \item Además los sistemas polarizados pueden describirse perfectamente a través de un vector denominado "vector de Stokes", que tiene la siguiente forma, $\vec{S} = (S_{0}, S_{1}, S_{2}, S_{3})^{T}$. 
+    
 \end{itemize}
 
-Cada uno de estos ha sido tratado de diferente forma. En el caso del papel de cocina, ha sido compactado suavemente con las manos, 
-el papel de aluminio ha sido compactado con las manos también pero de forma más intensa, y el papel de tipo folio ha sido comprimido 
-con una bandeja con pesos de entorno a 1 kilo por encima. 
+\section{Objetivos}
+Los objetivos son familiarizarse con procedimientos ópticos utilizados para el estudio de diferentes fenómenos ópticos asociados a la polarización. 
+\section{Metodología}
 
-\vspace{0.2cm}
+Para los procedimientos aquí propuestos se han utilizado en todos un láser de luz roja con $\lambda = 630 nm$ y un fotómetro de thorlabs \cite{thorlabs_opm}. Ahora el montaje para cada procedimiento es diferente. 
 
-Cabe destacar el tamaño utilizado ya que este se ha vasado en un tamaño original consistente en un aproximado 1/8 de un papel de cocina completo. Así siendo este el 
-peso de valor 1 y aumentando este hasta llegar a 64.  
+\subsection{Ecuaciones de fresnel y ángulo de Brewster}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_brewster.jpg}
+\end{figure}
+
+En este caso se ha colocado el prisma en un goniómetro calibrado que nos permitirá medir el ángulo para diferentes casos. La luz saliente del láser está polarizada linealmente inicialmente, luego procederemos a colocar
+un polarizador que nos ayude a que la luz pase a ser perpendicularmente polarizada. 
+
+Con los datos de ángulos representaremos $I$ frente a $\theta$ y donde se encurntre el mínimo de la curva, tendremos el ángulo de Brewster. Con ello usando la relación $tan(\theta_{B}) = \frac{n'}{n}$ podremos hallar
+el índice de refracción del prisma.
+
+\subsection{Ley de Malus}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_malus.jpg}
+\end{figure}
+
+Ahora se ha colocado un polarizador que nos permite variar el ángulo de polarización con un cierto margen de error. Con esto representaremos I frente a $\theta$ para verificar que la función obtenida es un $cos^{2}(\theta)$.
+
+\subsection{Vector de Stokes}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_stokes.jpg}
+\end{figure}
+
+En este análisis se han ido montando diferentes sistemas conforme al orden pedido en la práctica. En este caso se ha realizado tanto para el caso A, luz lineal vertical, como para el caso B, luz circular.
+
+\begin{enumerate}
+    \item $I_{total}$ (sin analizador)
+    \item $I_{v}$ (con analizaodr vertical a 90º)
+    \item $I_{45}$ (con analizador a 45º)
+    \item $I_{CD}$ (con analizador circular)
+\end{enumerate}
+
+Con estos se han calculado los vectores de Jones para cada caso y calculados con los valores teóricos $(1, -1, 0, 0)$ y $(1, 0, 0, 1)$ respectivamente. 
+\newpage
+
 \section{Tratamiento de datos}
 
-A continuación mostraremos las tablas de datos obtenidos. Para cada tipo de papel se han realizado 7 medidas para cada masa de cada pelota
-y realizado el promedio de estas medidas para cada una. El error asociado es el error del calibre utilizado para la propia medida, en este caso 0.02mm.
+A continuación mostraremos las tablas de datos obtenidos. Para cada parte.
 
-\vspace{0.5cm}
+\subsection{Ecuaciones de fresnel y ángulo de Brewster}
 
-Tabla de datos para papel suave:
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{cccc}
+        \hline
+        $\theta$ (º) &   $I$ (mw) & $\Delta \theta$ (º)   & $\Delta I$ (mw)   \\
+        \hline
+                            5 &     7.45 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            10 &     7.56 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            15 &     7.84 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            20 &     8.72 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            25 &     9.77 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            30 &    10    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            35 &    12    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            40 &    14    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            45 &    16    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            50 &    19    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            55 &    25    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            60 &    32    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            65 &    44    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            70 &    61    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            75 &    83    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            80 &   116    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            85 &   161    & $\pm 0.5$                    & $\pm 0.01$      \\
+        \hline
+    \end{tabular}
+    \caption{Tabla de ángulos frente a intensidad normalizada para el caso vertical}
+\end{table}
 
-\begin{tabular}{ccc}
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{cccc}
+        \hline
+        $\theta$ (º) &   $I$ (mw) & $\Delta \theta$ (º)   & $\Delta I$ (mw)   \\
+        \hline
+                            5 &     0.77 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            10 &     0.72 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            15 &     0.66 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            20 &     0.61 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            25 &     0.52 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            30 &     0.48 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            35 &     0.39 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            40 &     0.33 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            45 &     0.26 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            50 &     0.14 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            55 &     0.14 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            60 &     0.18 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            65 &     0.41 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            70 &     0.93 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            75 &     2.06 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            80 &     4.79 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            85 &     9.62 & $\pm 0.5$                    & $\pm 0.01$      \\
+        \hline
+    \end{tabular}
+    \caption{Tabla de ángulos frente a intensidad normalizada para el caso perpendicular}
+\end{table}
+
+\vspace{0.3cm}
+
+\subsection{Ley de Malus}
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{cccc}
+        \hline
+        $\theta$ (º) &   $I$ (mw) & $\Delta \theta$ (º)   & $\Delta I$ (mw)   \\
+        \hline
+                    0 &     145    & $\pm 0.5$             & $\pm 0.01$        \\
+                    5 &     143    & $\pm 0.5$             & $\pm 0.01$        \\
+                    10 &     140    & $\pm 0.5$             & $\pm 0.01$        \\
+                    15 &     133    & $\pm 0.5$             & $\pm 0.01$        \\
+                    20 &     125    & $\pm 0.5$             & $\pm 0.01$        \\
+                    25 &     115    & $\pm 0.5$             & $\pm 0.01$        \\
+                    30 &     103    & $\pm 0.5$             & $\pm 0.01$        \\
+                    35 &      89    & $\pm 0.5$             & $\pm 0.01$        \\
+                    40 &      78    & $\pm 0.5$             & $\pm 0.01$        \\
+                    45 &      67    & $\pm 0.5$             & $\pm 0.01$        \\
+                    50 &      55    & $\pm 0.5$             & $\pm 0.01$        \\
+                    55 &      44    & $\pm 0.5$             & $\pm 0.01$        \\
+                    60 &      33    & $\pm 0.5$             & $\pm 0.01$        \\
+                    65 &      23    & $\pm 0.5$             & $\pm 0.01$        \\
+                    70 &      15    & $\pm 0.5$             & $\pm 0.01$        \\
+                    75 &       9    & $\pm 0.5$             & $\pm 0.01$        \\
+                    80 &       4.72 & $\pm 0.5$             & $\pm 0.01$        \\
+                    85 &       2.66 & $\pm 0.5$             & $\pm 0.01$        \\
+                    90 &       2.78 & $\pm 0.5$             & $\pm 0.01$        \\
+                    95 &       5.1  & $\pm 0.5$             & $\pm 0.01$        \\
+                    100 &       9.53 & $\pm 0.5$             & $\pm 0.01$        \\
+                    105 &      16    & $\pm 0.5$             & $\pm 0.01$        \\
+                    110 &      24    & $\pm 0.5$             & $\pm 0.01$        \\
+                    115 &      34    & $\pm 0.5$             & $\pm 0.01$        \\
+                    120 &      45    & $\pm 0.5$             & $\pm 0.01$        \\
+                    125 &      57    & $\pm 0.5$             & $\pm 0.01$        \\
+                    130 &      70    & $\pm 0.5$             & $\pm 0.01$        \\
+                    135 &      82    & $\pm 0.5$             & $\pm 0.01$        \\
+                    140 &      95    & $\pm 0.5$             & $\pm 0.01$        \\
+                    145 &     107    & $\pm 0.5$             & $\pm 0.01$        \\
+                    150 &     117    & $\pm 0.5$             & $\pm 0.01$        \\
+                    160 &     127    & $\pm 0.5$             & $\pm 0.01$        \\
+                    165 &     134    & $\pm 0.5$             & $\pm 0.01$        \\
+                    170 &     135    & $\pm 0.5$             & $\pm 0.01$        \\
+                    175 &     136    & $\pm 0.5$             & $\pm 0.01$        \\
+                    180 &     136    & $\pm 0.5$             & $\pm 0.01$        \\
+        \hline
+    \end{tabular}
+    \caption{Tabla de ángulos frente intensidad al variar la polarización con el polarizador}
+\end{table}
+
+\newpage
+\subsection{Vector de stokes}
+
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad y Vector de Jones para el Caso A.}
+\begin{tabular}{|l|c|}
 \hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
-\hline
-          1 &                        16.14 & $\pm$ 0.02                 \\
-          2 &                        23.96 & $\pm$ 0.02                 \\
-          4 &                        31.66 & $\pm$ 0.02                 \\
-          8 &                        41.5  & $\pm$ 0.02                 \\
-         16 &                        48.87 & $\pm$ 0.02                 \\
-         32 &                        74.19 & $\pm$ 0.02                 \\
-         64 &                       108.4  & $\pm$ 0.02                 \\
-\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $528.00 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $352.00 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $0.74 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $167.00 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $191.00 \pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $288.00 \pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $240.00 \pm 0.01$ \\ \hline
 \end{tabular}
+\end{table}
 
 
-\vspace{0.5cm}
-
-
-Tabla de datos para papel aluminio:
-
-\begin{tabular}{ccc}
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad y Vector de Jones para el Caso B.}
+\begin{tabular}{|l|c|}
 \hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
-\hline
-          1 &                        10.06 & $\pm$ 0.02                 \\
-          2 &                        11.91 & $\pm$ 0.02                 \\
-          4 &                        17    & $\pm$ 0.02                 \\
-          8 &                        20.7  & $\pm$ 0.02                 \\
-         16 &                        27.06 & $\pm$ 0.02                 \\
-         32 &                        35.87 & $\pm$ 0.02                 \\
-         64 &                        53.54 & $\pm$ 0.02                 \\
-\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $300.00 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $104.00 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $103.00 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $200.00 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $163.00 \pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $93.00 \pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $100.00 \pm 0.01$ \\ \hline
 \end{tabular}
-
-
-\vspace{0.5cm}
-
-
-Tabla de datos para papel comprimido:
-
-\begin{tabular}{ccc}
-\hline
-   Masa (g) &   $\langle$ D $\rangle$ (mm) & $\bigtriangleup$ D (mm)   \\
-\hline
-          1 &                        10.79 & $\pm$ 0.02                 \\
-          2 &                        15.29 & $\pm$ 0.02                 \\
-          4 &                        23.69 & $\pm$ 0.02                 \\
-          8 &                        27.53 & $\pm$ 0.02                 \\
-         16 &                        35.67 & $\pm$ 0.02                 \\
-         32 &                        49.17 & $\pm$ 0.02                 \\
-         64 &                        62.14 & $\pm$ 0.02                 \\
-\hline
-\end{tabular}
-
-\vspace{0.5 cm}
-
-Con estos datos, se realiza una represión lineal para cada tipo de papel así pudiendo analizar la dimensión fractal obtenida. En estas aparece ya calculado el
-error asociado a la dimensión fractal, que se ha obtenido a partir de la siguiente fórmula: 
-\begin{equation}
-    \triangle d = \left | \frac{\partial d}{\partial m} \right | \triangle m = \frac{1}{m^{2}} \triangle m
-\end{equation}
+\end{table}
 
 \vspace{0.5cm}
+
+
 \section{Análisis de resultados}
-Además de los valores dados de dimensión fractal, se ha realizado el cálculo de residuos para cada toma
-y así poder analizar la calidad del ajuste lineal realizado. Para este cálculo se ha realizado una regresión lineal 
-en python con la función \texttt{scipy.stats.linregress} y a partir de esta se han obtenido los valores de 
-pendiente e intercepción para cada tipo de papel y restado al valor real obtenido.
-\vspace{0.5cm}
 
-Al analizar los residuos, vemos que el modelo es adecuado, si bien no representa una homostacidad perfecta ya que ciertos valores 
-como el valor quinto de el papel suave tienen saltos significativos respecto a los demás.Tomando esto en cuenta, hemos comparado los resultados obtenidos con los estudios:
+\subsection{Ecuaciones de fresnel y ángulo de Brewster}
+En este caso para hallar el ángulo de Brewster, 
 
-\vspace{0.5cm}
 
-Donde en ellos se obtiene una media de dimensión fractal de entre 2.3 a 2.5.
-\vspace{0.5cm}
-
-Vemos pues que aún a pesar de los resultados obtenidos en el cálculo de los residuos asociados a las tomas, los resultados
- experimentales son consistentes con estudios realizados previamente.  
 \section{Conclusiones}
 
 Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$

@@ -79,7 +79,7 @@
       <file>polarizacion.bcf</file>
     </requires>
     <requires type="editable">
-      <file>referencias.bib</file>
+      <file>polarizacion.bib</file>
     </requires>
   </external>
 </requests>

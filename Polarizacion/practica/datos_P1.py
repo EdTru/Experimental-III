@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import tabulate as tb
 
 #lambd = 635nm
 
@@ -46,30 +47,44 @@ pol_per = np.array([
 ])
 
 
-grados = []
+grados = np.transpose(pol_per)[0]
 
-intensidad1 = []
+err_grados = [r"$\pm 0.5$"] * len(grados)
 
-intensidad2 = []
+err_int = [r"$\pm 0.01$"] * len(grados)
 
-for i in pol_ver:
-	grados.append(i[0])
+intensidadv = np.transpose(pol_ver)[1]
 
-for i in pol_ver:
-	intensidad1.append(i[1]/161)
+intensidadp = np.transpose(pol_per)[1]
 
-for i in pol_per:
-	intensidad2.append(i[1]/9.62)
+intensidadv_norm = intensidadv / np.max(intensidadv)
 
+intensidadp_norm = intensidadp / np.max(intensidadp)
 
-plt.plot(grados, intensidad1, label='Datos')
-plt.plot(grados, intensidad2, label='Datos')
+print(intensidadv_norm)
+
+print(intensidadp_norm)
+
+plt.scatter(grados, intensidadv_norm, label='Vertical')
+plt.scatter(grados, intensidadp_norm, label='Horizontal')
 plt.xlabel('Grados')
 plt.ylabel('Intensidad')
-plt.title('Gráfico de ejemplo')
+plt.title('Ángulo -- Intensidad normalizada')
 plt.legend()
 plt.grid(True)
 plt.show()
 
 
 plt.show()
+
+titulos = [r"$\theta (\degrees)$", r"I (mw)", r"$\delta \theta (\degrees)$", r"\delta I (mw)"]
+
+tablav = tb.tabulate(np.transpose([grados, intensidadv, err_grados, err_int]), headers=titulos, tablefmt="latex_raw")
+
+tablap = tb.tabulate(np.transpose([grados, intensidadp, err_grados, err_int]), headers=titulos, tablefmt="latex_raw")
+
+print(tablav)
+
+print(tablap)
+
+

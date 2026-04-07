@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import tabulate as tb
 
+#lambd = 635nm
 datos_malus = np.array([
 	[0  ,145],
 	[5  ,143],
@@ -45,4 +47,15 @@ print(dati[0])
 
 plt.scatter(dati[0],dati[1])
 
+
 plt.show()
+
+titulos = [r"$\theta$ (º)", r"$I$ (mw)", r"$\Delta \theta$ (º)", r"$\Delta I$ (mw)"]
+
+err_grados = [r"$\pm 0.5$"] * len(dati[0])
+
+err_int = [r"$\pm 0.01$"] * len(dati[0])
+
+tabla = tb.tabulate(np.transpose([dati[0], dati[1], err_grados, err_int]), headers=titulos, tablefmt="latex_raw")
+
+print(tabla)
