@@ -36,7 +36,7 @@ with open("niveles_energia.csv", "r", newline='', encoding='utf-8') as csvfile:
 		S = int((int(nivel_Esp[0])-1)/2)
 
 		E_ev = np.float64(row[4][2:-1])
-		if int(e2[0])>4:
+		if int(e2[0])>3:
 			continue
 
 		datos_niveles.append([e1,e2,nivel_Esp,J,L,S,E_ev])
@@ -55,7 +55,7 @@ x = [int(j) + 1 for j in J]
 
 fig, ax = plt.subplots(figsize=(10, 7))
 
-ax.scatter(x, En, s=2000, marker="_", linewidth=2, zorder=3)
+ax.scatter(x, En, s=3000, marker="_", linewidth=5, zorder=6)
 ax.set_yscale("log", base=2)
 
 # 1. Guardar todos los textos en una lista para adjust_text
@@ -64,7 +64,7 @@ for xi, Eni, nom_orbital, H, mom_ang in zip(x, En, orb, nivel_Esp, J):
 	nombre = f"{nom_orbital}|{H}|J={mom_ang}"
 	t = ax.text(
 		xi, Eni, nombre,
-		fontsize=7.5,
+		fontsize=10,
 		va='bottom',
 		bbox=dict(           # 2. Fondo blanco para que no se "pisen"
 			boxstyle='round,pad=0.15',
@@ -89,7 +89,7 @@ adjust_text(
 
 ax.set_xlabel("Momento angular J")
 ax.set_ylabel("Energía ->>")
-ax.set_title("Niveles de energía del Helio hasta n=5")
+ax.set_title("Niveles de energía del Helio hasta n=3")
 ax.grid(True, axis='y', alpha=0.2)
 
 plt.tight_layout()

@@ -1,0 +1,18 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'Serie_de_Balmer.blg'
+[77] biber:340> INFO - === Tue Apr  7, 2026, 19:00:29
+[90] Biber.pm:419> INFO - Reading 'Serie_de_Balmer.bcf'
+[160] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
+[174] Biber.pm:4419> INFO - Processing section 0
+[184] Biber.pm:4610> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[185] bibtex.pm:1713> INFO - LaTeX decoding ...
+[189] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[251] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[251] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[251] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
+[259] bbl.pm:660> INFO - Writing 'Serie_de_Balmer.bbl' with encoding 'UTF-8'
+[262] bbl.pm:763> INFO - Output to Serie_de_Balmer.bbl
+[262] Biber.pm:131> WARN - online entry 'espectro_helioHYP' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
+[262] Biber.pm:131> WARN - online entry 'espectro_helioNASA' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
+[263] Biber.pm:131> WARN - online entry 'espectro_Richard' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
+[263] Biber.pm:133> INFO - WARNINGS: 3
