@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{NIST_ASD}{misc}{}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{NIST_ASD}{misc}{}{}
       \name{author}{4}{}{%
         {{hash=ddbd1f1593f40dee11f838bc95965d76}{%
            family={A.\bibnamedelimi Kramida},
@@ -36,17 +36,19 @@
       }
       \strng{namehash}{1a52701bb6fc3a4484f548a763977709}
       \strng{fullhash}{2fbeb9bb15c7d95559622e458d2552ea}
+      \strng{fullhashraw}{2fbeb9bb15c7d95559622e458d2552ea}
       \strng{bibnamehash}{1a52701bb6fc3a4484f548a763977709}
       \strng{authorbibnamehash}{1a52701bb6fc3a4484f548a763977709}
       \strng{authornamehash}{1a52701bb6fc3a4484f548a763977709}
       \strng{authorfullhash}{2fbeb9bb15c7d95559622e458d2552ea}
+      \strng{authorfullhashraw}{2fbeb9bb15c7d95559622e458d2552ea}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{howpublished}{{NIST Atomic Spectra Database (ver. 5.12), [Online]. Available: {\tt{https://physics.nist.gov/asd}} [2026, April 5]. National Institute of Standards and Technology, Gaithersburg, MD.}}
       \field{year}{2024}
     \endentry
-    \entry{espectro_helioHYP}{online}{}
+    \entry{espectro_helioHYP}{online}{}{}
       \name{author}{1}{}{%
         {{hash=8c876526cc16abcd9834a8960e879161}{%
            family={{Hyperphysics.phy-astr.gsu.edu}},
@@ -54,10 +56,12 @@
       }
       \strng{namehash}{8c876526cc16abcd9834a8960e879161}
       \strng{fullhash}{8c876526cc16abcd9834a8960e879161}
+      \strng{fullhashraw}{8c876526cc16abcd9834a8960e879161}
       \strng{bibnamehash}{8c876526cc16abcd9834a8960e879161}
       \strng{authorbibnamehash}{8c876526cc16abcd9834a8960e879161}
       \strng{authornamehash}{8c876526cc16abcd9834a8960e879161}
       \strng{authorfullhash}{8c876526cc16abcd9834a8960e879161}
+      \strng{authorfullhashraw}{8c876526cc16abcd9834a8960e879161}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
@@ -72,7 +76,7 @@
       \endverb
       \warn{\item online entry 'espectro_helioHYP' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring}
     \endentry
-    \entry{espectro_helioNASA}{online}{}
+    \entry{espectro_helioNASA}{online}{}{}
       \name{author}{1}{}{%
         {{hash=f91cc837b09a486a2ea91edb965feea5}{%
            family={{imagine.gsfc.nasa.gov}},
@@ -80,10 +84,12 @@
       }
       \strng{namehash}{f91cc837b09a486a2ea91edb965feea5}
       \strng{fullhash}{f91cc837b09a486a2ea91edb965feea5}
+      \strng{fullhashraw}{f91cc837b09a486a2ea91edb965feea5}
       \strng{bibnamehash}{f91cc837b09a486a2ea91edb965feea5}
       \strng{authorbibnamehash}{f91cc837b09a486a2ea91edb965feea5}
       \strng{authornamehash}{f91cc837b09a486a2ea91edb965feea5}
       \strng{authorfullhash}{f91cc837b09a486a2ea91edb965feea5}
+      \strng{authorfullhashraw}{f91cc837b09a486a2ea91edb965feea5}
       \field{sortinit}{i}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
       \field{labelnamesource}{author}
@@ -98,7 +104,7 @@
       \endverb
       \warn{\item online entry 'espectro_helioNASA' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring}
     \endentry
-    \entry{espectro_Richard}{online}{}
+    \entry{espectro_Richard}{online}{}{}
       \name{author}{1}{}{%
         {{hash=eb77b3d20dc17de31e653f7497a0c43f}{%
            family={{Richard Born}},
@@ -106,10 +112,12 @@
       }
       \strng{namehash}{eb77b3d20dc17de31e653f7497a0c43f}
       \strng{fullhash}{eb77b3d20dc17de31e653f7497a0c43f}
+      \strng{fullhashraw}{eb77b3d20dc17de31e653f7497a0c43f}
       \strng{bibnamehash}{eb77b3d20dc17de31e653f7497a0c43f}
       \strng{authorbibnamehash}{eb77b3d20dc17de31e653f7497a0c43f}
       \strng{authornamehash}{eb77b3d20dc17de31e653f7497a0c43f}
       \strng{authorfullhash}{eb77b3d20dc17de31e653f7497a0c43f}
+      \strng{authorfullhashraw}{eb77b3d20dc17de31e653f7497a0c43f}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
@@ -124,7 +132,7 @@
       \endverb
       \warn{\item online entry 'espectro_Richard' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring}
     \endentry
-    \entry{experimental32026}{misc}{}
+    \entry{experimental32026}{misc}{}{}
       \name{author}{2}{}{%
         {{hash=5e3c8c3ecb721b59723c100265d89e8b}{%
            family={Truchado-Iniesta},
@@ -142,10 +150,12 @@
       }
       \strng{namehash}{ea8772518921c7b59269d22694fad627}
       \strng{fullhash}{ea8772518921c7b59269d22694fad627}
+      \strng{fullhashraw}{ea8772518921c7b59269d22694fad627}
       \strng{bibnamehash}{ea8772518921c7b59269d22694fad627}
       \strng{authorbibnamehash}{ea8772518921c7b59269d22694fad627}
       \strng{authornamehash}{ea8772518921c7b59269d22694fad627}
       \strng{authorfullhash}{ea8772518921c7b59269d22694fad627}
+      \strng{authorfullhashraw}{ea8772518921c7b59269d22694fad627}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}

@@ -1,18 +1,18 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'Frank_Hertz.blg'
-[106] biber:340> INFO - === Mon Apr  6, 2026, 22:24:30
-[154] Biber.pm:419> INFO - Reading 'Frank_Hertz.bcf'
-[221] Biber.pm:979> INFO - Found 5 citekeys in bib section 0
-[258] Biber.pm:4419> INFO - Processing section 0
-[377] Biber.pm:4610> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[378] bibtex.pm:1713> INFO - LaTeX decoding ...
-[390] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[613] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[613] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[613] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
-[622] bbl.pm:660> INFO - Writing 'Frank_Hertz.bbl' with encoding 'UTF-8'
-[625] bbl.pm:763> INFO - Output to Frank_Hertz.bbl
-[625] Biber.pm:131> WARN - online entry 'espectro_helioHYP' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
-[625] Biber.pm:131> WARN - online entry 'espectro_helioNASA' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
-[625] Biber.pm:131> WARN - online entry 'espectro_Richard' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
-[625] Biber.pm:133> INFO - WARNINGS: 3
+[1] Config.pm:328> INFO - This is Biber 2.21
+[1] Config.pm:331> INFO - Logfile is 'Frank_Hertz.blg'
+[150] biber:342> INFO - === mar abr  7, 2026, 12:51:40
+[180] Biber.pm:421> INFO - Reading 'Frank_Hertz.bcf'
+[317] Biber.pm:1002> INFO - Found 5 citekeys in bib section 0
+[342] Biber.pm:4487> INFO - Processing section 0
+[362] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[364] bibtex.pm:1713> INFO - LaTeX decoding ...
+[375] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[491] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[491] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[492] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'es-ES'
+[511] bbl.pm:676> INFO - Writing 'Frank_Hertz.bbl' with encoding 'UTF-8'
+[516] bbl.pm:779> INFO - Output to Frank_Hertz.bbl
+[516] Biber.pm:132> WARN - online entry 'espectro_helioHYP' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
+[516] Biber.pm:132> WARN - online entry 'espectro_helioNASA' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
+[516] Biber.pm:132> WARN - online entry 'espectro_Richard' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring
+[517] Biber.pm:134> INFO - WARNINGS: 3
