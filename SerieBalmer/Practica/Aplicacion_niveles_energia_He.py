@@ -52,8 +52,7 @@ class GUI(ctk.CTk):
 	def __init__(self):
 		super().__init__()
 		self.title("Niveles Energeticos del Helio - NIST")
-		self.geometry("1500x1000")
-		self.resizable(False, False)
+		self.geometry("500x500")
 		self.configure(fg_color="#0d0f1a")
 		self.construir_interfaz()
 

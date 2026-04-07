@@ -449,20 +449,30 @@ buscamos en la literatura y encontramos \cite{NIST_ASD}.
 
 Descargamos los datos del NIST \cite{NIST_ASD} en formato $csv$ y realizamos un 
 código de python que lea el archivo para así encontrar los niveles de energía. Por 
-comodidad trabajaremos solo hasta $n=5$. Con estos datos hacemos un esquema 
+comodidad trabajaremos solo hasta $n=3$. Con estos datos hacemos un esquema 
 de los niveles de energía:
 
 \begin{figure}[h]
 	\centering
-	\includesvg[scale=0.5]{imagenes/EspectroHelioTeo.svg}
+	\includegraphics[scale=0.3]{imagenes/EspectroHelioTeo.pdf}
 	\caption{Esquema de los niveles de energía del helio}
 	\label{nivelHe}
 \end{figure}
 
 Como se puede observar en el esquema, hasta con una representación logarítmica 
-en el eje $y$ los niveles de energía para $n=5$ se aglutinan bastante. 
+en el eje $y$ los niveles de energía para $n=3$ se aglutinan bastante. Por lo 
+que consultamos en la literatura para ver una mejor representación:
+
+
 
 \vspace{0.2cm}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{imagenes/EspectroHelioTeo.png}
+	\caption{Esquema de los niveles de energía del helio de \ref{libroNuclear}}
+	\label{nivelHeLib}
+\end{figure}
 
 Ahora crearemos un programa con una interfaz gráfica que calcule que transiciones 
 energéticas generan cada longitud de onda . 
@@ -481,9 +491,11 @@ ellas:
 \vspace{0.2cm}
 
 Las imágenes del uso del programa se encuentran en un apéndice al final del documento. Y 
-en ellas podemos ver algunas transiciones como la  $1s3d 1D\rightarrow 1s2p 1P$  \ref{EGUI1} 
-que da lugar a una emisión de color amarillo. O la transición $1s3d 1D \rightarrow 1s2p 1P$  \ref{EGUI2}
- que da lugar a una emisión roja. Los otros dos ejemplos son de cómo si se cumple alguna 
+en ellas podemos ver algunas transiciones como la  $1s3d\:1D\rightarrow 1s2p\: 1P$  \ref{EGUI1} 
+que da lugar a una emisión de color amarillo. La transición $1s3d\: 1D \rightarrow 1s2p\: 1P$  \ref{EGUI2}
+ que da lugar a una emisión roja o la transición $1s3p\: 3P\rightarrow 1s2s\: 3s$ \ref{EGUI5} que 
+ da lugar a una transición morada. 
+  Los otros dos ejemplos son de cómo si se cumple alguna 
  de las reglas que mencionamos antes el programa no ejecuta \ref{EGUI3} \ref{EGUI4}.
 
 Con la ayuda del programa y de la literatura, podemos ampliar la tabla \ref{tab: TablaHeM} 
@@ -491,17 +503,16 @@ con los saltos electrónicos correspondientes:
 
 \begin{table}[h]
    \centering
-
 \begin{tabular}{cccccc}
 \hline
-   Color       &  $\lambda$ ($m$) &    $E$ ($eV$) &  Transición&$\Delta \lambda$ &     $\Delta E$ \\
+   Color       &  $\approx\lambda$ ($m$) &    $\approx E$ ($eV$) &  Transición\\
 \hline
-           azul oscuro & 440e-09 &   2.82 & $6d\rightarrow2p$&3e-09 &   0.02 \\
-           azul claro  & 465e-09 &   2.67 & $5d\rightarrow2p$&3e-09 &   0.02 \\
-           cyan        & 486e-09 &   2.55 & $4d\rightarrow2p$&3e-09 &   0.02 \\
-           verde       & 495e-09 &   2.51 & $4d\rightarrow2p$&3e-09 &   0.02 \\
-           amarillo    & 576e-09 &   2.16 & $3d\rightarrow2p$&4e-09 &   0.01 \\
-           rojo        & 655e-09 &   1.89 & $3d\rightarrow2p$&4e-09 &   0.01 \\
+           azul oscuro & 440e-09 &   2.82 & $6d\rightarrow2p$\\
+           azul claro  & 465e-09 &   2.67 & $5d\rightarrow2p$\\
+           cyan        & 486e-09 &   2.55 & $4d\rightarrow2p$\\
+           verde       & 495e-09 &   2.51 & $4d\rightarrow2p$\\
+           amarillo    & 576e-09 &   2.16 & $3d\rightarrow2p$\\
+           rojo        & 655e-09 &   1.89 & $3d\rightarrow2p$\\
 \hline
 
 
@@ -566,31 +577,39 @@ github donde están todos los archivos de prácticas:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI1.png}
+	\includegraphics[scale=1]{imagenes/EjemploGUI1.png}
 	\caption{Ejemplo 1}
 	\label{EGUI1}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI2.png}
+	\includegraphics[scale=1]{imagenes/EjemploGUI2.png}
 	\caption{Ejemplo 2}
 	\label{EGUI2}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI3.png}
+	\includegraphics[scale=1]{imagenes/EjemploGUI3.png}
 	\caption{Ejemplo 3}
 	\label{EGUI3}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI4.png}
+	\includegraphics[scale=1]{imagenes/EjemploGUI4.png}
 	\caption{Ejemplo 4}
 	\label{EGUI4}
 \end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{imagenes/EjemploGUI5.png}
+	\caption{Ejemplo 5}
+	\label{EGUI5}
+\end{figure}
+
 
 
 \end{document}
