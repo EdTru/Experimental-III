@@ -79,12 +79,12 @@
 
 En esta práctica nuestro objetivo será verificar experimentalmente la 
 cuantización de los niveles de energía atómicos. Para ello, realizaremos 
-el experimento de Franck-Hertz
-
-\vspace{0.1cm}
-
-Por último, realizaremos un script de Python que simule estas transiciones 
-electrónicas.
+el experimento de Franck-Hertz, en el que aceleraremos electrones mediante 
+una diferencia de potencial variable y estudiaremos sus colisiones con átomos 
+de mercurio en fase gaseosa. A partir de la curva característica 
+corriente-voltaje obtenida, determinaremos experimentalmente la energía del 
+primer nivel de excitación del mercurio y la compararemos con el valor 
+teórico de $4,9 eV$.
 
 \end{abstract}
 
@@ -100,10 +100,45 @@ y absorber electrones cuya energía corresponda al salto entre dos niveles:
 \end{equation}
 
 Para comprobar la veracidad de este postulado tenemos el experimento de 
-Franck y Hertz. Este experimento consiste en bombardear con electrones con una 
-energía cinética conocida a un gas de átomos
+Franck y Hertz. Este experimento consiste en bombardear a átomos con electrones con una 
+energía cinética conocida:
 
-El circuito que utiliza 
+\begin{equation}
+   K = \frac{1}{2}mv^2 = |e|V
+\end{equation}
+
+donde $e$ es la carga del electrón y $V$ la tensión aceleradora aplicada. 
+Cuando la energía cinética de los electrones es inferior a la energía del 
+primer nivel excitado del átomo, las colisiones que se producen son 
+elásticas: el electrón no transfiere energía interna al átomo y ambos 
+conservan su energía cinética. Por el contrario, cuando la tensión 
+aceleradora es suficiente para que el electrón alcance dicha energía umbral, 
+la colisión pasa a ser inelástica y el electrón cede exactamente esa energía 
+al átomo, excitando a uno de sus electrones a un nivel superior.
+
+En el montaje experimental se utiliza un tubo de Franck-Hertz relleno de 
+vapor de mercurio a baja presión, en el que los electrones son emitidos por 
+efecto termoiónico desde un cátodo calefactado y acelerados hacia una rejilla 
+mediante la tensión $V$. Una pequeña tensión de frenado $V_f$ aplicada entre 
+la rejilla y el ánodo colector impide que lleguen al detector aquellos 
+electrones que hayan perdido su energía en una colisión inelástica.
+
+Al aumentar progresivamente $V$, la corriente anódica crece hasta que los 
+electrones alcanzan la energía de excitación del mercurio ($\Delta E = 4{,}9$ eV), 
+momento en el que se produce una caída brusca de la corriente. Al seguir 
+aumentando $V$, los electrones recuperan energía cinética tras la colisión y 
+la corriente vuelve a crecer, repitiéndose el proceso periódicamente. La 
+curva $I$-$V$ resultante presenta así una serie de máximos y mínimos 
+equiespaciados, cuya separación en tensión corresponde directamente a la 
+energía del primer nivel de excitación del átomo de mercurio, confirmando 
+la cuantización de los niveles energéticos predicha por Bohr.
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.5]{imagenes/Experiencia_Franck_Hertz.svg}
+	\caption{Espectro de emisión visible del helio}
+	\label{espectroHe}
+\end{figure}
 
 \section{Objetivos}
 Los objetivos principales de la práctica son: calibrar una red de difracción 
@@ -114,16 +149,32 @@ a esas lineas espectrales.
 
 \section{Metodología}
 
-\subsection{Calibración del parámetro de red}
-
-Para esta parte el montaje será:
+Conectamos el equipo Franck-Hertz, que tiene un circuito tal que:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.2]{imagenes/Montaje_SerieBalmer.png}
-	\caption{Montaje experimental para la determinación de la constante de red}
-	\label{Montaje1}
+	\includegraphics[scale=0.2]{imagenes/CircuitoHertz.png}
+	\caption{Circuito del dispositivo Franck-Hertz}
+	\label{CircFH}
 \end{figure}
+
+donde $U_H$ es la tensión que se aplica al filamento que actua de calentador, $U_1$
+es la tensión aceleradora; que se encarga de acelerar los electrones arrancados a 
+la resistencia, $U_2$ es la tensión de frenado; que se encarga de frenar a los 
+electrones que no vengan con la energía cinética suficiente y $U_3$ es una tensión 
+de aceleración extra que al no ser necesaria para el mercurio mantendremos siempre 
+como 0.
+
+\vspace{0.2cm}
+
+Con el montaje hecho, prepararemos el horno a una temperatura de $T=175ºC$ y 
+esperaremos a que alcance ese valor, luego, esperaremos unos 15 minutos adicionales 
+para asegurarnos de que se encuentra a esa temperatura en todo el tubo. Y cada vez 
+que variemos la temperatura repetiremos este proceso.
+
+\vspace{0.2cm}
+
+A la hora de medir, tomaremos el valor 
 
 Montamos el banco óptico a una distancia $d$ que variaremos y colocaremos una 
 regla milimetrada detrás del tubo espectral, para evitar el error de paralaje. 

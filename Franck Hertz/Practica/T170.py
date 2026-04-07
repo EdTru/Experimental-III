@@ -48,6 +48,7 @@ import scipy.io
 A = datos[0]  # coordenada x
 B = datos[1]  # coordenada y
 N = len(A)
+t = range(N)
 
 # --- FFT de cada coordenada por separado ---
 fft_A = np.fft.fft(A)
@@ -72,7 +73,7 @@ for i in range(len(fft_A)):
 A_rec = np.fft.ifft(fft_A_filt).real
 B_rec = np.fft.ifft(fft_B_filt).real
 
-fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+fig, axes = plt.subplots(1, 4, figsize=(12, 5))
 
 axes[0].scatter(A, B, s=5, label="Original")
 axes[0].set_title("Curva original")
@@ -81,6 +82,13 @@ axes[0].set_aspect("equal")
 axes[1].scatter(A_rec, B_rec, s=5, color='orange', label="Filtrada (pasa-alto)")
 axes[1].set_title("Reconstrucción")
 axes[1].set_aspect("equal")
+
+axes[2].scatter(t, A, s=5, color='orange', label="Filtrada (pasa-alto)")
+axes[2].set_title("Reconstrucción")
+
+axes[3].scatter(t, B, s=5, color='orange', label="Filtrada (pasa-alto)")
+axes[3].set_title("Reconstrucción")
+
 
 plt.tight_layout()
 plt.show()
