@@ -74,6 +74,8 @@ print(minimop)
 
 plt.scatter(grados, intensidadv_norm, label='Vertical')
 plt.scatter(grados, intensidadp_norm, label='Horizontal')
+plt.errorbar(grados, intensidadv_norm, xerr=0.5, yerr=0.01, fmt="o", ecolor="red", capsize=5)
+plt.errorbar(grados, intensidadp_norm, xerr=0.5, yerr=0.01, fmt="o", ecolor="red", capsize=5)
 plt.xlabel('Grados')
 plt.ylabel('Intensidad')
 plt.title('Ángulo -- Intensidad normalizada')

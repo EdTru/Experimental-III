@@ -52,6 +52,7 @@ datos_teoricos = np.cos(np.radians(angulos))**2
 
 plt.scatter(dati[0],intensidad_norm, label = "Experimental")
 plt.plot(angulos, datos_teoricos, label = "Teórico", color = "red")
+plt.errorbar(dati[0], intensidad_norm, xerr=0.5, yerr=0.01, fmt="o", ecolor="red", capsize=5)
 plt.xlabel('Grados')
 plt.ylabel('Intensidad')
 plt.title('Ángulo -- Intensidad')

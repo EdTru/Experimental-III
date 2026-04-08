@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.3)  8 APR 2026 02:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.3)  8 APR 2026 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -832,7 +832,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 91.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 91.
-<fotos_practica/montaje_brewster.jpg, id=73, 4095.3pt x 3083.52pt>
+<fotos_practica/montaje_brewster.jpg, id=89, 4095.3pt x 3083.52pt>
 File: fotos_practica/montaje_brewster.jpg Graphic file (type jpg)
 <use fotos_practica/montaje_brewster.jpg>
 Package pdftex.def Info: fotos_practica/montaje_brewster.jpg  used on input line 110.
@@ -840,7 +840,7 @@ Package pdftex.def Info: fotos_practica/montaje_brewster.jpg  used on input line
 
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
-<logoFCTo.png, id=74, 121.8954pt x 36.3759pt>
+<logoFCTo.png, id=90, 121.8954pt x 36.3759pt>
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
 Package pdftex.def Info: logoFCTo.png  used on input line 112.
@@ -849,12 +849,12 @@ Package pdftex.def Info: logoFCTo.png  used on input line 112.
 
 
  <./logoFCTo.png>]
-<fotos_practica/montaje_malus.jpg, id=94, 4095.3pt x 3083.52pt>
+<fotos_practica/montaje_malus.jpg, id=110, 4095.3pt x 3083.52pt>
 File: fotos_practica/montaje_malus.jpg Graphic file (type jpg)
 <use fotos_practica/montaje_malus.jpg>
 Package pdftex.def Info: fotos_practica/montaje_malus.jpg  used on input line 123.
 (pdftex.def)             Requested size: 182.09486pt x 137.10564pt.
-<fotos_practica/montaje_stokes.jpg, id=95, 4095.3pt x 3083.52pt>
+<fotos_practica/montaje_stokes.jpg, id=111, 4095.3pt x 3083.52pt>
 File: fotos_practica/montaje_stokes.jpg Graphic file (type jpg)
 <use fotos_practica/montaje_stokes.jpg>
 Package pdftex.def Info: fotos_practica/montaje_stokes.jpg  used on input line 132.
@@ -878,41 +878,39 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 156.
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 264.
+Package pdftex.def Info: logoFCTo.png  used on input line 267.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
  [3]
-<fotos_practica/tablas_parte_1.png, id=115, 462.528pt x 346.896pt>
+<fotos_practica/tablas_parte_1.png, id=133, 462.528pt x 346.896pt>
 File: fotos_practica/tablas_parte_1.png Graphic file (type png)
 <use fotos_practica/tablas_parte_1.png>
-Package pdftex.def Info: fotos_practica/tablas_parte_1.png  used on input line 310.
+Package pdftex.def Info: fotos_practica/tablas_parte_1.png  used on input line 316.
 (pdftex.def)             Requested size: 204.85846pt x 153.6457pt.
-<fotos_practica/tablas_parte_2.png, id=117, 462.528pt x 346.896pt>
+<fotos_practica/tablas_parte_2.png, id=135, 462.528pt x 346.896pt>
 File: fotos_practica/tablas_parte_2.png Graphic file (type png)
 <use fotos_practica/tablas_parte_2.png>
-Package pdftex.def Info: fotos_practica/tablas_parte_2.png  used on input line 349.
+Package pdftex.def Info: fotos_practica/tablas_parte_2.png  used on input line 355.
 (pdftex.def)             Requested size: 182.09486pt x 136.56984pt.
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 357.
+Package pdftex.def Info: logoFCTo.png  used on input line 363.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
  [4 <./fotos_practica/tablas_parte_1.png> <./fotos_practica/tablas_parte_2.png>]
-<fotos_practica/birrefringencia.jpg, id=134, 4095.3pt x 3083.52pt>
+<fotos_practica/birrefringencia.jpg, id=152, 4095.3pt x 3083.52pt>
 File: fotos_practica/birrefringencia.jpg Graphic file (type jpg)
 <use fotos_practica/birrefringencia.jpg>
-Package pdftex.def Info: fotos_practica/birrefringencia.jpg  used on input line 410.
+Package pdftex.def Info: fotos_practica/birrefringencia.jpg  used on input line 416.
 (pdftex.def)             Requested size: 182.09486pt x 137.10564pt.
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 426.
+Package pdftex.def Info: logoFCTo.png  used on input line 431.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
  [5 <./fotos_practica/birrefringencia.jpg>]
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
-Package pdftex.def Info: logoFCTo.png  used on input line 442.
+Package pdftex.def Info: logoFCTo.png  used on input line 484.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
- [6
-
-] (./polarizacion.aux
+ [6] (./polarizacion.aux
 LaTeX Info: Redefining \sptext on input line 14.
 LaTeX Info: Redefining \. on input line 14.
 LaTeX Info: Redefining \% on input line 14.
@@ -922,24 +920,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `polarizacion.out' has not changed.
-(rerunfilecheck)             Checksum: 8949A79EBA09B30E51125487784D4D4A;2619.
+(rerunfilecheck)             Checksum: 027BB08A84AEE0C2A8D0BDDD6C7302A3;3599.
 Package logreq Info: Writing requests to 'polarizacion.run.xml'.
 \openout1 = `polarizacion.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25435 strings out of 474222
- 448933 string characters out of 5748734
- 1959975 words of memory out of 5000000
- 47084 multiletter control sequences out of 15000+600000
- 612193 words of font info for 291 fonts, out of 8000000 for 9000
+ 25473 strings out of 474222
+ 449381 string characters out of 5748734
+ 1960975 words of memory out of 5000000
+ 47101 multiletter control sequences out of 15000+600000
+ 612736 words of font info for 300 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,81p,1091b,1825s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,15n,81p,1091b,1829s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on polarizacion.pdf (6 pages, 10436297 bytes).
+Output written on polarizacion.pdf (6 pages, 10443458 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 53 named destinations out of 1000 (max. 500000)
- 70828 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 238 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 70860 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -177,6 +177,7 @@ A continuación mostraremos las tablas de datos obtenidos. Para cada parte.
         \hline
     \end{tabular}
     \caption{Tabla de ángulos frente a intensidad normalizada para el caso vertical}
+    \label{Tabla_1}
 \end{table}
 
 
@@ -207,6 +208,7 @@ A continuación mostraremos las tablas de datos obtenidos. Para cada parte.
         \hline
     \end{tabular}
     \caption{Tabla de ángulos frente a intensidad normalizada para el caso perpendicular}
+    \label{Tabla_2}
 \end{table}
 
 \vspace{0.3cm}
@@ -259,6 +261,7 @@ A continuación mostraremos las tablas de datos obtenidos. Para cada parte.
         \hline
     \end{tabular}
     \caption{Tabla de ángulos frente intensidad al variar la polarización con el polarizador}
+    \label{Tabla_3}
 \end{table}
 
 \newpage
@@ -278,6 +281,7 @@ A $+45^\circ$ ($I_{+45}$) & $191.00 \pm 0.01$ \\ \hline
 Circular ($\lambda/4$) & $288.00 \pm 0.01$ \\ \hline
 Circular ($-\lambda/4$) & $240.00 \pm 0.01$ \\ \hline
 \end{tabular}
+\label{Tabla_4}
 \end{table}
 
 
@@ -295,6 +299,7 @@ A $+45^\circ$ ($I_{+45}$) & $163.00 \pm 0.01$ \\ \hline
 Circular ($\lambda/4$) & $93.00 \pm 0.01$ \\ \hline
 Circular ($-\lambda/4$) & $100.00 \pm 0.01$ \\ \hline
 \end{tabular}
+\label{Tabla_5}
 \end{table}
 
 \vspace{0.5cm}
@@ -303,7 +308,8 @@ Circular ($-\lambda/4$) & $100.00 \pm 0.01$ \\ \hline
 \section{Análisis de resultados}
 
 \subsection{Ecuaciones de fresnel y ángulo de Brewster}
-En este caso para hallar el ángulo de Brewster, buscaremos el mínimo de la curva generada. 
+En este caso para hallar el ángulo de Brewster, buscaremos el mínimo de la curva generada por los valores de las tablas
+\ref{Tabla_1} y \ref{Tabla_2}. 
 
 \begin{figure}[H]
     \centering
@@ -409,6 +415,42 @@ En esta parte, se aporta una imagen de como afecta un elemento absorbente a un r
     \centering
     \includegraphics[width=0.4\textwidth]{fotos_practica/birrefringencia.jpg}
 \end{figure}
+
+\section{Cuestiones planteadas en el informe}
+En la práctica se nos propone resolver una serie de cuestiones teóricas sobre los fenómenos estudiados aquí. 
+
+\subsection{Ángulo de Brewster microscópico}
+Si analizamos el fenómeno desde una vista microscópica cuando la luz, que es una luz EM, incide en un dieléctrico, 
+esta induce a través de su campo eléctrico una oscilación en los $e^{-}$ del material, los cuales están organizados 
+en forma de dipolos eléctricos. Debido a esto los dipolos oscilan en la misma dirección que el ángulo refractado, es
+decir, oscilan a la misma vez que el ángulo transmitido. Pero sabemos que la radiación emitida por un dipolo no se 
+propaga en la dirección en la que oscila el dipolo. A causa de esto, podemos llegar a la conclusión de que en el caso 
+del ángulo de Brewster, el ángulo reflejado y refractado deben formar un ángulo de $180$º en el material, entonces, dado
+que sabemos que los dipolos no pueden emitir en la dirección de propagación y en este caso el haz de luz reflejado tiene 
+la misma dirección que los dipolos oscilantes, no se genera el haz reflejado.
+
+\subsection{Polarizadores reales vs ideales}
+Partimos de suponer que existen $t_{1}$ y $t_{2}$ que son constantes de transmisión que cumplen que
+ $t_{1}^{2} = k_{1}$ como $t_{2}^{2} =k_{2}$ y que además son iguales en todo el material. 
+ Con esto claro, podemos describir el campo eléctrico en el material de la forma:
+\begin{equation}
+    \vec{E} = (E_{x}, E_{y}) = (E_{0x} \cdot t_{1}, E_{0y} \cdot k_{2})
+\end{equation}
+
+Además la intensidad se define como $I = \left|E\right|^{2}$, por tanto.
+
+\begin{align}
+    I &= \left|E_{0x} \cdot t_{1}\right|^{2} + \left|E_{0y} \cdot t_{2}\right|^{2} = \\
+    &= E_{0x}^{2} \cdot t_{1}^{2} + E_{0y}^{2} \cdot t_{2}^{2} \\
+    &= E_{0x}^{2} \cdot k_{1} + E_{0y}^{2} \cdot k_{2}
+\end{align}
+Ahora, consideramos $E_{0x} = E_{0} \cdot cos(\theta)$ y $E_{0y} = E_{0} \cdot sin(\theta)$ donde además $I_{0} = E_{0}^{2}$, obtenemos.
+
+\begin{equation}
+    I (\theta) = I_{0} (k_{1} \cdot cos^{2}(\theta) + k_{2} \cdot sin^{2}(\theta))
+\end{equation}
+
+\subsection{Dependencia cromática de la lámina retardada}
 \section{Conclusiones}
 
 Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
