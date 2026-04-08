@@ -342,6 +342,19 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+<<<<<<< HEAD:Difraccion/informe/difraccion2.fls
+=======
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
+INPUT ./logoFCTo.png
+INPUT ./logoFCTo.png
+INPUT ./logoFCTo.png
+INPUT ./logoFCTo.png
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7v.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
+>>>>>>> polarizacion:Difraccion/Informe/difraccion.fls
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmri.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
@@ -409,6 +422,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
+<<<<<<< HEAD:Difraccion/informe/difraccion2.fls
 INPUT ./fotos_practica/toma_1_rendija_simple.png
 INPUT ./fotos_practica/toma_1_rendija_simple.png
 INPUT ./fotos_practica/toma_1_rendija_simple.png
@@ -429,10 +443,15 @@ INPUT ./fotos_practica/toma_4_rendija_simple.png
 INPUT ./fotos_practica/toma_4_rendija_simple.png
 INPUT ./fotos_practica/toma_4_rendija_simple.png
 INPUT ./fotos_practica/toma_4_rendija_simple.png
+=======
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+>>>>>>> polarizacion:Difraccion/Informe/difraccion.fls
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
+<<<<<<< HEAD:Difraccion/informe/difraccion2.fls
 INPUT ./fotos_practica/toma_5_rendija_simple.png
 INPUT ./fotos_practica/toma_5_rendija_simple.png
 INPUT ./fotos_practica/toma_5_rendija_simple.png
@@ -498,6 +517,13 @@ INPUT ./difraccion2.out
 INPUT ./difraccion2.out
 INPUT difraccion2.run.xml
 OUTPUT difraccion2.run.xml
+=======
+INPUT difraccion.aux
+INPUT ./difraccion.out
+INPUT ./difraccion.out
+INPUT difraccion.run.xml
+OUTPUT difraccion.run.xml
+>>>>>>> polarizacion:Difraccion/Informe/difraccion.fls
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
