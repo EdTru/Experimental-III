@@ -6,7 +6,7 @@ from scipy.signal import find_peaks
 from tabulate import tabulate
 from scipy.constants import constants
 
-pat = os.path.dirname(os.path.realpath(__file__))+"/PicoScope_2202/T180"
+pat = os.path.dirname(os.path.realpath(__file__))+"/Analog_Discovery/"
 os.chdir(pat)
 
 
@@ -16,36 +16,34 @@ def tomar_csv_dar_minimos(archivocsv):
 
 	datos=[]
 
-	with open(archivos[1]) as archivo:
-		lectura = csv.reader(archivo, delimiter=';')
+	with open(archivos[2]) as archivo:
+		lectura = csv.reader(archivo, delimiter=',')
 		lectura = list(lectura)
-
-		lectura.pop(0)
-		lectura.pop(0)
-		lectura.pop(0)
-
-		valor_U_1 = float(lectura[0][1].replace(",","."))*10
-		valor_I_A = float(lectura[0][2].replace(",","."))*5
+		
+		valor_U_1 = float(lectura[0][0])*10+30
+		valor_I_A = float(lectura[0][1])*5+4
 
 		datos.append([valor_U_1,valor_I_A])
 
 		for i in range(1,len(lectura)):
-			valor_U_1 = float(lectura[i][1].replace(",","."))*10
-			valor_I_A = float(lectura[i][2].replace(",","."))*5
+			valor_U_1 = float(lectura[i][0])*10+30
+			valor_I_A = float(lectura[i][1])*5+4
 
 			if valor_U_1<10:
 				continue
-			elif valor_U_1 < 55 and valor_I_A > 7:
+			elif valor_U_1 < 59 and valor_I_A > 10:
 				continue
 
 			datos.append([valor_U_1,valor_I_A])	
 
+	datos = sorted(datos)
+
 	datos = np.unique(datos,axis=0)
 	datos= np.transpose(datos)
+
 	U_1 = datos[0]
 	I_A = datos[1]
 
-	I_Ainv = [elemento * -1 for elemento in I_A]
 
 	def encontrar_minimo(lista,distancia_busqueda):
 		minimos = [0]
@@ -61,11 +59,11 @@ def tomar_csv_dar_minimos(archivocsv):
 		return minimos
 
 
-	picos_I = encontrar_minimo(I_A,8)
+	picos_I = encontrar_minimo(I_A,250)
 	picos_U = []
 
 	for pico in picos_I:
-		if U_1[pico] < 30:
+		if U_1[pico] < 25:
 			continue
 		picos_U.append(U_1[int(pico)])
 

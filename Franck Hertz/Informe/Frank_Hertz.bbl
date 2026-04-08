@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{FrankHertzTubo}{online}{}{}
+  \datalist[entry]{nty/global//global/global}
+    \entry{FrankHertzTubo}{online}{}
       \name{author}{1}{}{%
         {{hash=4b57d9719af6b7fb86b7034300ad103c}{%
            family={Nave},
@@ -29,12 +29,10 @@
       }
       \strng{namehash}{4b57d9719af6b7fb86b7034300ad103c}
       \strng{fullhash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{fullhashraw}{4b57d9719af6b7fb86b7034300ad103c}
       \strng{bibnamehash}{4b57d9719af6b7fb86b7034300ad103c}
       \strng{authorbibnamehash}{4b57d9719af6b7fb86b7034300ad103c}
       \strng{authornamehash}{4b57d9719af6b7fb86b7034300ad103c}
       \strng{authorfullhash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{authorfullhashraw}{4b57d9719af6b7fb86b7034300ad103c}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
@@ -49,7 +47,7 @@
       \endverb
       \warn{\item online entry 'FrankHertzTubo' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring}
     \endentry
-    \entry{experimental32026}{misc}{}{}
+    \entry{experimental32026}{misc}{}
       \name{author}{2}{}{%
         {{hash=5e3c8c3ecb721b59723c100265d89e8b}{%
            family={Truchado-Iniesta},
@@ -67,12 +65,10 @@
       }
       \strng{namehash}{ea8772518921c7b59269d22694fad627}
       \strng{fullhash}{ea8772518921c7b59269d22694fad627}
-      \strng{fullhashraw}{ea8772518921c7b59269d22694fad627}
       \strng{bibnamehash}{ea8772518921c7b59269d22694fad627}
       \strng{authorbibnamehash}{ea8772518921c7b59269d22694fad627}
       \strng{authornamehash}{ea8772518921c7b59269d22694fad627}
       \strng{authorfullhash}{ea8772518921c7b59269d22694fad627}
-      \strng{authorfullhashraw}{ea8772518921c7b59269d22694fad627}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}

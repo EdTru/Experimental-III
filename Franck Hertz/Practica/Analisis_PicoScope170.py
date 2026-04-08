@@ -6,7 +6,7 @@ from scipy.signal import find_peaks
 from tabulate import tabulate
 from scipy.constants import constants
 
-pat = os.path.dirname(os.path.realpath(__file__))+"/PicoScope_2202/T180"
+pat = os.path.dirname(os.path.realpath(__file__))+"/PicoScope_2202/T170"
 os.chdir(pat)
 
 
@@ -14,9 +14,9 @@ archivos = os.listdir(os.getcwd())
 
 def tomar_csv_dar_minimos(archivocsv):
 
-	datos=[]
+	datos = []
 
-	with open(archivos[1]) as archivo:
+	with open(archivocsv) as archivo:
 		lectura = csv.reader(archivo, delimiter=';')
 		lectura = list(lectura)
 
@@ -35,7 +35,7 @@ def tomar_csv_dar_minimos(archivocsv):
 
 			if valor_U_1<10:
 				continue
-			elif valor_U_1 < 55 and valor_I_A > 7:
+			elif valor_U_1 < 59 and valor_I_A > 30:
 				continue
 
 			datos.append([valor_U_1,valor_I_A])	

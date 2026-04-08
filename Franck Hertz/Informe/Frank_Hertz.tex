@@ -25,7 +25,7 @@
 \usepackage{caption}
 \usepackage{svg}
 \usepackage{dblfloatfix}
-
+\usepackage{float}
 \captionsetup{labelfont=bf, font=small} % Captions en negrita y pequeñas
 
 % --- Hipervínculos y Referencias ---
@@ -255,6 +255,8 @@ osciloscopio es:
 	\label{Pico175}
 \end{figure}
 
+\newpage
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.2]{imagenes/T180.png}
@@ -262,52 +264,250 @@ osciloscopio es:
 	\label{Pico180}
 \end{figure}
 
+Realizamos un programa de python que lea los datos de los ficheros csv y los 
+represente:
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/PicoScopeT170.svg}
+	\caption{Representación por python de los datos PicoScope 2202 para $T=170^\circ$}
+	\label{Pico170csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/PicoScopeT175.svg}
+	\caption{Representación por python de los datos PicoScope 2202 para $T=175^\circ$}
+	\label{Pico175csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/PicoScopeT180.svg}
+	\caption{Representación por python de los datos PicoScope 2202 para $T=180^\circ$}
+	\label{Pico180csv}
+\end{figure}
+\newpage
+
+Para hacer la representación, hemos tomado el primer archivo de cada carpeta 
+para evitar hacer representaciones extra. Además, hemos filtrado la señal 
+para que no aparezca el bucle que teníamos en la aplicación del osciloscopio.
 Los ficheros de datos se encuentran en \cite{experimental32026} dentro de 
 la carpeta correspondiente a esta practica en la ruta "$/Franck\_Hertz/Practica/PicoScope\_2202$".
 
 \subsection{Analog discovery}
 
-Por último, utilizaremos el osciloscopio Analog discovery, que nos devuelve 
-los datos en formato $.csv$. La ruta a estos archivos dentro del repositorio de 
+Este osciloscopio nos vuelve a devolver los datos en archivos $.csv$ y al 
+representarlos con el código de python tenemos:
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/AnalogDiscoveryT170.svg}
+	\caption{Representación por python de los datos Analog Discovery para $T=170^\circ$}
+	\label{Pico170csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/AnalogDiscoveryT175.svg}
+	\caption{Representación por python de los datos Analog Discovery para $T=175^\circ$}
+	\label{Pico175csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/AnalogDiscoveryT180.svg}
+	\caption{Representación por python de los datos Analog Discovery para $T=180^\circ$}
+	\label{Pico180csv}
+\end{figure}
+\newpage
+La ruta a estos archivos dentro del repositorio de 
 github es: "$/Franck\_Hertz/Practica/Analog\_discovery$".
 
 \section{Análisis de resultados}
 
 En esta sección, crearemos un programa en python que calcule la distancia entre los 
-mínimos leyendo el archivo de datos.
+mínimos leyendo todos los archivos de datos.
+
+\subsection{PicoScope 2202}
+
+Para cada temperatura teníamos en torno a 200 ficheros de datos, realizamos un
+código en python que recorra cada fichero, haga un filtrado para eliminar 
+el bucle que nos aparecía y calcule las distancias entre los mínimos del potencial.
+Realizamos el código para cada temperatura y obtenemos:
+
+\newpage
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+   $\overline{\Delta U}$ (V)&   $\sigma_{\Delta U}$ \\
+\hline
+             4.86 &                  0.9 \\
+\hline
+\end{tabular}
+\label{tab: Tabla170}
+\caption{Valor medio de $\Delta U$ para $T = 170^\circ$}
+\end{table}
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+
+   $\overline{\Delta U}$ (V) &   $\sigma_{\Delta U}$ \\
+\hline
+             5.08 &                0.4 \\
+\hline
+\end{tabular}
+\label{tab: Tabla175}
+\caption{Valor medio de $\Delta U$ para $T = 175^\circ$}
+\end{table}
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+
+   $\overline{\Delta U}$ (V)&   $\sigma_{\Delta U}$ \\
+\hline
+              4.84 &                 0.3 \\
+\hline
+\end{tabular}
+\label{tab: Tabla180}
+\caption{Valor medio de $\Delta U$ para $T = 180^\circ$}
+\end{table}
+
+Con los valores medios para cada temperatura ahora podemos calcular 
+la energía de transmisión $E_{exc}$:
+
+\begin{equation}
+   E_{exc} = |e| \cdot \Delta U
+\end{equation}
+
+Y la longitud de onda de los fotones emitidos será entonces: 
+
+\begin{equation}
+   \lambda = \frac{hc}{E_{exc}}
+\end{equation}
+
+Y para cada temperatura tendremos:
+
+\begin{table}[H]
+\centering   
+
+\begin{tabular}{cccc}
+
+   $T$ (ºC)&   $E_{exc}$ ($J\cdot 10^{-19}$) & $E_{exc}$ ($eV$) & $\lambda$(nm)\\
+\hline
+            170 &       $8 \pm 1 $     & $4.86\pm0.9$&$260\pm50$\\
+            175 &       $8.1 \pm 0.6$ & $5.08\pm0.4$&$240\pm20$\\
+            180 &       $7.8 \pm 0.5$ & $4.84\pm0.3$&$260\pm20$\\                          
+\hline
+\end{tabular}
+\label{tab: TabPicoFin}
+\caption{Energía de excitación y longitud de onda emitida}
+\end{table}
+
+\subsection{Analog Discovery}
+
+Para cada temperatura tenemos un fichero de datos distinto, por lo que calcularemos 
+los niveles energéticos de los tres archivos y realizaremos la media con todos los 
+datos, independientemente de la temperatura:
+
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+
+   $\overline{\Delta U}$ (V)&   $\sigma_{\Delta U}$ \\
+\hline
+             4.64 &                 0.2\\
+\hline
+\end{tabular}
+\label{tab: TablaAD}
+\caption{Valor medio de $\Delta U$ }
+\end{table}
+
+\newpage
+
+Y el valor de la energía de excitación y de la longitud de onda emitida será:
+
+\begin{table}[h]
+\begin{tabular}{cccc}
+
+   $E_{exc}$ ($J\cdot 10^{-19}$) & $E_{exc}$ ($eV$) & $\lambda$(nm)\\
+\hline
+   $7.4 \pm 0.3 $     & $4.64\pm0.2$&$260\pm10$\\
+                        
+\hline
+\end{tabular}
+\label{tab: TABLAFINNNN}
+\caption{Energía de excitación y longitud de onda emitida}
+\end{table}
+
 
 \section{Conclusiones}
 
-Tras el estudio podemos concluir que la medición de las lineas espectrales 
-del mercurio para calibrar la constante de red, pese a no estar dentro de los 
-límites de error. Dió un resultado aceptable.
+Tras el trabajo realizado podemos concluir que los objetivos de la práctica fueron 
+cumplidos ya que demostramos que los niveles de energía están cuantizados. También
+ nos acercamos razonablemente, ya que entra dentro de los límites de error, al valor 
+ teórico del potencial de excitación de $4.9V$ y de la longitud de onda 
+de emisión $253 nm$. 
 
 \vspace{0.2cm}
 
-En cuanto a la parte del cálculo de las lineas espectrales, pese a que hemos intentado 
-varios métodos como la medida directa y el uso de un fotodiodo, ambas tienen 
-mucho error y no se acercan todo lo que deberían al valor esperado. Probablemente 
-la fuente de error sea que la medida directa no haya sido todo lo precisa posible 
-especialmente a la hora de mantener perpendiculares la muestra y la red de difracción, 
-y que en la medida con el fotodiodo este tomaba un ancho de luz demasiado grande 
-y cuando enfocabamos a un solo ángulo este tomaba la intensidad de un rango de unos $10º$ 
-que supone un tercio de todo el barrido. Esta última parte intentamos compensarla 
-añadiendo un tubo mas largo al óptico del goniómetro o tapando con cinta la mayor 
-parte del telescopio, pero no resultó en nada.
+En cuanto a los aspectos físicos analizados, los mínimos de corriente 
+observados presentan una anchura finita, explicable por la distribución 
+térmica de Maxwell-Boltzmann de las velocidades de los electrones emitidos 
+por el cátodo: al no tener todos la misma energía cinética, las colisiones 
+inelásticas no ocurren a un único valor de $U_1$, sino en un rango de 
+tensiones, ensanchando los valles de la curva.
+
+Asimismo, hemos comprobado que el primer mínimo no aparece exactamente a 
+$4{,}9$ V sino desplazado a un valor superior, debido al potencial de 
+contacto originado por la diferencia de función de trabajo $\Phi$ entre 
+los materiales del cátodo y la rejilla. Sin embargo, este desplazamiento 
+es sistemático y no afecta a la separación entre mínimos consecutivos, 
+que sí corresponde fielmente al potencial de excitación.
+
+Respecto a la transición observada ($6\,^1S_0 \rightarrow 6\,^3P_1$), 
+esta está formalmente prohibida por las reglas de selección de dipolo 
+eléctrico para el espín ($\Delta S = 0$), ya que implica un salto de 
+singlete a triplete. Sin embargo, en el mercurio, al ser un átomo pesado, 
+el fuerte acoplamiento espín-órbita mezcla los estados de espín, relajando 
+esta prohibición y permitiendo que la transición ocurra con una probabilidad 
+no despreciable.
+
+En cuanto a la energía absorbida por el átomo de Hg, esta se libera 
+posteriormente en forma de fotón ultravioleta ($\lambda \approx 253{,}7$ nm) 
+durante la desexcitación. El hecho de que no observemos luminiscencia visible 
+en el tubo se debe precisamente a que la radiación emitida se encuentra fuera 
+del espectro visible, en el rango ultravioleta.
+
+Por último, hemos analizado el papel de los parámetros experimentales. Un 
+aumento drástico de la tensión de frenado $U_3$ impediría que prácticamente 
+ningún electrón alcanzase el ánodo, suprimiendo la corriente $I_A$ y haciendo 
+desaparecer la estructura de máximos y mínimos. Por otro lado, si el tubo 
+se encontrase a temperatura ambiente, la presión de vapor del mercurio sería 
+tan baja que el recorrido libre medio $\lambda$ de los electrones superaría 
+ampliamente la distancia cátodo-rejilla, haciendo que las colisiones fueran 
+prácticamente inexistentes y la curva $I_A$-$U_1$ no presentase ningún 
+mínimo observable.
 
 \vspace{0.2cm}
 
-La mejor manera de resolverlo habría sido, conseguir un tubo mas delgado y que 
-filtrase mejor la luz haciendola mas directa y utilizar una red de difracción 
-que hubiese dispersado mas las lineas espectrales.
+Para finalizar, en la práctica hemos comprobado como al aumentar la resolución 
+del osciloscopio (el Analog Discovery presenta una frecuencia de muestreo un orden 
+de magnitud mayor) nos ha permitido realizar medidas con una mayor precisión aunque 
+esto luego no se haya trasladado a un mejor resultado. Esto último puede ser debido a 
+que el algoritmo para detectar minimos que implementamos no funcionaba muy bien con 
+grandes volúmenes de datos.
 
 \vspace{0.2cm}
 
-Por otro lado, el uso de la GUI desarrollada y de la literatura nos han hecho 
-ver que pese a los errores en el procedimiento no estamos tan alejados de los 
-autenticos resultados.
-
-\vspace{1cm}
 Para ver todo el análisis de datos realizado por los alumnos, se habilita este 
 enlace al repositorio de 
 github donde están todos los archivos de prácticas: 
@@ -322,11 +522,6 @@ github donde están todos los archivos de prácticas:
 %\nocite{garcia2012bolas}
 
 \printbibliography
-
-\appendix
-\onecolumn
-
-
 
 
 \end{document}

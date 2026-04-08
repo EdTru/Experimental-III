@@ -6,7 +6,7 @@ from scipy.signal import find_peaks
 from tabulate import tabulate
 from scipy.constants import constants
 
-pat = os.path.dirname(os.path.realpath(__file__))+"/PicoScope_2202/T180"
+pat = os.path.dirname(os.path.realpath(__file__))+"/PicoScope_2202/T175"
 os.chdir(pat)
 
 
@@ -35,7 +35,7 @@ def tomar_csv_dar_minimos(archivocsv):
 
 			if valor_U_1<10:
 				continue
-			elif valor_U_1 < 55 and valor_I_A > 7:
+			elif valor_U_1 < 55 and valor_I_A > 11:
 				continue
 
 			datos.append([valor_U_1,valor_I_A])	
