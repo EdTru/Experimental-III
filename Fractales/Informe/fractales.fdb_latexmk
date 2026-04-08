@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber fractales"] 1775671548.63602 "fractales.bcf" "fractales.bbl" "fractales" 1775671554.19555 0
-  "fractales.bcf" 1775671554.07515 108344 ae32c6c752be7161dfa98916d481be8b "pdflatex"
+["biber fractales"] 1775671548.63602 "fractales.bcf" "fractales.bbl" "fractales" 1775671854.75446 0
+  "fractales.bcf" 1775671854.63709 108344 ae32c6c752be7161dfa98916d481be8b "pdflatex"
   "referencias.bib" 1775671183.42113 1519 d4e9f8d386f7c931f2198c6bb8f6a454 ""
   (generated)
   "fractales.bbl"
   "fractales.blg"
   (rewritten before read)
-["pdflatex"] 1775671552.67885 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1775671554.19591 0
+["pdflatex"] 1775671853.15223 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1775671854.75481 0
   "/etc/texmf/web2c/texmf.cnf" 1772558401.88063 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" 1775671274.37908 14195 0742c012a806c00c242e3d5004c47581 ""
+  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" 1775671852.90187 14252 f6ba36a87917a820b440404a89f55308 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -103,6 +103,9 @@
   "/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
   "/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty" 1525128982 329481 7fc6b003158402a4c694bc0a1b729308 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg" 1429144587 7068 06f8d141725d114847527a66439066b6 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def" 1663185836 21994 2bc2a882df92d97dbce35c06bb1d3541 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty" 1663185836 62761 3c92d495a9e03d7254b9a3266aa17164 ""
   "/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
   "/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty" 1668028059 18450 88279bf67c81e69f8e3f1c1bad1a26c5 ""
@@ -166,11 +169,11 @@
   "fotos_informe/papel_comprimido_real.jpg" 1775671183.39982 1287300 ad2ae4c6d811046e6620f26b1221d25e ""
   "fotos_informe/papel_de_aluminio_real.jpg" 1775671183.41024 1258353 4ec5f9446b6188d69194ba631fdc7eab ""
   "fotos_informe/papel_suave_real.jpg" 1775671183.41682 1334760 bcfb12feae9434ed2503703028148ddd ""
-  "fractales.aux" 1775671554.07223 4152 6f20a33379fe0e77d0474af13195a11e "pdflatex"
+  "fractales.aux" 1775671854.63401 4152 6f20a33379fe0e77d0474af13195a11e "pdflatex"
   "fractales.bbl" 1775671549.49298 7348 cfe05b52241324e0f74bda3e3202038b "biber fractales"
-  "fractales.out" 1775671554.07415 807 5676db89b5e4d038b1f886e88451c096 "pdflatex"
-  "fractales.run.xml" 1775671554.07699 2341 98a3d12bab2e550761377b9257d9aa7c "pdflatex"
-  "fractales.tex" 1775671274.37908 14195 0742c012a806c00c242e3d5004c47581 ""
+  "fractales.out" 1775671854.63509 807 5676db89b5e4d038b1f886e88451c096 "pdflatex"
+  "fractales.run.xml" 1775671854.63861 2341 98a3d12bab2e550761377b9257d9aa7c "pdflatex"
+  "fractales.tex" 1775671852.90187 14252 f6ba36a87917a820b440404a89f55308 ""
   "logoFCTo.png" 1772615879.30213 24951 42ed5d86fd536d29b7eb5bb73e116d7c ""
   (generated)
   "fractales.aux"
