@@ -2,16 +2,18 @@ import os
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
 
 
-pat = os.path.dirname(os.path.realpath(__file__))+"/T170"
+pat = os.path.dirname(os.path.realpath(__file__))+"/PicoScope_2202/T180"
 os.chdir(pat)
 
 archivos = os.listdir(os.getcwd())
 
-datos = []
+U_1 = []
+I_A = []
 
-with open(archivos[2]) as archivo:
+with open(archivos[0]) as archivo:
 	lectura = csv.reader(archivo, delimiter=';')
 	lectura = list(lectura)
 
@@ -19,34 +21,32 @@ with open(archivos[2]) as archivo:
 	lectura.pop(0)
 	lectura.pop(0)
 
-	datos.append([lectura[0][1].replace(",","."),lectura[0][2].replace(",",".")])
+	valor_U_1 = float(lectura[0][1].replace(",","."))*10
+	valor_I_A = float(lectura[0][2].replace(",","."))*5
+
+
+	U_1.append(valor_U_1)
+	I_A.append(valor_I_A)
 
 
 	for i in range(1,len(lectura)):
-		valor_x = float(lectura[i][1].replace(",","."))
-		valor_y = float(lectura[i][2].replace(",","."))
+		valor_U_1 = float(lectura[i][1].replace(",","."))*10
+		valor_I_A = float(lectura[i][2].replace(",","."))*5
 
-		if 0.5 < valor_x and valor_x < 5.7 and 6 < valor_y: 
+		if valor_U_1<10:
 			continue
-		elif valor_x < 1:
+		elif valor_U_1 < 55 and valor_I_A > 7:
 			continue
 
-
-		datos.append([float(lectura[i][1].replace(",",".")),float(lectura[i][2].replace(",","."))])
-
-		
-
-datos = np.transpose(np.float64(datos))
+		U_1.append(valor_U_1)
+		I_A.append(valor_I_A)		
 
 
-
-import numpy as np
-import matplotlib.pyplot as plt
-import scipy.io
+print(find_peaks(I_A))
 
 # Tus datos (curva paramétrica)
-A = datos[0]  # coordenada x
-B = datos[1]  # coordenada y
+A = U_1  # coordenada x
+B = I_A  # coordenada y
 N = len(A)
 t = range(N)
 
@@ -73,21 +73,14 @@ for i in range(len(fft_A)):
 A_rec = np.fft.ifft(fft_A_filt).real
 B_rec = np.fft.ifft(fft_B_filt).real
 
-fig, axes = plt.subplots(1, 4, figsize=(12, 5))
+fig, axes = plt.subplots(1, 2, figsize=(15, 7))
 
 axes[0].scatter(A, B, s=5, label="Original")
 axes[0].set_title("Curva original")
-axes[0].set_aspect("equal")
 
 axes[1].scatter(A_rec, B_rec, s=5, color='orange', label="Filtrada (pasa-alto)")
 axes[1].set_title("Reconstrucción")
-axes[1].set_aspect("equal")
 
-axes[2].scatter(t, A, s=5, color='orange', label="Filtrada (pasa-alto)")
-axes[2].set_title("Reconstrucción")
-
-axes[3].scatter(t, B, s=5, color='orange', label="Filtrada (pasa-alto)")
-axes[3].set_title("Reconstrucción")
 
 
 plt.tight_layout()

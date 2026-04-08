@@ -19,36 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{FrankHertzTubo}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=4b57d9719af6b7fb86b7034300ad103c}{%
-           family={Nave},
-           familyi={N\bibinitperiod},
-           given={M\bibnamedelima Olmo\bibnamedelima R},
-           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{fullhash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{fullhashraw}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{bibnamehash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{authorbibnamehash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{authornamehash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{authorfullhash}{4b57d9719af6b7fb86b7034300ad103c}
-      \strng{authorfullhashraw}{4b57d9719af6b7fb86b7034300ad103c}
-      \field{sortinit}{N}
-      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{El Experimento de Franck-Hertz}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb http://hyperphysics.phy-astr.gsu.edu/hbasees/frhz.html
-      \endverb
-      \verb{url}
-      \verb http://hyperphysics.phy-astr.gsu.edu/hbasees/frhz.html
-      \endverb
-      \warn{\item online entry 'FrankHertzTubo' (referencias.bib): Invalid format '2026-04-5' of date field 'urldate' - ignoring}
-    \endentry
     \entry{experimental32026}{misc}{}{}
       \name{author}{2}{}{%
         {{hash=5e3c8c3ecb721b59723c100265d89e8b}{%
@@ -80,10 +50,14 @@
       \field{howpublished}{\url{https://github.com/EdTru/Experimental-III.git}}
       \field{journaltitle}{GitHub repository}
       \field{note}{Experimental III}
-      \field{title}{Experimental III}
+      \field{title}{Análisis de Dimensión Fractal en Sistemas Arrugados}
       \field{year}{2026}
     \endentry
   \enddatalist
+  \missing{NIST_ASD}
+  \missing{espectro_Richard}
+  \missing{espectro_helioHYP}
+  \missing{espectro_helioNASA}
 \endrefsection
 \endinput
 

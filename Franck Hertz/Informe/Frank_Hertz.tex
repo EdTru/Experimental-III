@@ -116,35 +116,38 @@ aceleradora es suficiente para que el electrón alcance dicha energía umbral,
 la colisión pasa a ser inelástica y el electrón cede exactamente esa energía 
 al átomo, excitando a uno de sus electrones a un nivel superior.
 
+\vspace{0.2cm}
+
 En el montaje experimental se utiliza un tubo de Franck-Hertz relleno de 
 vapor de mercurio a baja presión, en el que los electrones son emitidos por 
 efecto termoiónico desde un cátodo calefactado y acelerados hacia una rejilla 
-mediante la tensión $V$. Una pequeña tensión de frenado $V_f$ aplicada entre 
+mediante la tensión $U_1$. Una pequeña tensión de frenado $U_2$ aplicada entre 
 la rejilla y el ánodo colector impide que lleguen al detector aquellos 
-electrones que hayan perdido su energía en una colisión inelástica.
+electrones que hayan perdido su energía en una colisión inelástica:
 
-Al aumentar progresivamente $V$, la corriente anódica crece hasta que los 
-electrones alcanzan la energía de excitación del mercurio ($\Delta E = 4{,}9$ eV), 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/TuboFrankHertz.png}
+	\caption{Tubo de Frrank-Hertz de \cite{FrankHertzTubo}}
+	\label{TuboFrankHertz}
+\end{figure}
+
+Al aumentar progresivamente $U_1$, la corriente anódica crece hasta que los 
+electrones alcanzan la energía de excitación del mercurio 
 momento en el que se produce una caída brusca de la corriente. Al seguir 
-aumentando $V$, los electrones recuperan energía cinética tras la colisión y 
+aumentando $U_1$, los electrones recuperan energía cinética tras la colisión y 
 la corriente vuelve a crecer, repitiéndose el proceso periódicamente. La 
-curva $I$-$V$ resultante presenta así una serie de máximos y mínimos 
+curva $I_A$-$U_1$ resultante presenta así una serie de máximos y mínimos 
 equiespaciados, cuya separación en tensión corresponde directamente a la 
 energía del primer nivel de excitación del átomo de mercurio, confirmando 
 la cuantización de los niveles energéticos predicha por Bohr.
 
-\begin{figure}[h]
-	\centering
-	\includesvg[scale=0.5]{imagenes/Experiencia_Franck_Hertz.svg}
-	\caption{Espectro de emisión visible del helio}
-	\label{espectroHe}
-\end{figure}
+
+
 
 \section{Objetivos}
-Los objetivos principales de la práctica son: calibrar una red de difracción 
-para comprobar cuál es su parámetro de red, estudiar las lineas espectrales 
-del mercurio y del helio y demostrar que transiciones electrónicas dan lugar 
-a esas lineas espectrales.
+Los objetivos de esta práctica serán: verificar la cuantización de los niveles 
+de energía y calcular el valor experimental de esos niveles de energía.
 
 
 \section{Metodología}
@@ -153,7 +156,7 @@ Conectamos el equipo Franck-Hertz, que tiene un circuito tal que:
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.2]{imagenes/CircuitoHertz.png}
+	\includegraphics[scale=0.5]{imagenes/CircuitoHertz.png}
 	\caption{Circuito del dispositivo Franck-Hertz}
 	\label{CircFH}
 \end{figure}
@@ -174,354 +177,104 @@ que variemos la temperatura repetiremos este proceso.
 
 \vspace{0.2cm}
 
-A la hora de medir, tomaremos el valor 
+A la hora de medir, tomaremos dos valores, la tensión $U_1$ y la diferencia 
+de potencial generada por la corriente anódica $I_A$. Y lo que haremos será 
+hacer un barrido en modo "sierra" del voltaje $U_1$ de $1V$ a $60$ mientras 
+que mantenemos $U_2$ a una tensión constante a $2V$ y $U_H$ a $6.3 v$.
 
-Montamos el banco óptico a una distancia $d$ que variaremos y colocaremos una 
-regla milimetrada detrás del tubo espectral, para evitar el error de paralaje. 
-Además, nos cercioraremos de que todo esté a la misma altura e intentaremos 
-tener la zona de trabajo lo menos iluminada posible.
+\vspace{0.2cm}
 
-\vspace{0.1cm}
+Además, el dispositivo Franck-Hertz que utilizamos tiene dos salidas para 
+medir directamente estas dos variables de interés, tan solo las recogeremos 
+con un osciloscopio para poder tomar medidas. En esta práctica utilizaremos 
+tres osciloscopios diferentes: un osciloscopio analógico, un primer osciloscopio 
+digital (PicoScope 2202) y un segundo osciloscopio digital (Analog Discovery).
 
-Una vez el montaje esté correcto, conectaremos la fuente de alto voltaje 
-con el tubo espectral de mercurio y colocando el ojo en una posición fija 
-respecto a la red de difracción y anotaremos los puntos en los que las lineas 
-de emisión coinciden con la regla milimetrada. De esta forma, podremos saber 
-la longitud entre cada linea de emisión.
+\vspace{0.2cm}
 
-\vspace{0.1cm}
-
-Midiendo estas lineas de emisión y comparandolas con las de la 
-literatura, obtendremos la constante de red que utilizaremos en los 
-siguientes apartados.
-
-\subsection{Lineas de emisión del helio}
-
-Una vez tengamos la constante de red de nuestra red de difracción, 
-cambiamos el tubo espectral del mercurio por uno de helio y mediremos 
-el ángulo para el cual se forman las lineas espectrales con el uso de un 
-goniómetro:
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.15]{imagenes/Montaje_Goniometro.png}
-	\caption{Montaje experimental para la medición de las lineas espectrales del helio}
-	\label{Montaje2}
-\end{figure}
-
-De esta manera podremos medir el ángulo para el cual se forman las lineas 
-espectrales de emisión. Con este ángulo podremos calcular la longitud de 
-onda de los fotones emitidos y con ello, su energía. Con la energía de 
-los fotones podremos determinar que salto entre niveles energéticos estamos 
-determinando.
-
-\vspace{0.1cm}
-
-Además, para intentar caracterizar mejor el espectro de emisión del helio 
-trataremos de colocar un fotodiodo en la lente del goniómetro para medir 
-ángulo a ángulo la intensidad recibida.
-
-\subsection{GUI de transiciones atómicas}
-
-Por último, realizaremos un script en Python que tenga una interfaz de 
-usuario gráfica que nos permita simular las energías de los fotones emitidos 
-en diferentes transiciones atómicas.
+Una vez colocadas ambas entradas a cada canal del osciloscopio, seleccionaremos 
+el módo de $x-y$ tomando $U_1$ como $x$ y la tensión generada por $I_A$ como $y$ 
+ya que solo nos interesa el valor del voltaje de canal, no 
+el tiempo. Además, cada uno de ellos tiene una frecuencia de muestreo diferente por lo que 
+los resultados, aunque generalmente sean los mismos, tendrán variaciones 
+en cuanto a la precisión. 
 
 \section{Tratamiento de datos}
 
-A continuación mostraremos los datos obtenidos al realizar cada apartado.
-
-\subsection{Calibración del parámetro de red}
-
-El error que tendremos al calcular el parámetro de red $g$ será:
-
-\begin{equation}
-   \Delta g = \left|  \frac{\partial g}{\partial l}\right| \Delta l + \left|  \frac{\partial g}{\partial d}\right| \Delta d
-\end{equation}
-
-Ya que tomamos que la longitud de onda de la teoría no tiene error. 
-Dentro del código $datos\_Hg.py$ se encuentran los datos obtenidos y al ejecutarlo 
-obtenemos:
-
-\begin{table*}
-	\begin{tabular}{cccccccccc}
-\hline
-   d (m) & Color    &   $\lambda_{ref}$ (nm) &   2l (m) &   l (m) &       g (m) &   $\Delta d$ &   $\Delta 2l$ &   $\Delta l$ & $\Delta g$\\
-\hline
-    0.5  & Amarillo &             578   &    0.382 &  0.191  & 1.620e-06 &    0.0005 &      0.001 &    0.0005 & 0.005e-06 \\
-    0.45 & Amarillo &             578   &    0.336 &  0.168  & 1.653e-06 &    0.0005 &      0.001 &    0.0005 & 0.006e-06 \\
-    0.5  & Verde    &             546.1 &    0.358 &  0.179  & 1.620e-06 &    0.0005 &      0.001 &    0.0005 & 0.005e-06 \\
-    0.45 & Verde    &             546.1 &    0.316 &  0.158  & 1.648e-06 &    0.0005 &      0.001 &    0.0005 & 0.006e-06 \\
-    0.5  & Azul     &             434.8 &    0.279 &  0.1395 & 1.618e-06 &    0.0005 &      0.001 &    0.0005 & 0.007e-06 \\
-    0.45 & Azul     &             434.8 &    0.247 &  0.1235 & 1.643e-06 &    0.0005 &      0.001 &    0.0005 & 0.008e-06 \\
-\hline
-\end{tabular}
-\caption{Resultados de la calibración de la constante de red $g$}
-
-\label{tab: TablagHg}
-\end{table*}
-
-\newpage
-
-Tomando la media nos da un valor de $g$ de:
-\begin{equation}
-	g = 1.634\cdot 10^{-06} m \pm  0.006\cdot 10^{-06} m
-\end{equation}
-
-\subsection{Lineas de emisión del helio}
-
-Dentro del código $datos\_He.py$ tenemos los datos:
-
-\begin{table}[h]
-   \centering
-   \resizebox{1\textwidth}{!}{
-\begin{tabular}{cccccccccc}
-\hline
-   nº muestra & Color       &   $\alpha_{deg}$ (º) &   $\alpha_{rad}$ (r) &   $\lambda$ ($m$) &    $E$ ($eV$) &   $\Delta \alpha_{deg}$ &   $\Delta \alpha_{rad}$  &   $\Delta \lambda$ &     $\Delta E$ \\
-\hline
-           1 & azul oscuro &         15.1 &       0.2635 &  426e-09 &   2.91 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           2 & azul oscuro &         16   &       0.2792 &  450e-09  &   2.75 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           3 & azul oscuro &         16.8 &       0.2932 &  472e-09 &   2.63 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           4 & azul oscuro &         14.6 &       0.2548 &  412e-09 &   3.01 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           1 & azul claro  &         15.9 &       0.2775 &  448e-09 &   2.77  &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           2 & azul claro  &         17   &       0.2967 &  478e-09 &   2.60 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           3 & azul claro  &         17.6 &       0.3072 &  494e-09 &   2.51    &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           4 & azul claro  &         15.7 &       0.2740 &  442e-09 &   2.80 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           1 & cyan        &         16.9 &       0.2949 &  475e-09   &   2.61 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           2 & cyan        &         17.5 &       0.3054 &  491e-09 &   2.52 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           3 & cyan        &         18.5 &       0.3228 &  518e-09 &   2.39 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           4 & cyan        &         16.4 &       0.2862 &  461e-09 &   2.69 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           1 & verde       &         17.3 &       0.3019 &  486e-09 &   2.55 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           2 & verde       &         18   &       0.3141 &  505e-09  &   2.46 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           3 & verde       &         18.7 &       0.3263 &  524e-09 &   2.37 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           4 & verde       &         16.6 &       0.2897 &  467e-09  &   2.66 &               0.05 &               0.0009 &    3e-09 &   0.02 \\
-           1 & amarillo    &         20.5 &       0.3578 &  572e-09  &   2.17 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
-           2 & amarillo    &         21   &       0.3665 &  585e-09 &   2.12 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
-           3 & amarillo    &         21.2 &       0.3700 &  591e-09 &   2.10 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
-           4 & amarillo    &         19.9 &       0.3473 &  556e-09 &   2.23 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
-           1 & rojo        &         23.5 &       0.4102 &  651e-09 &   1.90 &               0.05 &               0.0009 &    4e-09 &   0.01  \\
-           2 & rojo        &         24   &       0.4189 &  664e-09 &   1.87 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
-           3 & rojo        &         24.3 &       0.4241 &  672e-09 &   1.84 &               0.05 &               0.0009 &    4e-09 &   0.01 \\
-           4 & rojo        &         22.8 &       0.3979 &  633e-09 &   1.96  &               0.05 &               0.0009 &    4e-09 &   0.01 \\
-\hline
+A continuación mostraremos los datos obtenidos al realizar las medidas con
+cada osciloscopio. Además, para cada osciloscopio realizaremos 3 medidas 
+diferentes a diferentes temperaturas: $T=175K$, $T=170K$ y $T=180K$.
 
 
-\end{tabular}
-   }
-\caption{Lineas de emisión del helio}
-\label{tab: TablaHe}
+\subsection{Osciloscopio analógico}
 
-\end{table}
-
-\newpage
-\quad
-\newpage
-
-Como hemos hecho cuatro tandas de medición tenemos cuatro valores para cada 
-línea de emisión, pero conviene tener la media de todas así que tomamos:
-
-
-\begin{table}[h]
-   \centering
-
-\begin{tabular}{ccccccccc}
-\hline
-   Color       &  $\lambda$ ($m$) &    $E$ ($eV$) &  $\Delta \lambda$ &     $\Delta E$ \\
-\hline
-           azul oscuro & 440e-09 &   2.82 &3e-09 &   0.02 \\
-           azul claro  & 465e-09 &   2.67 &3e-09 &   0.02 \\
-           cyan        & 486e-09 &   2.55 &3e-09 &   0.02 \\
-           verde       & 495e-09 &   2.51 &3e-09 &   0.02 \\
-           amarillo    & 576e-09 &   2.16 &4e-09 &   0.01 \\
-           rojo        & 655e-09 &   1.89 &4e-09 &   0.01 \\
-\hline
-
-
-\end{tabular}
-\caption{Valor medio de las lineas de emisión del helio}
-\label{tab: TablaHeM}
-
-\end{table}
-
-Dónde los errores de $\lambda$ y $E$ se han calculado por propagación de 
-errores de \ref{lambdaEQ} y \ref{EEQ}:
-
-\begin{equation}
-   \Delta \lambda = \left| \sin(\theta)\right| \Delta g + |g\cos(\theta)|\Delta \theta
-\end{equation}
-
-\begin{equation}
-   \Delta E = \frac{hc}{e} \frac{\Delta \lambda}{\lambda^2}
-\end{equation}
-
-La medición con el fotodiodo se encuentra en $datos\_He\_continuo.py$ y de ella obtenemos:
-
-\begin{table}[h]
-   \centering
-   \resizebox{0.5\textwidth}{!}{
-\begin{tabular}{cccccccc}
-\hline
-   $\alpha_{deg}$ (º) &   $\alpha_{rad}$ (rad) &   $\lambda$ ($m$)&   $I$ ($mW/cm^2$) &   $\Delta \alpha_{deg}$ &   $\Delta \alpha_{rad}$ &   $\Delta \lambda$ &   $\Delta I$ \\
-\hline
-            2 &         0.0349 & 57e-09  &                  0.006 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-            3 &         0.0524 & 85e-09  &                  0.004 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-            4 &         0.0698 & 114e-09 &                  0.009 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-            5 &         0.0873 & 142e-09 &                  0.008 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-            6 &         0.1047 & 171e-09 &                  0.002 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-            7 &         0.1222 & 199e-09 &                  0.008 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-            8 &         0.1396 & 227e-09 &                  0.013 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-            9 &         0.1571 & 256e-09 &                  0.006 &               0.05 &               0.0009 &         2e-09 &              0.001 \\
-           10 &         0.1745 & 284e-09 &                  0.003 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           11 &         0.192  & 312e-09 &                  0.001 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           12 &         0.2094 & 340e-09  &                  0.004 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           13 &         0.2269 & 367e-09 &                  0.006 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           14 &         0.2443 & 395e-09 &                  0.005 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           15 &         0.2618 & 423e-09 &                  0.004 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           16 &         0.2793 & 450e-09  &                  0.005 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           17 &         0.2967 & 478e-09 &                  0.001 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           18 &         0.3142 & 505e-09 &                  0.013 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           19 &         0.3316 & 532e-09 &                  0.013 &               0.05 &               0.0009 &         3e-09 &              0.001 \\
-           20 &         0.3491 & 559e-09 &                  0.018 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           21 &         0.3665 & 585e-09 &                  0.013 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           22 &         0.384  & 612e-09 &                  0.025 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           23 &         0.4014 & 638e-09 &                  0.006 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           24 &         0.4189 & 664e-09 &                  0.016 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           25 &         0.4363 & 690e-09  &                  0.009 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           26 &         0.4538 & 716e-09 &                  0.004 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           27 &         0.4712 & 742e-09 &                  0.002 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           28 &         0.4887 & 767e-09 &                  0.002 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           29 &         0.5061 & 792e-09 &                  0.003 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-           30 &         0.5236 & 817e-09 &                  0.002 &               0.05 &               0.0009 &         4e-09 &              0.001 \\
-\hline
-\end{tabular}
-   }
-\caption{Valores del espectro de emisión visible del helio}
-\label{tab: TablaHedio}
-
-\end{table}
-
-Y representando las intensidades frente a las longitudes de onda obtenemos 
-el espectro de emisión:
+Para este osciloscopio no teníamos la opción de obtener los datos directamente 
+al ordenador, por lo que tan solo tomamos imagenes del resultado:
 
 \begin{figure}[h]
 	\centering
-	\includesvg[scale=0.5]{imagenes/Espectrohelio.svg}
-	\caption{Espectro de emisión visible del helio}
-	\label{espectroHe}
+	\includegraphics[scale=0.11]{imagenes/T_170_anag.jpg}
+	\caption{Resultado del osciloscopio analógico para $T=170^\circ$}
+	\label{Anag170}
 \end{figure}
 
-\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.11]{imagenes/T_175_anag.jpg}
+	\caption{Resultado del osciloscopio analógico para $T=175^\circ$}
+	\label{Anag175}
+\end{figure}
+
+\newpage 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{imagenes/T_180_anag.png}
+	\caption{Resultado del osciloscopio analógico para $T=180^\circ$}
+	\label{Anag180}
+\end{figure}
+
+\subsection{PicoScope 2202}
+
+Este osciloscopio ya permite, además de la representación de la gráfica $x-y$, 
+la adquisición de datos por ordenador. Sacando un archivo $.csv$ para cada medida.
+Lo que haremos será, para cada temperatura obtener 64 mediciones, que correspondrán 
+a 64 archivos $.csv$. La representación gráfica que devuelve el software del
+osciloscopio es:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/T170.png}
+	\caption{Resultado del osciloscopio PicoScope 2202 para $T=170^\circ$}
+	\label{Pico170}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/T175.png}
+	\caption{Resultado del osciloscopio PicoScope 2202 para $T=175^\circ$}
+	\label{Pico175}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/T180.png}
+	\caption{Resultado del osciloscopio PicoScope 2202 para $T=180^\circ$}
+	\label{Pico180}
+\end{figure}
+
+Los ficheros de datos se encuentran en \cite{experimental32026} dentro de 
+la carpeta correspondiente a esta practica en la ruta "$/Franck\_Hertz/Practica/PicoScope\_2202$".
+
+\subsection{Analog discovery}
+
+Por último, utilizaremos el osciloscopio Analog discovery, que nos devuelve 
+los datos en formato $.csv$. La ruta a estos archivos dentro del repositorio de 
+github es: "$/Franck\_Hertz/Practica/Analog\_discovery$".
 
 \section{Análisis de resultados}
-\subsection{Calibración del parámetro de red}
 
-La red de difracción que estábamos utilizando tenía, según las especificaciones,
-$600$ líneas por milímetro. Lo que corresponde a un parámetro de red de 
-$g=1.667\cdot10^{-6} m$. Este valor, aunque falla por un $3\%$ aproximadamente 
-del nuestro, no se encuentra en el rango de error que dimos. Por lo que debemos 
-tener otra fuente de error, que muy probablemente será o el error de paralaje 
-al medir o que la medida fuese incorrecta al tomar la linea espectral desde un 
-punto equivocado.
-
-\vspace{0.2cm}
-
-Esto podríamos haberlo resuelto si hubiesemos repetido las muestras tomando cada 
-vez una distancia al objeto $d$ mayor. Aunque en ese caso la iluminación hubiera empezado 
-a afectar nuestras medidas.
-
-\subsection{Lineas de emisión del Helio}
-
-Para comprobar si los resultados son adecuados, buscamos en la literatura 
-cual es es espectro de emisión del Helio y encontramos que en \cite{espectro_helioHYP}
-, en  \cite{espectro_helioNASA} y en \cite{espectro_Richard} obtienen entre 8 y 9 líneas de emision, mientras 
-que nosotros tan solo encontramos 6. 
-
-\newpage
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.30]{imagenes/ImagenRichar.png}
-	\caption{Espectro del helio según \cite{espectro_Richard}}
-	\label{espectroRichar}
-\end{figure}
-
-En estas tres referencias, y especialmente en la imagen, observamos que nuestros 
-datos \ref{tab: TablaHeM} \ref{tab: TablaHedio} corresponden con lo que observamos 
-en la literatura, pero solo el rojo y el verde se encuentran dentro del rango de error.
-En las demás medidas tenemos un factor de desplazamieento de hasta $10nm$ en el caso del 
-rojo.
-
-\vspace{0.2cm}
-
-Ahora, para encontrar los niveles de energía que corresponden a cada linea de emisión
-buscamos en la literatura y encontramos \cite{NIST_ASD}.
-
-\vspace{0.2cm}
-
-Descargamos los datos del NIST \cite{NIST_ASD} en formato $csv$ y realizamos un 
-código de python que lea el archivo para así encontrar los niveles de energía. Por 
-comodidad trabajaremos solo hasta $n=5$. Con estos datos hacemos un esquema 
-de los niveles de energía:
-
-\begin{figure}[h]
-	\centering
-	\includesvg[scale=0.5]{imagenes/EspectroHelioTeo.svg}
-	\caption{Esquema de los niveles de energía del helio}
-	\label{nivelHe}
-\end{figure}
-
-Como se puede observar en el esquema, hasta con una representación logarítmica 
-en el eje $y$ los niveles de energía para $n=5$ se aglutinan bastante. 
-
-\vspace{0.2cm}
-
-Ahora crearemos un programa con una interfaz gráfica que calcule que transiciones 
-energéticas generan cada longitud de onda . 
-Y no todas las transiciones están permitidas, ya que deben de seguir las reglas:
-
-\begin{enumerate}
-   \centering
-   \item $\Delta L = \pm 1 $
-   \item $\Delta S = 0$
-\end{enumerate}
-
-El programa tiene por nombre $Aplicacion\_niveles\_energia\_He.py$ y con él, podemos 
-ir probando diferentes configuraciones para ver que emisión resulta de cada una de 
-ellas:
-
-\vspace{0.2cm}
-
-Las imágenes del uso del programa se encuentran en un apéndice al final del documento. Y 
-en ellas podemos ver algunas transiciones como la  $1s3d 1D\rightarrow 1s2p 1P$  \ref{EGUI1} 
-que da lugar a una emisión de color amarillo. O la transición $1s3d 1D \rightarrow 1s2p 1P$  \ref{EGUI2}
- que da lugar a una emisión roja. Los otros dos ejemplos son de cómo si se cumple alguna 
- de las reglas que mencionamos antes el programa no ejecuta \ref{EGUI3} \ref{EGUI4}.
-
-Con la ayuda del programa y de la literatura, podemos ampliar la tabla \ref{tab: TablaHeM} 
-con los saltos electrónicos correspondientes:
-
-\begin{table}[h]
-   \centering
-
-\begin{tabular}{cccccc}
-\hline
-   Color       &  $\lambda$ ($m$) &    $E$ ($eV$) &  Transición&$\Delta \lambda$ &     $\Delta E$ \\
-\hline
-           azul oscuro & 440e-09 &   2.82 & $6d\rightarrow2p$&3e-09 &   0.02 \\
-           azul claro  & 465e-09 &   2.67 & $5d\rightarrow2p$&3e-09 &   0.02 \\
-           cyan        & 486e-09 &   2.55 & $4d\rightarrow2p$&3e-09 &   0.02 \\
-           verde       & 495e-09 &   2.51 & $4d\rightarrow2p$&3e-09 &   0.02 \\
-           amarillo    & 576e-09 &   2.16 & $3d\rightarrow2p$&4e-09 &   0.01 \\
-           rojo        & 655e-09 &   1.89 & $3d\rightarrow2p$&4e-09 &   0.01 \\
-\hline
-
-
-\end{tabular}
-\caption{Valor medio de las lineas de emisión del helio}
-\label{tab: TablaHeM}
-
-\end{table}
-
+En esta sección, crearemos un programa en python que calcule la distancia entre los 
+mínimos leyendo el archivo de datos.
 
 \section{Conclusiones}
 
@@ -573,35 +326,7 @@ github donde están todos los archivos de prácticas:
 \appendix
 \onecolumn
 
-\section{Imagenes de la GUI}
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI1.png}
-	\caption{Ejemplo 1}
-	\label{EGUI1}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI2.png}
-	\caption{Ejemplo 2}
-	\label{EGUI2}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI3.png}
-	\caption{Ejemplo 3}
-	\label{EGUI3}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.35]{imagenes/EjemploGUI4.png}
-	\caption{Ejemplo 4}
-	\label{EGUI4}
-\end{figure}
 
 
 \end{document}
