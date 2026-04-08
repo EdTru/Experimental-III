@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.3)  8 APR 2026 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.3)  8 APR 2026 20:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -761,13 +761,12 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `fractales.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'fractales.bbl' not found.
-
-No file fractales.bbl.
+Package biblatex Info: ... file 'fractales.bbl' found.
+ (./fractales.bbl)
 Package biblatex Info: Reference section=0 on input line 66.
 Package biblatex Info: Reference segment=0 on input line 66.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 69.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 69.
@@ -874,20 +873,7 @@ File: Residuos_Papel_Comprimido.png Graphic file (type png)
 <use Residuos_Papel_Comprimido.png>
 Package pdftex.def Info: Residuos_Papel_Comprimido.png  used on input line 245.
 (pdftex.def)             Requested size: 182.09486pt x 91.04744pt.
-
-
-LaTeX Warning: Citation 'gomes1987fractal' on page 3 undefined on input line 257.
-
-
-LaTeX Warning: Citation 'balankin2010fractal' on page 3 undefined on input line 257.
-
-
-LaTeX Warning: Citation 'cambou2011three' on page 3 undefined on input line 257.
-
-
-LaTeX Warning: Citation 'garcia2012bolas' on page 3 undefined on input line 257.
-
-<fotos_informe/papel_comprimido_real.jpg, id=67, 4095.3pt x 3083.52pt>
+<fotos_informe/papel_comprimido_real.jpg, id=71, 4095.3pt x 3083.52pt>
 File: fotos_informe/papel_comprimido_real.jpg Graphic file (type jpg)
 <use fotos_informe/papel_comprimido_real.jpg>
 Package pdftex.def Info: fotos_informe/papel_comprimido_real.jpg  used on input line 277.
@@ -896,13 +882,13 @@ File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
 Package pdftex.def Info: logoFCTo.png  used on input line 280.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
-[3 <./Residuos_Papel_Suave.png> <./Residuos_Papel_Aluminio.png> <./Residuos_Papel_Comprimido.png> <./fotos_informe/papel_comprimido_real.jpg>]
-<fotos_informe/papel_de_aluminio_real.jpg, id=80, 3083.52pt x 4095.3pt>
+ [3 <./Residuos_Papel_Suave.png> <./Residuos_Papel_Aluminio.png> <./Residuos_Papel_Comprimido.png> <./fotos_informe/papel_comprimido_real.jpg>]
+<fotos_informe/papel_de_aluminio_real.jpg, id=88, 3083.52pt x 4095.3pt>
 File: fotos_informe/papel_de_aluminio_real.jpg Graphic file (type jpg)
 <use fotos_informe/papel_de_aluminio_real.jpg>
 Package pdftex.def Info: fotos_informe/papel_de_aluminio_real.jpg  used on input line 284.
 (pdftex.def)             Requested size: 182.09486pt x 241.83307pt.
-<fotos_informe/papel_suave_real.jpg, id=81, 3083.52pt x 4095.3pt>
+<fotos_informe/papel_suave_real.jpg, id=89, 3083.52pt x 4095.3pt>
 File: fotos_informe/papel_suave_real.jpg Graphic file (type jpg)
 <use fotos_informe/papel_suave_real.jpg>
 Package pdftex.def Info: fotos_informe/papel_suave_real.jpg  used on input line 291.
@@ -920,23 +906,9 @@ File: logoFCTo.png Graphic file (type png)
 Package pdftex.def Info: logoFCTo.png  used on input line 341.
 (pdftex.def)             Requested size: 190.69357pt x 56.9055pt.
  [4 <./fotos_informe/papel_de_aluminio_real.jpg> <./fotos_informe/papel_suave_real.jpg>]
-
-LaTeX Warning: Citation 'experimental32026' on page 5 undefined on input line 344.
-
-
-LaTeX Warning: Citation 'gomes1987fractal' undefined on input line 348.
-
-
-LaTeX Warning: Citation 'balankin2010fractal' undefined on input line 349.
-
-
-LaTeX Warning: Citation 'cambou2011three' undefined on input line 350.
-
-
-LaTeX Warning: Citation 'garcia2012bolas' undefined on input line 351.
-
-
-LaTeX Warning: Empty bibliography on input line 353.
+Underfull \hbox (badness 1077) in paragraph at lines 354--354
+[]\T1/ppl/m/n/10.95 (+20) A. D. Cam-bou y N. Me-non. ``Three-
+ []
 
 File: logoFCTo.png Graphic file (type png)
 <use logoFCTo.png>
@@ -953,34 +925,25 @@ LaTeX Info: Redefining \% on input line 12.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `fractales.out' has not changed.
 (rerunfilecheck)             Checksum: 5676DB89B5E4D038B1F886E88451C096;807.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                fractales
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'fractales.run.xml'.
 \openout1 = `fractales.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25309 strings out of 474222
- 447267 string characters out of 5748734
+ 25387 strings out of 474222
+ 449060 string characters out of 5748734
  1943975 words of memory out of 5000000
- 47031 multiletter control sequences out of 15000+600000
- 611603 words of font info for 264 fonts, out of 8000000 for 9000
+ 47078 multiletter control sequences out of 15000+600000
+ 614556 words of font info for 279 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,81p,1085b,1829s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on fractales.pdf (5 pages, 4194869 bytes).
+Output written on fractales.pdf (5 pages, 4206901 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 60523 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 64619 words of extra memory for PDF output out of 74296 (max. 10000000)
 

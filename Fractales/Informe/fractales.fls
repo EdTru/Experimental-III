@@ -223,6 +223,11 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
 OUTPUT fractales.bcf
+INPUT fractales.bbl
+INPUT ./fractales.bbl
+INPUT ./fractales.bbl
+INPUT ./fractales.bbl
+INPUT fractales.bbl
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
@@ -380,7 +385,6 @@ INPUT ./Residuos_Papel_Comprimido.png
 INPUT ./Residuos_Papel_Comprimido.png
 INPUT ./Residuos_Papel_Comprimido.png
 INPUT ./Residuos_Papel_Comprimido.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
 INPUT ./fotos_informe/papel_comprimido_real.jpg
 INPUT ./fotos_informe/papel_comprimido_real.jpg
 INPUT ./fotos_informe/papel_comprimido_real.jpg
@@ -390,8 +394,6 @@ INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT ./fotos_informe/papel_de_aluminio_real.jpg
 INPUT ./fotos_informe/papel_de_aluminio_real.jpg
 INPUT ./fotos_informe/papel_de_aluminio_real.jpg
@@ -437,10 +439,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
 INPUT ./logoFCTo.png
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT fractales.aux
 INPUT ./fractales.out
 INPUT ./fractales.out

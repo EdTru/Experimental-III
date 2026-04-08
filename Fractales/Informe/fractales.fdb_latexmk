@@ -1,11 +1,12 @@
 # Fdb version 4
-["biber fractales"] 1775671183.72166 "fractales.bcf" "fractales.bbl" "fractales" 1775671282.70766 2
-  "fractales.bcf" 1775671282.58751 108344 ae32c6c752be7161dfa98916d481be8b "pdflatex"
+["biber fractales"] 1775671548.63602 "fractales.bcf" "fractales.bbl" "fractales" 1775671554.19555 0
+  "fractales.bcf" 1775671554.07515 108344 ae32c6c752be7161dfa98916d481be8b "pdflatex"
+  "referencias.bib" 1775671183.42113 1519 d4e9f8d386f7c931f2198c6bb8f6a454 ""
   (generated)
   "fractales.bbl"
   "fractales.blg"
   (rewritten before read)
-["pdflatex"] 1775671281.17362 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1775671282.70803 0
+["pdflatex"] 1775671552.67885 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" "fractales.pdf" "fractales" 1775671554.19591 0
   "/etc/texmf/web2c/texmf.cnf" 1772558401.88063 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/juan/Documentos/Experimental-III-main/Experimental-III/Fractales/Informe/fractales.tex" 1775671274.37908 14195 0742c012a806c00c242e3d5004c47581 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -15,7 +16,9 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm" 1136768653 1804 7b5f73028f6509167f47ace9d69509ed ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm" 1136768653 2796 d37c29814a6717720ee1a7c9a0b2c3b8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm" 1136768653 3820 ee5b9d58608ae328e43c6e2bfd4ff851 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplrc8t.tfm" 1136768653 6396 8f2d6400481d3b17b3e6693d0adfe2c9 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm" 1136768653 2720 70000d5e623e601132eab3cded5b819b ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm" 1136768653 3684 929c666381f7272e81481908b735ccba ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1136768653 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm" 1136768653 1536 a988bfe554c1f79514bd46d13c3c64ce ""
@@ -43,6 +46,8 @@
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf" 1136768653 2316 c3899bd8afb459a9a5a9a546bf3029a2 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf" 1136768653 1380 037725697594405988999f61172f52de ""
   "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplr8t.vf" 1136768653 2324 a163806de13ddf37313d2ee968aa0a98 ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplrc8t.vf" 1136768653 3612 3b695ba1de8aa9e6cce1125ba31cb82d ""
+  "/usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplri8t.vf" 1136768653 2308 5bc0a90b83a3fd7d37d34ef3b64d7e8a ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7m.vf" 1136768653 1812 de7624743c8bafe2ce204bec2f72ce7e ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7t.vf" 1136768653 1532 73e2c76c81e4f977ab65540630baf4f0 ""
   "/usr/share/texlive/texmf-dist/fonts/vf/public/mathpazo/zplmr7v.vf" 1136768653 1436 3cc3caf644d79936444909aaff6786a8 ""
@@ -161,10 +166,10 @@
   "fotos_informe/papel_comprimido_real.jpg" 1775671183.39982 1287300 ad2ae4c6d811046e6620f26b1221d25e ""
   "fotos_informe/papel_de_aluminio_real.jpg" 1775671183.41024 1258353 4ec5f9446b6188d69194ba631fdc7eab ""
   "fotos_informe/papel_suave_real.jpg" 1775671183.41682 1334760 bcfb12feae9434ed2503703028148ddd ""
-  "fractales.aux" 1775671282.58351 3775 e4d70bafab86514df40b3ab984edb85e "pdflatex"
-  "fractales.bbl" 0 -1 0 "biber fractales"
-  "fractales.out" 1775671282.58651 807 5676db89b5e4d038b1f886e88451c096 "pdflatex"
-  "fractales.run.xml" 1775671282.58922 2341 5a60511cfeeefc55aa83bf7706f6fe59 "pdflatex"
+  "fractales.aux" 1775671554.07223 4152 6f20a33379fe0e77d0474af13195a11e "pdflatex"
+  "fractales.bbl" 1775671549.49298 7348 cfe05b52241324e0f74bda3e3202038b "biber fractales"
+  "fractales.out" 1775671554.07415 807 5676db89b5e4d038b1f886e88451c096 "pdflatex"
+  "fractales.run.xml" 1775671554.07699 2341 98a3d12bab2e550761377b9257d9aa7c "pdflatex"
   "fractales.tex" 1775671274.37908 14195 0742c012a806c00c242e3d5004c47581 ""
   "logoFCTo.png" 1772615879.30213 24951 42ed5d86fd536d29b7eb5bb73e116d7c ""
   (generated)
