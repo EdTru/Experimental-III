@@ -35,17 +35,23 @@ class SimuladorPolarizacion(ctk.CTk):
         ctk.CTkLabel(self.panel_controles, text="Amplitud E0x (0 a 1)").pack(anchor="w", padx=10)
         self.slider_e0x = ctk.CTkSlider(self.panel_controles, from_=0, to=1, variable=self.e0x, command=self.actualizar_stokes)
         self.slider_e0x.pack(fill="x", padx=10, pady=(0, 15))
+        self.lbl_e0x = ctk.CTkLabel(self.panel_controles, text=f"E0x = {self.e0x.get():.2f}")
+        self.lbl_e0x.pack(anchor="w", padx=10)
 
         # Slider E0y
         ctk.CTkLabel(self.panel_controles, text="Amplitud E0y (0 a 1)").pack(anchor="w", padx=10)
         self.slider_e0y = ctk.CTkSlider(self.panel_controles, from_=0, to=1, variable=self.e0y, command=self.actualizar_stokes)
         self.slider_e0y.pack(fill="x", padx=10, pady=(0, 15))
+        self.lbl_e0y = ctk.CTkLabel(self.panel_controles, text=f"E0y = {self.e0y.get():.2f}")
+        self.lbl_e0y.pack(anchor="w", padx=10)
 
         # Slider Desfase (Delta)
         ctk.CTkLabel(self.panel_controles, text="Desfase δ (0 a 2π rad)").pack(anchor="w", padx=10)
         self.slider_delta = ctk.CTkSlider(self.panel_controles, from_=0, to=2*np.pi, variable=self.delta, command=self.actualizar_stokes)
         self.slider_delta.pack(fill="x", padx=10, pady=(0, 25))
-
+        self.lbl_delta = ctk.CTkLabel(self.panel_controles, text=f"δ = {self.delta.get():.2f} rad")
+        self.lbl_delta.pack(anchor="w", padx=10)
+    
         # Panel para Parámetros de Stokes
         self.panel_stokes = ctk.CTkFrame(self.panel_controles)
         self.panel_stokes.pack(fill="x", padx=10, pady=10)
@@ -74,14 +80,27 @@ class SimuladorPolarizacion(ctk.CTk):
         s2 = 2 * e0x_val * e0y_val * np.cos(delta_val)
         s3 = 2 * e0x_val * e0y_val * np.sin(delta_val)
 
+        # Actualizamos para saber los valores de los sliders
+
         texto_stokes = f"S0 = {s0:.3f}\nS1 = {s1:.3f}\nS2 = {s2:.3f}\nS3 = {s3:.3f}"
         self.lbl_stokes.configure(text=texto_stokes)
+
+        texto_delta = f"{delta_val/(np.pi):.2f} radianes"
+        self.lbl_delta.configure(text=texto_delta)
+
+        texto_e0y = f"E0y = {e0y_val:.2f}"
+        self.lbl_e0y.configure(text=texto_e0y)
+
+        texto_e0x = f"E0x = {e0x_val:.2f}"
+        self.lbl_e0x.configure(text=texto_e0x)
 
     def animar_grafico(self):
         """Dibuja la elipse y el punto animado en tiempo real."""
         e0x_val = self.e0x.get()
         e0y_val = self.e0y.get()
         delta_val = self.delta.get()
+
+        
 
         # Dibujamos la trayectoria completa (la elipse estática de fondo)
         t_completo = np.linspace(0, 2*np.pi, 100)

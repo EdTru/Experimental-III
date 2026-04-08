@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber polarizacion"] 0 "polarizacion.bcf" "polarizacion.bbl" "polarizacion" 1775641272.92417 -1
-  "polarizacion.bcf" 1775641272.82 107770 63cc25e0d78ca64bc18289cbc8c5adc4 "pdflatex"
+["biber polarizacion"] 0 "polarizacion.bcf" "polarizacion.bbl" "polarizacion" 1775669429.56374 -1
+  "polarizacion.bcf" 1775669429.45748 107770 63cc25e0d78ca64bc18289cbc8c5adc4 "pdflatex"
   "polarizacion.bib" 1775589827.69229 260 2deebb4df358b0c535b70e281e401e01 ""
   (generated)
   "polarizacion.bbl"
   "polarizacion.blg"
   (rewritten before read)
-["pdflatex"] 1775641271.54005 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Polarizacion/informe/polarizacion.tex" "polarizacion.pdf" "polarizacion" 1775641272.92452 0
+["pdflatex"] 1775669427.80309 "/home/juan/Documentos/Experimental-III-main/Experimental-III/Polarizacion/informe/polarizacion.tex" "polarizacion.pdf" "polarizacion" 1775669429.56408 0
   "/etc/texmf/web2c/texmf.cnf" 1772558401.88063 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Polarizacion/informe/polarizacion.tex" 1775641269.86097 23584 7b319c4e358ea9decd71e5f36fdaac27 ""
+  "/home/juan/Documentos/Experimental-III-main/Experimental-III/Polarizacion/informe/polarizacion.tex" 1775669427.55835 25383 8495ebcc544370bcf37f274f11492d03 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm" 1136768653 2532 9ad73cf4dd2173a847f2a5f5608e0b9a ""
@@ -159,17 +159,19 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772558436.28143 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772558537 8213750 c6ebc134b42159850a4c1734aebddba1 ""
   "fotos_practica/birrefringencia.jpg" 1775589827.63929 1507313 452f8124a76727e0d9beba866f0f5314 ""
+  "fotos_practica/circular_levogira.png" 1775668697.24744 116385 6b4cedef641b1c2ca7f9b7a8879fba51 ""
+  "fotos_practica/esfera_poincare.png" 1775664454.77636 164046 f84a71289a2bd56f34596fb11bcac188 ""
   "fotos_practica/montaje_brewster.jpg" 1775589827.66129 3060375 2d8851bab79f0e391812eda0ae3d4577 ""
   "fotos_practica/montaje_malus.jpg" 1775589827.67629 3016440 3fb9b3bd3bb2bb8e86ca53caa4a95f3a ""
   "fotos_practica/montaje_stokes.jpg" 1775589827.69129 2605708 141f470aeeb42f4b2ac882c8ba5305e4 ""
   "fotos_practica/tablas_parte_1.png" 1775638667.57456 28699 39f4fda464ab563e0ac2e58f929c9c91 ""
   "fotos_practica/tablas_parte_2.png" 1775638547.36275 38541 6b32620f4c18faa9f735d37184021f7b ""
   "logoFCTo.png" 1775589827.69229 24951 42ed5d86fd536d29b7eb5bb73e116d7c ""
-  "polarizacion.aux" 1775641272.816 5380 ad4782f80e0dd1299a2bd85886b8c398 "pdflatex"
+  "polarizacion.aux" 1775669429.45248 5927 e097675ed31332e7516367b147744c3e "pdflatex"
   "polarizacion.bbl" 1775589827.69229 1510 29f0205c97d5701da74ebb07184fa5f9 "biber polarizacion"
-  "polarizacion.out" 1775641272.819 3599 027bb08a84aee0c2a8d0bddd6c7302a3 "pdflatex"
-  "polarizacion.run.xml" 1775641272.82149 2363 1bbec0b0ae2e4ba6bcd0410d82bdbcae "pdflatex"
-  "polarizacion.tex" 1775641269.86097 23584 7b319c4e358ea9decd71e5f36fdaac27 ""
+  "polarizacion.out" 1775669429.45548 3912 3c39864b73ddb85e30e2b0242817f2f7 "pdflatex"
+  "polarizacion.run.xml" 1775669429.45888 2363 1bbec0b0ae2e4ba6bcd0410d82bdbcae "pdflatex"
+  "polarizacion.tex" 1775669427.55835 25383 8495ebcc544370bcf37f274f11492d03 ""
   (generated)
   "polarizacion.aux"
   "polarizacion.bcf"

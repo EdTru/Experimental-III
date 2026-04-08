@@ -70,7 +70,6 @@
 \thispagestyle{fancy}
 
 %Resumen
-
 \begin{abstract}
 En esta práctica se han realizado diferentes montajes relacionados con la polarización para analizar diferentes fenómenos: 
 
@@ -84,6 +83,7 @@ En esta práctica se han realizado diferentes montajes relacionados con la polar
 \end{enumerate}
 
 \end{abstract}
+
 
 \section{Introducción}
 
@@ -367,7 +367,7 @@ Si normalizamos los valores de las tablas obtendremos:
 
 \begin{table}[h!]
 \centering
-\caption{Medidas de intensidad y Vector de Jones para el Caso A.}
+\caption{Medidas de intensidad normalizadas para el Caso A.}
 \begin{tabular}{|l|c|}
 \hline
 \textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
@@ -384,7 +384,7 @@ Circular ($-\lambda/4$) & $0.45 \pm 0.01$ \\ \hline
 
 \begin{table}[h!]
 \centering
-\caption{Medidas de intensidad y Vector de Jones para el Caso B.}
+\caption{Medidas de intensidad normalizadas para el Caso B.}
 \begin{tabular}{|l|c|}
 \hline
 \textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
@@ -399,6 +399,21 @@ Circular ($-\lambda/4$) & $0.33 \pm 0.01$ \\ \hline
 \end{table}
 
 \vspace{0.5cm}
+
+Una vez que tenemos estas medidas, calculamos los parámetros de Stokes:
+\begin{itemize}
+    \item $S_{0} = I_{total}$
+    \item $S_{1} = I_{h} - I_{v}$
+    \item $S_{2} = I_{+45} - I_{-45}$
+    \item $S_{3} = I_{\lambda/4} - I_{-\lambda/4}$ 
+\end{itemize}
+
+Donde obtenemos :
+
+\begin{align}
+    \vec{S}_{A} = (1, -067, 0.04, 0.1) \\
+    \vec{S}_{B} = (1, -0.01, -0.13, -0.02)    
+\end{align}
 
 Vemos pues que si comparamos con los valores obtenidos teóricamente $(1, -1, 0, 0)$ y $(1, 0, 0, 1)$, estos divergen mucho entre sí,
 posiblemente debido al montaje experimental realizado. 
@@ -451,28 +466,54 @@ Ahora, consideramos $E_{0x} = E_{0} \cdot cos(\theta)$ y $E_{0y} = E_{0} \cdot s
 \end{equation}
 
 \subsection{Dependencia cromática de la lámina retardada}
+Recordemos que para el caso de na lámina $\lambda/4 $ el retardo generado en la onda EM , se calcula en base a :
+\begin{equation}
+    \delta = \frac{2\pi}{\lambda}d \Delta n 
+\end{equation}
+
+Donde $d$ es le grosor de la lámina, y $\Delta n= n_{2} - n_{1}$. En nuestro caso como está adaptada la lámina a
+una $\lambda = 650 nm$, por ende si el láser es verde ($470 - 550 nm$), como lo único que varía en la fórmula es la $\lambda$, 
+obtendremos un valor de $\delta > \frac{\pi}{2}$. Por ende dejará de ser circular y pasará a ser elíptica.
+ 
+
+\subsection{Esfera de poincaré}
+Una vez normalizado el vector de Stokes, podemos considerar las componentes $S_{1}, S_{2}, S_{3}$ como las componentes $X, Y, Z$
+en una esfera tridimensional como la esfera de Poincaré. Considerando nuestros vectores, tendremos: 
+\begin{align}
+    P_{A} = (-0.67, 0.04, 0.1) \\
+    P_{B} = (-0.01, -0.13, -0.02) \\
+\end{align}
+
+Si ahora en python con la biblioteca $Matplotlib$ hacemos una representación de la esfera como una malla y colocamos dentro de ella los vectores
+normalizamos, obtenemos la siguiente figura. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{fotos_practica/esfera_poincare.png}
+    \caption{Esfera de Poincaré con los puntos representados}
+\end{figure}
+
+\subsection{Parte computacional}
+Se aporta además del informe un appi realizada en python donde con 3 deslizadores que permiten cambiar las amplitudes de los campos en los ejes $x$ e $y$ y otra que cambia el 
+desfase entre ambas componentes, se hace una representación en 2D de que tipod e polaridad generan. Usando este código, se nos pide comprobar que la combinación $E_{0x} = E_{0y}$
+y $\delta = \frac{\pi}{2}$ genera polarización circular levógira. Si lo aplicamos al código, obtenemos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/circular_levogira.png}
+    \caption{Circular levogira}
+
+\end{figure}
 \section{Conclusiones}
+Tras el estudio podemos sacar ciertas conclusiones. Lo primero es que podemos utilizar la refracción para obtener los índices de refracción de materiales haciendo
+uso de propiedades como el ángulo de Brewster. En nuetsro caso el estudio fue suficientemente satisfactorio comparándolo con valores reales proporcionados en la propia
+práctica. 
 
-Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
-se encuentra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
-ocupa todo el espacio teniendo zonas con aire lo que hace variar su volumen general. 
+Por otro lado comprobamos la correspondencia teórico-experimental de la ley de Malus y llegamos a un resultado final bastante bueno si bien debido a errores de calibración
+o de medida hubiera pequeños desajustes a lo largo de la línea sobretodo en la parte final. 
 
-
-En el caso de que hubieramos obtenido un valor experimental de $d = 3$, eso implicaría que la bola que hemos creado sería perfectamente esférica, 
-lo que implicaría que estaríamos hablando de un objeto en 3D. 
-
-\vspace{0.5cm}
-Podemos sacar otras relaciones en base a la masa y el volumen como la densidad. Como $\rho = \frac{M}{V}$ y $V \propto R^d$, 
-podemos decir que $\rho \propto D^{d-3}$. Y como $d < 3$, las bolas más grandes, con mayor masa serán menos densas que las más 
-pequeñas y compactas. 
-
-\vspace{0.5cm}
-
-Otra relación interesante es la dependendia de $d$ con el tipo de material utilizado para formar las esferas y con el método (si han sido comprimidas o no). 
-En nuestro caso podemos apreciar que el pael de aluminio es el que más se acerca a tener una dimensión igual a 3, mientras que el papel no comprimido se aleja más
-si bien el comprimido tiene una dimensión mayor. Es decir cuanto más maleable o más se trabaje para asimilar a una esfera, mayor será la dimensión fractal obetnida.
-
-\textbf{AQUÍ HABRÍA QUE COMPARAR EL ERROR OBTENIDO PARA m EXPERIMENTALMENTE CON EL OBTENIDO EN LA APLICACIÓN}
+Más adelante usando diferentes sistemas ópticos medimos intensidades para obtener los vectores de Stokes de dos luces, lineal y circular. En este caso las medidas si que fueron mucho más erradas
+ya que los resultados obtenidos se diferenciaban mucho de los teóricamente esperados. Posiblemente esto debido a errores de calibración a la hora de preparar el sistema.
 
 \vspace{1cm}
 Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de práctias: 
