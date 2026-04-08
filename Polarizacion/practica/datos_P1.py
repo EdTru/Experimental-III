@@ -61,9 +61,16 @@ intensidadv_norm = intensidadv / np.max(intensidadv)
 
 intensidadp_norm = intensidadp / np.max(intensidadp)
 
-print(intensidadv_norm)
+minv = min(intensidadv_norm)
+minp = min(intensidadp_norm)
 
-print(intensidadp_norm)
+minimov = grados[np.argmin(intensidadv_norm)]
+minimop = grados[np.argmin(intensidadp_norm)]
+
+
+print(minimov)
+print(minimop)
+
 
 plt.scatter(grados, intensidadv_norm, label='Vertical')
 plt.scatter(grados, intensidadp_norm, label='Horizontal')

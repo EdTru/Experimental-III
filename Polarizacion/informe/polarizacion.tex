@@ -203,7 +203,7 @@ A continuación mostraremos las tablas de datos obtenidos. Para cada parte.
                             70 &     0.93 & $\pm 0.5$                    & $\pm 0.01$      \\
                             75 &     2.06 & $\pm 0.5$                    & $\pm 0.01$      \\
                             80 &     4.79 & $\pm 0.5$                    & $\pm 0.01$      \\
-                            85 &     9.62 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            85 &     9.62 & $\pm 0.1$                    & $\pm 0.01$      \\
         \hline
     \end{tabular}
     \caption{Tabla de ángulos frente a intensidad normalizada para el caso perpendicular}
@@ -303,13 +303,116 @@ Circular ($-\lambda/4$) & $100.00 \pm 0.01$ \\ \hline
 \section{Análisis de resultados}
 
 \subsection{Ecuaciones de fresnel y ángulo de Brewster}
-En este caso para hallar el ángulo de Brewster, 
+En este caso para hallar el ángulo de Brewster, buscaremos el mínimo de la curva generada. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fotos_practica/tablas_parte_1.png}
+\end{figure}
+
+Donde obtenemos que los ángulso mínimos serán: 
+
+\begin{equation}
+    \theta_{||} = \theta_{B} = 55 \pm 0.01 \hspace{0.5cm} \theta_{\perp} = 5 \pm 0.5
+\end{equation}
+
+Si ahora calculamos el error asociado para así poder calcular el valor de $n'$ usando la relación $tan(\theta_{B}) = \frac{n'}{n}$, donde 
+asumimos que $n\approx 1$.
+
+\begin{equation}
+    \Delta n' = \left|\frac{\partial n'}{\partial \theta_{B}}\right|\Delta \theta_{B rad} = \frac{1}{cos^{2}(\theta)}\Delta \theta_{Brad}
+\end{equation}
+
+Por tanto obtendremos: 
+
+\begin{equation}
+    n' = 1.428 \pm 0.027
+\end{equation}
+
+Además, si lo comparamos con los valores dados en el informe para el vidrio o metracrilato (1.45 o 1.5), vemos que hay una cierta diferencia. Por
+ende procedemos a calcular el error relativo: 
+
+\begin{equation}
+    E_{r} = \frac{\left|n_{exp} - n_{teo}\right|}{n_{teo}} \cdot \cdot 100 \%
+\end{equation}
+
+\begin{equation}
+    E-{r} = \frac{\left|1.428-1.45\right|}{1.45} \cdot 100 \approx 1.52 \%
+\end{equation}
+\subsection{Ley de Malus}
+
+Ahora representaremos los datos obetnidos de intensidad, normalizados, frente al ángulo y sobreesquibiremos sobre ellos una función $cos^{2}(\theta)$
+para comprobar así la ley de Malus.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/tablas_parte_2.png}
+\end{figure}
+
+Vemos así que la correlación es bastante buena en casi todo el espectro del rango seleccionado.
+
+Por otro lado si bien nuestro máximo de intensidad se acerca bastante al resultado teórico, los pequeños desfases que tiene seguramente se deban a algún error
+de calibración donde los diales del polarizador no estaban perfectamente paralelos al plano de incidencia del haz incidente. Para haber realizado una correlación
+más adecuada entonces se tendría que haber ajustado esa pequeña inclinación $\phi_{0}$ para corregir el error, quedando así por tanto $I(\theta) = I_{0} cos^{2}(\theta - \phi_{0})$.
+
+\subsection{Vectores de Stokes}
+
+Si normalizamos los valores de las tablas obtendremos: 
+
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad y Vector de Jones para el Caso A.}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $1 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $0.67 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $0 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $0.32 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $0.36\pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $0.55\pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $0.45 \pm 0.01$ \\ \hline
+\end{tabular}
+\end{table}
 
 
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad y Vector de Jones para el Caso B.}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $1 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $0.35 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $0.34 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $0.67 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $0.54 \pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $0.31 \pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $0.33 \pm 0.01$ \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.5cm}
+
+Vemos pues que si comparamos con los valores obtenidos teóricamente $(1, -1, 0, 0)$ y $(1, 0, 0, 1)$, estos divergen mucho entre sí,
+posiblemente debido al montaje experimental realizado. 
+
+Esto mayoritariamente se debe a los problemas de alinear una luz a exactamente una luz circular. Esto debido a que requiere que este desfasada
+exactamente $\pi /2$ y a la mínima variación de este valor, volvemos a tener luz elíptica generando un desfase que altera las componetes x e y 
+de la luz. No obstante en nuestras tomas debieron existir otros errores de medida ya sea por la falta de calibración en las tomas o la colocación de
+los polarizadores que afecten para llegar a resultados tan divergentes respecto a los teóricos. 
+\subsection{Birrefringencia}
+
+En esta parte, se aporta una imagen de como afecta un elemento absorbente a un rayo de luz:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/birrefringencia.jpg}
+\end{figure}
 \section{Conclusiones}
 
 Tras el estudio podemos sacar ciertas conclusiones. En primer lugar, podemos observar que la dimensión fractal siendo esta cercana a $d\approx 2.5$
-se encurntra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
+se encuentra en un punto medio entre las 2D y las 3D, lo que quiere decir que no es un objeto perfectamente plano o esférico, sino que su volumen no 
 ocupa todo el espacio teniendo zonas con aire lo que hace variar su volumen general. 
 
 

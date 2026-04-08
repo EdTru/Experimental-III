@@ -43,13 +43,23 @@ datos_malus = np.array([
 ])
 
 dati = np.transpose(datos_malus)
-print(dati[0])
 
-plt.scatter(dati[0],dati[1])
+intensidad_norm = dati[1] / np.max(dati[1])
 
 
+angulos = np.linspace(np.min(dati[0]), np.max(dati[0]), 300)
+datos_teoricos = np.cos(np.radians(angulos))**2
+
+plt.scatter(dati[0],intensidad_norm, label = "Experimental")
+plt.plot(angulos, datos_teoricos, label = "Teórico", color = "red")
+plt.xlabel('Grados')
+plt.ylabel('Intensidad')
+plt.title('Ángulo -- Intensidad')
+plt.legend()
+plt.grid(True)
 plt.show()
 
+"""
 titulos = [r"$\theta$ (º)", r"$I$ (mw)", r"$\Delta \theta$ (º)", r"$\Delta I$ (mw)"]
 
 err_grados = [r"$\pm 0.5$"] * len(dati[0])
@@ -59,3 +69,4 @@ err_int = [r"$\pm 0.01$"] * len(dati[0])
 tabla = tb.tabulate(np.transpose([dati[0], dati[1], err_grados, err_int]), headers=titulos, tablefmt="latex_raw")
 
 print(tabla)
+"""

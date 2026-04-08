@@ -22,3 +22,15 @@ caso_B = { #mW
 	"-I_lambda/4": 100
 
 }
+
+caso_A_norm = {}
+caso_B_norm = {}
+
+for key in caso_A:
+	caso_A_norm[key] = round(caso_A[key] / caso_A["I_total"],2)
+
+for key in caso_B:
+	caso_B_norm[key] = round(caso_B[key] / caso_B["I_total"],2)
+
+print(caso_A_norm)
+print(caso_B_norm)
