@@ -1,4 +1,8 @@
 import numpy as np
+from tabulate import tabulate
+from scipy.stats import linregress # parahacer el ajuste lineal 
+import matplotlib.pyplot as plt 
+
 
 #en mm, error = 0,02mm
 m_error = np.array([[0,0.2],
@@ -190,3 +194,104 @@ papel_comprimido_7 = np.array([[1, 12.4],
 papel_suave = [papel_suave_1, papel_suave_2, papel_suave_3, papel_suave_4, papel_suave_5, papel_suave_6, papel_suave_7]
 papel_aluminio = [papel_aluminio_1, papel_aluminio_2, papel_aluminio_3, papel_aluminio_4, papel_aluminio_5, papel_aluminio_6,papel_aluminio_7]
 papel_comprimido = [papel_comprimido_1, papel_comprimido_2, papel_comprimido_3, papel_comprimido_4, papel_comprimido_5, papel_comprimido_6,papel_comprimido_7]
+
+
+diametros_globales = {}
+
+masas_globales = [1, 2, 4, 8, 16, 32, 64]
+
+def generar_tabla(papel, lista_papel):
+
+    diametros = np.array([i[:,1] for i in lista_papel])
+
+    media_diametros = np.mean(diametros, axis=0)
+    masas = np.array([i[0] for i in lista_papel[0]])
+
+    fila = []
+
+    diametrosj = []
+
+    for i in range(len(masas)):
+        fila.append([
+            int(masas[i]),
+            media_diametros[i].round(2), 
+            r"$\pm$ " + str(m_error[0][1])
+        ])
+
+        diametrosj.append(media_diametros[i].round(2))
+
+    diametros_globales[papel] = diametrosj
+
+    
+    headers = [r"Masa (g)", r"$\langle$ D $\rangle$ (mm)", r"$\bigtriangleup$ D (mm)"]
+    print(f"Tabla de datos para {papel}:\n")
+    print(tabulate(fila, headers=headers, tablefmt="latex_raw"))
+    print("\n")
+    print(r"\vspace{0.5cm}")
+    print("\n")
+
+generar_tabla("Papel Suave", papel_suave)
+
+generar_tabla("Papel Aluminio", papel_aluminio)
+generar_tabla("Papel Comprimido", papel_comprimido)
+
+
+#Cálculo de residuos basados en el código de matlab
+#Diferencia entre el valor experimental y el valor ajustado (predicho) para cada punto de datos.
+
+def calculo_residuos(masas, diametros, nombre):
+    
+    logm = np.log(masas)
+    logd = np.log(diametros[nombre])
+
+    slope, intercept, r_value, p_value, std_err = linregress(logm, logd)
+
+    logd_pred = slope * logm + intercept
+
+    residuos = logd_pred - logd
+
+    plt.figure(figsize=(8, 4))
+    plt.scatter(logm, residuos, color='red', label='Residuos')
+    plt.axhline(y=0, color='black', linestyle='--')
+    plt.title(f'Análisis de Residuos - {nombre} - Media Residual: ')
+    plt.xlabel('log10(M)')
+    plt.ylabel('Error (logD_exp - logD_fit)')
+    plt.grid(True)
+    plt.show()
+    
+    print(f"Dimensión fractal d para {nombre}: {1/slope:.3f}")
+
+# Ejemplo con tus datos
+
+calculo_residuos(masas_globales, diametros_globales, "Papel Aluminio")
+calculo_residuos(masas_globales, diametros_globales, "Papel Suave")
+calculo_residuos(masas_globales, diametros_globales, "Papel Comprimido")
+
+
+def representar(masas, diametros, nombre):
+    
+    logm = np.log(masas)
+    logd = np.log(diametros[nombre])
+
+    slope, intercept, r_value, p_value, std_err = linregress(logm, logd)
+
+    logd_pred = slope * logm + intercept
+
+    error_dimension = 1/(slope**2) * 0.02
+
+
+
+    plt.figure(figsize=(8, 4))
+    plt.scatter(logm, logd, color='blue', label='Datos Experimentales')
+    plt.plot(logm, logd_pred, color='orange', label='Ajuste Lineal')
+    plt.errorbar(logm, logd, yerr=0.02, fmt='o', color='blue', ecolor='lightgray', elinewidth=3, capsize=0)
+    plt.title(f'Log(D) - Log(M) para {nombre} con d = {(1/slope).round(1)} $\pm$ {error_dimension.round(2)}')
+    plt.xlabel('log(M)')
+    plt.ylabel('log(D)')
+    plt.grid(True)
+    plt.legend()
+    plt.show()
+
+representar(masas_globales, diametros_globales, "Papel Aluminio")
+representar(masas_globales, diametros_globales, "Papel Suave")
+representar(masas_globales, diametros_globales, "Papel Comprimido")
