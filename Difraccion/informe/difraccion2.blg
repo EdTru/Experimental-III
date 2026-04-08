@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'difraccion2.blg'
+[59] biber:340> INFO - === sáb abr  4, 2026, 22:47:21
+[74] Biber.pm:419> INFO - Reading 'difraccion2.bcf'
+[127] Biber.pm:979> INFO - Found 3 citekeys in bib section 0
+[138] Biber.pm:4419> INFO - Processing section 0
+[147] Biber.pm:4610> INFO - Looking for bibtex file 'difraccion.bib' for section 0
+[148] bibtex.pm:1713> INFO - LaTeX decoding ...
+[152] bibtex.pm:1519> INFO - Found BibTeX data source 'difraccion.bib'
+[191] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[191] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[191] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'es-ES'
+[198] bbl.pm:660> INFO - Writing 'difraccion2.bbl' with encoding 'UTF-8'
+[199] bbl.pm:763> INFO - Output to difraccion2.bbl
+[199] Biber.pm:131> WARN - online entry 'ventus_rendijas' (difraccion.bib): Invalid format '2026-04-4' of date field 'urldate' - ignoring
+[199] Biber.pm:131> WARN - online entry 'espectro_helio' (difraccion.bib): Invalid format '2026-04-4' of date field 'urldate' - ignoring
+[199] Biber.pm:133> INFO - WARNINGS: 2

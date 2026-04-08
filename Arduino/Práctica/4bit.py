@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt 
+import csv 
 
 #hecho manualmente, no con arduino vfuente = 4.8V
 datos_manual = np.array([
@@ -40,6 +41,8 @@ datos_arduino = np.array([
     ["1110", 4.10],
     ["1111", 4.39]
 ])
+
+
 
 
 
