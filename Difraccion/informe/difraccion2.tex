@@ -349,7 +349,47 @@ más adelante en el estudio espectroscópico ya que uilizaremos los valores medi
 \end{align}
 
 \subsection{Parte opcional: Patrón de difracción circular}
-En esta parte se ha realizado un estudio del patrón de difracción circular.
+En esta parte se ha realizado un estudio del patrón de difracción circular, que genera un disco de Airy. Hemos tomado la distancia entre puntos y los radios para diferentes distancias. Así hemos obtenido: 
+
+\begin{table}[H]
+\caption{Tabla para la toma de mínimos }
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{cccc}
+\hline
+   $D$ (mm) &   $d_{p}$ & $\Delta D$ (mm)   & $\Delta d_{max}$   \\
+\hline
+        900 &      3.62 & $\pm 0.02$        & $\pm 0.01$         \\
+        850 &      3.71 & $\pm 0.02$        & $\pm 0.01$         \\
+        800 &      2.01 & $\pm 0.02$        & $\pm 0.01$         \\
+        750 &      2.12 & $\pm 0.02$        & $\pm 0.01$         \\
+        700 &      2.81 & $\pm 0.02$        & $\pm 0.01$         \\
+\hline
+\end{tabular}
+\caption{Distancia entre medidor y rendija frente a distancias entre puntos}
+\end{table}
+
+\vspace{0.5cm}
+
+\begin{table}[H]
+\caption{Tabla para la toma de radios }
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{cccc}
+\hline
+   $D$ (mm) &   $d_{r}$ & $\Delta D$ (mm)   & $\Delta d_{max}$   \\
+\hline
+        900 &     40.32 & $\pm 0.02$        & $\pm 0.01$         \\
+        850 &     37.83 & $\pm 0.02$        & $\pm 0.01$         \\
+        800 &     34.92 & $\pm 0.02$        & $\pm 0.01$         \\
+        750 &     31.92 & $\pm 0.02$        & $\pm 0.01$         \\
+        700 &     30.91 & $\pm 0.02$        & $\pm 0.01$         \\
+\hline
+\end{tabular}
+\caption{Distancia entre medidor y rendija frente a radios completos del disco de Airy}
+\end{table}
 
 \subsection{Espectroscopía de un gas}
 
@@ -431,7 +471,7 @@ Ahora procederemos a representar gráficamente los resultados ohbtenidos para en
 
 \subsection{Rendija simple}
 En esta parte representaremos gráficamente la relación entre $X_{min}$ y $D$ para cada una de las 6 tomas realizadas. Además, se realizará un ajuste lineal a cada una de las gráficas para obtener el valor de $m$ 
-y así poder obtener el valor de la anchura de la rendija. Para el cálculo, supondremos que el laser tiene una $\lambda = $
+y así poder obtener el valor de la anchura de la rendija. Para el cálculo, supondremos que el laser tiene una $\lambda = 650nm$.
 
 \begin{figure}[H]
     \centering
@@ -523,6 +563,32 @@ Con el análisis realizado, obtenemos que $p= \frac{m}{\lambda}$, con $\lambda =
 Vemos pues que nuestros resultados, divergen ligeramente respecto al resultado teórico, pero al encontrarse en el mismo orden de magnitud, los errores pueden deberse a errores de 
 calibración en la medida. 
 
+\subsection{Parte opcional: Rendijas circulares}
+
+Usando la relación $X = \frac{\lambda D}{d}$ donde d es la distancia entre agujeros, podemos representar $X$ frente a $D$ y obtener mediante la pendiente la distancia entre las aberturas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/benito_p.png}
+\end{figure}
+
+Donde obtenemos que:
+\begin{equation}
+    d = 108.3 \mu m \pm 0.54
+\end{equation}
+
+Por otro lado con los radios podemos obtener el tamaño de las aberturas usando la relación $R_{min} = 1.22 \frac{\lambda D}{2a}$ como podemos hallar en la página \cite[p. 485]{hecht2000optica}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{fotos_practica/benito_r.png}
+\end{figure}
+
+Con esto obtenemos que: 
+
+\begin{equation}
+    2a = 16.2 \pm 0.13 \mu m
+\end{equation}
 \subsection{Espectroscopía de un gas}
 
 Para este apartado utilizaremos el código programado para el apartado 6. Con ello, obtendremos las longitudes de onda representadas. Pasaremos en cada caso los datos a metros ya que es 
