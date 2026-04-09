@@ -1,0 +1,525 @@
+\documentclass[11pt, a4paper, twocolumn]{article}
+
+
+% --- Paquetes de Idioma y Codificación ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-nodecimaldot]{babel} % Configurado para español
+\usepackage[T1]{fontenc}
+
+% --- Tipografía y Estética ---
+\usepackage{mathpazo} % Fuente Palatino, elegante y legible
+\usepackage{microtype} % Mejora el espaciado entre letras y palabras
+
+% --- Geometría de Página ---
+\usepackage[margin=2.5cm, top=3.8cm, headheight=65pt, headsep=0.8cm]{geometry}
+\columnsep 0.6cm % Espacio entre columnas
+\usepackage{float}
+
+% --- Matemáticas Avanzadas ---
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{mathtools}
+
+% --- Gráficos y Tablas ---
+\usepackage{graphicx}
+\usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
+\usepackage{caption}
+\captionsetup{labelfont=bf, font=small} % Captions en negrita y pequeñas
+
+% --- Hipervínculos y Referencias ---
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
+\usepackage{biblatex}
+\addbibresource{polarizacion.bib}
+
+% --- Título y Autores ---
+\title{\textbf{\Large Polarización}}
+\author{
+    \textbf{Truchado Iniesta, Eduardo}, \textbf{Sanz Rubio, Juan} \\
+    \small Grado de Física, UCLM. \texttt{juan.sanz1@alu.uclm.es} \\
+    \small Grado de Física, UCLM. \texttt{eduardo.truchado@alu.uclm.es}
+}
+\date{\small 2 Marzo 2026}
+
+
+\usepackage{fancyhdr}
+%\usepackage{graphicx}
+
+% --- Configuración del Encabezado ---
+\pagestyle{fancy}
+\fancyhf{} % Limpia encabezado y pie de página
+\renewcommand{\headrulewidth}{0.4pt} % Línea horizontal bajo el encabezado
+
+% Imagen a la IZQUIERDA
+\fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}}
+
+\fancyfoot[C]{\thepage}
+
+
+\fancypagestyle{plain}{
+    \fancyhf{} % Limpia el estilo plain por defecto
+    \fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}} % Mantiene tu logo
+    \fancyfoot[C]{\thepage} % Fuerza el número de página
+    \renewcommand{\headrulewidth}{0.4pt} % Mantiene la línea
+}
+
+% --- Inicio del Documento ---
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+%Resumen
+\begin{abstract}
+En esta práctica se han realizado diferentes montajes relacionados con la polarización para analizar diferentes fenómenos: 
+
+\begin{enumerate}
+    \item \textbf{Ecuaciones de Fresnel y ángulo de Brewster:} Mediante el estudio de la reflexión de un láser a través de un
+    prisma, obtendremos el ángulo de Brewster y el índice de refracción del prisma.
+    \item \textbf{Ley de Malus:} Mediante un analizador de intensidad y un polarizador que nos permite variar el ángulo, buscamos
+    mostrar la ley de intensidades de Malus.
+    \item \textbf{Cálculo del vector de Stokes:} Montaremos diferentes sistemas con polarizadores y láminas para ver como varían los vectores de Stokes.
+    \item \textbf{Birrefringencia:} Vemos cualitativamente como afectan los materiales birrefringentes a un sistema lumínico de un láser.
+\end{enumerate}
+
+\end{abstract}
+
+
+\section{Introducción}
+
+La polarización es una propiedad intrínseca de las ondas electromagnéticas, esta puede estudiarse mediante diferentes métodos. En nuestro utilizaremos diferentes medios ópticos para
+estudiar el comportamiento de la luz, en este caso un láser con $\lambda = 635 nm$, al pasar por ellos.
+
+\begin{itemize}
+    \item La luz refracta con un cierto ángulo cuando sufre un cambio de medios con diferente índice de refracción. Un caso interesante es aquel donde se cumple la relación de Brewster $tan(\theta_{B}) = \frac{n'}{n}$ donde $\theta_{B}$ es el ángulo de Brewster que es aquel donde no hay reflexión.
+    \item Por otro lado la intensidad de la luz también varía al cambiar su ángulo de polarización, esta variabilidad sigue una ley conocida como ley de Malus, $I(\theta) = I_{0}cos^2(\theta)$.
+    \item Además los sistemas polarizados pueden describirse perfectamente a través de un vector denominado "vector de Stokes", que tiene la siguiente forma, $\vec{S} = (S_{0}, S_{1}, S_{2}, S_{3})^{T}$. 
+    
+\end{itemize}
+
+\section{Objetivos}
+Los objetivos son familiarizarse con procedimientos ópticos utilizados para el estudio de diferentes fenómenos ópticos asociados a la polarización. 
+\section{Metodología}
+
+Para los procedimientos aquí propuestos se han utilizado en todos un láser de luz roja con $\lambda = 630 nm$ y un fotómetro de thorlabs \cite{thorlabs_opm}. Ahora el montaje para cada procedimiento es diferente. 
+
+\subsection{Ecuaciones de fresnel y ángulo de Brewster}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_brewster.jpg}
+\end{figure}
+
+En este caso se ha colocado el prisma en un goniómetro calibrado que nos permitirá medir el ángulo para diferentes casos. La luz saliente del láser está polarizada linealmente inicialmente, luego procederemos a colocar
+un polarizador que nos ayude a que la luz pase a ser perpendicularmente polarizada. 
+
+Con los datos de ángulos representaremos $I$ frente a $\theta$ y donde se encurntre el mínimo de la curva, tendremos el ángulo de Brewster. Con ello usando la relación $tan(\theta_{B}) = \frac{n'}{n}$ podremos hallar
+el índice de refracción del prisma.
+
+\subsection{Ley de Malus}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_malus.jpg}
+\end{figure}
+
+Ahora se ha colocado un polarizador que nos permite variar el ángulo de polarización con un cierto margen de error. Con esto representaremos I frente a $\theta$ para verificar que la función obtenida es un $cos^{2}(\theta)$.
+
+\subsection{Vector de Stokes}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/montaje_stokes.jpg}
+\end{figure}
+
+En este análisis se han ido montando diferentes sistemas conforme al orden pedido en la práctica. En este caso se ha realizado tanto para el caso A, luz lineal vertical, como para el caso B, luz circular.
+
+\begin{enumerate}
+    \item $I_{total}$ (sin analizador)
+    \item $I_{v}$ (con analizaodr vertical a 90º)
+    \item $I_{45}$ (con analizador a 45º)
+    \item $I_{CD}$ (con analizador circular)
+\end{enumerate}
+
+Con estos se han calculado los vectores de Jones para cada caso y calculados con los valores teóricos $(1, -1, 0, 0)$ y $(1, 0, 0, 1)$ respectivamente. 
+\newpage
+
+\section{Tratamiento de datos}
+
+A continuación mostraremos las tablas de datos obtenidos. Para cada parte.
+
+\subsection{Ecuaciones de fresnel y ángulo de Brewster}
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{cccc}
+        \hline
+        $\theta$ (º) &   $I$ (mw) & $\Delta \theta$ (º)   & $\Delta I$ (mw)   \\
+        \hline
+                            5 &     7.45 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            10 &     7.56 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            15 &     7.84 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            20 &     8.72 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            25 &     9.77 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            30 &    10    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            35 &    12    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            40 &    14    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            45 &    16    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            50 &    19    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            55 &    25    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            60 &    32    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            65 &    44    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            70 &    61    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            75 &    83    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            80 &   116    & $\pm 0.5$                    & $\pm 0.01$      \\
+                            85 &   161    & $\pm 0.5$                    & $\pm 0.01$      \\
+        \hline
+    \end{tabular}
+    \caption{Tabla de ángulos frente a intensidad normalizada para el caso vertical}
+    \label{Tabla_1}
+\end{table}
+
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{cccc}
+        \hline
+        $\theta$ (º) &   $I$ (mw) & $\Delta \theta$ (º)   & $\Delta I$ (mw)   \\
+        \hline
+                            5 &     0.77 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            10 &     0.72 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            15 &     0.66 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            20 &     0.61 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            25 &     0.52 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            30 &     0.48 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            35 &     0.39 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            40 &     0.33 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            45 &     0.26 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            50 &     0.14 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            55 &     0.14 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            60 &     0.18 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            65 &     0.41 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            70 &     0.93 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            75 &     2.06 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            80 &     4.79 & $\pm 0.5$                    & $\pm 0.01$      \\
+                            85 &     9.62 & $\pm 0.1$                    & $\pm 0.01$      \\
+        \hline
+    \end{tabular}
+    \caption{Tabla de ángulos frente a intensidad normalizada para el caso perpendicular}
+    \label{Tabla_2}
+\end{table}
+
+\vspace{0.3cm}
+
+\subsection{Ley de Malus}
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{cccc}
+        \hline
+        $\theta$ (º) &   $I$ (mw) & $\Delta \theta$ (º)   & $\Delta I$ (mw)   \\
+        \hline
+                    0 &     145    & $\pm 0.5$             & $\pm 0.01$        \\
+                    5 &     143    & $\pm 0.5$             & $\pm 0.01$        \\
+                    10 &     140    & $\pm 0.5$             & $\pm 0.01$        \\
+                    15 &     133    & $\pm 0.5$             & $\pm 0.01$        \\
+                    20 &     125    & $\pm 0.5$             & $\pm 0.01$        \\
+                    25 &     115    & $\pm 0.5$             & $\pm 0.01$        \\
+                    30 &     103    & $\pm 0.5$             & $\pm 0.01$        \\
+                    35 &      89    & $\pm 0.5$             & $\pm 0.01$        \\
+                    40 &      78    & $\pm 0.5$             & $\pm 0.01$        \\
+                    45 &      67    & $\pm 0.5$             & $\pm 0.01$        \\
+                    50 &      55    & $\pm 0.5$             & $\pm 0.01$        \\
+                    55 &      44    & $\pm 0.5$             & $\pm 0.01$        \\
+                    60 &      33    & $\pm 0.5$             & $\pm 0.01$        \\
+                    65 &      23    & $\pm 0.5$             & $\pm 0.01$        \\
+                    70 &      15    & $\pm 0.5$             & $\pm 0.01$        \\
+                    75 &       9    & $\pm 0.5$             & $\pm 0.01$        \\
+                    80 &       4.72 & $\pm 0.5$             & $\pm 0.01$        \\
+                    85 &       2.66 & $\pm 0.5$             & $\pm 0.01$        \\
+                    90 &       2.78 & $\pm 0.5$             & $\pm 0.01$        \\
+                    95 &       5.1  & $\pm 0.5$             & $\pm 0.01$        \\
+                    100 &       9.53 & $\pm 0.5$             & $\pm 0.01$        \\
+                    105 &      16    & $\pm 0.5$             & $\pm 0.01$        \\
+                    110 &      24    & $\pm 0.5$             & $\pm 0.01$        \\
+                    115 &      34    & $\pm 0.5$             & $\pm 0.01$        \\
+                    120 &      45    & $\pm 0.5$             & $\pm 0.01$        \\
+                    125 &      57    & $\pm 0.5$             & $\pm 0.01$        \\
+                    130 &      70    & $\pm 0.5$             & $\pm 0.01$        \\
+                    135 &      82    & $\pm 0.5$             & $\pm 0.01$        \\
+                    140 &      95    & $\pm 0.5$             & $\pm 0.01$        \\
+                    145 &     107    & $\pm 0.5$             & $\pm 0.01$        \\
+                    150 &     117    & $\pm 0.5$             & $\pm 0.01$        \\
+                    160 &     127    & $\pm 0.5$             & $\pm 0.01$        \\
+                    165 &     134    & $\pm 0.5$             & $\pm 0.01$        \\
+                    170 &     135    & $\pm 0.5$             & $\pm 0.01$        \\
+                    175 &     136    & $\pm 0.5$             & $\pm 0.01$        \\
+                    180 &     136    & $\pm 0.5$             & $\pm 0.01$        \\
+        \hline
+    \end{tabular}
+    \caption{Tabla de ángulos frente intensidad al variar la polarización con el polarizador}
+    \label{Tabla_3}
+\end{table}
+
+\newpage
+\subsection{Vector de stokes}
+
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad y Vector de Jones para el Caso A.}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $528.00 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $352.00 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $0.74 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $167.00 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $191.00 \pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $288.00 \pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $240.00 \pm 0.01$ \\ \hline
+\end{tabular}
+\label{Tabla_4}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad y Vector de Jones para el Caso B.}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $300.00 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $104.00 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $103.00 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $200.00 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $163.00 \pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $93.00 \pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $100.00 \pm 0.01$ \\ \hline
+\end{tabular}
+\label{Tabla_5}
+\end{table}
+
+\vspace{0.5cm}
+
+
+\section{Análisis de resultados}
+
+\subsection{Ecuaciones de fresnel y ángulo de Brewster}
+En este caso para hallar el ángulo de Brewster, buscaremos el mínimo de la curva generada por los valores de las tablas
+\ref{Tabla_1} y \ref{Tabla_2}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{fotos_practica/tablas_parte_1.png}
+\end{figure}
+
+Donde obtenemos que los ángulso mínimos serán: 
+
+\begin{equation}
+    \theta_{||} = \theta_{B} = 55 \pm 0.01 \hspace{0.5cm} \theta_{\perp} = 5 \pm 0.5
+\end{equation}
+
+Si ahora calculamos el error asociado para así poder calcular el valor de $n'$ usando la relación $tan(\theta_{B}) = \frac{n'}{n}$, donde 
+asumimos que $n\approx 1$.
+
+\begin{equation}
+    \Delta n' = \left|\frac{\partial n'}{\partial \theta_{B}}\right|\Delta \theta_{B rad} = \frac{1}{cos^{2}(\theta)}\Delta \theta_{Brad}
+\end{equation}
+
+Por tanto obtendremos: 
+
+\begin{equation}
+    n' = 1.428 \pm 0.027
+\end{equation}
+
+Además, si lo comparamos con los valores dados en el informe para el vidrio o metracrilato (1.45 o 1.5), vemos que hay una cierta diferencia. Por
+ende procedemos a calcular el error relativo: 
+
+\begin{equation}
+    E_{r} = \frac{\left|n_{exp} - n_{teo}\right|}{n_{teo}} \cdot \cdot 100 \%
+\end{equation}
+
+\begin{equation}
+    E-{r} = \frac{\left|1.428-1.45\right|}{1.45} \cdot 100 \approx 1.52 \%
+\end{equation}
+\subsection{Ley de Malus}
+
+Ahora representaremos los datos obetnidos de intensidad, normalizados, frente al ángulo y sobreesquibiremos sobre ellos una función $cos^{2}(\theta)$
+para comprobar así la ley de Malus.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/tablas_parte_2.png}
+\end{figure}
+
+Vemos así que la correlación es bastante buena en casi todo el espectro del rango seleccionado.
+
+Por otro lado si bien nuestro máximo de intensidad se acerca bastante al resultado teórico, los pequeños desfases que tiene seguramente se deban a algún error
+de calibración donde los diales del polarizador no estaban perfectamente paralelos al plano de incidencia del haz incidente. Para haber realizado una correlación
+más adecuada entonces se tendría que haber ajustado esa pequeña inclinación $\phi_{0}$ para corregir el error, quedando así por tanto $I(\theta) = I_{0} cos^{2}(\theta - \phi_{0})$.
+
+\subsection{Vectores de Stokes}
+
+Si normalizamos los valores de las tablas obtendremos: 
+
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad normalizadas para el Caso A.}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $1 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $0.67 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $0 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $0.32 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $0.36\pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $0.55\pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $0.45 \pm 0.01$ \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h!]
+\centering
+\caption{Medidas de intensidad normalizadas para el Caso B.}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Estado de Medida} & \textbf{Intensidad $I$ (mW)} \\ \hline
+Total ($I_{total}$) & $1 \pm 0.01$ \\ \hline
+Vertical ($I_v$) & $0.35 \pm 0.01$ \\ \hline
+Horizontal ($I_h$) & $0.34 \pm 0.01$ \\ \hline
+A $-45^\circ$ ($I_{-45}$) & $0.67 \pm 0.01$ \\ \hline
+A $+45^\circ$ ($I_{+45}$) & $0.54 \pm 0.01$ \\ \hline
+Circular ($\lambda/4$) & $0.31 \pm 0.01$ \\ \hline
+Circular ($-\lambda/4$) & $0.33 \pm 0.01$ \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.5cm}
+
+Una vez que tenemos estas medidas, calculamos los parámetros de Stokes:
+\begin{itemize}
+    \item $S_{0} = I_{total}$
+    \item $S_{1} = I_{h} - I_{v}$
+    \item $S_{2} = I_{+45} - I_{-45}$
+    \item $S_{3} = I_{\lambda/4} - I_{-\lambda/4}$ 
+\end{itemize}
+
+Donde obtenemos :
+
+\begin{align}
+    \vec{S}_{A} = (1, -067, 0.04, 0.1) \\
+    \vec{S}_{B} = (1, -0.01, -0.13, -0.02)    
+\end{align}
+
+Vemos pues que si comparamos con los valores obtenidos teóricamente $(1, -1, 0, 0)$ y $(1, 0, 0, 1)$, estos divergen mucho entre sí,
+posiblemente debido al montaje experimental realizado. 
+
+Esto mayoritariamente se debe a los problemas de alinear una luz a exactamente una luz circular. Esto debido a que requiere que este desfasada
+exactamente $\pi /2$ y a la mínima variación de este valor, volvemos a tener luz elíptica generando un desfase que altera las componetes x e y 
+de la luz. No obstante en nuestras tomas debieron existir otros errores de medida ya sea por la falta de calibración en las tomas o la colocación de
+los polarizadores que afecten para llegar a resultados tan divergentes respecto a los teóricos. 
+\subsection{Birrefringencia}
+
+En esta parte, se aporta una imagen de como afecta un elemento absorbente a un rayo de luz:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/birrefringencia.jpg}
+\end{figure}
+
+\section{Cuestiones planteadas en el informe}
+En la práctica se nos propone resolver una serie de cuestiones teóricas sobre los fenómenos estudiados aquí. 
+
+\subsection{Ángulo de Brewster microscópico}
+Si analizamos el fenómeno desde una vista microscópica cuando la luz, que es una luz EM, incide en un dieléctrico, 
+esta induce a través de su campo eléctrico una oscilación en los $e^{-}$ del material, los cuales están organizados 
+en forma de dipolos eléctricos. Debido a esto los dipolos oscilan en la misma dirección que el ángulo refractado, es
+decir, oscilan a la misma vez que el ángulo transmitido. Pero sabemos que la radiación emitida por un dipolo no se 
+propaga en la dirección en la que oscila el dipolo. A causa de esto, podemos llegar a la conclusión de que en el caso 
+del ángulo de Brewster, el ángulo reflejado y refractado deben formar un ángulo de $180$º en el material, entonces, dado
+que sabemos que los dipolos no pueden emitir en la dirección de propagación y en este caso el haz de luz reflejado tiene 
+la misma dirección que los dipolos oscilantes, no se genera el haz reflejado.
+
+\subsection{Polarizadores reales vs ideales}
+Partimos de suponer que existen $t_{1}$ y $t_{2}$ que son constantes de transmisión que cumplen que
+ $t_{1}^{2} = k_{1}$ como $t_{2}^{2} =k_{2}$ y que además son iguales en todo el material. 
+ Con esto claro, podemos describir el campo eléctrico en el material de la forma:
+\begin{equation}
+    \vec{E} = (E_{x}, E_{y}) = (E_{0x} \cdot t_{1}, E_{0y} \cdot k_{2})
+\end{equation}
+
+Además la intensidad se define como $I = \left|E\right|^{2}$, por tanto.
+
+\begin{align}
+    I &= \left|E_{0x} \cdot t_{1}\right|^{2} + \left|E_{0y} \cdot t_{2}\right|^{2} = \\
+    &= E_{0x}^{2} \cdot t_{1}^{2} + E_{0y}^{2} \cdot t_{2}^{2} \\
+    &= E_{0x}^{2} \cdot k_{1} + E_{0y}^{2} \cdot k_{2}
+\end{align}
+Ahora, consideramos $E_{0x} = E_{0} \cdot cos(\theta)$ y $E_{0y} = E_{0} \cdot sin(\theta)$ donde además $I_{0} = E_{0}^{2}$, obtenemos.
+
+\begin{equation}
+    I (\theta) = I_{0} (k_{1} \cdot cos^{2}(\theta) + k_{2} \cdot sin^{2}(\theta))
+\end{equation}
+
+\subsection{Dependencia cromática de la lámina retardada}
+Recordemos que para el caso de na lámina $\lambda/4 $ el retardo generado en la onda EM , se calcula en base a :
+\begin{equation}
+    \delta = \frac{2\pi}{\lambda}d \Delta n 
+\end{equation}
+
+Donde $d$ es le grosor de la lámina, y $\Delta n= n_{2} - n_{1}$. En nuestro caso como está adaptada la lámina a
+una $\lambda = 650 nm$, por ende si el láser es verde ($470 - 550 nm$), como lo único que varía en la fórmula es la $\lambda$, 
+obtendremos un valor de $\delta > \frac{\pi}{2}$. Por ende dejará de ser circular y pasará a ser elíptica.
+ 
+
+\subsection{Esfera de poincaré}
+Una vez normalizado el vector de Stokes, podemos considerar las componentes $S_{1}, S_{2}, S_{3}$ como las componentes $X, Y, Z$
+en una esfera tridimensional como la esfera de Poincaré. Considerando nuestros vectores, tendremos: 
+\begin{align}
+    P_{A} = (-0.67, 0.04, 0.1) \\
+    P_{B} = (-0.01, -0.13, -0.02) \\
+\end{align}
+
+Si ahora en python con la biblioteca $Matplotlib$ hacemos una representación de la esfera como una malla y colocamos dentro de ella los vectores
+normalizamos, obtenemos la siguiente figura. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{fotos_practica/esfera_poincare.png}
+    \caption{Esfera de Poincaré con los puntos representados}
+\end{figure}
+
+\subsection{Parte computacional}
+Se aporta además del informe un appi realizada en python donde con 3 deslizadores que permiten cambiar las amplitudes de los campos en los ejes $x$ e $y$ y otra que cambia el 
+desfase entre ambas componentes, se hace una representación en 2D de que tipod e polaridad generan. Usando este código, se nos pide comprobar que la combinación $E_{0x} = E_{0y}$
+y $\delta = \frac{\pi}{2}$ genera polarización circular levógira. Si lo aplicamos al código, obtenemos:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{fotos_practica/circular_levogira.png}
+    \caption{Circular levogira}
+
+\end{figure}
+\section{Conclusiones}
+Tras el estudio podemos sacar ciertas conclusiones. Lo primero es que podemos utilizar la refracción para obtener los índices de refracción de materiales haciendo
+uso de propiedades como el ángulo de Brewster. En nuetsro caso el estudio fue suficientemente satisfactorio comparándolo con valores reales proporcionados en la propia
+práctica. 
+
+Por otro lado comprobamos la correspondencia teórico-experimental de la ley de Malus y llegamos a un resultado final bastante bueno si bien debido a errores de calibración
+o de medida hubiera pequeños desajustes a lo largo de la línea sobretodo en la parte final. 
+
+Más adelante usando diferentes sistemas ópticos medimos intensidades para obtener los vectores de Stokes de dos luces, lineal y circular. En este caso las medidas si que fueron mucho más erradas
+ya que los resultados obtenidos se diferenciaban mucho de los teóricamente esperados. Posiblemente esto debido a errores de calibración a la hora de preparar el sistema.
+
+\vspace{1cm}
+Para ver todo el análisis de datos realizado por los alumnos, se habilita este enlace al repositorio de github donde están todos los archivos de prácticas \cite{experimental32026}: 
+
+\section{Referencias}
+
+\printbibliography
+
+\end{document}

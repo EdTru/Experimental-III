@@ -1,0 +1,527 @@
+\documentclass[11pt, a4paper, twocolumn]{article}
+
+% --- Paquetes de Idioma y Codificación ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-nodecimaldot]{babel} % Configurado para español
+\usepackage[T1]{fontenc}
+
+% --- Tipografía y Estética ---
+\usepackage{mathpazo} % Fuente Palatino, elegante y legible
+\usepackage{microtype} % Mejora el espaciado entre letras y palabras
+
+% --- Geometría de Página ---
+\usepackage[margin=2.5cm, top=3.8cm, headheight=65pt, headsep=0.8cm]{geometry}
+\columnsep 0.6cm % Espacio entre columnas
+
+% --- Matemáticas Avanzadas ---
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{mathtools}
+\usepackage{appendix}
+% --- Gráficos y Tablas ---
+\usepackage{graphicx}
+\usepackage{booktabs} % Para tablas con estilo profesional (sin líneas verticales)
+\usepackage{caption}
+\usepackage{svg}
+\usepackage{dblfloatfix}
+\usepackage{float}
+\captionsetup{labelfont=bf, font=small} % Captions en negrita y pequeñas
+
+% --- Hipervínculos y Referencias ---
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[capitalize]{cleveref} % Referencias inteligentes (ej: Fig. 1)
+\usepackage{biblatex}
+\usepackage{csquotes}
+\addbibresource{referencias.bib}
+
+% --- Título y Autores ---
+\title{\textbf{\Large Experimento de Franck-Hertz}}
+\author{
+	\textbf{Truchado Iniesta, Eduardo}, \textbf{Sanz Rubio, Juan} \\
+	\small Grado de Física, UCLM. \texttt{juan.sanz1@alu.uclm.es} \\
+	\small Grado de Física, UCLM. \texttt{eduardo.truchado@alu.uclm.es}
+}
+\date{\small 2 Marzo 2026}
+
+
+\usepackage{fancyhdr}
+%\usepackage{graphicx}
+
+% --- Configuración del Encabezado ---
+\pagestyle{fancy}
+\fancyhf{} % Limpia encabezado y pie de página
+\renewcommand{\headrulewidth}{0.4pt} % Línea horizontal bajo el encabezado
+
+% Imagen a la IZQUIERDA
+\fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}}
+
+\fancyfoot[C]{\thepage}
+
+
+\fancypagestyle{plain}{
+	\fancyhf{} % Limpia el estilo plain por defecto
+	\fancyhead[L]{\includegraphics[height=2cm]{logoFCTo.png}} % Mantiene tu logo
+	\fancyfoot[C]{\thepage} % Fuerza el número de página
+	\renewcommand{\headrulewidth}{0.4pt} % Mantiene la línea
+}
+
+% --- Inicio del Documento ---
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+
+%Resumen
+
+\begin{abstract}
+
+En esta práctica nuestro objetivo será verificar experimentalmente la 
+cuantización de los niveles de energía atómicos. Para ello, realizaremos 
+el experimento de Franck-Hertz, en el que aceleraremos electrones mediante 
+una diferencia de potencial variable y estudiaremos sus colisiones con átomos 
+de mercurio en fase gaseosa. A partir de la curva característica 
+corriente-voltaje obtenida, determinaremos experimentalmente la energía del 
+primer nivel de excitación del mercurio y la compararemos con el valor 
+teórico de $4,9 eV$.
+
+\end{abstract}
+
+
+\section{Introducción}
+
+Según los postulados de Bohr, los electrones en los átomos solo pueden ocupar 
+niveles de energía discretos, o cuantizados, y por lo tanto solo pueden emitir 
+y absorber electrones cuya energía corresponda al salto entre dos niveles:
+
+\begin{equation}
+   \Delta E = E_f - E_i = h\nu
+\end{equation}
+
+Para comprobar la veracidad de este postulado tenemos el experimento de 
+Franck y Hertz. Este experimento consiste en bombardear a átomos con electrones con una 
+energía cinética conocida:
+
+\begin{equation}
+   K = \frac{1}{2}mv^2 = |e|V
+\end{equation}
+
+donde $e$ es la carga del electrón y $V$ la tensión aceleradora aplicada. 
+Cuando la energía cinética de los electrones es inferior a la energía del 
+primer nivel excitado del átomo, las colisiones que se producen son 
+elásticas: el electrón no transfiere energía interna al átomo y ambos 
+conservan su energía cinética. Por el contrario, cuando la tensión 
+aceleradora es suficiente para que el electrón alcance dicha energía umbral, 
+la colisión pasa a ser inelástica y el electrón cede exactamente esa energía 
+al átomo, excitando a uno de sus electrones a un nivel superior.
+
+\vspace{0.2cm}
+
+En el montaje experimental se utiliza un tubo de Franck-Hertz relleno de 
+vapor de mercurio a baja presión, en el que los electrones son emitidos por 
+efecto termoiónico desde un cátodo calefactado y acelerados hacia una rejilla 
+mediante la tensión $U_1$. Una pequeña tensión de frenado $U_2$ aplicada entre 
+la rejilla y el ánodo colector impide que lleguen al detector aquellos 
+electrones que hayan perdido su energía en una colisión inelástica:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/TuboFrankHertz.png}
+	\caption{Tubo de Frrank-Hertz de \cite{FrankHertzTubo}}
+	\label{TuboFrankHertz}
+\end{figure}
+
+Al aumentar progresivamente $U_1$, la corriente anódica crece hasta que los 
+electrones alcanzan la energía de excitación del mercurio 
+momento en el que se produce una caída brusca de la corriente. Al seguir 
+aumentando $U_1$, los electrones recuperan energía cinética tras la colisión y 
+la corriente vuelve a crecer, repitiéndose el proceso periódicamente. La 
+curva $I_A$-$U_1$ resultante presenta así una serie de máximos y mínimos 
+equiespaciados, cuya separación en tensión corresponde directamente a la 
+energía del primer nivel de excitación del átomo de mercurio, confirmando 
+la cuantización de los niveles energéticos predicha por Bohr.
+
+
+
+
+\section{Objetivos}
+Los objetivos de esta práctica serán: verificar la cuantización de los niveles 
+de energía y calcular el valor experimental de esos niveles de energía.
+
+
+\section{Metodología}
+
+Conectamos el equipo Franck-Hertz, que tiene un circuito tal que:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{imagenes/CircuitoHertz.png}
+	\caption{Circuito del dispositivo Franck-Hertz}
+	\label{CircFH}
+\end{figure}
+
+donde $U_H$ es la tensión que se aplica al filamento que actua de calentador, $U_1$
+es la tensión aceleradora; que se encarga de acelerar los electrones arrancados a 
+la resistencia, $U_2$ es la tensión de frenado; que se encarga de frenar a los 
+electrones que no vengan con la energía cinética suficiente y $U_3$ es una tensión 
+de aceleración extra que al no ser necesaria para el mercurio mantendremos siempre 
+como 0.
+
+\vspace{0.2cm}
+
+Con el montaje hecho, prepararemos el horno a una temperatura de $T=175ºC$ y 
+esperaremos a que alcance ese valor, luego, esperaremos unos 15 minutos adicionales 
+para asegurarnos de que se encuentra a esa temperatura en todo el tubo. Y cada vez 
+que variemos la temperatura repetiremos este proceso.
+
+\vspace{0.2cm}
+
+A la hora de medir, tomaremos dos valores, la tensión $U_1$ y la diferencia 
+de potencial generada por la corriente anódica $I_A$. Y lo que haremos será 
+hacer un barrido en modo "sierra" del voltaje $U_1$ de $1V$ a $60$ mientras 
+que mantenemos $U_2$ a una tensión constante a $2V$ y $U_H$ a $6.3 v$.
+
+\vspace{0.2cm}
+
+Además, el dispositivo Franck-Hertz que utilizamos tiene dos salidas para 
+medir directamente estas dos variables de interés, tan solo las recogeremos 
+con un osciloscopio para poder tomar medidas. En esta práctica utilizaremos 
+tres osciloscopios diferentes: un osciloscopio analógico, un primer osciloscopio 
+digital (PicoScope 2202) y un segundo osciloscopio digital (Analog Discovery).
+
+\vspace{0.2cm}
+
+Una vez colocadas ambas entradas a cada canal del osciloscopio, seleccionaremos 
+el módo de $x-y$ tomando $U_1$ como $x$ y la tensión generada por $I_A$ como $y$ 
+ya que solo nos interesa el valor del voltaje de canal, no 
+el tiempo. Además, cada uno de ellos tiene una frecuencia de muestreo diferente por lo que 
+los resultados, aunque generalmente sean los mismos, tendrán variaciones 
+en cuanto a la precisión. 
+
+\section{Tratamiento de datos}
+
+A continuación mostraremos los datos obtenidos al realizar las medidas con
+cada osciloscopio. Además, para cada osciloscopio realizaremos 3 medidas 
+diferentes a diferentes temperaturas: $T=175K$, $T=170K$ y $T=180K$.
+
+
+\subsection{Osciloscopio analógico}
+
+Para este osciloscopio no teníamos la opción de obtener los datos directamente 
+al ordenador, por lo que tan solo tomamos imagenes del resultado:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.11]{imagenes/T_170_anag.jpg}
+	\caption{Resultado del osciloscopio analógico para $T=170^\circ$}
+	\label{Anag170}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.11]{imagenes/T_175_anag.jpg}
+	\caption{Resultado del osciloscopio analógico para $T=175^\circ$}
+	\label{Anag175}
+\end{figure}
+
+\newpage 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{imagenes/T_180_anag.png}
+	\caption{Resultado del osciloscopio analógico para $T=180^\circ$}
+	\label{Anag180}
+\end{figure}
+
+\subsection{PicoScope 2202}
+
+Este osciloscopio ya permite, además de la representación de la gráfica $x-y$, 
+la adquisición de datos por ordenador. Sacando un archivo $.csv$ para cada medida.
+Lo que haremos será, para cada temperatura obtener 64 mediciones, que correspondrán 
+a 64 archivos $.csv$. La representación gráfica que devuelve el software del
+osciloscopio es:
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/T170.png}
+	\caption{Resultado del osciloscopio PicoScope 2202 para $T=170^\circ$}
+	\label{Pico170}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/T175.png}
+	\caption{Resultado del osciloscopio PicoScope 2202 para $T=175^\circ$}
+	\label{Pico175}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.2]{imagenes/T180.png}
+	\caption{Resultado del osciloscopio PicoScope 2202 para $T=180^\circ$}
+	\label{Pico180}
+\end{figure}
+
+Realizamos un programa de python que lea los datos de los ficheros csv y los 
+represente:
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/PicoScopeT170.svg}
+	\caption{Representación por python de los datos PicoScope 2202 para $T=170^\circ$}
+	\label{Pico170csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/PicoScopeT175.svg}
+	\caption{Representación por python de los datos PicoScope 2202 para $T=175^\circ$}
+	\label{Pico175csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/PicoScopeT180.svg}
+	\caption{Representación por python de los datos PicoScope 2202 para $T=180^\circ$}
+	\label{Pico180csv}
+\end{figure}
+\newpage
+
+Para hacer la representación, hemos tomado el primer archivo de cada carpeta 
+para evitar hacer representaciones extra. Además, hemos filtrado la señal 
+para que no aparezca el bucle que teníamos en la aplicación del osciloscopio.
+Los ficheros de datos se encuentran en \cite{experimental32026} dentro de 
+la carpeta correspondiente a esta practica en la ruta "$/Franck\_Hertz/Practica/PicoScope\_2202$".
+
+\subsection{Analog discovery}
+
+Este osciloscopio nos vuelve a devolver los datos en archivos $.csv$ y al 
+representarlos con el código de python tenemos:
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/AnalogDiscoveryT170.svg}
+	\caption{Representación por python de los datos Analog Discovery para $T=170^\circ$}
+	\label{Pico170csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/AnalogDiscoveryT175.svg}
+	\caption{Representación por python de los datos Analog Discovery para $T=175^\circ$}
+	\label{Pico175csv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includesvg[scale=0.4]{imagenes/AnalogDiscoveryT180.svg}
+	\caption{Representación por python de los datos Analog Discovery para $T=180^\circ$}
+	\label{Pico180csv}
+\end{figure}
+\newpage
+La ruta a estos archivos dentro del repositorio de 
+github es: "$/Franck\_Hertz/Practica/Analog\_discovery$".
+
+\section{Análisis de resultados}
+
+En esta sección, crearemos un programa en python que calcule la distancia entre los 
+mínimos leyendo todos los archivos de datos.
+
+\subsection{PicoScope 2202}
+
+Para cada temperatura teníamos en torno a 200 ficheros de datos, realizamos un
+código en python que recorra cada fichero, haga un filtrado para eliminar 
+el bucle que nos aparecía y calcule las distancias entre los mínimos del potencial.
+Realizamos el código para cada temperatura y obtenemos:
+
+\newpage
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+   $\overline{\Delta U}$ (V)&   $\sigma_{\Delta U}$ \\
+\hline
+             4.86 &                  0.9 \\
+\hline
+\end{tabular}
+\label{tab: Tabla170}
+\caption{Valor medio de $\Delta U$ para $T = 170^\circ$}
+\end{table}
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+
+   $\overline{\Delta U}$ (V) &   $\sigma_{\Delta U}$ \\
+\hline
+             5.08 &                0.4 \\
+\hline
+\end{tabular}
+\label{tab: Tabla175}
+\caption{Valor medio de $\Delta U$ para $T = 175^\circ$}
+\end{table}
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+
+   $\overline{\Delta U}$ (V)&   $\sigma_{\Delta U}$ \\
+\hline
+              4.84 &                 0.3 \\
+\hline
+\end{tabular}
+\label{tab: Tabla180}
+\caption{Valor medio de $\Delta U$ para $T = 180^\circ$}
+\end{table}
+
+Con los valores medios para cada temperatura ahora podemos calcular 
+la energía de transmisión $E_{exc}$:
+
+\begin{equation}
+   E_{exc} = |e| \cdot \Delta U
+\end{equation}
+
+Y la longitud de onda de los fotones emitidos será entonces: 
+
+\begin{equation}
+   \lambda = \frac{hc}{E_{exc}}
+\end{equation}
+
+Y para cada temperatura tendremos:
+
+\begin{table}[H]
+\centering   
+
+\begin{tabular}{cccc}
+
+   $T$ (ºC)&   $E_{exc}$ ($J\cdot 10^{-19}$) & $E_{exc}$ ($eV$) & $\lambda$(nm)\\
+\hline
+            170 &       $8 \pm 1 $     & $4.86\pm0.9$&$260\pm50$\\
+            175 &       $8.1 \pm 0.6$ & $5.08\pm0.4$&$240\pm20$\\
+            180 &       $7.8 \pm 0.5$ & $4.84\pm0.3$&$260\pm20$\\                          
+\hline
+\end{tabular}
+\label{tab: TabPicoFin}
+\caption{Energía de excitación y longitud de onda emitida}
+\end{table}
+
+\subsection{Analog Discovery}
+
+Para cada temperatura tenemos un fichero de datos distinto, por lo que calcularemos 
+los niveles energéticos de los tres archivos y realizaremos la media con todos los 
+datos, independientemente de la temperatura:
+
+
+\begin{table}[h]
+\centering   
+
+\begin{tabular}{rr}
+
+   $\overline{\Delta U}$ (V)&   $\sigma_{\Delta U}$ \\
+\hline
+             4.64 &                 0.2\\
+\hline
+\end{tabular}
+\label{tab: TablaAD}
+\caption{Valor medio de $\Delta U$ }
+\end{table}
+
+\newpage
+
+Y el valor de la energía de excitación y de la longitud de onda emitida será:
+
+\begin{table}[h]
+\begin{tabular}{cccc}
+
+   $E_{exc}$ ($J\cdot 10^{-19}$) & $E_{exc}$ ($eV$) & $\lambda$(nm)\\
+\hline
+   $7.4 \pm 0.3 $     & $4.64\pm0.2$&$260\pm10$\\
+                        
+\hline
+\end{tabular}
+\label{tab: TABLAFINNNN}
+\caption{Energía de excitación y longitud de onda emitida}
+\end{table}
+
+
+\section{Conclusiones}
+
+Tras el trabajo realizado podemos concluir que los objetivos de la práctica fueron 
+cumplidos ya que demostramos que los niveles de energía están cuantizados. También
+ nos acercamos razonablemente, ya que entra dentro de los límites de error, al valor 
+ teórico del potencial de excitación de $4.9V$ y de la longitud de onda 
+de emisión $253 nm$. 
+
+\vspace{0.2cm}
+
+En cuanto a los aspectos físicos analizados, los mínimos de corriente 
+observados presentan una anchura finita, explicable por la distribución 
+térmica de Maxwell-Boltzmann de las velocidades de los electrones emitidos 
+por el cátodo: al no tener todos la misma energía cinética, las colisiones 
+inelásticas no ocurren a un único valor de $U_1$, sino en un rango de 
+tensiones, ensanchando los valles de la curva.
+
+Asimismo, hemos comprobado que el primer mínimo no aparece exactamente a 
+$4{,}9$ V sino desplazado a un valor superior, debido al potencial de 
+contacto originado por la diferencia de función de trabajo $\Phi$ entre 
+los materiales del cátodo y la rejilla. Sin embargo, este desplazamiento 
+es sistemático y no afecta a la separación entre mínimos consecutivos, 
+que sí corresponde fielmente al potencial de excitación.
+
+Respecto a la transición observada ($6\,^1S_0 \rightarrow 6\,^3P_1$), 
+esta está formalmente prohibida por las reglas de selección de dipolo 
+eléctrico para el espín ($\Delta S = 0$), ya que implica un salto de 
+singlete a triplete. Sin embargo, en el mercurio, al ser un átomo pesado, 
+el fuerte acoplamiento espín-órbita mezcla los estados de espín, relajando 
+esta prohibición y permitiendo que la transición ocurra con una probabilidad 
+no despreciable.
+
+En cuanto a la energía absorbida por el átomo de Hg, esta se libera 
+posteriormente en forma de fotón ultravioleta ($\lambda \approx 253{,}7$ nm) 
+durante la desexcitación. El hecho de que no observemos luminiscencia visible 
+en el tubo se debe precisamente a que la radiación emitida se encuentra fuera 
+del espectro visible, en el rango ultravioleta.
+
+Por último, hemos analizado el papel de los parámetros experimentales. Un 
+aumento drástico de la tensión de frenado $U_3$ impediría que prácticamente 
+ningún electrón alcanzase el ánodo, suprimiendo la corriente $I_A$ y haciendo 
+desaparecer la estructura de máximos y mínimos. Por otro lado, si el tubo 
+se encontrase a temperatura ambiente, la presión de vapor del mercurio sería 
+tan baja que el recorrido libre medio $\lambda$ de los electrones superaría 
+ampliamente la distancia cátodo-rejilla, haciendo que las colisiones fueran 
+prácticamente inexistentes y la curva $I_A$-$U_1$ no presentase ningún 
+mínimo observable.
+
+\vspace{0.2cm}
+
+Para finalizar, en la práctica hemos comprobado como al aumentar la resolución 
+del osciloscopio (el Analog Discovery presenta una frecuencia de muestreo un orden 
+de magnitud mayor) nos ha permitido realizar medidas con una mayor precisión aunque 
+esto luego no se haya trasladado a un mejor resultado. Esto último puede ser debido a 
+que el algoritmo para detectar minimos que implementamos no funcionaba muy bien con 
+grandes volúmenes de datos.
+
+\vspace{0.2cm}
+
+Para ver todo el análisis de datos realizado por los alumnos, se habilita este 
+enlace al repositorio de 
+github donde están todos los archivos de prácticas: 
+\cite{experimental32026}
+
+
+\section{Referencias}
+
+\nocite{experimental32026}
+
+%\nocite{cambou2011three}
+%\nocite{garcia2012bolas}
+
+\printbibliography
+
+
+\end{document}
